@@ -7,10 +7,10 @@
 |dc:creator|1..1|cardinality, range-class |
 |dc:date|1..1|quality, range-class, cardinality, literal |
 
-### Property "dc:contributor"
+#### Property "dc:contributor"
 ------
 
-###### http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class
+###### <a id="cardinality"/>http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class
 <table>
 <tr><th align="right">description</th><td>the reference should be one to an Agent (the access to the data and the data itself should be formatted according to the Agent specifications.)<td></tr>
 <tr><th align="right">subject</th><td>R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</td></tr>
