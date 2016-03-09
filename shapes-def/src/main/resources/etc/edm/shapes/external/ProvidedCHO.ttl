@@ -1,0 +1,1155 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix ore:  <http://www.openarchives.org/ore/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+
+@prefix edm:  <http://www.europeana.eu/schemas/edm/> .
+@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#> .
+@base         <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/> .
+
+@prefix Agent:    <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> .
+@prefix Concept:  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> .
+@prefix Place:    <http://www.europeana.eu/schemas/edm/shapes/external/Place#base> .
+@prefix TimeSpan: <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base> .
+
+################################################################################
+# Shape Graph for edm:ProvidedCHO
+################################################################################
+
+:
+  rdf:type owl:Ontology, sh:Graph ;
+  owl:versionInfo "Draft version for edm:ProvidedCHO Class"^^xsd:string ;
+  sh:shapesGraph <http://www.w3.org/ns/shacl> ;
+.
+
+################################################################################
+# Base Shape for the edm:ProvidedCHO Class
+################################################################################
+
+:base
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:scopeClass edm:ProvidedCHO ;
+
+  sh:inverseProperty <aggregatedCHO#correlation> ;
+  sh:constraint      :correlation ;
+
+  # DC properties
+  sh:property        <contributor#cardinality> ;
+  sh:property        <contributor#range-class> ;
+  sh:property        <coverage#cardinality> ;
+  sh:property        <coverage#quality> ;
+  sh:property        <coverage#range-class> ;
+  sh:constraint      <coverage#subproperty> ;
+  sh:property        <creator#cardinality> ;
+  sh:property        <creator#range-class> ;
+  sh:property        <date#cardinality> ;
+  sh:property        <date#range-class> ;
+  sh:property        <date#literal> ;
+  sh:property        <date#quality> ;
+  sh:constraint      <date#subproperty> ;
+  sh:property        <description#cardinality> ;
+  sh:property        <format#cardinality> ;
+  sh:property        <identifier#type> ;
+  sh:property        <identifier#cardinality> ;
+  sh:property        <language#type> ;
+  sh:property        <language#cardinality> ;
+  sh:property        <language#values> ;
+  sh:property        <publisher#cardinality> ;
+  sh:property        <publisher#range-class> ;
+  sh:property        <rights#cardinality> ;
+  sh:constraint      <rights#subproperty> ;
+  sh:property        <subject#cardinality> ;
+  sh:property        <subject#range-class> ;
+  sh:property        <subject#multiplevalue> ;
+  sh:property        <title#type> ;
+  sh:property        <title#cardinality> ;
+  sh:property        <dctype#cardinality> ;
+  sh:property        <dctype#range-class> ;
+
+  # DCTERMS properties
+  sh:property        <alternative#type> ;
+  sh:constraint      <alternative#subproperty> ;
+  sh:property        <conformsTo#cardinality> ;
+  sh:property        <created#cardinality> ;
+  sh:property        <created#range-values> ;
+  sh:property        <created#correlation> ;
+  sh:property        <extent#cardinality> ;
+  sh:property        <hasFormat#cardinality> ;
+  sh:property        <hasPart#cardinality> ;
+  sh:property        <hasVersion#cardinality> ;
+  sh:property        <isFormatOf#cardinality> ;
+  sh:property        <isPartOf#cardinality> ;
+  sh:property        <isReferencedBy#cardinality> ;
+  sh:property        <isReplacedBy#cardinality> ;
+  sh:property        <isRequiredBy#cardinality> ;
+  sh:property        <issued#cardinality> ;
+  sh:property        <isVersionOf#cardinality> ;
+  sh:property        <medium#cardinality> ;
+  sh:property        <provenance#cardinality> ;
+  sh:property        <references#cardinality> ;
+  sh:property        <replaces#cardinality> ;
+  sh:property        <requires#cardinality> ;
+  sh:property        <spatial#cardinality> ;
+  sh:property        <tableOfContents#type> ;
+  sh:property        <tableOfContents#cardinality> ;
+  sh:property        <temporal#cardinality> ;
+
+  # EDM properties
+  sh:property        <currentLocation#type> ;
+  sh:property        <currentLocation#cardinality> ;
+  sh:property        <hasMet#type> ;
+  sh:property        <hasMet#cardinality> ;
+  sh:property        <hasMet#range-class> ;
+  sh:property        <hasType#cardinality> ;
+  sh:property        <incorporates#type> ;
+  sh:property        <incorporates#cardinality> ;
+  sh:property        <isDerivativeOf#type> ;
+  sh:property        <isDerivativeOf#cardinality> ;
+  sh:property        <isNextInSequence#type> ;
+  sh:property        <isNextInSequence#cardinality> ;
+  sh:property        <isNextInSequence#range-class> ;
+  sh:property        <isNextInSequence#correlation> ;
+  sh:property        <isRelatedTo#cardinality> ;
+  sh:property        <isRepresentationOf#type> ;
+  sh:property        <isRepresentationOf#cardinality> ;
+  sh:property        <isSimilarTo#type> ;
+  sh:property        <isSimilarTo#cardinality> ;
+  sh:property        <isSuccessorOf#type> ;
+  sh:property        <isSuccessorOf#cardinality> ;
+  sh:property        <realizes#type> ;
+  sh:property        <realizes#cardinality> ;
+
+  sh:property        <edmtype#type> ;
+  sh:property        <edmtype#cardinality> ;
+  sh:property        <edmtype#values> ;
+  sh:property        <edmtype#correlation> ;
+  sh:property        <unstored#type> ;
+  sh:property        <unstored#cardinality> ;
+  sh:property        <ugc#type> ;
+  sh:property        <ugc#cardinality> ;
+  sh:property        <sameAs#type> ;
+  sh:property        <sameAs#cardinality> ;
+.
+
+
+################################################################################
+# All Constraint Declarations
+################################################################################
+
+<aggregatedCHO#correlation>
+  a sh:InversePropertyConstraint ;
+  sh:description """Check that the URI of the ProvidedCHO and the URI described 
+                    in edm:aggregatedCHO are the same.""" ;
+  dc:type esc:correlation ;
+  dc:subject "R-225-Validation-of-class-association" ;
+  sh:predicate edm:aggregatedCHO ;
+  sh:valueClass ore:Aggregation ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ; #this enforces uniqueness
+.
+
+#:uniqueness ?
+
+# the constraint for edm:type was taken out of this rule
+:correlation
+  a sh:Constraint ;
+  sh:description """Check that if edm:ProvidedCHO is present, at least: one 
+                    dc:title or sh:description should be present; one dc:subject
+                    or dc:type or dc:coverage or dcterms:spatial and edm:type 
+                    should be present""" ;
+  dc:type esc:correlation ;
+  dc:subject "R-68-REQUIRED-PROPERTIES" ;
+  sh:message """At least: one dc:title or sh:description; one dc:subject or 
+                dc:type or dc:coverage or dcterms:spatial; and one edm:type 
+                should be present""" ;
+  sh:and (
+    [
+      sh:constraint [
+        sh:or (
+          [ sh:property [ sh:predicate dc:title       ; sh:minCount 1 ; ] ]
+          [ sh:property [ sh:predicate dc:description ; sh:minCount 1 ; ] ]
+        )
+      ]
+    ]
+    [
+      sh:constraint [
+        sh:or (
+          [ sh:property [ sh:predicate dc:subject  ; sh:minCount 1 ; ] ]
+          [ sh:property [ sh:predicate dc:type     ; sh:minCount 1 ; ] ]
+          [ sh:property [ sh:predicate dc:coverage ; sh:minCount 1 ; ] ]
+          [ sh:property [ sh:predicate dct:spatial ; sh:minCount 1 ; ] ]
+        )
+      ]
+    ]
+  ) ;
+.
+
+
+# dc:contributor ###############################################################
+
+<contributor#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:contributor ;
+  sh:minCount 0 ;
+.
+
+<contributor#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """the reference should be one to an Agent (the access to the 
+                    data and the data itself should be formatted according to 
+                    the Agent specifications.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+  sh:predicate dc:contributor ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate dc:contributor ;
+      sh:nodeKind sh:IRI ;
+    ]
+  ] ;
+  sh:valueShape Agent: ;
+.
+
+
+# dc:coverage ##################################################################
+
+<coverage#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:coverage ;
+  sh:minCount 0 ;
+.
+
+<coverage#quality>
+  a sh:PropertyConstraint ;
+  sh:description """If two dc:coverage are present, suggest the use of 
+                    dcterms:spatial or dcterms:temporal.""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:predicate dc:coverage ;
+  sh:maxCount 1 ;
+  sh:severity sh:Warning ;
+  sh:message "Suggest the use of dcterms:spatial or dcterms:temporal" ;
+.
+
+<coverage#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """If the value is a URI, check if it refers to a TimeSpan or a
+                    Place that is declared in the document.""" ;
+  sh:predicate dc:coverage ;
+  sh:filterShape [
+    sh:property [
+        sh:predicate dc:coverage ;
+        sh:nodeKind sh:IRI ;
+    ]
+  ] ;
+  sh:valueShape [
+    sh:constraint [
+      sh:or ( Place: TimeSpan: )
+    ] ;
+  ] ;
+.
+
+<coverage#subproperty>
+  a sh:Constraint ;
+  dc:type esc:subproperty ;
+  sh:description """If dc:coverage and dcterms:spatial or dcterms:temporal are 
+                    present, check that the value in dc:coverage is not 
+                    redundant with dcterms:spatial or dcterms:temporal for 
+                    ingestion""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:and (
+    [
+      sh:property [
+        sh:predicate dc:coverage ;
+        sh:notEquals dct:spatial ;
+      ]
+    ]
+    [
+      sh:property [
+        sh:predicate dc:coverage ;
+        sh:notEquals dct:temporal ;
+      ]
+    ]
+  )
+.
+
+
+# dc:creator ###################################################################
+
+<creator#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:creator ;
+  sh:minCount 0 ;
+.
+
+<creator#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """the reference should be one to an Agent (the access to the 
+                    data and the data itself should be formatted according to 
+                    the Agent specifications.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:predicate dc:creator ;
+  sh:filterShape [ #restrict only to nodes
+      sh:property [
+          sh:predicate dc:creator ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape Agent: ;
+.
+
+
+# dc:date ######################################################################
+
+<date#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:date ;
+  sh:minCount 0 ;
+.
+
+<date#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """the reference should be one to a TimeSpan (the access to 
+                    the data and the data itself should be formatted according 
+                    to the TimeSpan specifications.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+  sh:predicate dc:date ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dc:date ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape TimeSpan: ;
+.
+
+<date#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:predicate dc:date ;
+  sh:filterShape [ #restrict only to Literals
+      sh:property [
+          sh:predicate dc:date ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+<date#quality>
+  a sh:PropertyConstraint ;
+  sh:description """If two dc:date are present, suggest the use of dcterms 
+                    created or dcterms:issued.""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:predicate dc:date ;
+  sh:maxCount 1 ;
+  sh:severity sh:Warning ;
+  sh:message "Suggest the use of dcterms:created or dcterms:issued" ;
+.
+
+<date#subproperty>
+  a sh:Constraint ;
+  dc:type esc:subproperty ;
+  sh:description """If dc:date and dcterms:created or dcterms:issued are present
+                    , check that the value in dc:date is not redundant with 
+                    dcterms:created or dctersm:issued for ingestion""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:and (
+    [ 
+      sh:predicate  dc:date ;
+      sh:notEquals dct:created ;
+    ]
+    [
+      sh:predicate dc:date ;
+      sh:notEquals dct:issued ;
+    ]
+  )
+.
+
+
+# dc:description ###############################################################
+
+<description#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:description ;
+  sh:minCount 0 ;
+.
+
+
+# dc:format ####################################################################
+
+<format#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:format ;
+  sh:minCount 0 ;
+.
+
+
+# dc:identifier ################################################################
+
+<identifier#type>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:identifier ;
+  sh:nodeKind sh:Literal ;
+.
+
+<identifier#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:identifier ;
+  sh:minCount 0 ;
+.
+
+
+# dc:language ##################################################################
+
+<language#type>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:language ;
+  sh:nodeKind sh:Literal ;
+.
+
+<language#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:language ;
+  sh:minCount 0 ;
+.
+
+<language#values>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for language matches ISO 639 two-letter
+                    code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
+                    otherwise accept three-letter code.""" ;
+  dc:subject "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG"
+           , "R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS" ;
+  sh:predicate dc:language ;
+  #alternative is to have the full list of acceptable values
+  sh:pattern "^[a-z]{2}$" ;
+.
+
+
+# dc:publisher #################################################################
+
+<publisher#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:publisher ;
+  sh:minCount 0 ;
+.
+
+<publisher#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """The reference should be one to an Agent( the access to the 
+                    data and the data itself should be formatted according to 
+                    the Agent specifications.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:predicate dc:publisher ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate dc:publisher ;
+      sh:nodeKind sh:IRI ;
+    ]
+  ] ;
+  sh:valueShape Agent: ;
+.
+
+
+# dc:rights ####################################################################
+
+<rights#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:rights ;
+  sh:minCount 0 ;
+.
+
+<rights#subproperty>
+  a sh:Constraint ;
+  dc:type esc:subproperty ;
+  sh:description """Check if dc:rights has the same value than edm:rights either
+                    as rdf:resource or literal, if yes the field is 
+                    redundant""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:predicate dc:rights ;
+  sh:notEquals edm:rights ;
+.
+
+
+# dc:subject ###################################################################
+
+<subject#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:subject ;
+  sh:minCount 0 ;
+.
+
+<subject#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """The reference should be one to a Concept( the access to the
+                    data and the data itself should be formatted according to 
+                    the Concept specifications.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+  sh:predicate dc:publisher ;
+  sh:filterShape [ #restrict only to nodes
+      sh:property [
+          sh:predicate dc:subject ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape Concept: ;
+.
+
+<subject#multiplevalue>
+  a sh:PropertyConstraint ;
+
+  sh:description """If more than one term is in the field, a new dc:subject 
+                    should be created.""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  skos:note """The field is considered to have multiple terms if a separator is 
+               detected""" ;
+  sh:severity sh:Warning ;
+
+  sh:predicate dc:subject ;
+  sh:pattern "^.*[,;].*$" ; #check for char separators
+
+  sh:message """More than one term was detected, suggest the use of a new 
+                dc:subject field""" ;
+.
+
+
+# dc:title #####################################################################
+
+<title#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate dc:title ;
+  sh:nodeKind sh:Literal ;
+.
+
+<title#cardinality>
+  a sh:PropertyConstraint ;
+  sh:predicate dc:title ;
+  sh:minCount 0 ;
+.
+
+
+# dc:type ######################################################################
+
+<dctype#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dc:type ;
+  sh:minCount 0 ;
+.
+
+<dctype#range-class>
+  a sh:PropertyConstraint ;
+  dc:type esc:range-class ;
+  sh:description """If the value is a URI, check if a skos:Concept class is 
+                    created.""" ;
+#  sh:description """The reference should be one to a Concept( the access to the
+#                    data and the data itself should be formatted according to 
+#                    the Concept specifications.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:predicate dc:type ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate dc:type ;
+      sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape Concept: ;
+.
+
+
+# dcterms:alternative ##########################################################
+
+<alternative#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate dct:alternative ;
+  sh:nodeKind sh:Literal ;
+.
+
+<alternative#subproperty>
+  a sh:Constraint ;
+  dc:type esc:subproperty ;
+  sh:description """If dcterms:alternative has the same title than dc:title, 
+                    then dcterms:alternative is redundant.""" ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:predicate dct:alternative ;
+  sh:notEquals dc:title ;
+  sh:message "Redundant dcterms:alternative" ;
+.
+
+
+# dcterms:conformsTo ###########################################################
+
+<conformsTo#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:conformsTo ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:created ##############################################################
+
+<created#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:created ;
+  sh:minCount 0 ;
+.
+
+<created#range-values>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""" ;
+  dc:type esc:range-value ;
+  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [ #restrict only to Literals
+    sh:property [
+      sh:predicate dc:date ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+#ISSUE: values need to be typed as xsd:date!
+<created#correlation>
+  a sh:PropertyConstraint ;
+
+  sh:description "dcterms:created must be equal or earlier than dcterms:issued";
+#  sh:description """Check that dcterms:created is equal or earlier than 
+#                    dcterms:issued""" ;
+  dc:type esc:correlation ;
+  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+
+  sh:predicate dct:created ;
+  sh:lessThan dct:issue ;
+.
+
+
+# dcterms:extent ###############################################################
+
+<extent#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:extent ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:hasFormat ############################################################
+
+<hasFormat#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:hasFormat ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:hasPart ##############################################################
+
+<hasPart#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:hasPart ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:hasVersion ###########################################################
+
+<hasVersion#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:hasVersion ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:isFormatOf ###########################################################
+
+<isFormatOf#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:isFormatOf ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:isPartOf #############################################################
+
+<isPartOf#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:isPartOf ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:isReferencedBy #######################################################
+
+<isReferencedBy#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:isReferencedBy ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:isReplacedBy #########################################################
+
+<isReplacedBy#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:isReplacedBy ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:isRequiredBy #########################################################
+
+<isRequiredBy#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:isRequiredBy ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:issued ###############################################################
+
+<issued#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:issued ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:isVersionOf ##########################################################
+
+<isVersionOf#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:isVersionOf ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:medium ###############################################################
+
+<medium#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:medium ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:provenance ###########################################################
+
+<provenance#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:provenance ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:references ###########################################################
+
+<references#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:references ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:replaces #############################################################
+
+<replaces#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:replaces ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:requires #############################################################
+
+<requires#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:requires ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:spatial ##############################################################
+
+<spatial#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:spatial ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:tableOfContents ######################################################
+
+<tableOfContents#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:tableOfContents ;
+  sh:nodeKind sh:Literal ;
+.
+
+<tableOfContents#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:tableOfContents ;
+  sh:minCount 0 ;
+.
+
+
+# dcterms:temporal #############################################################
+
+<temporal#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:temporal ;
+  sh:minCount 0 ;
+.
+
+
+# edm:currentLocation ##########################################################
+
+<currentLocation#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:currentLocation ;
+  sh:nodeKind sh:IRI ;
+.
+
+<currentLocation#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:currentLocation ;
+  sh:minCount 0 ;
+.
+
+
+# edm:hasMet ###################################################################
+
+<hasMet#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:hasMet ;
+  sh:nodeKind sh:IRI ;
+.
+
+<hasMet#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:hasMet ;
+  sh:minCount 0 ;
+.
+
+<hasMet#range-class>
+  a sh:PropertyConstraint ;
+  dc:type esc:range-class ;
+  sh:description """A edm:hasMet should reference one of Agent, Place, TimeSpan 
+                    or Concept that is declared in the record""" ;
+# sh:description """the reference should be one to an Agent, a Place, a TimeSpan
+#                   or a Concept ( the access to the data and the data itself 
+#                   should be formatted according to the specifications of the 
+#                   corresponding classes.)""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+
+  sh:or (
+    [ sh:predicate dc:contributor ; sh:valueShape Agent:    ]
+    [ sh:predicate dc:contributor ; sh:valueShape Place:    ]
+    [ sh:predicate dc:contributor ; sh:valueShape TimeSpan: ]
+    [ sh:predicate dc:contributor ; sh:valueShape Concept:  ]
+  )
+.
+
+
+# edm:hasType ###################################################################
+
+<hasType#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:hasType ;
+  sh:minCount 0 ;
+.
+
+
+# edm:incorporates #############################################################
+
+<incorporates#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:incorporates ;
+  sh:nodeKind sh:IRI ;
+.
+
+<incorporates#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:incorporates ;
+  sh:minCount 0 ;
+.
+
+
+# edm:isDerivativeOf ###########################################################
+
+<isDerivativeOf#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:isDerivativeOf ;
+  sh:nodeKind sh:IRI ;
+.
+
+<isDerivativeOf#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:isDerivativeOf ;
+  sh:minCount 0 ;
+.
+
+
+# edm:isNextInSequence #########################################################
+
+<isNextInSequence#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:isNextInSequence ;
+  sh:nodeKind sh:IRI ;
+.
+
+<isNextInSequence#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:isNextInSequence ;
+  sh:minCount 0 ;
+.
+
+# Issue requires the full dataset
+<isNextInSequence#range-class>
+  a sh:PropertyConstraint ;
+  dc:type esc:range-class ;
+  sh:description """The reference should be a valid edm:ProvidedCHO""" ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+           , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;  
+  sh:predicate edm:isNextInSequence ;
+.
+
+# Implement using a SPARQL query
+# Requires the full dataset
+<isNextInSequence#correlation>
+  a sh:PropertyConstraint ;
+  dc:type esc:correlation ;
+  sh:description """The ProvidedCHO referred to by this property must share 
+                    the same parent""" ;
+  dc:subject "?" ;
+  sh:predicate edm:isNextInSequence ;
+.
+
+
+# edm:isRelatedTo ##############################################################
+
+<isRelatedTo#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:isRelatedTo ;
+  sh:minCount 0 ;
+.
+
+
+# edm:isRepresentationOf #######################################################
+
+<isRepresentationOf#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:isRepresentationOf ;
+  sh:nodeKind sh:IRI ;
+.
+
+<isRepresentationOf#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:isRepresentationOf ;
+  sh:minCount 0 ;
+  sh:maxCount 1 ;
+.
+
+
+# edm:isSimilarTo ##############################################################
+
+<isSimilarTo#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:isSimilarTo ;
+  sh:nodeKind sh:IRI ;
+.
+
+<isSimilarTo#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:isSimilarTo ;
+  sh:minCount 0 ;
+.
+
+
+# edm:isSuccessorOf ############################################################
+
+<isSuccessorOf#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:isSuccessorOf ;
+  sh:nodeKind sh:IRI ;
+.
+
+<isSuccessorOf#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:isSuccessorOf ;
+  sh:minCount 0 ;
+.
+
+
+# edm:realizes #################################################################
+
+<realizes#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:realizes ;
+  sh:nodeKind sh:IRI ;
+.
+
+<realizes#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:realizes ;
+  sh:minCount 0 ;
+.
+
+
+# edm:type #####################################################################
+
+<edmtype#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:type ;
+  sh:nodeKind sh:Literal ;
+.
+
+<edmtype#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:type ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+.
+
+<edmtype#values>
+  a sh:PropertyConstraint ;
+  dc:type esc:values ;
+  sh:description """The value of edm:type must match one of: 
+                    TEXT, VIDEO, SOUND, IMAGE, 3D""" ;
+# sh:description """Check that edm:type matches the value 
+#                   TEXT, VIDEO, SOUND, IMAGE, 3D""" ;
+  dc:subject "R-30-DEFINE-VALUE-LISTS" ;
+  sh:predicate edm:type ;
+  sh:in ( "TEXT" "VIDEO" "SOUND" "IMAGE" "3D" ) ;
+.
+
+<edmtype#correlation>
+  a sh:PropertyConstraint ;
+# sh:description """Check that if the value of edm:type  is 3D the syntax of 
+#                   dc:format is 3D-PDF """ ;
+  sh:description """If the value of edm:type is '3D' then the syntax of 
+                    dc:format must be '3D-PDF'""";
+  dc:type esc:correlation ;
+  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate edm:type ;
+      sh:hasValue "3D" ;
+    ]
+  ] ;
+  sh:predicate dc:format ;
+  sh:hasValue "3D-PDF" ;
+.
+
+
+# edm:unstored #################################################################
+
+<unstored#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:unstored ;
+  sh:nodeKind sh:Literal ;
+.
+
+<unstored#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:unstored ;
+  sh:minCount 0 ;
+.
+
+
+# edm:ugc ######################################################################
+
+<ugc#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate edm:ugc ;
+  sh:nodeKind sh:Literal ;
+.
+
+<ugc#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate edm:ugc ;
+  sh:minCount 0 ;
+.
+
+
+# owl:sameAs ###################################################################
+
+<sameAs#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate owl:sameAs ;
+  sh:nodeKind sh:IRI ;
+.
+
+<sameAs#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate owl:sameAs ;
+  sh:minCount 0 ;
+.
+
