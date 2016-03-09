@@ -52,13 +52,13 @@
 |<a href="#edm_ugc">edm:ugc</a>|<a href="#edm_shapes_external_ProvidedCHO_ugc_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_ugc_type">type</a>|
 |<a href="#edm_unstored">edm:unstored</a>|<a href="#edm_shapes_external_ProvidedCHO_unstored_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_unstored_type">type</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_ProvidedCHO_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_sameAs_type">type</a>|
-#### Property <a id="dc_contributor"  target="_blank"href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a>
+#### Property <a id="dc_contributor" target="_blank" href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_contributor_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_contributor_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -71,13 +71,13 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_contributor_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_contributor_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -98,13 +98,13 @@
   sh:valueShape Agent: ;
 .
 ```
-#### Property <a id="dc_coverage"  target="_blank"href="http://purl.org/dc/elements/1.1/coverage">http://purl.org/dc/elements/1.1/coverage</a>
+#### Property <a id="dc_coverage" target="_blank" href="http://purl.org/dc/elements/1.1/coverage">http://purl.org/dc/elements/1.1/coverage</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_coverage_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_coverage_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -117,12 +117,12 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_coverage_quality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#quality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#quality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_coverage_quality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#quality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#quality</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If two dc:coverage are present, suggest the use of 
                     dcterms:spatial or dcterms:temporal.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -138,12 +138,12 @@
   sh:message "Suggest the use of dcterms:spatial or dcterms:temporal" ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_coverage_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_coverage_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -166,13 +166,13 @@
   ] ;
 .
 ```
-#### Property <a id="dc_creator"  target="_blank"href="http://purl.org/dc/elements/1.1/creator">http://purl.org/dc/elements/1.1/creator</a>
+#### Property <a id="dc_creator" target="_blank" href="http://purl.org/dc/elements/1.1/creator">http://purl.org/dc/elements/1.1/creator</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_creator_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_creator_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -185,13 +185,13 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_creator_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_creator_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/creator#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -212,14 +212,14 @@
   sh:valueShape Agent: ;
 .
 ```
-#### Property <a id="dc_date"  target="_blank"href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
+#### Property <a id="dc_date" target="_blank" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_date_quality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#quality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#quality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_date_quality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#quality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#quality</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If two dc:date are present, suggest the use of dcterms 
                     created or dcterms:issued.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -235,13 +235,13 @@
   sh:message "Suggest the use of dcterms:created or dcterms:issued" ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_date_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_date_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
                     to the TimeSpan specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -262,11 +262,11 @@
   sh:valueShape TimeSpan: ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_date_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_date_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -279,13 +279,13 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_date_literal"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#literal">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#literal</a>
+###### <a id="edm_shapes_external_ProvidedCHO_date_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#literal">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#literal</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -307,13 +307,13 @@
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 .
 ```
-#### Property <a id="dc_description"  target="_blank"href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
+#### Property <a id="dc_description" target="_blank" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_description_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/description#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/description#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_description_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/description#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/description#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -326,13 +326,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dc_format"  target="_blank"href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
+#### Property <a id="dc_format" target="_blank" href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_format_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/format#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/format#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_format_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/format#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/format#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -345,12 +345,12 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_edmtype_correlation"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#correlation</a>
+###### <a id="edm_shapes_external_ProvidedCHO_edmtype_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#correlation</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If the value of edm:type is '3D' then the syntax of 
                     dc:format must be '3D-PDF'</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -373,13 +373,13 @@
   sh:hasValue "3D-PDF" ;
 .
 ```
-#### Property <a id="dc_identifier"  target="_blank"href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a>
+#### Property <a id="dc_identifier" target="_blank" href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_identifier_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_identifier_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -392,11 +392,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_identifier_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_identifier_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/identifier#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -407,15 +407,15 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-#### Property <a id="dc_language"  target="_blank"href="http://purl.org/dc/elements/1.1/language">http://purl.org/dc/elements/1.1/language</a>
+#### Property <a id="dc_language" target="_blank" href="http://purl.org/dc/elements/1.1/language">http://purl.org/dc/elements/1.1/language</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_language_values"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#values">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#values</a>
+###### <a id="edm_shapes_external_ProvidedCHO_language_values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#values">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#values</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check that the value for language matches ISO 639 two-letter
                     code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
                     otherwise accept three-letter code.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/54">R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/54">R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -432,11 +432,11 @@
   sh:pattern "^[a-z]{2}$" ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_language_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_language_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -449,11 +449,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_language_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_language_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/language#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -464,15 +464,15 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-#### Property <a id="dc_publisher"  target="_blank"href="http://purl.org/dc/elements/1.1/publisher">http://purl.org/dc/elements/1.1/publisher</a>
+#### Property <a id="dc_publisher" target="_blank" href="http://purl.org/dc/elements/1.1/publisher">http://purl.org/dc/elements/1.1/publisher</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_publisher_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_publisher_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The reference should be one to an Agent( the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -493,11 +493,11 @@
   sh:valueShape Agent: ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_publisher_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_publisher_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/publisher#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -510,13 +510,13 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_subject_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_subject_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The reference should be one to a Concept( the access to the
                     data and the data itself should be formatted according to 
                     the Concept specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -537,13 +537,13 @@
   sh:valueShape Concept: ;
 .
 ```
-#### Property <a id="dc_rights"  target="_blank"href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
+#### Property <a id="dc_rights" target="_blank" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_rights_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_rights_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -556,13 +556,13 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_rights_subproperty"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#subproperty">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#subproperty</a>
+###### <a id="edm_shapes_external_ProvidedCHO_rights_subproperty" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#subproperty">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/rights#subproperty</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check if dc:rights has the same value than edm:rights either
                     as rdf:resource or literal, if yes the field is 
                     redundant</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -579,14 +579,14 @@
   sh:notEquals edm:rights ;
 .
 ```
-#### Property <a id="dc_subject"  target="_blank"href="http://purl.org/dc/elements/1.1/subject">http://purl.org/dc/elements/1.1/subject</a>
+#### Property <a id="dc_subject" target="_blank" href="http://purl.org/dc/elements/1.1/subject">http://purl.org/dc/elements/1.1/subject</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_subject_multiplevalue"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#multiplevalue">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#multiplevalue</a>
+###### <a id="edm_shapes_external_ProvidedCHO_subject_multiplevalue" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#multiplevalue">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#multiplevalue</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If more than one term is in the field, a new dc:subject 
                     should be created.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -608,11 +608,11 @@
                 dc:subject field""" ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_subject_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_subject_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/subject#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -625,13 +625,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dc_title"  target="_blank"href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a>
+#### Property <a id="dc_title" target="_blank" href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_title_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_title_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -644,11 +644,11 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_title_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_title_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/title#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -660,13 +660,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dc_type"  target="_blank"href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a>
+#### Property <a id="dc_type" target="_blank" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_dctype_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_dctype_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -679,12 +679,12 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_dctype_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_dctype_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If the value is a URI, check if a skos:Concept class is 
                     created.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#range-class</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -708,13 +708,13 @@
   sh:valueShape Concept: ;
 .
 ```
-#### Property <a id="dct_alternative"  target="_blank"href="http://purl.org/dc/terms/alternative">http://purl.org/dc/terms/alternative</a>
+#### Property <a id="dct_alternative" target="_blank" href="http://purl.org/dc/terms/alternative">http://purl.org/dc/terms/alternative</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_alternative_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_alternative_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -727,11 +727,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_alternative_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_alternative_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -743,12 +743,12 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_alternative_subproperty"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#subproperty">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#subproperty</a>
+###### <a id="edm_shapes_external_ProvidedCHO_alternative_subproperty" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#subproperty">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#subproperty</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If dcterms:alternative has the same title than dc:title, 
                     then dcterms:alternative is redundant.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -765,13 +765,13 @@
   sh:message "Redundant dcterms:alternative" ;
 .
 ```
-#### Property <a id="dct_conformsTo"  target="_blank"href="http://purl.org/dc/terms/conformsTo">http://purl.org/dc/terms/conformsTo</a>
+#### Property <a id="dct_conformsTo" target="_blank" href="http://purl.org/dc/terms/conformsTo">http://purl.org/dc/terms/conformsTo</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_conformsTo_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/conformsTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/conformsTo#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_conformsTo_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/conformsTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/conformsTo#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -784,13 +784,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_created"  target="_blank"href="http://purl.org/dc/terms/created">http://purl.org/dc/terms/created</a>
+#### Property <a id="dct_created" target="_blank" href="http://purl.org/dc/terms/created">http://purl.org/dc/terms/created</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_created_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_created_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -803,11 +803,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_created_correlation"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#correlation</a>
+###### <a id="edm_shapes_external_ProvidedCHO_created_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/created#correlation</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -825,13 +825,13 @@
   sh:lessThan dct:issue ;
 .
 ```
-#### Property <a id="dct_extent"  target="_blank"href="http://purl.org/dc/terms/extent">http://purl.org/dc/terms/extent</a>
+#### Property <a id="dct_extent" target="_blank" href="http://purl.org/dc/terms/extent">http://purl.org/dc/terms/extent</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_extent_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/extent#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/extent#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_extent_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/extent#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/extent#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -844,13 +844,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_hasFormat"  target="_blank"href="http://purl.org/dc/terms/hasFormat">http://purl.org/dc/terms/hasFormat</a>
+#### Property <a id="dct_hasFormat" target="_blank" href="http://purl.org/dc/terms/hasFormat">http://purl.org/dc/terms/hasFormat</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_hasFormat_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasFormat#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasFormat#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_hasFormat_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasFormat#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasFormat#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -863,13 +863,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_hasPart"  target="_blank"href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
+#### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_hasPart_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasPart#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasPart#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -882,13 +882,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_hasVersion"  target="_blank"href="http://purl.org/dc/terms/hasVersion">http://purl.org/dc/terms/hasVersion</a>
+#### Property <a id="dct_hasVersion" target="_blank" href="http://purl.org/dc/terms/hasVersion">http://purl.org/dc/terms/hasVersion</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_hasVersion_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasVersion#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasVersion#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_hasVersion_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasVersion#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasVersion#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -901,13 +901,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_isFormatOf"  target="_blank"href="http://purl.org/dc/terms/isFormatOf">http://purl.org/dc/terms/isFormatOf</a>
+#### Property <a id="dct_isFormatOf" target="_blank" href="http://purl.org/dc/terms/isFormatOf">http://purl.org/dc/terms/isFormatOf</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isFormatOf_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isFormatOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isFormatOf#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isFormatOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isFormatOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isFormatOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -920,13 +920,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_isPartOf"  target="_blank"href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
+#### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isPartOf_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isPartOf#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isPartOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -939,13 +939,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_isReferencedBy"  target="_blank"href="http://purl.org/dc/terms/isReferencedBy">http://purl.org/dc/terms/isReferencedBy</a>
+#### Property <a id="dct_isReferencedBy" target="_blank" href="http://purl.org/dc/terms/isReferencedBy">http://purl.org/dc/terms/isReferencedBy</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isReferencedBy_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReferencedBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReferencedBy#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isReferencedBy_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReferencedBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReferencedBy#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -958,13 +958,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_isReplacedBy"  target="_blank"href="http://purl.org/dc/terms/isReplacedBy">http://purl.org/dc/terms/isReplacedBy</a>
+#### Property <a id="dct_isReplacedBy" target="_blank" href="http://purl.org/dc/terms/isReplacedBy">http://purl.org/dc/terms/isReplacedBy</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isReplacedBy_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReplacedBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReplacedBy#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isReplacedBy_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReplacedBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isReplacedBy#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -977,13 +977,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_isRequiredBy"  target="_blank"href="http://purl.org/dc/terms/isRequiredBy">http://purl.org/dc/terms/isRequiredBy</a>
+#### Property <a id="dct_isRequiredBy" target="_blank" href="http://purl.org/dc/terms/isRequiredBy">http://purl.org/dc/terms/isRequiredBy</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isRequiredBy_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRequiredBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRequiredBy#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isRequiredBy_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRequiredBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRequiredBy#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -996,13 +996,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_isVersionOf"  target="_blank"href="http://purl.org/dc/terms/isVersionOf">http://purl.org/dc/terms/isVersionOf</a>
+#### Property <a id="dct_isVersionOf" target="_blank" href="http://purl.org/dc/terms/isVersionOf">http://purl.org/dc/terms/isVersionOf</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isVersionOf_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isVersionOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isVersionOf#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isVersionOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isVersionOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isVersionOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1015,13 +1015,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_issued"  target="_blank"href="http://purl.org/dc/terms/issued">http://purl.org/dc/terms/issued</a>
+#### Property <a id="dct_issued" target="_blank" href="http://purl.org/dc/terms/issued">http://purl.org/dc/terms/issued</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_issued_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/issued#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/issued#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_issued_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/issued#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/issued#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1034,13 +1034,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_medium"  target="_blank"href="http://purl.org/dc/terms/medium">http://purl.org/dc/terms/medium</a>
+#### Property <a id="dct_medium" target="_blank" href="http://purl.org/dc/terms/medium">http://purl.org/dc/terms/medium</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_medium_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/medium#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/medium#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_medium_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/medium#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/medium#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1053,13 +1053,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_provenance"  target="_blank"href="http://purl.org/dc/terms/provenance">http://purl.org/dc/terms/provenance</a>
+#### Property <a id="dct_provenance" target="_blank" href="http://purl.org/dc/terms/provenance">http://purl.org/dc/terms/provenance</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_provenance_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/provenance#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/provenance#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_provenance_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/provenance#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/provenance#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1072,13 +1072,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_references"  target="_blank"href="http://purl.org/dc/terms/references">http://purl.org/dc/terms/references</a>
+#### Property <a id="dct_references" target="_blank" href="http://purl.org/dc/terms/references">http://purl.org/dc/terms/references</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_references_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/references#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/references#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_references_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/references#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/references#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1091,13 +1091,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_replaces"  target="_blank"href="http://purl.org/dc/terms/replaces">http://purl.org/dc/terms/replaces</a>
+#### Property <a id="dct_replaces" target="_blank" href="http://purl.org/dc/terms/replaces">http://purl.org/dc/terms/replaces</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_replaces_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/replaces#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/replaces#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_replaces_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/replaces#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/replaces#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1110,13 +1110,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_requires"  target="_blank"href="http://purl.org/dc/terms/requires">http://purl.org/dc/terms/requires</a>
+#### Property <a id="dct_requires" target="_blank" href="http://purl.org/dc/terms/requires">http://purl.org/dc/terms/requires</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_requires_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/requires#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/requires#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_requires_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/requires#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/requires#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1129,13 +1129,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_spatial"  target="_blank"href="http://purl.org/dc/terms/spatial">http://purl.org/dc/terms/spatial</a>
+#### Property <a id="dct_spatial" target="_blank" href="http://purl.org/dc/terms/spatial">http://purl.org/dc/terms/spatial</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_spatial_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/spatial#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/spatial#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_spatial_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/spatial#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/spatial#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1148,13 +1148,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_tableOfContents"  target="_blank"href="http://purl.org/dc/terms/tableOfContents">http://purl.org/dc/terms/tableOfContents</a>
+#### Property <a id="dct_tableOfContents" target="_blank" href="http://purl.org/dc/terms/tableOfContents">http://purl.org/dc/terms/tableOfContents</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_tableOfContents_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_tableOfContents_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1166,11 +1166,11 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_tableOfContents_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_tableOfContents_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/tableOfContents#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1183,13 +1183,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="dct_temporal"  target="_blank"href="http://purl.org/dc/terms/temporal">http://purl.org/dc/terms/temporal</a>
+#### Property <a id="dct_temporal" target="_blank" href="http://purl.org/dc/terms/temporal">http://purl.org/dc/terms/temporal</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_temporal_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/temporal#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/temporal#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_temporal_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/temporal#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/temporal#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1202,14 +1202,14 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="edm_aggregatedCHO"  target="_blank"href="http://www.europeana.eu/schemas/edm/aggregatedCHO">http://www.europeana.eu/schemas/edm/aggregatedCHO</a>
+#### Property <a id="edm_aggregatedCHO" target="_blank" href="http://www.europeana.eu/schemas/edm/aggregatedCHO">http://www.europeana.eu/schemas/edm/aggregatedCHO</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_aggregatedCHO_correlation"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/aggregatedCHO#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/aggregatedCHO#correlation</a>
+###### <a id="edm_shapes_external_ProvidedCHO_aggregatedCHO_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/aggregatedCHO#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/aggregatedCHO#correlation</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check that the URI of the ProvidedCHO and the URI described 
                     in edm:aggregatedCHO are the same.</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1226,13 +1226,13 @@
   sh:maxCount 1 ; #this enforces uniqueness
 .
 ```
-#### Property <a id="edm_currentLocation"  target="_blank"href="http://www.europeana.eu/schemas/edm/currentLocation">http://www.europeana.eu/schemas/edm/currentLocation</a>
+#### Property <a id="edm_currentLocation" target="_blank" href="http://www.europeana.eu/schemas/edm/currentLocation">http://www.europeana.eu/schemas/edm/currentLocation</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_currentLocation_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_currentLocation_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1244,11 +1244,11 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_currentLocation_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_currentLocation_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/currentLocation#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1261,13 +1261,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="edm_hasMet"  target="_blank"href="http://www.europeana.eu/schemas/edm/hasMet">http://www.europeana.eu/schemas/edm/hasMet</a>
+#### Property <a id="edm_hasMet" target="_blank" href="http://www.europeana.eu/schemas/edm/hasMet">http://www.europeana.eu/schemas/edm/hasMet</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_hasMet_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_hasMet_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1280,11 +1280,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_hasMet_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_hasMet_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasMet#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1296,13 +1296,13 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-#### Property <a id="edm_hasType"  target="_blank"href="http://www.europeana.eu/schemas/edm/hasType">http://www.europeana.eu/schemas/edm/hasType</a>
+#### Property <a id="edm_hasType" target="_blank" href="http://www.europeana.eu/schemas/edm/hasType">http://www.europeana.eu/schemas/edm/hasType</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_hasType_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasType#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasType#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_hasType_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasType#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/hasType#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1315,13 +1315,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="edm_incorporates"  target="_blank"href="http://www.europeana.eu/schemas/edm/incorporates">http://www.europeana.eu/schemas/edm/incorporates</a>
+#### Property <a id="edm_incorporates" target="_blank" href="http://www.europeana.eu/schemas/edm/incorporates">http://www.europeana.eu/schemas/edm/incorporates</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_incorporates_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_incorporates_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1333,11 +1333,11 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_incorporates_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_incorporates_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/incorporates#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1350,13 +1350,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="edm_isDerivativeOf"  target="_blank"href="http://www.europeana.eu/schemas/edm/isDerivativeOf">http://www.europeana.eu/schemas/edm/isDerivativeOf</a>
+#### Property <a id="edm_isDerivativeOf" target="_blank" href="http://www.europeana.eu/schemas/edm/isDerivativeOf">http://www.europeana.eu/schemas/edm/isDerivativeOf</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isDerivativeOf_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isDerivativeOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1369,11 +1369,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isDerivativeOf_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isDerivativeOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isDerivativeOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1385,13 +1385,13 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-#### Property <a id="edm_isNextInSequence"  target="_blank"href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
+#### Property <a id="edm_isNextInSequence" target="_blank" href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1404,11 +1404,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1420,11 +1420,11 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_range-class"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:ProvidedCHO</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#range-class</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1438,12 +1438,12 @@
   sh:predicate edm:isNextInSequence ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_correlation"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#correlation</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isNextInSequence_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isNextInSequence#correlation</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The ProvidedCHO referred to by this property must share 
                     the same parent</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null">?</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">?</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1457,13 +1457,13 @@
   sh:predicate edm:isNextInSequence ;
 .
 ```
-#### Property <a id="edm_isRelatedTo"  target="_blank"href="http://www.europeana.eu/schemas/edm/isRelatedTo">http://www.europeana.eu/schemas/edm/isRelatedTo</a>
+#### Property <a id="edm_isRelatedTo" target="_blank" href="http://www.europeana.eu/schemas/edm/isRelatedTo">http://www.europeana.eu/schemas/edm/isRelatedTo</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isRelatedTo_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRelatedTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRelatedTo#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isRelatedTo_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRelatedTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRelatedTo#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1476,13 +1476,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="edm_isRepresentationOf"  target="_blank"href="http://www.europeana.eu/schemas/edm/isRepresentationOf">http://www.europeana.eu/schemas/edm/isRepresentationOf</a>
+#### Property <a id="edm_isRepresentationOf" target="_blank" href="http://www.europeana.eu/schemas/edm/isRepresentationOf">http://www.europeana.eu/schemas/edm/isRepresentationOf</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isRepresentationOf_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isRepresentationOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1494,11 +1494,11 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isRepresentationOf_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isRepresentationOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isRepresentationOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1512,13 +1512,13 @@
   sh:maxCount 1 ;
 .
 ```
-#### Property <a id="edm_isSimilarTo"  target="_blank"href="http://www.europeana.eu/schemas/edm/isSimilarTo">http://www.europeana.eu/schemas/edm/isSimilarTo</a>
+#### Property <a id="edm_isSimilarTo" target="_blank" href="http://www.europeana.eu/schemas/edm/isSimilarTo">http://www.europeana.eu/schemas/edm/isSimilarTo</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isSimilarTo_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isSimilarTo_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1530,11 +1530,11 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isSimilarTo_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isSimilarTo_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSimilarTo#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1547,13 +1547,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="edm_isSuccessorOf"  target="_blank"href="http://www.europeana.eu/schemas/edm/isSuccessorOf">http://www.europeana.eu/schemas/edm/isSuccessorOf</a>
+#### Property <a id="edm_isSuccessorOf" target="_blank" href="http://www.europeana.eu/schemas/edm/isSuccessorOf">http://www.europeana.eu/schemas/edm/isSuccessorOf</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_isSuccessorOf_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isSuccessorOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1566,11 +1566,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_isSuccessorOf_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_isSuccessorOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/isSuccessorOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1582,13 +1582,13 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-#### Property <a id="edm_realizes"  target="_blank"href="http://www.europeana.eu/schemas/edm/realizes">http://www.europeana.eu/schemas/edm/realizes</a>
+#### Property <a id="edm_realizes" target="_blank" href="http://www.europeana.eu/schemas/edm/realizes">http://www.europeana.eu/schemas/edm/realizes</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_realizes_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_realizes_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1601,11 +1601,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_realizes_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_realizes_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/realizes#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1617,14 +1617,14 @@
   sh:nodeKind sh:IRI ;
 .
 ```
-#### Property <a id="edm_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/type">http://www.europeana.eu/schemas/edm/type</a>
+#### Property <a id="edm_type" target="_blank" href="http://www.europeana.eu/schemas/edm/type">http://www.europeana.eu/schemas/edm/type</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_edmtype_values"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#values">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#values</a>
+###### <a id="edm_shapes_external_ProvidedCHO_edmtype_values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#values">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#values</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The value of edm:type must match one of: 
                     TEXT, VIDEO, SOUND, IMAGE, 3D</td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/37">R-30-DEFINE-VALUE-LISTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/37">R-30-DEFINE-VALUE-LISTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#values</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1641,11 +1641,11 @@
   sh:in ( "TEXT" "VIDEO" "SOUND" "IMAGE" "3D" ) ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_edmtype_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_edmtype_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1659,11 +1659,11 @@
   sh:maxCount 1 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_edmtype_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_edmtype_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edmtype#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1675,13 +1675,13 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-#### Property <a id="edm_ugc"  target="_blank"href="http://www.europeana.eu/schemas/edm/ugc">http://www.europeana.eu/schemas/edm/ugc</a>
+#### Property <a id="edm_ugc" target="_blank" href="http://www.europeana.eu/schemas/edm/ugc">http://www.europeana.eu/schemas/edm/ugc</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_ugc_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_ugc_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1694,11 +1694,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_ugc_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_ugc_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/ugc#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1710,13 +1710,13 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-#### Property <a id="edm_unstored"  target="_blank"href="http://www.europeana.eu/schemas/edm/unstored">http://www.europeana.eu/schemas/edm/unstored</a>
+#### Property <a id="edm_unstored" target="_blank" href="http://www.europeana.eu/schemas/edm/unstored">http://www.europeana.eu/schemas/edm/unstored</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_unstored_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_unstored_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1728,11 +1728,11 @@
   sh:nodeKind sh:Literal ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_unstored_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_unstored_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/unstored#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1745,13 +1745,13 @@
   sh:minCount 0 ;
 .
 ```
-#### Property <a id="owl_sameAs"  target="_blank"href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
+#### Property <a id="owl_sameAs" target="_blank" href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_sameAs_cardinality"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#cardinality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_sameAs_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1764,11 +1764,11 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_sameAs_type"  target="_blank"href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#type</a>
+###### <a id="edm_shapes_external_ProvidedCHO_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/sameAs#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a  target="_blank"href="null"></a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
 <tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
