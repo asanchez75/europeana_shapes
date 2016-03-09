@@ -74,6 +74,7 @@
   sh:property        <dctype#range-class> ;
 
   # DCTERMS properties
+  sh:property        <alternative#cardinality> ;
   sh:property        <alternative#type> ;
   sh:constraint      <alternative#subproperty> ;
   sh:property        <conformsTo#cardinality> ;
@@ -196,6 +197,7 @@
 
 <contributor#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:contributor ;
   sh:minCount 0 ;
 .
@@ -221,6 +223,7 @@
 
 <coverage#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:coverage ;
   sh:minCount 0 ;
 .
@@ -284,6 +287,7 @@
 
 <creator#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:creator ;
   sh:minCount 0 ;
 .
@@ -309,6 +313,7 @@
 
 <date#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:date ;
   sh:minCount 0 ;
 .
@@ -382,6 +387,7 @@
 
 <description#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:description ;
   sh:minCount 0 ;
 .
@@ -406,6 +412,7 @@
 
 <identifier#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:identifier ;
   sh:minCount 0 ;
 .
@@ -421,6 +428,7 @@
 
 <language#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:language ;
   sh:minCount 0 ;
 .
@@ -443,6 +451,7 @@
 <publisher#cardinality>
   a sh:PropertyConstraint ;
   sh:predicate dc:publisher ;
+  dc:type esc:cardinality ;
   sh:minCount 0 ;
 .
 
@@ -467,6 +476,7 @@
 
 <rights#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:rights ;
   sh:minCount 0 ;
 .
@@ -488,6 +498,7 @@
 
 <subject#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:subject ;
   sh:minCount 0 ;
 .
@@ -537,6 +548,7 @@
 
 <title#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:title ;
   sh:minCount 0 ;
 .
@@ -572,6 +584,13 @@
 
 
 # dcterms:alternative ##########################################################
+
+<alternative#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:alternative ;
+  sh:minCount 0 ;
+.
 
 <alternative#type>
   a sh:PropertyConstraint ;

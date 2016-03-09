@@ -1,57 +1,57 @@
 # Class edm:ProvidedCHO
 | Property | Cardinality | Constraints |
 | --- | --- | --- |
-|<a href="#dc_contributor">dc:contributor</a>||<a href="edm_shapes_external_ProvidedCHO_contributor_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_contributor_range-class">range-class</a>|
-|<a href="#dc_coverage">dc:coverage</a>||<a href="edm_shapes_external_ProvidedCHO_coverage_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_coverage_quality">quality</a>,<a href="edm_shapes_external_ProvidedCHO_coverage_range-class">range-class</a>|
-|<a href="#dc_creator">dc:creator</a>||<a href="edm_shapes_external_ProvidedCHO_creator_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_creator_range-class">range-class</a>|
-|<a href="#dc_date">dc:date</a>||<a href="edm_shapes_external_ProvidedCHO_date_quality">quality</a>,<a href="edm_shapes_external_ProvidedCHO_date_range-class">range-class</a>,<a href="edm_shapes_external_ProvidedCHO_date_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_date_literal">literal</a>|
-|<a href="#dc_description">dc:description</a>||<a href="edm_shapes_external_ProvidedCHO_description_cardinality">cardinality</a>|
-|<a href="#dc_format">dc:format</a>||<a href="edm_shapes_external_ProvidedCHO_format_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_edmtype_correlation">correlation</a>|
-|<a href="#dc_identifier">dc:identifier</a>||<a href="edm_shapes_external_ProvidedCHO_identifier_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_identifier_type">type</a>|
-|<a href="#dc_language">dc:language</a>||<a href="edm_shapes_external_ProvidedCHO_language_values">values</a>,<a href="edm_shapes_external_ProvidedCHO_language_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_language_type">type</a>|
-|<a href="#dc_publisher">dc:publisher</a>||<a href="edm_shapes_external_ProvidedCHO_publisher_range-class">range-class</a>,<a href="edm_shapes_external_ProvidedCHO_publisher_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_subject_range-class">range-class</a>|
-|<a href="#dc_rights">dc:rights</a>||<a href="edm_shapes_external_ProvidedCHO_rights_cardinality">cardinality</a>,<a href="edm_shapes_external_ProvidedCHO_rights_subproperty">subproperty</a>|
-|<a href="#dc_subject">dc:subject</a>||<a href="edm_shapes_external_ProvidedCHO_subject_multiplevalue">multiplevalue</a>,<a href="edm_shapes_external_ProvidedCHO_subject_cardinality">cardinality</a>|
-|<a href="#dc_title">dc:title</a>||<a href="edm_shapes_external_ProvidedCHO_title_type">type</a>,<a href="edm_shapes_external_ProvidedCHO_title_cardinality">cardinality</a>|
-|<a href="#dc_type">dc:type</a>|<a href="edm_shapes_external_ProvidedCHO_dctype_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_dctype_range-class">range-class</a>|
-|<a href="#dct_alternative">dct:alternative</a>||<a href="edm_shapes_external_ProvidedCHO_alternative_type">type</a>,<a href="edm_shapes_external_ProvidedCHO_alternative_subproperty">subproperty</a>|
-|<a href="#dct_conformsTo">dct:conformsTo</a>|<a href="edm_shapes_external_ProvidedCHO_conformsTo_cardinality">0..?</a>||
-|<a href="#dct_created">dct:created</a>|<a href="edm_shapes_external_ProvidedCHO_created_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_created_correlation">correlation</a>|
-|<a href="#dct_extent">dct:extent</a>|<a href="edm_shapes_external_ProvidedCHO_extent_cardinality">0..?</a>||
-|<a href="#dct_hasFormat">dct:hasFormat</a>|<a href="edm_shapes_external_ProvidedCHO_hasFormat_cardinality">0..?</a>||
-|<a href="#dct_hasPart">dct:hasPart</a>|<a href="edm_shapes_external_ProvidedCHO_hasPart_cardinality">0..?</a>||
-|<a href="#dct_hasVersion">dct:hasVersion</a>|<a href="edm_shapes_external_ProvidedCHO_hasVersion_cardinality">0..?</a>||
-|<a href="#dct_isFormatOf">dct:isFormatOf</a>|<a href="edm_shapes_external_ProvidedCHO_isFormatOf_cardinality">0..?</a>||
-|<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="edm_shapes_external_ProvidedCHO_isPartOf_cardinality">0..?</a>||
-|<a href="#dct_isReferencedBy">dct:isReferencedBy</a>|<a href="edm_shapes_external_ProvidedCHO_isReferencedBy_cardinality">0..?</a>||
-|<a href="#dct_isReplacedBy">dct:isReplacedBy</a>|<a href="edm_shapes_external_ProvidedCHO_isReplacedBy_cardinality">0..?</a>||
-|<a href="#dct_isRequiredBy">dct:isRequiredBy</a>|<a href="edm_shapes_external_ProvidedCHO_isRequiredBy_cardinality">0..?</a>||
-|<a href="#dct_isVersionOf">dct:isVersionOf</a>|<a href="edm_shapes_external_ProvidedCHO_isVersionOf_cardinality">0..?</a>||
-|<a href="#dct_issued">dct:issued</a>|<a href="edm_shapes_external_ProvidedCHO_issued_cardinality">0..?</a>||
-|<a href="#dct_medium">dct:medium</a>|<a href="edm_shapes_external_ProvidedCHO_medium_cardinality">0..?</a>||
-|<a href="#dct_provenance">dct:provenance</a>|<a href="edm_shapes_external_ProvidedCHO_provenance_cardinality">0..?</a>||
-|<a href="#dct_references">dct:references</a>|<a href="edm_shapes_external_ProvidedCHO_references_cardinality">0..?</a>||
-|<a href="#dct_replaces">dct:replaces</a>|<a href="edm_shapes_external_ProvidedCHO_replaces_cardinality">0..?</a>||
-|<a href="#dct_requires">dct:requires</a>|<a href="edm_shapes_external_ProvidedCHO_requires_cardinality">0..?</a>||
-|<a href="#dct_spatial">dct:spatial</a>|<a href="edm_shapes_external_ProvidedCHO_spatial_cardinality">0..?</a>||
-|<a href="#dct_tableOfContents">dct:tableOfContents</a>|<a href="edm_shapes_external_ProvidedCHO_tableOfContents_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_tableOfContents_type">type</a>|
-|<a href="#dct_temporal">dct:temporal</a>|<a href="edm_shapes_external_ProvidedCHO_temporal_cardinality">0..?</a>||
-|<a href="#edm_aggregatedCHO">edm:aggregatedCHO</a>||<a href="edm_shapes_external_ProvidedCHO_aggregatedCHO_correlation">correlation</a>|
-|<a href="#edm_currentLocation">edm:currentLocation</a>|<a href="edm_shapes_external_ProvidedCHO_currentLocation_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_currentLocation_type">type</a>|
-|<a href="#edm_hasMet">edm:hasMet</a>|<a href="edm_shapes_external_ProvidedCHO_hasMet_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_hasMet_type">type</a>|
-|<a href="#edm_hasType">edm:hasType</a>|<a href="edm_shapes_external_ProvidedCHO_hasType_cardinality">0..?</a>||
-|<a href="#edm_incorporates">edm:incorporates</a>|<a href="edm_shapes_external_ProvidedCHO_incorporates_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_incorporates_type">type</a>|
-|<a href="#edm_isDerivativeOf">edm:isDerivativeOf</a>|<a href="edm_shapes_external_ProvidedCHO_isDerivativeOf_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_isDerivativeOf_type">type</a>|
-|<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="edm_shapes_external_ProvidedCHO_isNextInSequence_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_isNextInSequence_type">type</a>,<a href="edm_shapes_external_ProvidedCHO_isNextInSequence_range-class">range-class</a>,<a href="edm_shapes_external_ProvidedCHO_isNextInSequence_correlation">correlation</a>|
-|<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|<a href="edm_shapes_external_ProvidedCHO_isRelatedTo_cardinality">0..?</a>||
-|<a href="#edm_isRepresentationOf">edm:isRepresentationOf</a>|<a href="edm_shapes_external_ProvidedCHO_isRepresentationOf_cardinality">0..1</a>|<a href="edm_shapes_external_ProvidedCHO_isRepresentationOf_type">type</a>|
-|<a href="#edm_isSimilarTo">edm:isSimilarTo</a>|<a href="edm_shapes_external_ProvidedCHO_isSimilarTo_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_isSimilarTo_type">type</a>|
-|<a href="#edm_isSuccessorOf">edm:isSuccessorOf</a>|<a href="edm_shapes_external_ProvidedCHO_isSuccessorOf_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_isSuccessorOf_type">type</a>|
-|<a href="#edm_realizes">edm:realizes</a>|<a href="edm_shapes_external_ProvidedCHO_realizes_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_realizes_type">type</a>|
-|<a href="#edm_type">edm:type</a>|<a href="edm_shapes_external_ProvidedCHO_edmtype_cardinality">1..1</a>|<a href="edm_shapes_external_ProvidedCHO_edmtype_values">values</a>,<a href="edm_shapes_external_ProvidedCHO_edmtype_type">type</a>|
-|<a href="#edm_ugc">edm:ugc</a>|<a href="edm_shapes_external_ProvidedCHO_ugc_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_ugc_type">type</a>|
-|<a href="#edm_unstored">edm:unstored</a>|<a href="edm_shapes_external_ProvidedCHO_unstored_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_unstored_type">type</a>|
-|<a href="#owl_sameAs">owl:sameAs</a>|<a href="edm_shapes_external_ProvidedCHO_sameAs_cardinality">0..?</a>|<a href="edm_shapes_external_ProvidedCHO_sameAs_type">type</a>|
+|<a href="#dc_contributor">dc:contributor</a>|<a href="#edm_shapes_external_ProvidedCHO_contributor_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_contributor_range-class">range-class</a>|
+|<a href="#dc_coverage">dc:coverage</a>|<a href="#edm_shapes_external_ProvidedCHO_coverage_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_coverage_quality">quality</a>,<a href="#edm_shapes_external_ProvidedCHO_coverage_range-class">range-class</a>|
+|<a href="#dc_creator">dc:creator</a>|<a href="#edm_shapes_external_ProvidedCHO_creator_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_creator_range-class">range-class</a>|
+|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_ProvidedCHO_date_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_date_quality">quality</a>,<a href="#edm_shapes_external_ProvidedCHO_date_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_date_literal">literal</a>|
+|<a href="#dc_description">dc:description</a>|<a href="#edm_shapes_external_ProvidedCHO_description_cardinality">0..?</a>||
+|<a href="#dc_format">dc:format</a>||<a href="#edm_shapes_external_ProvidedCHO_format_cardinality">cardinality</a>,<a href="#edm_shapes_external_ProvidedCHO_edmtype_correlation">correlation</a>|
+|<a href="#dc_identifier">dc:identifier</a>|<a href="#edm_shapes_external_ProvidedCHO_identifier_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_identifier_type">type</a>|
+|<a href="#dc_language">dc:language</a>|<a href="#edm_shapes_external_ProvidedCHO_language_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_language_values">values</a>,<a href="#edm_shapes_external_ProvidedCHO_language_type">type</a>|
+|<a href="#dc_publisher">dc:publisher</a>|<a href="#edm_shapes_external_ProvidedCHO_publisher_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_publisher_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_subject_range-class">range-class</a>|
+|<a href="#dc_rights">dc:rights</a>|<a href="#edm_shapes_external_ProvidedCHO_rights_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_rights_subproperty">subproperty</a>|
+|<a href="#dc_subject">dc:subject</a>|<a href="#edm_shapes_external_ProvidedCHO_subject_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_subject_multiplevalue">multiplevalue</a>|
+|<a href="#dc_title">dc:title</a>|<a href="#edm_shapes_external_ProvidedCHO_title_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_title_type">type</a>|
+|<a href="#dc_type">dc:type</a>|<a href="#edm_shapes_external_ProvidedCHO_dctype_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dctype_range-class">range-class</a>|
+|<a href="#dct_alternative">dct:alternative</a>|<a href="#edm_shapes_external_ProvidedCHO_alternative_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_alternative_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_alternative_subproperty">subproperty</a>|
+|<a href="#dct_conformsTo">dct:conformsTo</a>|<a href="#edm_shapes_external_ProvidedCHO_conformsTo_cardinality">0..?</a>||
+|<a href="#dct_created">dct:created</a>|<a href="#edm_shapes_external_ProvidedCHO_created_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_created_correlation">correlation</a>|
+|<a href="#dct_extent">dct:extent</a>|<a href="#edm_shapes_external_ProvidedCHO_extent_cardinality">0..?</a>||
+|<a href="#dct_hasFormat">dct:hasFormat</a>|<a href="#edm_shapes_external_ProvidedCHO_hasFormat_cardinality">0..?</a>||
+|<a href="#dct_hasPart">dct:hasPart</a>|<a href="#edm_shapes_external_ProvidedCHO_hasPart_cardinality">0..?</a>||
+|<a href="#dct_hasVersion">dct:hasVersion</a>|<a href="#edm_shapes_external_ProvidedCHO_hasVersion_cardinality">0..?</a>||
+|<a href="#dct_isFormatOf">dct:isFormatOf</a>|<a href="#edm_shapes_external_ProvidedCHO_isFormatOf_cardinality">0..?</a>||
+|<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_ProvidedCHO_isPartOf_cardinality">0..?</a>||
+|<a href="#dct_isReferencedBy">dct:isReferencedBy</a>|<a href="#edm_shapes_external_ProvidedCHO_isReferencedBy_cardinality">0..?</a>||
+|<a href="#dct_isReplacedBy">dct:isReplacedBy</a>|<a href="#edm_shapes_external_ProvidedCHO_isReplacedBy_cardinality">0..?</a>||
+|<a href="#dct_isRequiredBy">dct:isRequiredBy</a>|<a href="#edm_shapes_external_ProvidedCHO_isRequiredBy_cardinality">0..?</a>||
+|<a href="#dct_isVersionOf">dct:isVersionOf</a>|<a href="#edm_shapes_external_ProvidedCHO_isVersionOf_cardinality">0..?</a>||
+|<a href="#dct_issued">dct:issued</a>|<a href="#edm_shapes_external_ProvidedCHO_issued_cardinality">0..?</a>||
+|<a href="#dct_medium">dct:medium</a>|<a href="#edm_shapes_external_ProvidedCHO_medium_cardinality">0..?</a>||
+|<a href="#dct_provenance">dct:provenance</a>|<a href="#edm_shapes_external_ProvidedCHO_provenance_cardinality">0..?</a>||
+|<a href="#dct_references">dct:references</a>|<a href="#edm_shapes_external_ProvidedCHO_references_cardinality">0..?</a>||
+|<a href="#dct_replaces">dct:replaces</a>|<a href="#edm_shapes_external_ProvidedCHO_replaces_cardinality">0..?</a>||
+|<a href="#dct_requires">dct:requires</a>|<a href="#edm_shapes_external_ProvidedCHO_requires_cardinality">0..?</a>||
+|<a href="#dct_spatial">dct:spatial</a>|<a href="#edm_shapes_external_ProvidedCHO_spatial_cardinality">0..?</a>||
+|<a href="#dct_tableOfContents">dct:tableOfContents</a>|<a href="#edm_shapes_external_ProvidedCHO_tableOfContents_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_tableOfContents_type">type</a>|
+|<a href="#dct_temporal">dct:temporal</a>|<a href="#edm_shapes_external_ProvidedCHO_temporal_cardinality">0..?</a>||
+|<a href="#edm_aggregatedCHO">edm:aggregatedCHO</a>||<a href="#edm_shapes_external_ProvidedCHO_aggregatedCHO_correlation">correlation</a>|
+|<a href="#edm_currentLocation">edm:currentLocation</a>|<a href="#edm_shapes_external_ProvidedCHO_currentLocation_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_currentLocation_type">type</a>|
+|<a href="#edm_hasMet">edm:hasMet</a>|<a href="#edm_shapes_external_ProvidedCHO_hasMet_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_hasMet_type">type</a>|
+|<a href="#edm_hasType">edm:hasType</a>|<a href="#edm_shapes_external_ProvidedCHO_hasType_cardinality">0..?</a>||
+|<a href="#edm_incorporates">edm:incorporates</a>|<a href="#edm_shapes_external_ProvidedCHO_incorporates_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_incorporates_type">type</a>|
+|<a href="#edm_isDerivativeOf">edm:isDerivativeOf</a>|<a href="#edm_shapes_external_ProvidedCHO_isDerivativeOf_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_isDerivativeOf_type">type</a>|
+|<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_ProvidedCHO_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_isNextInSequence_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_isNextInSequence_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_isNextInSequence_correlation">correlation</a>|
+|<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|<a href="#edm_shapes_external_ProvidedCHO_isRelatedTo_cardinality">0..?</a>||
+|<a href="#edm_isRepresentationOf">edm:isRepresentationOf</a>|<a href="#edm_shapes_external_ProvidedCHO_isRepresentationOf_cardinality">0..1</a>|<a href="#edm_shapes_external_ProvidedCHO_isRepresentationOf_type">type</a>|
+|<a href="#edm_isSimilarTo">edm:isSimilarTo</a>|<a href="#edm_shapes_external_ProvidedCHO_isSimilarTo_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_isSimilarTo_type">type</a>|
+|<a href="#edm_isSuccessorOf">edm:isSuccessorOf</a>|<a href="#edm_shapes_external_ProvidedCHO_isSuccessorOf_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_isSuccessorOf_type">type</a>|
+|<a href="#edm_realizes">edm:realizes</a>|<a href="#edm_shapes_external_ProvidedCHO_realizes_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_realizes_type">type</a>|
+|<a href="#edm_type">edm:type</a>|<a href="#edm_shapes_external_ProvidedCHO_edmtype_cardinality">1..1</a>|<a href="#edm_shapes_external_ProvidedCHO_edmtype_values">values</a>,<a href="#edm_shapes_external_ProvidedCHO_edmtype_type">type</a>|
+|<a href="#edm_ugc">edm:ugc</a>|<a href="#edm_shapes_external_ProvidedCHO_ugc_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_ugc_type">type</a>|
+|<a href="#edm_unstored">edm:unstored</a>|<a href="#edm_shapes_external_ProvidedCHO_unstored_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_unstored_type">type</a>|
+|<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_ProvidedCHO_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_sameAs_type">type</a>|
 #### Property <a id="dc_contributor" href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a>
 ------
 ###### <a id="edm_shapes_external_ProvidedCHO_contributor_cardinality" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#cardinality</a>
@@ -59,12 +59,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <contributor#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:contributor ;
   sh:minCount 0 ;
 .
@@ -103,12 +104,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <coverage#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:coverage ;
   sh:minCount 0 ;
 .
@@ -169,12 +171,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <creator#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:creator ;
   sh:minCount 0 ;
 .
@@ -261,12 +264,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <date#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:date ;
   sh:minCount 0 ;
 .
@@ -306,12 +310,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <description#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:description ;
   sh:minCount 0 ;
 .
@@ -368,12 +373,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <identifier#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:identifier ;
   sh:minCount 0 ;
 .
@@ -423,12 +429,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <language#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:language ;
   sh:minCount 0 ;
 .
@@ -482,13 +489,14 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <publisher#cardinality>
   a sh:PropertyConstraint ;
   sh:predicate dc:publisher ;
+  dc:type esc:cardinality ;
   sh:minCount 0 ;
 .
 ```
@@ -526,12 +534,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <rights#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:rights ;
   sh:minCount 0 ;
 .
@@ -593,12 +602,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <subject#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:subject ;
   sh:minCount 0 ;
 .
@@ -626,12 +636,13 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
 <title#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
   sh:predicate dc:title ;
   sh:minCount 0 ;
 .
@@ -685,6 +696,22 @@
 ```
 #### Property <a id="dct_alternative" href="http://purl.org/dc/terms/alternative">http://purl.org/dc/terms/alternative</a>
 ------
+###### <a id="edm_shapes_external_ProvidedCHO_alternative_cardinality" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<alternative#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:predicate dct:alternative ;
+  sh:minCount 0 ;
+.
+```
 ###### <a id="edm_shapes_external_ProvidedCHO_alternative_type" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#type">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/alternative#type</a>
 ------
 <table>
