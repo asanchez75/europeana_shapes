@@ -8,7 +8,7 @@
 |dc:date|1..1|quality, range-class, cardinality, literal |
 
 ### Property "dc:contributor"
-======
+------
 
 ###### http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/contributor#range-class
 <table>
