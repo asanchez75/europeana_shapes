@@ -59,7 +59,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -78,7 +78,7 @@
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -105,7 +105,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -123,7 +123,7 @@
 <tr><th align="right">description</th><td>If two dc:coverage are present, suggest the use of 
                     dcterms:spatial or dcterms:temporal.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -144,7 +144,7 @@
 <tr><th align="right">description</th><td>If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -173,7 +173,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -192,7 +192,7 @@
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -220,7 +220,7 @@
 <tr><th align="right">description</th><td>If two dc:date are present, suggest the use of dcterms 
                     created or dcterms:issued.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -242,7 +242,7 @@
                     the data and the data itself should be formatted according 
                     to the TimeSpan specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -267,7 +267,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -286,7 +286,7 @@
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -314,7 +314,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -333,7 +333,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -351,7 +351,7 @@
 <tr><th align="right">description</th><td>If the value of edm:type is '3D' then the syntax of 
                     dc:format must be '3D-PDF'</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -380,7 +380,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -397,7 +397,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -416,7 +416,7 @@
                     code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
                     otherwise accept three-letter code.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/54">R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -437,7 +437,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -454,7 +454,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -473,7 +473,7 @@
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -498,7 +498,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -517,7 +517,7 @@
                     data and the data itself should be formatted according to 
                     the Concept specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -544,7 +544,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -563,7 +563,7 @@
                     as rdf:resource or literal, if yes the field is 
                     redundant</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#subproperty">http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -587,7 +587,7 @@
 <tr><th align="right">description</th><td>If more than one term is in the field, a new dc:subject 
                     should be created.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -613,7 +613,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -632,7 +632,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -649,7 +649,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -667,7 +667,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -685,7 +685,7 @@
 <tr><th align="right">description</th><td>If the value is a URI, check if a skos:Concept class is 
                     created.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#range-class</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -715,7 +715,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -732,7 +732,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -749,7 +749,7 @@
 <tr><th align="right">description</th><td>If dcterms:alternative has the same title than dc:title, 
                     then dcterms:alternative is redundant.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#subproperty">http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -772,7 +772,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -791,7 +791,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -808,7 +808,7 @@
 <table>
 <tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -832,7 +832,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -851,7 +851,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -870,7 +870,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -889,7 +889,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -908,7 +908,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -927,7 +927,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -946,7 +946,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -965,7 +965,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -984,7 +984,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1003,7 +1003,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1022,7 +1022,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1041,7 +1041,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1060,7 +1060,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1079,7 +1079,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1098,7 +1098,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1117,7 +1117,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1136,7 +1136,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1155,7 +1155,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1171,7 +1171,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1190,7 +1190,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1210,7 +1210,7 @@
 <tr><th align="right">description</th><td>Check that the URI of the ProvidedCHO and the URI described 
                     in edm:aggregatedCHO are the same.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1233,7 +1233,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1249,7 +1249,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1268,7 +1268,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1285,7 +1285,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1303,7 +1303,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1322,7 +1322,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1338,7 +1338,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1357,7 +1357,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1374,7 +1374,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1392,7 +1392,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1409,7 +1409,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1425,7 +1425,7 @@
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:ProvidedCHO</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#range-class</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1444,7 +1444,7 @@
 <tr><th align="right">description</th><td>The ProvidedCHO referred to by this property must share 
                     the same parent</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null">?</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#correlation</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1464,7 +1464,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1483,7 +1483,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1499,7 +1499,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1519,7 +1519,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1535,7 +1535,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1554,7 +1554,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1571,7 +1571,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1589,7 +1589,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1606,7 +1606,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1625,7 +1625,7 @@
 <tr><th align="right">description</th><td>The value of edm:type must match one of: 
                     TEXT, VIDEO, SOUND, IMAGE, 3D</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/37">R-30-DEFINE-VALUE-LISTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#values</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#values">http://www.europeana.eu/schemas/edm/shapes/categories#values</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1646,7 +1646,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1664,7 +1664,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1682,7 +1682,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1699,7 +1699,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1717,7 +1717,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1733,7 +1733,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1752,7 +1752,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -1769,7 +1769,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td>http://www.europeana.eu/schemas/edm/shapes/categories#type</td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
