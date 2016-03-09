@@ -123,7 +123,7 @@
 <table>
 <tr><th align="right">description</th><td>If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -442,7 +442,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -476,7 +476,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -493,7 +493,7 @@
 <tr><th align="right">description</th><td>Check that the value for language matches ISO 639 two-letter
                     code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
                     otherwise accept three-letter code.</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/54">R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/54">R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -679,7 +679,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -801,7 +801,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1247,7 +1247,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1325,7 +1325,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1388,7 +1388,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1442,7 +1442,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1477,7 +1477,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1531,7 +1531,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:ProvidedCHO</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1549,7 +1549,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1604,7 +1604,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1639,7 +1639,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1674,7 +1674,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1709,7 +1709,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1773,7 +1773,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1830,7 +1830,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1865,7 +1865,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
@@ -1900,7 +1900,7 @@
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
