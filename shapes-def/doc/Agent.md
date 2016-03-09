@@ -1,3 +1,3 @@
 # Class edm:Agent
-| Property | Cardinality | Constraints |
-| --- | --- | --- |
+| Property | Cardinality | Value Type | Constraints |
+| --- | --- | --- | --- |
