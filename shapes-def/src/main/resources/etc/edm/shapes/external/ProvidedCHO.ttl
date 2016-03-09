@@ -198,6 +198,7 @@
 <contributor#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:contributor ;
   sh:minCount 0 ;
 .
@@ -224,6 +225,7 @@
 <coverage#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:coverage ;
   sh:minCount 0 ;
 .
@@ -288,6 +290,7 @@
 <creator#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:creator ;
   sh:minCount 0 ;
 .
@@ -314,6 +317,7 @@
 <date#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:date ;
   sh:minCount 0 ;
 .
@@ -388,6 +392,7 @@
 <description#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:description ;
   sh:minCount 0 ;
 .
@@ -397,6 +402,8 @@
 
 <format#cardinality>
   a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:format ;
   sh:minCount 0 ;
 .
@@ -413,6 +420,7 @@
 <identifier#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:identifier ;
   sh:minCount 0 ;
 .
@@ -429,6 +437,7 @@
 <language#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:language ;
   sh:minCount 0 ;
 .
@@ -450,8 +459,9 @@
 
 <publisher#cardinality>
   a sh:PropertyConstraint ;
-  sh:predicate dc:publisher ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  sh:predicate dc:publisher ;
   sh:minCount 0 ;
 .
 
@@ -477,6 +487,7 @@
 <rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:rights ;
   sh:minCount 0 ;
 .
@@ -499,6 +510,7 @@
 <subject#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:subject ;
   sh:minCount 0 ;
 .
@@ -542,6 +554,7 @@
 <title#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:title ;
   sh:nodeKind sh:Literal ;
 .
@@ -559,6 +572,7 @@
 <dctype#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:type ;
   sh:minCount 0 ;
 .
@@ -588,6 +602,7 @@
 <alternative#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:alternative ;
   sh:minCount 0 ;
 .
@@ -617,6 +632,7 @@
 <conformsTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:conformsTo ;
   sh:minCount 0 ;
 .
@@ -627,6 +643,7 @@
 <created#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:created ;
   sh:minCount 0 ;
 .
@@ -668,6 +685,7 @@
 <extent#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:extent ;
   sh:minCount 0 ;
 .
@@ -678,6 +696,7 @@
 <hasFormat#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:hasFormat ;
   sh:minCount 0 ;
 .
@@ -688,6 +707,7 @@
 <hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:hasPart ;
   sh:minCount 0 ;
 .
@@ -698,6 +718,7 @@
 <hasVersion#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:hasVersion ;
   sh:minCount 0 ;
 .
@@ -708,6 +729,7 @@
 <isFormatOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:isFormatOf ;
   sh:minCount 0 ;
 .
@@ -718,6 +740,7 @@
 <isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:isPartOf ;
   sh:minCount 0 ;
 .
@@ -728,6 +751,7 @@
 <isReferencedBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:isReferencedBy ;
   sh:minCount 0 ;
 .
@@ -738,6 +762,7 @@
 <isReplacedBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:isReplacedBy ;
   sh:minCount 0 ;
 .
@@ -748,6 +773,7 @@
 <isRequiredBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:isRequiredBy ;
   sh:minCount 0 ;
 .
@@ -758,6 +784,7 @@
 <issued#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:issued ;
   sh:minCount 0 ;
 .
@@ -768,6 +795,7 @@
 <isVersionOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:isVersionOf ;
   sh:minCount 0 ;
 .
@@ -778,6 +806,7 @@
 <medium#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:medium ;
   sh:minCount 0 ;
 .
@@ -788,6 +817,7 @@
 <provenance#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:provenance ;
   sh:minCount 0 ;
 .
@@ -798,6 +828,7 @@
 <references#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:references ;
   sh:minCount 0 ;
 .
@@ -808,6 +839,7 @@
 <replaces#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:replaces ;
   sh:minCount 0 ;
 .
@@ -818,6 +850,7 @@
 <requires#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:requires ;
   sh:minCount 0 ;
 .
@@ -828,6 +861,7 @@
 <spatial#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:spatial ;
   sh:minCount 0 ;
 .
@@ -845,6 +879,7 @@
 <tableOfContents#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:tableOfContents ;
   sh:minCount 0 ;
 .
@@ -855,6 +890,7 @@
 <temporal#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:temporal ;
   sh:minCount 0 ;
 .
@@ -872,6 +908,7 @@
 <currentLocation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:currentLocation ;
   sh:minCount 0 ;
 .
@@ -889,6 +926,7 @@
 <hasMet#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:hasMet ;
   sh:minCount 0 ;
 .
@@ -918,6 +956,7 @@
 <hasType#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:hasType ;
   sh:minCount 0 ;
 .
@@ -935,6 +974,7 @@
 <incorporates#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:incorporates ;
   sh:minCount 0 ;
 .
@@ -952,6 +992,7 @@
 <isDerivativeOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isDerivativeOf ;
   sh:minCount 0 ;
 .
@@ -969,6 +1010,7 @@
 <isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isNextInSequence ;
   sh:minCount 0 ;
 .
@@ -1000,6 +1042,7 @@
 <isRelatedTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isRelatedTo ;
   sh:minCount 0 ;
 .
@@ -1017,6 +1060,7 @@
 <isRepresentationOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isRepresentationOf ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -1035,6 +1079,7 @@
 <isSimilarTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isSimilarTo ;
   sh:minCount 0 ;
 .
@@ -1052,6 +1097,7 @@
 <isSuccessorOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isSuccessorOf ;
   sh:minCount 0 ;
 .
@@ -1069,6 +1115,7 @@
 <realizes#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:realizes ;
   sh:minCount 0 ;
 .
@@ -1086,6 +1133,7 @@
 <edmtype#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:type ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -1134,6 +1182,7 @@
 <unstored#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:unstored ;
   sh:minCount 0 ;
 .
@@ -1151,6 +1200,7 @@
 <ugc#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:ugc ;
   sh:minCount 0 ;
 .
@@ -1168,6 +1218,7 @@
 <sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate owl:sameAs ;
   sh:minCount 0 ;
 .
