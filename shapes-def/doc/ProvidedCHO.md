@@ -2,9 +2,9 @@
 | Property | Cardinality | Constraints |
 | --- | --- | --- |
 |<a href="#dc_contributor">dc:contributor</a>|<a href="#edm_shapes_external_ProvidedCHO_contributor_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_contributor_range-class">range-class</a>|
-|<a href="#dc_coverage">dc:coverage</a>|<a href="#edm_shapes_external_ProvidedCHO_coverage_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_coverage_quality">quality</a>,<a href="#edm_shapes_external_ProvidedCHO_coverage_range-class">range-class</a>|
+|<a href="#dc_coverage">dc:coverage</a>|<a href="#edm_shapes_external_ProvidedCHO_coverage_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_coverage_subproperty_1">subproperty_1</a>,<a href="#edm_shapes_external_ProvidedCHO_coverage_range-class">range-class</a>|
 |<a href="#dc_creator">dc:creator</a>|<a href="#edm_shapes_external_ProvidedCHO_creator_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_creator_range-class">range-class</a>|
-|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_ProvidedCHO_date_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_date_quality">quality</a>,<a href="#edm_shapes_external_ProvidedCHO_date_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_date_literal">literal</a>|
+|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_ProvidedCHO_date_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_date_subproperty_1">subproperty_1</a>,<a href="#edm_shapes_external_ProvidedCHO_date_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_date_literal">literal</a>|
 |<a href="#dc_description">dc:description</a>|<a href="#edm_shapes_external_ProvidedCHO_description_cardinality">0..?</a>||
 |<a href="#dc_format">dc:format</a>|<a href="#edm_shapes_external_ProvidedCHO_format_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edmtype_correlation">correlation</a>|
 |<a href="#dc_identifier">dc:identifier</a>|<a href="#edm_shapes_external_ProvidedCHO_identifier_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_identifier_type">type</a>|
@@ -13,7 +13,7 @@
 |<a href="#dc_rights">dc:rights</a>|<a href="#edm_shapes_external_ProvidedCHO_rights_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_rights_subproperty">subproperty</a>|
 |<a href="#dc_subject">dc:subject</a>|<a href="#edm_shapes_external_ProvidedCHO_subject_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_subject_multiplevalue">multiplevalue</a>|
 |<a href="#dc_title">dc:title</a>|<a href="#edm_shapes_external_ProvidedCHO_title_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_title_type">type</a>|
-|<a href="#dc_type">dc:type</a>|<a href="#edm_shapes_external_ProvidedCHO_dctype_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dctype_range-class">range-class</a>|
+|<a href="#dc_type">dc:type</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_type_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_type_range-class">range-class</a>|
 |<a href="#dct_alternative">dct:alternative</a>|<a href="#edm_shapes_external_ProvidedCHO_alternative_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_alternative_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_alternative_subproperty">subproperty</a>|
 |<a href="#dct_conformsTo">dct:conformsTo</a>|<a href="#edm_shapes_external_ProvidedCHO_conformsTo_cardinality">0..?</a>||
 |<a href="#dct_created">dct:created</a>|<a href="#edm_shapes_external_ProvidedCHO_created_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_created_correlation">correlation</a>|
@@ -78,7 +78,7 @@
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -87,6 +87,7 @@
   sh:description """the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
   sh:predicate dc:contributor ;
   sh:filterShape [
@@ -117,20 +118,21 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_coverage_quality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#quality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#quality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_coverage_subproperty_1" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#subproperty_1">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/coverage#subproperty_1</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If two dc:coverage are present, suggest the use of 
                     dcterms:spatial or dcterms:temporal.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#subproperty">http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<coverage#quality>
+<coverage#subproperty_1>
   a sh:PropertyConstraint ;
   sh:description """If two dc:coverage are present, suggest the use of 
                     dcterms:spatial or dcterms:temporal.""" ;
+  dc:type esc:subproperty ;
   dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:predicate dc:coverage ;
   sh:maxCount 1 ;
@@ -144,7 +146,7 @@
 <tr><th align="right">description</th><td>If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -152,6 +154,7 @@
   a sh:PropertyConstraint ;
   sh:description """If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.""" ;
+  dc:type esc:range-class ;
   sh:predicate dc:coverage ;
   sh:filterShape [
     sh:property [
@@ -192,7 +195,7 @@
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -201,6 +204,7 @@
   sh:description """the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dc:creator ;
   sh:filterShape [ #restrict only to nodes
@@ -214,20 +218,21 @@
 ```
 #### Property <a id="dc_date" target="_blank" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_date_quality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#quality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#quality</a>
+###### <a id="edm_shapes_external_ProvidedCHO_date_subproperty_1" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#subproperty_1">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/date#subproperty_1</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If two dc:date are present, suggest the use of dcterms 
                     created or dcterms:issued.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#subproperty">http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<date#quality>
+<date#subproperty_1>
   a sh:PropertyConstraint ;
   sh:description """If two dc:date are present, suggest the use of dcterms 
                     created or dcterms:issued.""" ;
+  dc:type esc:subproperty ;
   dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:predicate dc:date ;
   sh:maxCount 1 ;
@@ -242,7 +247,7 @@
                     the data and the data itself should be formatted according 
                     to the TimeSpan specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -251,6 +256,7 @@
   sh:description """the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
                     to the TimeSpan specifications.)""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
   sh:predicate dc:date ;
   sh:filterShape [
@@ -473,7 +479,7 @@
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -482,6 +488,7 @@
   sh:description """The reference should be one to an Agent( the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dc:publisher ;
   sh:filterShape [
@@ -517,7 +524,7 @@
                     data and the data itself should be formatted according to 
                     the Concept specifications.)</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -526,6 +533,7 @@
   sh:description """The reference should be one to a Concept( the access to the
                     data and the data itself should be formatted according to 
                     the Concept specifications.)""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
   sh:predicate dc:publisher ;
   sh:filterShape [ #restrict only to nodes
@@ -662,24 +670,7 @@
 ```
 #### Property <a id="dc_type" target="_blank" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_dctype_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#cardinality</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<dctype#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:type ;
-  sh:minCount 0 ;
-.
-```
-###### <a id="edm_shapes_external_ProvidedCHO_dctype_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dctype#range-class</a>
+###### <a id="edm_shapes_external_ProvidedCHO_dc_type_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_type#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_type#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>If the value is a URI, check if a skos:Concept class is 
@@ -689,14 +680,14 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dctype#range-class>
+<dc_type#range-class>
   a sh:PropertyConstraint ;
-  dc:type esc:range-class ;
   sh:description """If the value is a URI, check if a skos:Concept class is 
                     created.""" ;
 #  sh:description """The reference should be one to a Concept( the access to the
 #                    data and the data itself should be formatted according to 
 #                    the Concept specifications.)""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dc:type ;
   sh:filterShape [
@@ -706,6 +697,23 @@
       ]
   ] ;
   sh:valueShape Concept: ;
+.
+```
+###### <a id="edm_shapes_external_ProvidedCHO_dc_type_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_type#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_type#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<dc_type#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  sh:predicate dc:type ;
+  sh:minCount 0 ;
 .
 ```
 #### Property <a id="dct_alternative" target="_blank" href="http://purl.org/dc/terms/alternative">http://purl.org/dc/terms/alternative</a>
@@ -1431,8 +1439,8 @@
 ```
 <isNextInSequence#range-class>
   a sh:PropertyConstraint ;
-  dc:type esc:range-class ;
   sh:description """The reference should be a valid edm:ProvidedCHO""" ;
+  dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;  
   sh:predicate edm:isNextInSequence ;
