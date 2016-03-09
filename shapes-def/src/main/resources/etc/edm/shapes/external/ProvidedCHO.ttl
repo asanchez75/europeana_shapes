@@ -149,7 +149,7 @@
   sh:description """Check that the URI of the ProvidedCHO and the URI described 
                     in edm:aggregatedCHO are the same.""" ;
   dc:type esc:correlation ;
-  dc:subject "R-225-Validation-of-class-association" ;
+  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:aggregatedCHO ;
   sh:valueClass ore:Aggregation ;
   sh:minCount 1 ;
