@@ -819,7 +819,7 @@
 <tableOfContents#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
-  sh:predicate edm:tableOfContents ;
+  sh:predicate dct:tableOfContents ;
   sh:nodeKind sh:Literal ;
 .
 
