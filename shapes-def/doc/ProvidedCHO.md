@@ -279,7 +279,7 @@
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -443,7 +443,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -477,7 +477,7 @@
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="null"></a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -494,7 +494,7 @@
                     code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
                     otherwise accept three-letter code.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/54">R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
@@ -624,7 +624,7 @@
 <tr><th align="right">description</th><td>If more than one term is in the field, a new dc:subject 
                     should be created.</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href=""></a></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 *Shape definition in Turtle syntax:*
 ```
