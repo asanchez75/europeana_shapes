@@ -2,21 +2,21 @@
 | Property | Cardinality | Constraints |
 | --- | --- | --- |
 |<a href="#dc_contributor">dc:contributor</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_range-class">range-class</a>|
-|<a href="#dc_coverage">dc:coverage</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_subproperty_1">subproperty_1</a>|
+|<a href="#dc_coverage">dc:coverage</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_subproperty_1">subproperty_1</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_subproperty_2">subproperty_2</a>|
 |<a href="#dc_creator">dc:creator</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_creator_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_creator_range-class">range-class</a>|
-|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_date_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_date_literal">literal</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_date_subproperty_1">subproperty_1</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_date_range-class">range-class</a>|
+|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_date_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_date_literal">literal</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_date_subproperty_1">subproperty_1</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_date_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_date_subproperty_2">subproperty_2</a>|
 |<a href="#dc_description">dc:description</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_description_cardinality">0..?</a>||
-|<a href="#dc_format">dc:format</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_format_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_type_correlation">correlation</a>|
+|<a href="#dc_format">dc:format</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_format_cardinality">0..?</a>||
 |<a href="#dc_identifier">dc:identifier</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_identifier_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_identifier_type">type</a>|
 |<a href="#dc_language">dc:language</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_language_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_language_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_language_values">values</a>|
-|<a href="#dc_publisher">dc:publisher</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_publisher_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_subject_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_publisher_range-class">range-class</a>|
+|<a href="#dc_publisher">dc:publisher</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_publisher_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_publisher_range-class">range-class</a>|
 |<a href="#dc_rights">dc:rights</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_rights_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_rights_subproperty">subproperty</a>|
-|<a href="#dc_subject">dc:subject</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_subject_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_subject_multiplevalue">multiplevalue</a>|
+|<a href="#dc_subject">dc:subject</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_subject_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_subject_range-class">range-class</a>,<a href="#edm_shapes_external_ProvidedCHO_dc_subject_multiplevalue">multiplevalue</a>|
 |<a href="#dc_title">dc:title</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_title_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_title_type">type</a>|
 |<a href="#dc_type">dc:type</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_type_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_type_range-class">range-class</a>|
 |<a href="#dct_alternative">dct:alternative</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_alternative_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_alternative_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_dct_alternative_subproperty">subproperty</a>|
 |<a href="#dct_conformsTo">dct:conformsTo</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_conformsTo_cardinality">0..?</a>||
-|<a href="#dct_created">dct:created</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_created_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_created_correlation">correlation</a>|
+|<a href="#dct_created">dct:created</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_created_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_created_range-values">range-values</a>,<a href="#edm_shapes_external_ProvidedCHO_dct_created_correlation">correlation</a>|
 |<a href="#dct_extent">dct:extent</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_extent_cardinality">0..?</a>||
 |<a href="#dct_hasFormat">dct:hasFormat</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_hasFormat_cardinality">0..?</a>||
 |<a href="#dct_hasPart">dct:hasPart</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_hasPart_cardinality">0..?</a>||
@@ -38,7 +38,7 @@
 |<a href="#dct_temporal">dct:temporal</a>|<a href="#edm_shapes_external_ProvidedCHO_dct_temporal_cardinality">0..?</a>||
 |<a href="#edm_aggregatedCHO">edm:aggregatedCHO</a>||<a href="#edm_shapes_external_ProvidedCHO_edm_aggregatedCHO_correlation">correlation</a>|
 |<a href="#edm_currentLocation">edm:currentLocation</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_currentLocation_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_currentLocation_type">type</a>|
-|<a href="#edm_hasMet">edm:hasMet</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_hasMet_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_hasMet_type">type</a>|
+|<a href="#edm_hasMet">edm:hasMet</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_hasMet_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_hasMet_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_edm_hasMet_range-class">range-class</a>|
 |<a href="#edm_hasType">edm:hasType</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_hasType_cardinality">0..?</a>||
 |<a href="#edm_incorporates">edm:incorporates</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_incorporates_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_incorporates_type">type</a>|
 |<a href="#edm_isDerivativeOf">edm:isDerivativeOf</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_isDerivativeOf_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_isDerivativeOf_type">type</a>|
@@ -48,7 +48,7 @@
 |<a href="#edm_isSimilarTo">edm:isSimilarTo</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_isSimilarTo_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_isSimilarTo_type">type</a>|
 |<a href="#edm_isSuccessorOf">edm:isSuccessorOf</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_isSuccessorOf_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_isSuccessorOf_type">type</a>|
 |<a href="#edm_realizes">edm:realizes</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_realizes_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_realizes_type">type</a>|
-|<a href="#edm_type">edm:type</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_type_cardinality">1..1</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_type_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_edm_type_values">values</a>|
+|<a href="#edm_type">edm:type</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_type_cardinality">1..1</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_type_type">type</a>,<a href="#edm_shapes_external_ProvidedCHO_edm_type_correlation">correlation</a>,<a href="#edm_shapes_external_ProvidedCHO_edm_type_values">values</a>|
 |<a href="#edm_ugc">edm:ugc</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_ugc_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_ugc_type">type</a>|
 |<a href="#edm_unstored">edm:unstored</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_unstored_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_unstored_type">type</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_ProvidedCHO_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_owl_sameAs_type">type</a>|
@@ -167,6 +167,43 @@
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:coverage ;
   sh:minCount 0 ;
+.
+```
+###### <a id="edm_shapes_external_ProvidedCHO_dc_coverage_subproperty_2" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_coverage#subproperty_2">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_coverage#subproperty_2</a>
+------
+<table>
+<tr><th align="right">description</th><td>If dc:coverage and dcterms:spatial or dcterms:temporal are 
+                    present, check that the value in dc:coverage is not 
+                    redundant with dcterms:spatial or dcterms:temporal for 
+                    ingestion</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#subproperty">http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<dc_coverage#subproperty_2>
+  a sh:Constraint ;
+  sh:description """If dc:coverage and dcterms:spatial or dcterms:temporal are 
+                    present, check that the value in dc:coverage is not 
+                    redundant with dcterms:spatial or dcterms:temporal for 
+                    ingestion""" ;
+  dc:type esc:subproperty ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:and (
+    [
+      sh:property [
+        sh:predicate dc:coverage ;
+        sh:notEquals dct:spatial ;
+      ]
+    ]
+    [
+      sh:property [
+        sh:predicate dc:coverage ;
+        sh:notEquals dct:temporal ;
+      ]
+    ]
+  )
 .
 ```
 #### Property <a id="dc_creator" target="_blank" href="http://purl.org/dc/elements/1.1/creator">http://purl.org/dc/elements/1.1/creator</a>
@@ -313,6 +350,37 @@
   sh:valueShape TimeSpan: ;
 .
 ```
+###### <a id="edm_shapes_external_ProvidedCHO_dc_date_subproperty_2" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#subproperty_2">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#subproperty_2</a>
+------
+<table>
+<tr><th align="right">description</th><td>If dc:date and dcterms:created or dcterms:issued are present
+                    , check that the value in dc:date is not redundant with 
+                    dcterms:created or dctersm:issued for ingestion</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#subproperty">http://www.europeana.eu/schemas/edm/shapes/categories#subproperty</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<dc_date#subproperty_2>
+  a sh:Constraint ;
+  sh:description """If dc:date and dcterms:created or dcterms:issued are present
+                    , check that the value in dc:date is not redundant with 
+                    dcterms:created or dctersm:issued for ingestion""" ;
+  dc:type esc:subproperty ;
+  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:and (
+    [
+      sh:predicate  dc:date ;
+      sh:notEquals dct:created ;
+    ]
+    [
+      sh:predicate dc:date ;
+      sh:notEquals dct:issued ;
+    ]
+  )
+.
+```
 #### Property <a id="dc_description" target="_blank" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
 ------
 ###### <a id="edm_shapes_external_ProvidedCHO_dc_description_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_description#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_description#cardinality</a>
@@ -334,34 +402,6 @@
 ```
 #### Property <a id="dc_format" target="_blank" href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
 ------
-###### <a id="edm_shapes_external_ProvidedCHO_edm_type_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#correlation</a>
-------
-<table>
-<tr><th align="right">description</th><td>If the value of edm:type is '3D' then the syntax of 
-                    dc:format must be '3D-PDF'</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<edm_type#correlation>
-  a sh:PropertyConstraint ;
-# sh:description """Check that if the value of edm:type  is 3D the syntax of 
-#                   dc:format is 3D-PDF """ ;
-  sh:description """If the value of edm:type is '3D' then the syntax of 
-                    dc:format must be '3D-PDF'""";
-  dc:type esc:correlation ;
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate edm:type ;
-      sh:hasValue "3D" ;
-    ]
-  ] ;
-  sh:predicate dc:format ;
-  sh:hasValue "3D-PDF" ;
-.
-```
 ###### <a id="edm_shapes_external_ProvidedCHO_dc_format_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_format#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_format#cardinality</a>
 ------
 <table>
@@ -489,34 +529,6 @@
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_ProvidedCHO_dc_subject_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#range-class</a>
-------
-<table>
-<tr><th align="right">description</th><td>The reference should be one to a Concept( the access to the
-                    data and the data itself should be formatted according to 
-                    the Concept specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<dc_subject#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """The reference should be one to a Concept( the access to the
-                    data and the data itself should be formatted according to 
-                    the Concept specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
-  sh:predicate dc:publisher ;
-  sh:filterShape [ #restrict only to nodes
-      sh:property [
-          sh:predicate dc:subject ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:valueShape Concept: ;
-.
-```
 ###### <a id="edm_shapes_external_ProvidedCHO_dc_publisher_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_publisher#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_publisher#range-class</a>
 ------
 <table>
@@ -589,6 +601,34 @@
 ```
 #### Property <a id="dc_subject" target="_blank" href="http://purl.org/dc/elements/1.1/subject">http://purl.org/dc/elements/1.1/subject</a>
 ------
+###### <a id="edm_shapes_external_ProvidedCHO_dc_subject_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#range-class</a>
+------
+<table>
+<tr><th align="right">description</th><td>The reference should be one to a Concept( the access to the
+                    data and the data itself should be formatted according to 
+                    the Concept specifications.)</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<dc_subject#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """The reference should be one to a Concept( the access to the
+                    data and the data itself should be formatted according to 
+                    the Concept specifications.)""" ;
+  dc:type esc:range-class ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+  sh:predicate dc:publisher ;
+  sh:filterShape [ #restrict only to nodes
+      sh:property [
+          sh:predicate dc:subject ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape Concept: ;
+.
+```
 ###### <a id="edm_shapes_external_ProvidedCHO_dc_subject_multiplevalue" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#multiplevalue">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#multiplevalue</a>
 ------
 <table>
@@ -794,6 +834,34 @@
 ```
 #### Property <a id="dct_created" target="_blank" href="http://purl.org/dc/terms/created">http://purl.org/dc/terms/created</a>
 ------
+###### <a id="edm_shapes_external_ProvidedCHO_dct_created_range-values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#range-values">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#range-values</a>
+------
+<table>
+<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-value">http://www.europeana.eu/schemas/edm/shapes/categories#range-value</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<dct_created#range-values>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""" ;
+  dc:type esc:range-value ;
+  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [ #restrict only to Literals
+    sh:property [
+      sh:predicate dc:date ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+```
 ###### <a id="edm_shapes_external_ProvidedCHO_dct_created_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#cardinality</a>
 ------
 <table>
@@ -1287,6 +1355,34 @@
   sh:nodeKind sh:IRI ;
 .
 ```
+###### <a id="edm_shapes_external_ProvidedCHO_edm_hasMet_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#range-class">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#range-class</a>
+------
+<table>
+<tr><th align="right">description</th><td>A edm:hasMet should reference one of Agent, Place, TimeSpan 
+                    or Concept that is declared in the record</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<edm_hasMet#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """A edm:hasMet should reference one of Agent, Place, TimeSpan 
+                    or Concept that is declared in the record""" ;
+# sh:description """the reference should be one to an Agent, a Place, a TimeSpan
+#                   or a Concept ( the access to the data and the data itself 
+#                   should be formatted according to the specifications of the 
+#                   corresponding classes.)""" ;
+  dc:type esc:range-class ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:or (
+    [ sh:predicate dc:contributor ; sh:valueShape Agent:    ]
+    [ sh:predicate dc:contributor ; sh:valueShape Place:    ]
+    [ sh:predicate dc:contributor ; sh:valueShape TimeSpan: ]
+    [ sh:predicate dc:contributor ; sh:valueShape Concept:  ]
+  )
+.
+```
 ###### <a id="edm_shapes_external_ProvidedCHO_edm_hasMet_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#cardinality</a>
 ------
 <table>
@@ -1641,6 +1737,34 @@
   dc:type esc:type ;
   sh:predicate edm:type ;
   sh:nodeKind sh:Literal ;
+.
+```
+###### <a id="edm_shapes_external_ProvidedCHO_edm_type_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#correlation</a>
+------
+<table>
+<tr><th align="right">description</th><td>If the value of edm:type is '3D' then the syntax of 
+                    dc:format must be '3D-PDF'</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<edm_type#correlation>
+  a sh:PropertyConstraint ;
+# sh:description """Check that if the value of edm:type  is 3D the syntax of 
+#                   dc:format is 3D-PDF """ ;
+  sh:description """If the value of edm:type is '3D' then the syntax of 
+                    dc:format must be '3D-PDF'""";
+  dc:type esc:correlation ;
+  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate edm:type ;
+      sh:hasValue "3D" ;
+    ]
+  ] ;
+  sh:predicate dc:format ;
+  sh:hasValue "3D-PDF" ;
 .
 ```
 ###### <a id="edm_shapes_external_ProvidedCHO_edm_type_values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#values">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#values</a>
