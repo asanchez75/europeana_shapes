@@ -83,7 +83,7 @@
 *Shape definition in Turtle syntax:*
 ```
 <dc_rights#redundancy>
-  a sh:Constraint ;
+  a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """dc:rights should not be the same as edm:rights, if true the 
                     field is redundant""" ;
