@@ -1,4 +1,5 @@
 ## Class ore:Aggregation
+*This document was generated from file: /Aggregation.ttl*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#dc_rights">dc:rights</a>|<a href="#edm_shapes_external_Aggregation_dc_rights_cardinality">0..?</a>|<a href="#edm_shapes_external_Aggregation_dc_rights_type">Literal</a>|<a href="#edm_shapes_external_Aggregation_dc_rights_redundancy">redundancy</a>|

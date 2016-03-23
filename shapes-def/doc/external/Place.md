@@ -1,4 +1,5 @@
 ## Class edm:Place
+*This document was generated from file: /Place.ttl*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Place_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Place_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Place_skos_altLabel_redundancy">redundancy</a>|

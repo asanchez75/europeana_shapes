@@ -38,6 +38,9 @@
 :base
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:ProvidedCHO class""" ;
+
   sh:scopeClass edm:ProvidedCHO ;
 
   # class level constraints

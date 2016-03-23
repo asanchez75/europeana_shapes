@@ -1,4 +1,5 @@
 ## Class edm:TimeSpan
+*This document was generated from file: /TimeSpan.ttl*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_TimeSpan_skos_altLabel_redundancy">redundancy</a>|
