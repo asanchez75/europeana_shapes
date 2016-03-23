@@ -1,5 +1,5 @@
 ## Shapes Definitions for ore:Aggregation class
-*This document was generated from the [source file](/Aggregation.ttl)*
+*This document was generated from the [source file](src/main/resources/etc/edm/shapes/external/Aggregation.ttl)*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#dc_rights">dc:rights</a>|<a href="#edm_shapes_external_Aggregation_dc_rights_cardinality">0..?</a>|<a href="#edm_shapes_external_Aggregation_dc_rights_type">Literal</a>|<a href="#edm_shapes_external_Aggregation_dc_rights_redundancy">redundancy</a>|

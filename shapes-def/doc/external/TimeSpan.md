@@ -1,5 +1,5 @@
 ## Shapes Definitions for edm:TimeSpan class
-*This document was generated from the [source file](/TimeSpan.ttl)*
+*This document was generated from the [source file](src/main/resources/etc/edm/shapes/external/TimeSpan.ttl)*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_TimeSpan_skos_altLabel_redundancy">redundancy</a>|

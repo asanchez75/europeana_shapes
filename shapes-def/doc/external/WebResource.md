@@ -1,5 +1,5 @@
 ## Shapes Definitions for edm:WebResource class
-*This document was generated from the [source file](/WebResource.ttl)*
+*This document was generated from the [source file](src/main/resources/etc/edm/shapes/external/WebResource.ttl)*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#dc_description">dc:description</a>|<a href="#edm_shapes_external_WebResource_dc_description_cardinality">0..?</a>|||
