@@ -3,13 +3,13 @@
 | --- | --- | --- | --- |
 |<a href="#dct_hasPart">dct:hasPart</a>|<a href="#edm_shapes_external_TimeSpan_dct_hasPart_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_dct_hasPart_type">IRI</a>|<a href="#edm_shapes_external_TimeSpan_dct_hasPart_range-class">range-class</a>|
 |<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_TimeSpan_dct_isPartOf_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_dct_isPartOf_type">IRI</a>|<a href="#edm_shapes_external_TimeSpan_dct_isPartOf_range-class">range-class</a>|
+|<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_TimeSpan_skos_altLabel_redundancy">redundancy</a>|
+|<a href="#skos_note">skos:note</a>|<a href="#edm_shapes_external_TimeSpan_skos_note_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_note_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_note_datatype">datatype</a>|
+|<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#edm_shapes_external_TimeSpan_skos_prefLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_prefLabel_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_prefLabel_datatype">datatype</a>|
 |<a href="#edm_begin">edm:begin</a>|<a href="#edm_shapes_external_TimeSpan_edm_begin_cardinality">0..1</a>|<a href="#edm_shapes_external_TimeSpan_edm_begin_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_edm_begin_correlation">correlation</a>, <a href="#edm_shapes_external_TimeSpan_edm_begin_literal">literal</a>|
 |<a href="#edm_end">edm:end</a>|<a href="#edm_shapes_external_TimeSpan_edm_end_cardinality">0..1</a>|<a href="#edm_shapes_external_TimeSpan_edm_end_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_edm_end_literal">literal</a>|
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_TimeSpan_edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_edm_isNextInSequence_type">IRI</a>|<a href="#edm_shapes_external_TimeSpan_edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_TimeSpan_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_owl_sameAs_type">IRI</a>||
-|<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_TimeSpan_skos_altLabel_redundancy">redundancy</a>|
-|<a href="#skos_note">skos:note</a>|<a href="#edm_shapes_external_TimeSpan_skos_note_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_note_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_note_datatype">datatype</a>|
-|<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#edm_shapes_external_TimeSpan_skos_prefLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_skos_prefLabel_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_skos_prefLabel_datatype">datatype</a>|
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
 ------
 ###### <a id="edm_shapes_external_TimeSpan_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#cardinality</a>
@@ -118,6 +118,191 @@
   dc:type esc:type ;
   sh:predicate dct:isPartOf ;
   sh:nodeKind sh:IRI ;
+.
+```
+#### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
+------
+###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_altLabel#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  sh:predicate skos:altLabel ;
+  sh:minCount 0 ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype</a>
+------
+<table>
+<tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_altLabel#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:altLabel should have a language tag" ;
+  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:predicate skos:altLabel ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy</a>
+------
+<table>
+<tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
+                    skos:prefLabel</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_altLabel#redundancy>
+  a sh:PropertyConstraint ;
+  dc:type esc:redundancy ;
+  sh:description """skos:altLabel should not have the same labels than in 
+                    skos:prefLabel""" ;
+  dc:subject "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:predicate  skos:altLabel ;
+  sh:notEquals  skos:prefLabel ;
+  sh:severity sh:Warning ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_altLabel#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate skos:altLabel ;
+  sh:nodeKind sh:Literal ;
+.
+```
+#### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
+------
+###### <a id="edm_shapes_external_TimeSpan_skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_note#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  sh:predicate skos:note ;
+  sh:minCount 0 ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype</a>
+------
+<table>
+<tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_note#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:note should have a language tag" ;
+  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:predicate skos:note ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_note#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate skos:note ;
+  sh:nodeKind sh:Literal ;
+.
+```
+#### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
+------
+###### <a id="edm_shapes_external_TimeSpan_skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_prefLabel#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS"
+           , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
+  sh:predicate skos:prefLabel ;
+  sh:minCount 0 ;
+  sh:uniqueLang true ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype</a>
+------
+<table>
+<tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_prefLabel#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:prefLabel should have a language tag" ;
+  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:predicate skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+```
+###### <a id="edm_shapes_external_TimeSpan_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<skos_prefLabel#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate skos:prefLabel ;
+  sh:nodeKind sh:Literal ;
 .
 ```
 #### Property <a id="edm_begin" target="_blank" href="http://www.europeana.eu/schemas/edm/begin">http://www.europeana.eu/schemas/edm/begin</a>
@@ -342,190 +527,5 @@
   dc:type esc:type ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
-.
-```
-#### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
-------
-###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#cardinality</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_altLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:altLabel ;
-  sh:minCount 0 ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype</a>
-------
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_altLabel#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:predicate skos:altLabel ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy</a>
-------
-<table>
-<tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
-                    skos:prefLabel</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_altLabel#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """skos:altLabel should not have the same labels than in 
-                    skos:prefLabel""" ;
-  dc:subject "R-10-DEFINE-DISJOINT-PROPERTIES" ;
-  sh:predicate  skos:altLabel ;
-  sh:notEquals  skos:prefLabel ;
-  sh:severity sh:Warning ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_altLabel#type>
-  a sh:PropertyConstraint ;
-  dc:type esc:type ;
-  sh:predicate skos:altLabel ;
-  sh:nodeKind sh:Literal ;
-.
-```
-#### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
-------
-###### <a id="edm_shapes_external_TimeSpan_skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#cardinality</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_note#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:note ;
-  sh:minCount 0 ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype</a>
-------
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_note#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:note should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:predicate skos:note ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_note#type>
-  a sh:PropertyConstraint ;
-  dc:type esc:type ;
-  sh:predicate skos:note ;
-  sh:nodeKind sh:Literal ;
-.
-```
-#### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
-------
-###### <a id="edm_shapes_external_TimeSpan_skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_prefLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS"
-           , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
-  sh:predicate skos:prefLabel ;
-  sh:minCount 0 ;
-  sh:uniqueLang true ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype</a>
-------
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_prefLabel#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:predicate skos:prefLabel ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-###### <a id="edm_shapes_external_TimeSpan_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type</a>
-------
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
-</table>
-*Shape definition in Turtle syntax:*
-```
-<skos_prefLabel#type>
-  a sh:PropertyConstraint ;
-  dc:type esc:type ;
-  sh:predicate skos:prefLabel ;
-  sh:nodeKind sh:Literal ;
 .
 ```
