@@ -1,5 +1,6 @@
 ## Shapes Definitions for edm:Place class
-*This document was generated from the [source file](src/main/resources/etc/edm/shapes/external/Place.ttl)*
+*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Place.ttl)*
+
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Place_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Place_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Place_skos_altLabel_redundancy">redundancy</a>|
