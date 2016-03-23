@@ -1,6 +1,8 @@
 ## Shapes Definitions for skos:Concept class
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Concept.ttl)*
 
+The following table shows an overview of the contraints divided per property:
+
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Concept_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Concept_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Concept_skos_altLabel_redundancy">redundancy</a>|

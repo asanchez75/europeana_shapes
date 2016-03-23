@@ -2,6 +2,8 @@
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/ProvidedCHO.ttl)*
 > This shape gathers all constraints that apply to a edm:ProvidedCHO class
 
+The following table shows an overview of the contraints divided per property:
+
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#dc_contributor">dc:contributor</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_cardinality">0..?</a>||<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_range-class">range-class</a>|
