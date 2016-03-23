@@ -1,5 +1,5 @@
-## Class edm:Agent
-*This document was generated from file: /Agent.ttl*
+## Shapes Definitions for edm:Agent class
+*This document was generated from the [source file](/Agent.ttl)*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Agent_skos_altLabel_redundancy">redundancy</a>|

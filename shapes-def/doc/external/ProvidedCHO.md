@@ -1,7 +1,7 @@
-## Class edm:ProvidedCHO
-This shape gathers all constraints that apply to a 
+## Shapes Definitions for edm:ProvidedCHO class
+*This document was generated from the [source file](/ProvidedCHO.ttl)*
+> This shape gathers all constraints that apply to a 
                     edm:ProvidedCHO class
-*This document was generated from file: /ProvidedCHO.ttl*
 | Property | Cardinality | Value Type | Constraints |
 | --- | --- | --- | --- |
 |<a href="#dc_contributor">dc:contributor</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_cardinality">0..?</a>||<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_range-class">range-class</a>|
