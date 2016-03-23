@@ -26,7 +26,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_description#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -45,7 +45,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_format#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_format#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -64,7 +64,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_rights#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -82,7 +82,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_rights#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """dc:rights should not be the same as edm:rights, if true the 
@@ -104,7 +104,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_source#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_source#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -123,7 +123,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_conformsTo#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_conformsTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -142,7 +142,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -159,7 +159,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#correlation_1>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1>
   a sh:PropertyConstraint ;
   dc:type esc:correlation ;
   sh:description "dcterms:created must be equal or earlier than dcterms:issued";
@@ -179,7 +179,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#correlation_2>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2>
   a sh:PropertyConstraint ;
 
   sh:description """dcterms:created must be equal or earlier than dcterms:issued
@@ -203,7 +203,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#range-values>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -232,7 +232,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_extent#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_extent#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -251,7 +251,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -268,7 +268,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:hasPart must refer to a valid edm:WebResource" ;
   dc:type esc:range-class ;
@@ -287,7 +287,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPartOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:hasPartOf ;
@@ -305,7 +305,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPartOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:hasPartOf ;
@@ -323,7 +323,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isFormatOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isFormatOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -342,7 +342,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -359,7 +359,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:isPartOf must refer to a valid edm:WebResource" ;
   dc:type esc:range-class ;
@@ -378,7 +378,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:isPartOf ;
@@ -396,7 +396,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -414,7 +414,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#correlation>
   a sh:PropertyConstraint ;
   dc:type esc:correlation ;
   sh:description """dcterms:issued must be equal or later than dcterms:created 
@@ -438,7 +438,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
@@ -467,7 +467,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#range-values>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -496,7 +496,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -514,7 +514,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#correlation>
   a sh:PropertyConstraint ;
   dc:type esc:correlation ;
   sh:description """Both WebResources referred to and subject of this property 
@@ -537,7 +537,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be a valid edm:WebResource""" ;
   dc:type esc:range-class ;
@@ -557,7 +557,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isNextInSequence ;
@@ -575,7 +575,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_rights#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -593,7 +593,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_rights#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:rights ;
@@ -610,7 +610,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_rights#values>
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#values>
   a sh:PropertyConstraint ;
   dc:type esc:values ;
   sh:description """Check the value is one of the controlled values: 

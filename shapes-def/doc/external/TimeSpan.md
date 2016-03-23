@@ -21,7 +21,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -38,7 +38,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
@@ -58,7 +58,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
@@ -78,7 +78,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
@@ -96,7 +96,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -113,7 +113,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
@@ -132,7 +132,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:note ;
@@ -150,7 +150,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
@@ -169,7 +169,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
@@ -188,7 +188,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:prefLabel ;
@@ -206,7 +206,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -223,7 +223,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:hasPart must refer to a valid edm:TimeSpan" ;
   dc:type esc:range-class ;
@@ -243,7 +243,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:hasPart ;
@@ -261,7 +261,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -278,7 +278,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:isPartOf must refer to a valid edm:TimeSpan" ;
   dc:type esc:range-class ;
@@ -298,7 +298,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:isPartOf ;
@@ -316,7 +316,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -334,7 +334,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#correlation>
   a sh:PropertyConstraint ;
   sh:description "edm:begin must be earlier or equals than edm:end";
   dc:type esc:correlation ;
@@ -354,7 +354,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -374,7 +374,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:begin ;
@@ -392,7 +392,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -412,7 +412,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -432,7 +432,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:end ;
@@ -450,7 +450,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -467,7 +467,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:TimeSpan" ;
   dc:type esc:range-class ;
@@ -487,7 +487,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isNextInSequence ;
@@ -505,7 +505,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<owl_sameAs#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/owl_sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -522,7 +522,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<owl_sameAs#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate owl:sameAs ;

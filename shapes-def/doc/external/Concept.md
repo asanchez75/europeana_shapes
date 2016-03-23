@@ -25,7 +25,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -42,7 +42,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
@@ -62,7 +62,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
@@ -82,7 +82,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
@@ -100,7 +100,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_broadMatch#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -117,7 +117,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_broadMatch#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:broadMatch ;
@@ -135,7 +135,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_broader#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -152,7 +152,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_broader#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class>
   a sh:PropertyConstraint ;
   sh:description "skos:broader must refer to a valid skos:Concept" ;
   dc:type esc:range-class ;
@@ -171,7 +171,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_broader#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:broader ;
@@ -189,7 +189,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_closeMatch#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_closeMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -206,7 +206,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_closeMatch#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_closeMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:closeMatch ;
@@ -224,7 +224,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_exactMatch#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_exactMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -241,7 +241,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_exactMatch#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_exactMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:exactMatch ;
@@ -259,7 +259,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_inScheme#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -276,7 +276,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_inScheme#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:inScheme ;
@@ -294,7 +294,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_narrowMatch#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -311,7 +311,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_narrowMatch#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:narrowMatch ;
@@ -329,7 +329,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_narrower#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -346,7 +346,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_narrower#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:narrower ;
@@ -364,7 +364,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_notation#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -381,7 +381,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_notation#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype>
   a sh:PropertyConstraint ;
   sh:description "skos:notation should be assigned with a typed literal" ;
   dc:type esc:datatype ;
@@ -398,7 +398,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_notation#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:notation ;
@@ -416,7 +416,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -433,7 +433,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
@@ -452,7 +452,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:note ;
@@ -470,7 +470,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
@@ -489,7 +489,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
@@ -508,7 +508,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:prefLabel ;
@@ -526,7 +526,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_related#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_related#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -543,7 +543,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_related#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_related#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:related ;
@@ -559,7 +559,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_relatedMatch#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -576,7 +576,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_relatedMatch#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:relatedMatch ;
@@ -594,7 +594,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_relatedMatch#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -611,7 +611,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_relatedMatch#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:relatedMatch ;

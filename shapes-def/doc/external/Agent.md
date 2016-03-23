@@ -32,7 +32,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -49,7 +49,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
@@ -69,7 +69,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
@@ -89,7 +89,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_altLabel#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
@@ -107,7 +107,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -124,7 +124,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
@@ -143,7 +143,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_note#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:note ;
@@ -161,7 +161,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
@@ -180,7 +180,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#datatype>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
@@ -199,7 +199,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<skos_prefLabel#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:prefLabel ;
@@ -217,7 +217,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -236,7 +236,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -264,7 +264,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_identifier#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -281,7 +281,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_identifier#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dc:identifier ;
@@ -299,7 +299,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -316,7 +316,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description """dcterms:hasPart must refer to a valid edm:Agent""" ;
   dc:type esc:range-class ;
@@ -336,7 +336,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:hasPart ;
@@ -354,7 +354,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -371,7 +371,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description """dcterms:isPartOf must refer to a valid edm:Agent""" ;
   dc:type esc:range-class ;
@@ -391,7 +391,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:isPartOf ;
@@ -409,7 +409,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<foaf_name#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -426,7 +426,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<foaf_name#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate foaf:name ;
@@ -444,7 +444,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_biographicalInformation#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -461,7 +461,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_biographicalInformation#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate rdaGr2:biographicalInformation ;
@@ -479,7 +479,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfBirth#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -497,7 +497,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfBirth#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#correlation>
   a sh:PropertyConstraint ;
   sh:description """rdaGr2:dateOfBirth must be earlier or equals than 
                     rdaGr2:dateOfDeath""";
@@ -518,7 +518,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfBirth#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -538,7 +538,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfBirth#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate rdaGr2:dateOfBirth ;
@@ -556,7 +556,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfDeath#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -575,7 +575,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfDeath#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -595,7 +595,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfDeath#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate rdaGr2:dateOfDeath ;
@@ -613,7 +613,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfEstablishment#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -631,7 +631,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfEstablishment#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation>
   a sh:PropertyConstraint ;
   sh:description """rdaGr2:dateOfEstablishment must be earlier or equals than 
                     rdaGr2:dateOfTermination""";
@@ -652,7 +652,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfEstablishment#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -672,7 +672,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfEstablishment#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate rdaGr2:dateOfEstablishment ;
@@ -690,7 +690,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfTermination#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -709,7 +709,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfTermination#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -729,7 +729,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_dateOfTermination#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate rdaGr2:dateOfTermination ;
@@ -747,7 +747,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_gender#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -765,7 +765,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_gender#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate rdaGr2:gender ;
@@ -783,7 +783,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<rdaGr2_professionOrOccupation#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -802,7 +802,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -820,7 +820,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#correlation>
   a sh:PropertyConstraint ;
   sh:description "edm:begin must be earlier or equals than edm:end";
   dc:type esc:correlation ;
@@ -840,7 +840,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -861,7 +861,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#redundancy>
   a sh:Constraint ;
   dc:type esc:redundancy ;
   sh:description """edm:begin should not be the same as rdaGr2:dateOfBirth
@@ -881,7 +881,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_begin#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:begin ;
@@ -899,7 +899,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -919,7 +919,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -940,7 +940,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#redundancy>
   a sh:Constraint ;
   dc:type esc:redundancy ;
   sh:description """edm:end should not be the same as rdaGr2:dateOfDeath
@@ -960,7 +960,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_end#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:end ;
@@ -978,7 +978,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasMet#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -996,7 +996,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasMet#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class>
   a sh:PropertyConstraint ;
   sh:description """edm:hasMet must refer to a valid edm:Agent, edm:Place
                   , skos:Concept or edm:TimeSpan""";
@@ -1018,7 +1018,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasMet#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:hasMet ;
@@ -1036,7 +1036,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isRelatedTo#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1053,7 +1053,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isRelatedTo#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isRelatedTo ;
@@ -1071,7 +1071,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<owl_sameAs#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1088,7 +1088,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<owl_sameAs#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate owl:sameAs ;

@@ -64,7 +64,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_contributor#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_contributor#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -83,7 +83,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_contributor#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_contributor#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
@@ -112,7 +112,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_coverage#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_coverage#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -130,7 +130,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_coverage#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_coverage#range-class>
   a sh:PropertyConstraint ;
   sh:description """If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.""" ;
@@ -159,7 +159,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_coverage#subproperty_1>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_coverage#subproperty_1>
   a sh:PropertyConstraint ;
   sh:description """If two dc:coverage are present, suggest the use of 
                     dcterms:spatial or dcterms:temporal.""" ;
@@ -183,7 +183,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_coverage#subproperty_2>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_coverage#subproperty_2>
   a sh:Constraint ;
   sh:description """If dc:coverage and dcterms:spatial or dcterms:temporal are 
                     present, check that the value in dc:coverage is not 
@@ -219,7 +219,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_creator#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_creator#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -238,7 +238,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_creator#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_creator#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
@@ -267,7 +267,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -286,7 +286,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#literal>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -314,7 +314,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
@@ -342,7 +342,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#subproperty_1>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#subproperty_1>
   a sh:PropertyConstraint ;
   sh:description """If two dc:date are present, suggest the use of 
                     dcterms:created or dcterms:issued.""" ;
@@ -365,7 +365,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_date#subproperty_2>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_date#subproperty_2>
   a sh:Constraint ;
   sh:description """If dc:date and dcterms:created or dcterms:issued are present
                     , check that the value in dc:date is not redundant with 
@@ -396,7 +396,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_description#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_description#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -415,7 +415,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_format#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_format#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -434,7 +434,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_identifier#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_identifier#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -451,7 +451,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_identifier#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_identifier#type>
   a sh:PropertyConstraint ;
   sh:predicate dc:identifier ;
   sh:nodeKind sh:Literal ;
@@ -470,7 +470,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_language#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_language#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -487,7 +487,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_language#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_language#type>
   a sh:PropertyConstraint ;
   sh:predicate dc:language ;
   sh:nodeKind sh:Literal ;
@@ -504,7 +504,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_language#values>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_language#values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for language matches ISO 639 two-letter
                     code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
@@ -527,7 +527,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_publisher#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_publisher#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -546,7 +546,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_publisher#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_publisher#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be one to an Agent( the access to the 
                     data and the data itself should be formatted according to 
@@ -575,7 +575,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_rights#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -594,7 +594,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_rights#redundancy>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_rights#redundancy>
   a esh:RedundancyConstraint, sh:Constraint ;
   dc:type esc:redundancy ;
   sh:description """Check if dc:rights has the same value than edm:rights of the 
@@ -618,7 +618,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_subject#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -636,7 +636,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_subject#multiplevalue>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#multiplevalue>
   a sh:PropertyConstraint ;
 
   sh:description """If more than one term is in the field, a new dc:subject 
@@ -664,7 +664,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_subject#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_subject#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be one to a Concept( the access to the
                     data and the data itself should be formatted according to 
@@ -693,7 +693,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_title#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_title#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -710,7 +710,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_title#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_title#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dc:title ;
@@ -728,7 +728,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_type#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_type#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -746,7 +746,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dc_type#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_type#range-class>
   a sh:PropertyConstraint ;
   sh:description """If the value is a URI, check if a skos:Concept class is 
                     created.""" ;
@@ -777,7 +777,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_alternative#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_alternative#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -795,7 +795,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_alternative#subproperty>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_alternative#subproperty>
   a sh:PropertyConstraint ;
   dc:type esc:subproperty ;
   sh:description """If dcterms:alternative has the same title than dc:title, 
@@ -816,7 +816,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_alternative#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_alternative#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:alternative ;
@@ -834,7 +834,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_conformsTo#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_conformsTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -853,7 +853,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -870,7 +870,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#correlation>
   a sh:PropertyConstraint ;
 
   sh:description "dcterms:created must be equal or earlier than dcterms:issued";
@@ -894,7 +894,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_created#range-values>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_created#range-values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -923,7 +923,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_extent#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_extent#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -942,7 +942,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasFormat#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_hasFormat#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -961,7 +961,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasPart#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -980,7 +980,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_hasVersion#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_hasVersion#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -999,7 +999,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isFormatOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_isFormatOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1018,7 +1018,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isPartOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1037,7 +1037,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isReferencedBy#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_isReferencedBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1056,7 +1056,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isReplacedBy#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_isReplacedBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1075,7 +1075,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isRequiredBy#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_isRequiredBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1094,7 +1094,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_isVersionOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_isVersionOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1113,7 +1113,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_issued#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1132,7 +1132,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_issued#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
@@ -1161,7 +1161,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_issued#range-values>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_issued#range-values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -1190,7 +1190,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_medium#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_medium#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1209,7 +1209,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_provenance#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_provenance#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1228,7 +1228,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_references#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_references#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1247,7 +1247,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_replaces#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_replaces#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1266,7 +1266,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_requires#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_requires#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1285,7 +1285,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_spatial#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_spatial#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1304,7 +1304,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_tableOfContents#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_tableOfContents#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1321,7 +1321,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_tableOfContents#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_tableOfContents#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:tableOfContents ;
@@ -1339,7 +1339,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<dct_temporal#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dct_temporal#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1359,7 +1359,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_aggregatedCHO#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_aggregatedCHO#correlation>
   a sh:InversePropertyConstraint ;
   sh:description """Check that the URI of the ProvidedCHO and the URI described 
                     in edm:aggregatedCHO are the same.""" ;
@@ -1382,7 +1382,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_currentLocation#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_currentLocation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1399,7 +1399,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_currentLocation#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_currentLocation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:currentLocation ;
@@ -1417,7 +1417,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasMet#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1435,7 +1435,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasMet#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#range-class>
   a sh:Constraint ;
   sh:description """A edm:hasMet should reference one of Agent, Place, TimeSpan 
                     or Concept that is declared in the record""" ;
@@ -1462,7 +1462,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasMet#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasMet#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:hasMet ;
@@ -1480,7 +1480,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_hasType#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_hasType#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1499,7 +1499,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_incorporates#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_incorporates#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1516,7 +1516,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_incorporates#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_incorporates#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:incorporates ;
@@ -1534,7 +1534,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isDerivativeOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isDerivativeOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1551,7 +1551,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isDerivativeOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isDerivativeOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isDerivativeOf ;
@@ -1569,7 +1569,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1587,7 +1587,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isNextInSequence#correlation>
   a sh:PropertyConstraint ;
   dc:type esc:correlation ;
   sh:description """The ProvidedCHO referred to by this property must share 
@@ -1605,7 +1605,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#range-class>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be a valid edm:ProvidedCHO""" ;
   dc:type esc:range-class ;
@@ -1623,7 +1623,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isNextInSequence#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isNextInSequence#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isNextInSequence ;
@@ -1641,7 +1641,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isRelatedTo#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isRelatedTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1660,7 +1660,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isRepresentationOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isRepresentationOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1678,7 +1678,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isRepresentationOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isRepresentationOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isRepresentationOf ;
@@ -1696,7 +1696,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isSimilarTo#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isSimilarTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1713,7 +1713,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isSimilarTo#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isSimilarTo#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isSimilarTo ;
@@ -1731,7 +1731,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isSuccessorOf#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isSuccessorOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1748,7 +1748,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_isSuccessorOf#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_isSuccessorOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isSuccessorOf ;
@@ -1766,7 +1766,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_realizes#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_realizes#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1783,7 +1783,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_realizes#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_realizes#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:realizes ;
@@ -1801,7 +1801,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_type#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1820,7 +1820,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_type#correlation>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#correlation>
   a sh:PropertyConstraint ;
 # sh:description """Check that if the value of edm:type  is 3D the syntax of 
 #                   dc:format is 3D-PDF """ ;
@@ -1847,7 +1847,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_type#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:type ;
@@ -1864,7 +1864,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_type#values>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_type#values>
   a sh:PropertyConstraint ;
   dc:type esc:values ;
   sh:description """The value of edm:type must match one of: 
@@ -1887,7 +1887,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_ugc#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_ugc#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1904,7 +1904,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_ugc#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_ugc#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:ugc ;
@@ -1922,7 +1922,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_unstored#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_unstored#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1939,7 +1939,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<edm_unstored#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/edm_unstored#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:unstored ;
@@ -1957,7 +1957,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<owl_sameAs#cardinality>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/owl_sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1974,7 +1974,7 @@
 </table>
 *Shape definition in Turtle syntax:*
 ```
-<owl_sameAs#type>
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate owl:sameAs ;
