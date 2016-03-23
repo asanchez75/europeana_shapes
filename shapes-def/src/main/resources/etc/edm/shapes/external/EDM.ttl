@@ -10,6 +10,7 @@
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 
 @prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
 
 ##############################################################################
 #                           SHAPE DEFINITIONS                                #
@@ -26,7 +27,6 @@
   owl:imports :ProvidedCHO ;
   owl:imports :Aggregation ;
   owl:imports :WebResource ;
-
   owl:imports :Concept ;
   owl:imports :Agent ;
   owl:imports :Place ;
@@ -34,4 +34,36 @@
 
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
 .
+
+:RedundancyConstraint
+    a sh:ConstraintTemplate ;
+    rdfs:label "Co-occurrence constraint between nodes" ;
+    rdfs:subClassOf sh:TemplateConstraint ;
+    sh:argument [
+        sh:predicate sh:predicate ;
+        sh:class rdf:Property ;
+        sh:name "predicate" ;
+        sh:description "The property of the focus node." ;
+    ] ;
+    sh:argument [
+        sh:predicate sh:scopeClass ;
+        sh:class rdf:Class ;
+        sh:name "scopeClass" ;
+        sh:description "The class of the target node." ;
+    ] ;
+    sh:argument [
+        sh:predicate sh:notEquals ;
+        sh:class rdf:Property ;
+        sh:name "notEquals" ;
+        sh:description "The property of the target node." ;
+    ] ;
+    rdfs:comment "Duplicate values"^^xsd:string ;
+    sh:message "Duplicate values" ;
+    sh:sparql """
+      SELECT ?this (?this as ?subject) $predicate ?value
+      WHERE { ?node rdf:type ?scopeClass ; ?property  ?value .
+              ?this                        ?notEquals ?value . }
+    """ ;
+.
+
 

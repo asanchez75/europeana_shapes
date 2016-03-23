@@ -2,14 +2,17 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
 @prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ore:  <http://www.openarchives.org/ore/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdaGr2: <http://rdvocab.info/ElementsGr2/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 @prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
 @prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#> .
 @base         <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/> .
 
@@ -38,6 +41,7 @@
   sh:scopeClass edm:ProvidedCHO ;
 
   # class level constraints
+  sh:constraint      [ sh:closed true ] ;
   sh:constraint      :correlation ;
 
   # DC properties
@@ -64,7 +68,7 @@
   sh:property        <dc_publisher#cardinality> ;
   sh:property        <dc_publisher#range-class> ;
   sh:property        <dc_rights#cardinality> ;
-  sh:constraint      <dc_rights#subproperty> ;
+  sh:constraint      <dc_rights#redundancy> ;
   sh:property        <dc_subject#cardinality> ;
   sh:property        <dc_subject#range-class> ;
   sh:property        <dc_subject#multiplevalue> ;
@@ -76,7 +80,7 @@
   # DCTERMS properties
   sh:property        <dct_alternative#cardinality> ;
   sh:property        <dct_alternative#type> ;
-  sh:constraint      <dct_alternative#subproperty> ;
+  sh:property        <dct_alternative#subproperty> ;
   sh:property        <dct_conformsTo#cardinality> ;
   sh:property        <dct_created#cardinality> ;
   sh:property        <dct_created#range-values> ;
@@ -91,6 +95,8 @@
   sh:property        <dct_isReplacedBy#cardinality> ;
   sh:property        <dct_isRequiredBy#cardinality> ;
   sh:property        <dct_issued#cardinality> ;
+  sh:property        <dct_issued#range-values> ;
+  sh:property        <dct_issued#range-class> ;
   sh:property        <dct_isVersionOf#cardinality> ;
   sh:property        <dct_medium#cardinality> ;
   sh:property        <dct_provenance#cardinality> ;
@@ -108,7 +114,7 @@
   sh:property        <edm_currentLocation#cardinality> ;
   sh:property        <edm_hasMet#type> ;
   sh:property        <edm_hasMet#cardinality> ;
-  sh:property        <edm_hasMet#range-class> ;
+  sh:constraint      <edm_hasMet#range-class> ;
   sh:property        <edm_hasType#cardinality> ;
   sh:property        <edm_incorporates#type> ;
   sh:property        <edm_incorporates#cardinality> ;
@@ -142,21 +148,7 @@
 .
 
 
-################################################################################
-# All Constraint Declarations
-################################################################################
-
-<edm_aggregatedCHO#correlation>
-  a sh:InversePropertyConstraint ;
-  sh:description """Check that the URI of the ProvidedCHO and the URI described 
-                    in edm:aggregatedCHO are the same.""" ;
-  dc:type esc:correlation ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
-  sh:predicate edm:aggregatedCHO ;
-  sh:valueClass ore:Aggregation ;
-  sh:minCount 1 ;
-  sh:maxCount 1 ; #this enforces uniqueness
-.
+# class level constraints ######################################################
 
 #:uniqueness ?
 
@@ -168,7 +160,8 @@
                     or dc:type or dc:coverage or dcterms:spatial and edm:type 
                     should be present""" ;
   dc:type esc:correlation ;
-  dc:subject "R-68-REQUIRED-PROPERTIES" ;
+  dc:subject "R-68-REQUIRED-PROPERTIES"
+           , "R-67-BOOLEAN-PROPERTY-PATTERNS" ;
   sh:message """At least: one dc:title or sh:description; one dc:subject or 
                 dc:type or dc:coverage or dcterms:spatial; and one edm:type 
                 should be present""" ;
@@ -194,6 +187,19 @@
   ) ;
 .
 
+# edm:aggregatedCHO ############################################################
+
+<edm_aggregatedCHO#correlation>
+  a sh:InversePropertyConstraint ;
+  sh:description """Check that the URI of the ProvidedCHO and the URI described 
+                    in edm:aggregatedCHO are the same.""" ;
+  dc:type esc:correlation ;
+  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  sh:predicate edm:aggregatedCHO ;
+  sh:valueClass ore:Aggregation ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ; #this enforces uniqueness
+.
 
 # dc:contributor ###############################################################
 
@@ -220,6 +226,7 @@
     ]
   ] ;
   sh:valueShape Agent: ;
+  sh:class edm:Agent ;
 .
 
 
@@ -315,6 +322,7 @@
       ]
   ] ;
   sh:valueShape Agent: ;
+  sh:class edm:Agent ;
 .
 
 
@@ -343,6 +351,7 @@
       ]
   ] ;
   sh:valueShape TimeSpan: ;
+  sh:class edm:TimeSpan ;
 .
 
 <dc_date#literal>
@@ -364,8 +373,8 @@
 
 <dc_date#subproperty_1>
   a sh:PropertyConstraint ;
-  sh:description """If two dc:date are present, suggest the use of dcterms 
-                    created or dcterms:issued.""" ;
+  sh:description """If two dc:date are present, suggest the use of 
+                    dcterms:created or dcterms:issued.""" ;
   dc:type esc:subproperty ;
   dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:predicate dc:date ;
@@ -488,6 +497,7 @@
     ]
   ] ;
   sh:valueShape Agent: ;
+  sh:class edm:Agent ;
 .
 
 
@@ -501,16 +511,17 @@
   sh:minCount 0 ;
 .
 
-<dc_rights#subproperty>
-  a sh:Constraint ;
-  dc:type esc:subproperty ;
-  sh:description """Check if dc:rights has the same value than edm:rights either
-                    as rdf:resource or literal, if yes the field is 
-                    redundant""" ;
+<dc_rights#redundancy>
+  a esh:RedundancyConstraint, sh:Constraint ;
+  dc:type esc:redundancy ;
+  sh:description """Check if dc:rights has the same value than edm:rights of the 
+                    Aggregation (either as rdf:resource or literal), if yes the 
+                    field is redundant""" ;
   dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:predicate  dc:rights ;
+  sh:scopeClass edm:Aggregation ;
+  sh:notEquals  edm:rights ;
   sh:severity sh:Warning ;
-  sh:predicate dc:rights ;
-  sh:notEquals edm:rights ;
 .
 
 
@@ -539,6 +550,7 @@
       ]
   ] ;
   sh:valueShape Concept: ;
+  sh:class skos:Concept ;
 .
 
 <dc_subject#multiplevalue>
@@ -564,7 +576,6 @@
 <dc_title#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:title ;
   sh:nodeKind sh:Literal ;
 .
@@ -572,6 +583,7 @@
 <dc_title#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dc:title ;
   sh:minCount 0 ;
 .
@@ -601,9 +613,10 @@
     sh:property [
       sh:predicate dc:type ;
       sh:nodeKind sh:IRI ;
-      ]
+    ]
   ] ;
   sh:valueShape Concept: ;
+  sh:class skos:Concept ;
 .
 
 
@@ -625,7 +638,7 @@
 .
 
 <dct_alternative#subproperty>
-  a sh:Constraint ;
+  a sh:PropertyConstraint ;
   dc:type esc:subproperty ;
   sh:description """If dcterms:alternative has the same title than dc:title, 
                     then dcterms:alternative is redundant.""" ;
@@ -633,7 +646,7 @@
   sh:severity sh:Warning ;
   sh:predicate dct:alternative ;
   sh:notEquals dc:title ;
-  sh:message "Redundant dcterms:alternative" ;
+#  sh:message "Redundant dcterms:alternative" ;
 .
 
 
@@ -665,9 +678,10 @@
                     YYYY-MM-DD""" ;
   dc:type esc:range-value ;
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:predicate dct:created ;
   sh:filterShape [ #restrict only to Literals
     sh:property [
-      sh:predicate dc:date ;
+      sh:predicate dct:created ;
       sh:nodeKind sh:Literal ;
     ]
   ] ;
@@ -686,7 +700,7 @@
   dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
 
   sh:predicate dct:created ;
-  sh:lessThan dct:issue ;
+  sh:lessThanOrEquals dct:issued ;
 .
 
 
@@ -797,6 +811,42 @@
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:issued ;
   sh:minCount 0 ;
+.
+
+<dct_issued#range-values>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""" ;
+  dc:type esc:range-value ;
+  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:predicate dct:issued ;
+  sh:filterShape [ #restrict only to Literals
+    sh:property [
+      sh:predicate dct:issued ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+<dct_issued#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """the reference should be one to a TimeSpan (the access to 
+                    the data and the data itself should be formatted according 
+                    to the TimeSpan specifications.)""" ;
+  dc:type esc:range-class ;
+  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+  sh:predicate dc:issued ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:issued ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape TimeSpan: ;
+  sh:class edm:TimeSpan ;
 .
 
 
@@ -942,7 +992,7 @@
 .
 
 <edm_hasMet#range-class>
-  a sh:PropertyConstraint ;
+  a sh:Constraint ;
   sh:description """A edm:hasMet should reference one of Agent, Place, TimeSpan 
                     or Concept that is declared in the record""" ;
 # sh:description """the reference should be one to an Agent, a Place, a TimeSpan
@@ -1030,7 +1080,7 @@
   sh:description """The reference should be a valid edm:ProvidedCHO""" ;
   dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
-           , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;  
+           , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isNextInSequence ;
 .
 
