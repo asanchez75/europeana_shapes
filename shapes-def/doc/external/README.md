@@ -28,11 +28,11 @@ own descriptive information (metadata).
 
 ## Metadata and Classification
 
-### Syntax for identifiers
+#### Syntax for identifiers
 
 http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality
 
-### Classification
+#### Classification
 
 *Work in progress...*
 
