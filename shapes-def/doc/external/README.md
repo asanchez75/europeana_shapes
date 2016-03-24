@@ -30,12 +30,15 @@ own descriptive information (metadata).
 
 #### Syntax for identifiers
 
-http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality
+The following syntax was defined to all constraints that relate to an EDM 
+validation requirement:
 
-Syntax:
 - for general constraints applied to a class:
+
 ```<namespace>/<classname>#<category>```
-- for constraints specific to a property: ```<namespace>/<classname>/<property>#<category>```
+
+- for constraints specific to a property: 
+```<namespace>/<classname>/<property>#<category>```
 
 Where:
 - **namespace** is the base URI for the EDM SHACL ontology.
