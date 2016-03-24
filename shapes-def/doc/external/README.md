@@ -34,7 +34,7 @@ The following syntax was defined to all constraints that relate to an EDM
 validation requirement:
 
 - for general constraints applied to a class:
-> <namespace>/<classname>#<category>
+> \<namespace\>/\<classname\>#\<category\>
 
 - for constraints specific to a property: 
 > <namespace>/<classname>/<property>#<category>
