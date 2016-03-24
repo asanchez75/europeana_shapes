@@ -60,8 +60,7 @@ constraint is applied to a focus node and the value range of a property.
 The only way to get around it, is to define constraint templates using SPARQL 
 which greatly increases the expressive power of the language. However,
 it is cumbersome to define it using SPARQL if there could be a simpler, declarative
-way to express them, especially when only a second focus node is needed. 
-
+way to express them, especially when only a second focus node is needed.
 > Let me explain with an example from EDM (it is now expressed using SPARQL here):
 >
 > *Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO*
