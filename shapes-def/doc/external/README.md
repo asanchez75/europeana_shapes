@@ -22,14 +22,13 @@ manageable files. Each file corresponds to a sub-ontology which is linked
 (using the *owl:imports* property) to through the main ontology file defined in 
 [EDM.ttl](../../src/main/resources/etc/edm/shapes/external/EDM.ttl).
 
-- **Constraints are isolated:** Each rule is expressed in a separate constraint
-or shape so that they are identifiable and have their own descriptive 
-information (metadata).
-- syntax for identifiers
+- **Constraints are isolated per EDM requirement:** Each rule is expressed in 
+a separate constraint or shape so that they are identifiable and may have their 
+own descriptive information (metadata).
 
 ## Metadata and Classification
 
-### Identifiers
+### Syntax for identifiers
 
 http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality
 
