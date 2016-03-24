@@ -1,0 +1,89 @@
+# Shapes Definitions for EDM (External)
+*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)*
+
+This document presents all shape definitions that make up the EDM external. It 
+is composed of the following documents, one for each EDM class:
+- [ore:Aggregation](Aggregation.md)
+- [edm:ProvidedCHO](ProvidedCHO.md)
+- [edm:WebResource](WebResource.md)
+- [edm:Agent](Agent.md)
+- [edm:Place](Place.md)
+- [skos:Concept](Concept.md)
+- [edm:TimeSpan](TimeSpan.md)
+
+## Design choices
+
+- **One shapes file per class:** A shapes ontology was created for each class
+in order to split the complete shapes definition for EDM into smaller and 
+manageable files. Each file corresponds to a sub-ontology which is linked 
+(using the owl:imports property) to through the main ontology file defined in 
+[EDM.ttl]().
+- **Constraints are isolated:** Each rule is expressed in a separate constraint
+or shape so that they are identifiable and have their own descriptive 
+information (metadata).
+- syntax for identifiers
+
+## Metadata and Classification
+
+### Identifiers
+
+http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality
+
+### Classification
+
+*Work in progress...*
+
+## Known limitations and possible improvements
+
+We identified the following limitations while using SHACL to express EDM
+validation requirements:
+
+- **Comparison constraints limited to datatyped literals:** SHACL provides
+functions to compare datatyped literal (e.g. sh:lessThan, sh:equals, sh:notEquals) values between properties. It uses the associated datatype to determine how the 
+values can be compared, which is the typical behaviour for typed programming 
+languages. However, most properties defined or adopted by EDM do not prescribe a
+datatype, in particular, all date related properties (dc:date, dcterms:created, 
+rdaGr2:dateOfBirth, etc.) and geospatial coordinates (wgs_pos). This brings an 
+additional challenge as for some of them the values should in fact obey to a 
+specific format (e.g. geospatial coordinates) even though not explicit stated 
+through a datatype, but for others there may be more than one format possible 
+(e.g. dc:date). In both cases, there should be a way to make the datatype 
+explicit or be determined so that comparative functions can still be applied. 
+Looking at the EDM requirements, the following should be supported:
+> For an edm:Agent, check that if edm:begin and edm:end are available, edm:begin 
+must be earlier than edm:end. 
+
+
+- **Constraints are limited to a single focus node:** in general, a SHACL 
+constraint is applied to a focus node together with the range of a given 
+property. The only way to get around it, is to define constraint templates using SPARQL which greatly increases the expressive power of the language. However,
+it is cumbersome to define it using SPARQL if there could be a simpler, declarative
+way to express them, especially when only a second focus node is needed. Let me
+explain with an example from EDM (it is now expressed using SPARQL here):
+> For a edm:WebResource, check that dcterms:created is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO
+
+The only thing missing to express it in a declarative way is the second focus
+node for the resource(s) with rdf:type edm:ProvidedCHO.
+
+
+Besides 
+
+- **Shapes are limited to resource nodes:** The same way as shapes can be 
+defined for resources, there should also be a way to define shapes that apply to
+Literals. The main interest on this option is to be able to reuse shapes on 
+Literals to more than one property. Looking again to EDM, there are a 
+significant number of properties whose values are dates, for which, we would 
+like to validate against the same pattern which can be quite complex. The 
+following pattern was defined for dates, but could be further expanded to 
+consider correct values for day, month, etc.
+> sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+
+- **Missing some inverse comparison properties:** SHACL defines properties for 
+comparing datatyped values such as sh:lessThan and sh:lessThanOrEqual, but is
+missing their inverse (e.g. sh:moreThan). Even though this can be achieved by 
+just changing the "source" property, but there can be situations  reversing the  no later than...
+
+- **disjoint properties
+- can I use notEquals more than once for the same property constraint?
+
+

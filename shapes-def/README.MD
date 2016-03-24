@@ -10,6 +10,10 @@ References:
 
 **Contact:** Hugo Manguinhas (hugo.manguinhas@europeana.eu)
 
+## About SHACL
+
+...
+
 ##Shapes Definitions for EDM
 
 EDM defines two flavours
