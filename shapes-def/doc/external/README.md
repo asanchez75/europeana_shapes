@@ -14,11 +14,14 @@ documents, one for each EDM class:
 
 ## Design choices
 
+This section explains the main design choices:
+
 - **One shapes file per class:** A shapes ontology was created for each class
 in order to split the complete shapes definition for EDM into smaller and 
 manageable files. Each file corresponds to a sub-ontology which is linked 
-(using the owl:imports property) to through the main ontology file defined in 
-[EDM.ttl]().
+(using the *owl:imports* property) to through the main ontology file defined in 
+[EDM.ttl](../../src/main/resources/etc/edm/shapes/external/EDM.ttl).
+
 - **Constraints are isolated:** Each rule is expressed in a separate constraint
 or shape so that they are identifiable and have their own descriptive 
 information (metadata).
