@@ -40,14 +40,14 @@ validation requirement:
 > \<namespace\>/\<classname\>/\<property\>#\<category\>
 
 Where:
-- **namespace** is the base URI for the EDM SHACL ontology.
-- **classname** is the name of the EDM class (without a namespace prefix)
-- **property** is the prefixed name of the property being constrained
-- **category** is a keyword that differentiates the contraints per category (see Section below)
+- **namespace:** is the base URI for the EDM SHACL ontology.
+- **classname:** is the name of the EDM class (without a namespace prefix)
+- **property:** is the prefixed name of the property being constrained
+- **category:** is a keyword that differentiates the contraints per category (see Section below)
 
 Examples:
-> http://www.europeana.eu/schemas/shapes/external/ProvidedCHO#type```
-> http://www.europeana.eu/schemas/shapes/external/ProvidedCHO/dc_contributor#cardinality```
+> http://www.europeana.eu/schemas/shapes/external/ProvidedCHO#type
+> http://www.europeana.eu/schemas/shapes/external/ProvidedCHO/dc_contributor#cardinality
 
 
 #### Classification
