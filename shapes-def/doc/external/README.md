@@ -42,7 +42,7 @@ validation requirement:
 Where:
 - **namespace:** is the base URI for the EDM SHACL ontology.
 - **classname:** is the name of the EDM class (without a namespace prefix)
-- **property:** is the prefixed name of the property being constrained
+- **property:** is the prefixed name of the property being constrained within the scope of a class
 - **category:** is a keyword that differentiates the contraints per category (see Section below)
 
 Examples:
