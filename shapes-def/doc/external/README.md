@@ -50,40 +50,48 @@ through a datatype, but for others there may be more than one format possible
 (e.g. dc:date). In both cases, there should be a way to make the datatype 
 explicit or be determined so that comparative functions can still be applied. 
 Looking at the EDM requirements, the following should be supported:
-> For an edm:Agent, check that if edm:begin and edm:end are available, edm:begin 
-must be earlier than edm:end. 
+> Check that if edm:begin and edm:end are defined to an edm:Agent, edm:begin 
+must be earlier than edm:end.
 
 
-- **Constraints are limited to a single focus node:** in general, a SHACL 
-constraint is applied to a focus node together with the range of a given 
-property. The only way to get around it, is to define constraint templates using SPARQL which greatly increases the expressive power of the language. However,
+- **Constraints are limited to a single focus node:** typically, a SHACL 
+constraint is applied to a focus node and the value range of a property. 
+The only way to get around it, is to define constraint templates using SPARQL 
+which greatly increases the expressive power of the language. However,
 it is cumbersome to define it using SPARQL if there could be a simpler, declarative
 way to express them, especially when only a second focus node is needed. Let me
 explain with an example from EDM (it is now expressed using SPARQL here):
-> For a edm:WebResource, check that dcterms:created is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO
+> Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO
 
 The only thing missing to express it in a declarative way is the second focus
 node for the resource(s) with rdf:type edm:ProvidedCHO.
 
 
-Besides 
+Besides the two points mentioned above as limitations, there are some features
+missing to SHACL which could greatly help improve the expressiveness of the 
+language, like the following:
 
 - **Shapes are limited to resource nodes:** The same way as shapes can be 
 defined for resources, there should also be a way to define shapes that apply to
-Literals. The main interest on this option is to be able to reuse shapes on 
-Literals to more than one property. Looking again to EDM, there are a 
-significant number of properties whose values are dates, for which, we would 
-like to validate against the same pattern which can be quite complex. The 
-following pattern was defined for dates, but could be further expanded to 
-consider correct values for day, month, etc.
+literals. The main interest of this option is to be able to reuse such shapes on 
+more than one constraints.
+
+> As an example and looking again at EDM, there are a 
+> significant number of properties whose values are dates, for which, we would 
+> like to validate against the same pattern. The 
+> following pattern was defined for dates, but could be further expanded to 
+> consider correct values for day, month, etc.
 > sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 
 - **Missing some inverse comparison properties:** SHACL defines properties for 
-comparing datatyped values such as sh:lessThan and sh:lessThanOrEqual, but is
-missing their inverse (e.g. sh:moreThan). Even though this can be achieved by 
-just changing the "source" property, but there can be situations  reversing the  no later than...
+comparing datatyped values such as sh:equals, sh:lessThan and sh:lessThanOrEqual
+, but is missing their inverse (e.g. sh:moreThan) with the exception of sh:equals
+(ie. notEquals). For the sake of consistency and also because there can be 
+situations where inverting the order may not be ideal, such functions should be
+available.
 
-- **disjoint properties
+- **Better support for disjointness of properties:** 
+
 - can I use notEquals more than once for the same property constraint?
 
 
