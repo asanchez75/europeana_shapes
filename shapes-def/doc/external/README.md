@@ -33,11 +33,11 @@ own descriptive information (metadata).
 The following syntax was defined to all constraints that relate to an EDM 
 validation requirement:
 
-- for general constraints applied to a class:
+- in particular, for general constraints applied to a class:
 > \<namespace\>/\<classname\>#\<category\>
 
-- for constraints specific to a property: 
-> <namespace>/<classname>/<property>#<category>
+- and for constraints specific to a property: 
+> \<namespace\>/\<classname\>/\<property\>#\<category\>
 
 Where:
 - **namespace** is the base URI for the EDM SHACL ontology.
@@ -46,8 +46,8 @@ Where:
 - **category** is a keyword that differentiates the contraints per category (see Section below)
 
 Examples:
-```http://www.europeana.eu/schemas/shapes/external/ProvidedCHO#type```
-```http://www.europeana.eu/schemas/shapes/external/ProvidedCHO/dc_contributor#cardinality```
+> http://www.europeana.eu/schemas/shapes/external/ProvidedCHO#type```
+> http://www.europeana.eu/schemas/shapes/external/ProvidedCHO/dc_contributor#cardinality```
 
 
 #### Classification
