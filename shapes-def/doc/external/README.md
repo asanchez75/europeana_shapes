@@ -84,12 +84,8 @@ given that in many situations the only thing missing is a way to select a second
 focus node.
 > Here is an example of an EDM constraint that requires two focus nodes, one 
 > for a edm:WebResource and a second for an edm:ProvidedCHO:
->
-> *Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO*
-> 
-> If the check applied to a single focus node (i.e. edm:WebResource), it could
-> be expressed in the following way: 
-> 
+> *"Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO"*. If the check applied 
+> to a single focus node (i.e. edm:WebResource), it could be expressed in the following way: 
 ```
 :contraint
   a sh:PropertyConstraint ;
