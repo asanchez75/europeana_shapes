@@ -88,9 +88,9 @@ focus node.
 > to a single focus node (i.e. edm:WebResource), it could be expressed in the following way: 
 > ```
 :contraint
-  a sh:PropertyConstraint ;
-  sh:predicate dct:created ;
-  sh:lessThanOrEqual dct:issue ;
+    a sh:PropertyConstraint ;
+    sh:predicate dcterms:created ;
+    sh:lessThanOrEqual dcterms:issue ;
 .
 ```
 
