@@ -71,8 +71,8 @@ through a datatype, but for others there may be more than one format possible
 (e.g. dc:date). In both cases, there should be a way to make the datatype 
 explicit or be determined so that comparative functions can still be applied. 
 > Looking at the EDM requirements, the following should be supported:
-> *Check that if edm:begin and edm:end are present in an edm:Agent, edm:begin 
-must be earlier than edm:end.*
+> *"Check that if edm:begin and edm:end are present in an edm:Agent, edm:begin 
+must be earlier than edm:end."*
 
 
 - **Constraints are limited to a single focus node:** typically, a SHACL 
@@ -87,11 +87,11 @@ focus node.
 > *"Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO"*. If the check applied 
 > to a single focus node (i.e. edm:WebResource), it could be expressed in the following way: 
 > ```
-:contraint
+\:contraint
     a sh:PropertyConstraint ;
     sh:predicate dcterms:created ;
     sh:lessThanOrEqual dcterms:issue ;
-.
+\.
 ```
 >
 
