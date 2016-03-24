@@ -1,4 +1,4 @@
-# Shapes definitions for EDM (External)
+# Shapes definitions for EDM (external)
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)*
 
 This document presents all shape definitions that make up EDM (in the form 
@@ -31,6 +31,22 @@ own descriptive information (metadata).
 #### Syntax for identifiers
 
 http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality
+
+Syntax:
+- for general constraints applied to a class:
+```<namespace>/<classname>#<category>```
+- for constraints specific to a property: ```<namespace>/<classname>/<property>#<category>```
+
+Where:
+- **namespace** is the base URI for the EDM SHACL ontology.
+- **classname** is the name of the EDM class (without a namespace prefix)
+- **property** is the prefixed name of the property being constrained
+- **category** is a keyword that differentiates the contraints per category (see Section below)
+
+Examples:
+```http://www.europeana.eu/schemas/shapes/external/ProvidedCHO#type```
+```http://www.europeana.eu/schemas/shapes/external/ProvidedCHO/dc_contributor#cardinality```
+
 
 #### Classification
 
