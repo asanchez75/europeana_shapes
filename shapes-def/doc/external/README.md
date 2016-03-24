@@ -60,12 +60,14 @@ constraint is applied to a focus node and the value range of a property.
 The only way to get around it, is to define constraint templates using SPARQL 
 which greatly increases the expressive power of the language. However,
 it is cumbersome to define it using SPARQL if there could be a simpler, declarative
-way to express them, especially when only a second focus node is needed. Let me
-explain with an example from EDM (it is now expressed using SPARQL here):
-> Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO
+way to express them, especially when only a second focus node is needed. 
 
-The only thing missing to express it in a declarative way is the second focus
-node for the resource(s) with rdf:type edm:ProvidedCHO.
+> Let me explain with an example from EDM (it is now expressed using SPARQL here):
+>
+> *Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO*
+> 
+> The only thing missing to express it in a declarative way is the second focus
+> node for the resource(s) with rdf:type edm:ProvidedCHO.
 
 
 Besides the two points mentioned above as limitations, there are some features
@@ -80,9 +82,10 @@ more than one constraints.
 > As an example and looking again at EDM, there are a 
 > significant number of properties whose values are dates, for which, we would 
 > like to validate against the same pattern. The 
-> following pattern was defined for dates, but could be further expanded to 
-> consider correct values for day, month, etc.
-> ```sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;```
+> following pattern ```sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;``` 
+> was defined for dates, but could be further expanded to consider correct 
+> values for day, month, etc. 
+> 
 
 - **Missing some inverse comparison properties:** SHACL defines properties for 
 comparing datatyped values such as sh:equals, sh:lessThan and sh:lessThanOrEqual
