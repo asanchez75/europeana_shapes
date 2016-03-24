@@ -93,6 +93,7 @@ focus node.
     sh:lessThanOrEqual dcterms:issue ;
 .
 ```
+>
 
 
 Besides the two points mentioned above as limitations, there are some features
