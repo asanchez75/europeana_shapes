@@ -59,7 +59,7 @@ Examples:
 We identified the following limitations while using SHACL to express the EDM
 validation requirements:
 
-- **Comparison constraints limited to datatyped literals:** SHACL provides
+- **Comparison constraints are limited to datatyped literals:** SHACL provides
 functions to compare datatyped literal (e.g. sh:lessThan, sh:equals, sh:notEquals) values between properties. It uses the associated datatype to determine how the 
 values can be compared, which is the typical behaviour for typed programming 
 languages. However, most properties defined or adopted by EDM do not prescribe a
@@ -86,10 +86,11 @@ focus node.
 > for a edm:WebResource and a second for an edm:ProvidedCHO:
 > *"Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created of the edm:ProvidedCHO"*. If the check applied 
 > just to edm:WebResource (i.e. a single focus node), it could be expressed in the following way: 
-> ```:contraint
-    a sh:PropertyConstraint ;
-    sh:predicate dcterms:created ;
-    sh:lessThanOrEqual dcterms:issue ;
+> ```
+:constraint
+        a sh:PropertyConstraint ;
+        sh:predicate dcterms:created ;
+        sh:lessThanOrEqual dcterms:issue ;
 .
 ``` 
 >
