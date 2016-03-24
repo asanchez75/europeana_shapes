@@ -1,8 +1,9 @@
 # Shapes Definitions for EDM (External)
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)*
 
-This document presents all shape definitions that make up the EDM external. It 
-is composed of the following documents, one for each EDM class:
+This document presents all shape definitions that make up EDM (in the form 
+which we call informally as external). It  is composed of the following 
+documents, one for each EDM class:
 - [ore:Aggregation](Aggregation.md)
 - [edm:ProvidedCHO](ProvidedCHO.md)
 - [edm:WebResource](WebResource.md)
@@ -82,7 +83,7 @@ more than one constraints.
 > following pattern was defined for dates, but could be further expanded to 
 > consider correct values for day, month, etc.
 
-> sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+```sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;```
 
 - **Missing some inverse comparison properties:** SHACL defines properties for 
 comparing datatyped values such as sh:equals, sh:lessThan and sh:lessThanOrEqual
