@@ -1,4 +1,4 @@
-## Shapes Definitions for edm:ProvidedCHO class
+## Shapes definitions for edm:ProvidedCHO class
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/ProvidedCHO.ttl)*
 > This shape gathers all constraints that apply to a edm:ProvidedCHO class
 

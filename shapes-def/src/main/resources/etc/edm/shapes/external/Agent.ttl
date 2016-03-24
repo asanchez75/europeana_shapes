@@ -38,6 +38,9 @@
 :base
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:Agent class""" ;
+
   sh:scopeClass edm:Agent ;
 
   # class level constraints

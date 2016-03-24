@@ -40,6 +40,9 @@
 :base
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:Place class""" ;
+
   sh:scopeClass edm:Place ;
 
   # class level constraints

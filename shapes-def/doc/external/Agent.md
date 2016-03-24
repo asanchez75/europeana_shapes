@@ -1,5 +1,6 @@
-## Shapes Definitions for edm:Agent class
+## Shapes definitions for edm:Agent class
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Agent.ttl)*
+> This shape gathers all constraints that apply to a edm:Agent class
 
 The following table shows an overview of the contraints divided per property:
 

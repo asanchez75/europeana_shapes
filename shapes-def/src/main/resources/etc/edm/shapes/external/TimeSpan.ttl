@@ -33,6 +33,9 @@
 :base
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:TimeSpan class""" ;
+
   sh:scopeClass edm:TimeSpan ;
 
   # class level constraints

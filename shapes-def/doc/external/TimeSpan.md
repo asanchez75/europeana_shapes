@@ -1,5 +1,6 @@
-## Shapes Definitions for edm:TimeSpan class
+## Shapes definitions for edm:TimeSpan class
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/TimeSpan.ttl)*
+> This shape gathers all constraints that apply to a edm:TimeSpan class
 
 The following table shows an overview of the contraints divided per property:
 

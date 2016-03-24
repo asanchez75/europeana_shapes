@@ -1,5 +1,6 @@
-## Shapes Definitions for skos:Concept class
+## Shapes definitions for skos:Concept class
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Concept.ttl)*
+> This shape gathers all constraints that apply to a skos:Concept class
 
 The following table shows an overview of the contraints divided per property:
 

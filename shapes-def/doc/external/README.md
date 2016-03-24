@@ -1,8 +1,8 @@
-# Shapes Definitions for EDM (External)
+# Shapes definitions for EDM (External)
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)*
 
 This document presents all shape definitions that make up EDM (in the form 
-which we call informally as external). It  is composed of the following 
+which we informally call as external). It is composed of the following 
 documents, one for each EDM class:
 - [ore:Aggregation](Aggregation.md)
 - [edm:ProvidedCHO](ProvidedCHO.md)
