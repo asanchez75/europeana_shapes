@@ -81,6 +81,7 @@ more than one constraints.
 > like to validate against the same pattern. The 
 > following pattern was defined for dates, but could be further expanded to 
 > consider correct values for day, month, etc.
+
 > sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 
 - **Missing some inverse comparison properties:** SHACL defines properties for 
