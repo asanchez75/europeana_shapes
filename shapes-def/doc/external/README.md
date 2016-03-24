@@ -86,7 +86,7 @@ focus node.
 > for a edm:WebResource and a second for an edm:ProvidedCHO:
 > *"Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO"*. If the check applied 
 > to a single focus node (i.e. edm:WebResource), it could be expressed in the following way: 
-```
+> ```
 :contraint
   a sh:PropertyConstraint ;
   sh:predicate dct:created ;
