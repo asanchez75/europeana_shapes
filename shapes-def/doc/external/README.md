@@ -56,7 +56,7 @@ Examples:
 
 ## Known limitations and possible improvements
 
-We identified the following limitations while using SHACL to express EDM
+We identified the following limitations while using SHACL to express the EDM
 validation requirements:
 
 - **Comparison constraints limited to datatyped literals:** SHACL provides
@@ -65,28 +65,38 @@ values can be compared, which is the typical behaviour for typed programming
 languages. However, most properties defined or adopted by EDM do not prescribe a
 datatype, in particular, all date related properties (dc:date, dcterms:created, 
 rdaGr2:dateOfBirth, etc.) and geospatial coordinates (wgs_pos). This brings an 
-additional challenge as for some of them the values should in fact obey to a 
+additional challenge as for some of them the values should obey to a 
 specific format (e.g. geospatial coordinates) even though not explicit stated 
 through a datatype, but for others there may be more than one format possible 
 (e.g. dc:date). In both cases, there should be a way to make the datatype 
 explicit or be determined so that comparative functions can still be applied. 
 > Looking at the EDM requirements, the following should be supported:
-> *Check that if edm:begin and edm:end are defined to an edm:Agent, edm:begin 
+> *Check that if edm:begin and edm:end are present in an edm:Agent, edm:begin 
 must be earlier than edm:end.*
->
+
 
 - **Constraints are limited to a single focus node:** typically, a SHACL 
 constraint is applied to a focus node and the value range of a property. 
-The only way to get around it, is to define constraint templates using SPARQL 
-which greatly increases the expressive power of the language. However,
-it is cumbersome to define it using SPARQL if there could be a simpler, declarative
-way to express them, especially when only a second focus node is needed.
-> Let me explain with an example from EDM (it is now expressed using SPARQL here):
+The only way to get around it, is to define templates using SPARQL 
+which greatly opens the expressive power of the SHACL. However, using SPARQL 
+looses the declarative advantage of using SHACL in the first place, especially
+given that in many situations the only thing missing is a way to select a second
+focus node.
+> Here is an example of an EDM constraint that requires two focus nodes, one 
+> for a edm:WebResource and a second for an edm:ProvidedCHO:
 >
 > *Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created in edm:ProvidedCHO*
 > 
-> The only thing missing to express it in a declarative way is the second focus
-> node for the resource(s) with rdf:type edm:ProvidedCHO.
+> If the check applied to a single focus node (i.e. edm:WebResource), it could
+> be expressed in the following way: 
+> 
+```
+:contraint
+  a sh:PropertyConstraint ;
+  sh:predicate dct:created ;
+  sh:lessThanOrEqual dct:issue ;
+.
+```
 
 
 Besides the two points mentioned above as limitations, there are some features
