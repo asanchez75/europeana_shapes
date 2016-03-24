@@ -84,16 +84,17 @@ given that in many situations the only thing missing is a way to select a second
 focus node.
 > Here is an example of an EDM constraint that requires two focus nodes, one 
 > for a edm:WebResource and a second for an edm:ProvidedCHO:
-> *"Check that dcterms:created of a edm:WebResource is equal or earlier than dcterms:issued and dcterms:created of the edm:ProvidedCHO"*. If the check applied 
-> just to edm:WebResource (i.e. a single focus node), it could be expressed in the following way: 
+> *"Check that dcterms:created of a edm:WebResource is equal or earlier than 
+> dcterms:issued and dcterms:created of the edm:ProvidedCHO"*. If the check 
+> applied just to edm:WebResource (i.e. a single focus node), it could be 
+> expressed in the following way: 
 > ```
 > :constraint
->        a sh:PropertyConstraint ;
->        sh:predicate dcterms:created ;
->        sh:lessThanOrEqual dcterms:issue ;
+>   a sh:PropertyConstraint ;
+>   sh:predicate dcterms:created ;
+>   sh:lessThanOrEqual dcterms:issue ;
 >.
 > ``` 
-
 
 
 Besides the two points mentioned above as limitations, there are some features
