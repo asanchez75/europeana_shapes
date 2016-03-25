@@ -97,6 +97,7 @@ focus node.
 > ``` 
 
 
+
 Besides the two points mentioned above as limitations, there are some features
 missing to SHACL which could greatly help improve the expressiveness of the 
 language, like the following:
