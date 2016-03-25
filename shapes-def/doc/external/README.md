@@ -104,25 +104,29 @@ language, like the following:
 - **Shapes are limited to resource nodes:** The same way as shapes can be 
 defined for resources, there should also be a way to define shapes that apply to
 literals. The main interest of this option is to be able to reuse such shapes on 
-more than one constraints.
-
-> As an example and looking again at EDM, there are a 
-> significant number of properties whose values are dates, for which, we would 
-> like to validate against the same pattern. The 
-> following pattern ```sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;``` 
+several constraints.
+> As an example, in EDM there are a significant number of properties whose 
+> values are dates, for which, we would  like to validate against the same 
+> pattern. The following pattern 
+> ```sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;``` 
 > was defined for dates, but could be further expanded to consider correct 
 > values for day, month, etc. 
-> 
+
 
 - **Missing some inverse comparison properties:** SHACL defines properties for 
-comparing datatyped values such as sh:equals, sh:lessThan and sh:lessThanOrEqual
-, but is missing their inverse (e.g. sh:moreThan) with the exception of sh:equals
+comparing datatyped literals such as sh:equals, sh:lessThan and sh:lessThanOrEqual,
+ but is missing their inverse (e.g. sh:moreThan) with the exception of sh:equals
 (ie. notEquals). For the sake of consistency and also because there can be 
 situations where inverting the order may not be ideal, such functions should be
 available.
 
-- **Better support for disjointness of properties:** 
-
-- can I use notEquals more than once for the same property constraint?
-
-
+- **Better support for disjointness of properties:** It is possible to define
+that the range of two properties is disjoint using the sh:notEquals. However,
+in case several properties must be disjoint amongst each other, it is necessary
+to create a sh:PropertyConstraint for each pair of properties, namely C(n,2).
+This could be simplified if sh:notEquals could be used more than once per 
+sh:PropertyConstraint. Another option would be to define a function at the level
+of a shape stating the group of properties that must be pairwise disjoint.
+> As an example, in EDM all SKOS relation properties should be disjoint, namely: 
+> skos:broadMatch, skos:narrowMatch, skos:relatedMatch, skos:broader, 
+> skos:narrower, skos:related, skos:exactMatch, skos:closeMatch
