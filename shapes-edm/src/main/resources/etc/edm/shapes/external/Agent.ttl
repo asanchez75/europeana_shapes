@@ -501,6 +501,7 @@
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:minCount 0 ;
+  sh:maxCount 1 ;
 .
 
 <Agent/rdaGr2_dateOfBirth#literal>
@@ -540,6 +541,7 @@
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:minCount 0 ;
+  sh:maxCount 1 ;
 .
 
 <Agent/rdaGr2_dateOfDeath#literal>

@@ -1,5 +1,5 @@
 ## Shapes definitions for edm:Agent class
-*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Agent.ttl)*
+*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Agent.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)*
 > This shape gathers all constraints that apply to a edm:Agent class
 
 The following table shows an overview of the contraints divided per property:
@@ -15,8 +15,8 @@ The following table shows an overview of the contraints divided per property:
 |<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_type">IRI</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_range-class">range-class</a>|
 |<a href="#foaf_name">foaf:name</a>|<a href="#edm_shapes_external_Agent_foaf_name_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_foaf_name_type">Literal</a>||
 |<a href="#rdaGr2_biographicalInformation">rdaGr2:biographicalInformation</a>|<a href="#edm_shapes_external_Agent_rdaGr2_biographicalInformation_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_biographicalInformation_type">Literal</a>||
-|<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_literal">literal</a>|
-|<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_literal">literal</a>|
+|<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_literal">literal</a>|
+|<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_literal">literal</a>|
 |<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_literal">literal</a>|
 |<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_literal">literal</a>|
 |<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_type">Literal</a>||
@@ -492,6 +492,7 @@ The following table shows an overview of the contraints divided per property:
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:minCount 0 ;
+  sh:maxCount 1 ;
 .
 ```
 ###### <a id="edm_shapes_external_Agent_rdaGr2_dateOfBirth_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#correlation</a>
@@ -569,6 +570,7 @@ The following table shows an overview of the contraints divided per property:
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:minCount 0 ;
+  sh:maxCount 1 ;
 .
 ```
 ###### <a id="edm_shapes_external_Agent_rdaGr2_dateOfDeath_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal</a>

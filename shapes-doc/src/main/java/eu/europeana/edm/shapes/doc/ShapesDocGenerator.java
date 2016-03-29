@@ -248,8 +248,10 @@ public class ShapesDocGenerator
     private void printClassDescription(Resource shape, File file
                                      , PrintStream ps)
     {
+        String swURL = "https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc";
         ps.println("*This document was generated from the [shapes file]("
-                + getRemoteURL(file) + ")*");
+                 + getRemoteURL(file) + ") using [this software](" + swURL 
+                 + ")*");
         StmtIterator iter = shape.listProperties(SH.description);
         while ( iter.hasNext() )
         {
