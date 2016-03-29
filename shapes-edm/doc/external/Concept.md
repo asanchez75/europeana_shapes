@@ -163,7 +163,7 @@ The following table shows an overview of the contraints divided per property:
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate skos:broader ;
-  sh:valueShape :base ;
+  sh:valueShape Concept: ;
   sh:class edm:Concept ;
 .
 ```

@@ -9,19 +9,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdaGr2: <http://rdvocab.info/ElementsGr2/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
-@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
-@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/Concept#> .
-@base         <http://www.europeana.eu/schemas/edm/shapes/external/Concept/> .
 
+@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+
+@base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix Concept:  <Concept#base> .
 
 ################################################################################
 # Shape Graph for skos:Concept
 ################################################################################
 
-:
+<Concept>
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for skos:Concept Class"^^xsd:string ;
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
@@ -31,7 +30,7 @@
 # Base Shape for the skos:Concept Class
 ################################################################################
 
-:base
+<Concept#base>
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
   sh:description """This shape gathers all constraints that apply to a 
@@ -40,53 +39,53 @@
   sh:scopeClass skos:Concept ;
 
   # class level constraints
-  sh:constraint [ sh:closed true ] ;
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
 
   # SKOS properties
-  sh:property        <skos_prefLabel#type> ;
-  sh:property        <skos_prefLabel#datatype> ;
-  sh:property        <skos_prefLabel#cardinality> ;
-  sh:property        <skos_altLabel#type> ;
-  sh:property        <skos_altLabel#datatype> ;
-  sh:property        <skos_altLabel#cardinality> ;
-  sh:property        <skos_altLabel#redundancy> ;
-  sh:property        <skos_broader#type> ;
-  sh:property        <skos_broader#cardinality> ;
-  sh:property        <skos_broader#range-class> ;
-  sh:property        <skos_narrower#type> ;
-  sh:property        <skos_narrower#cardinality> ;
-  sh:property        <skos_related#type> ;
-  sh:property        <skos_related#cardinality> ;
-  sh:property        <skos_broadMatch#type> ;
-  sh:property        <skos_broadMatch#cardinality> ;
-  sh:property        <skos_narrowMatch#type> ;
-  sh:property        <skos_narrowMatch#cardinality> ;
-  sh:property        <skos_relatedMatch#type> ;
-  sh:property        <skos_relatedMatch#cardinality> ;
-  sh:property        <skos_exactMatch#type> ;
-  sh:property        <skos_exactMatch#cardinality> ;
-  sh:property        <skos_closeMatch#type> ;
-  sh:property        <skos_closeMatch#cardinality> ;
-  sh:property        <skos_note#type> ;
-  sh:property        <skos_note#datatype> ;
-  sh:property        <skos_note#cardinality> ;
-  sh:property        <skos_notation#type> ;
-  sh:property        <skos_notation#datatype> ;
-  sh:property        <skos_notation#cardinality> ;
-  sh:property        <skos_inScheme#type> ;
-  sh:property        <skos_inScheme#cardinality> ;
+  sh:property        <Concept/skos_prefLabel#type> ;
+  sh:property        <Concept/skos_prefLabel#datatype> ;
+  sh:property        <Concept/skos_prefLabel#cardinality> ;
+  sh:property        <Concept/skos_altLabel#type> ;
+  sh:property        <Concept/skos_altLabel#datatype> ;
+  sh:property        <Concept/skos_altLabel#cardinality> ;
+  sh:property        <Concept/skos_altLabel#redundancy> ;
+  sh:property        <Concept/skos_broader#type> ;
+  sh:property        <Concept/skos_broader#cardinality> ;
+  sh:property        <Concept/skos_broader#range-class> ;
+  sh:property        <Concept/skos_narrower#type> ;
+  sh:property        <Concept/skos_narrower#cardinality> ;
+  sh:property        <Concept/skos_related#type> ;
+  sh:property        <Concept/skos_related#cardinality> ;
+  sh:property        <Concept/skos_broadMatch#type> ;
+  sh:property        <Concept/skos_broadMatch#cardinality> ;
+  sh:property        <Concept/skos_narrowMatch#type> ;
+  sh:property        <Concept/skos_narrowMatch#cardinality> ;
+  sh:property        <Concept/skos_relatedMatch#type> ;
+  sh:property        <Concept/skos_relatedMatch#cardinality> ;
+  sh:property        <Concept/skos_exactMatch#type> ;
+  sh:property        <Concept/skos_exactMatch#cardinality> ;
+  sh:property        <Concept/skos_closeMatch#type> ;
+  sh:property        <Concept/skos_closeMatch#cardinality> ;
+  sh:property        <Concept/skos_note#type> ;
+  sh:property        <Concept/skos_note#datatype> ;
+  sh:property        <Concept/skos_note#cardinality> ;
+  sh:property        <Concept/skos_notation#type> ;
+  sh:property        <Concept/skos_notation#datatype> ;
+  sh:property        <Concept/skos_notation#cardinality> ;
+  sh:property        <Concept/skos_inScheme#type> ;
+  sh:property        <Concept/skos_inScheme#cardinality> ;
 .
 
 # skos:prefLabel ###############################################################
 
-<skos_prefLabel#type>
+<Concept/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_prefLabel#datatype>
+<Concept/skos_prefLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
@@ -96,7 +95,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_prefLabel#cardinality>
+<Concept/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
@@ -108,14 +107,14 @@
 
 # skos:altLabel ################################################################
 
-<skos_altLabel#type>
+<Concept/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_altLabel#datatype>
+<Concept/skos_altLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
@@ -125,7 +124,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_altLabel#cardinality>
+<Concept/skos_altLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -133,7 +132,7 @@
   sh:minCount 0 ;
 .
 
-<skos_altLabel#redundancy>
+<Concept/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
@@ -146,14 +145,14 @@
 
 # skos:broader #################################################################
 
-<skos_broader#type>
+<Concept/skos_broader#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:broader ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_broader#cardinality>
+<Concept/skos_broader#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -161,26 +160,26 @@
   sh:minCount 0 ;
 .
 
-<skos_broader#range-class>
+<Concept/skos_broader#range-class>
   a sh:PropertyConstraint ;
   sh:description "skos:broader must refer to a valid skos:Concept" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate skos:broader ;
-  sh:valueShape :base ;
+  sh:valueShape Concept: ;
   sh:class edm:Concept ;
 .
 
 # skos:narrower ################################################################
 
-<skos_narrower#type>
+<Concept/skos_narrower#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:narrower ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_narrower#cardinality>
+<Concept/skos_narrower#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -190,14 +189,14 @@
 
 # skos:related #################################################################
 
-<skos_related#type>
+<Concept/skos_related#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:related ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_related#cardinality>
+<Concept/skos_related#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -207,14 +206,14 @@
 
 # skos:broadMatch ##############################################################
 
-<skos_broadMatch#type>
+<Concept/skos_broadMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:broadMatch ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_broadMatch#cardinality>
+<Concept/skos_broadMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -224,14 +223,14 @@
 
 # skos:narrowMatch #############################################################
 
-<skos_narrowMatch#type>
+<Concept/skos_narrowMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:narrowMatch ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_narrowMatch#cardinality>
+<Concept/skos_narrowMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -241,14 +240,14 @@
 
 # skos:relatedMatch ############################################################
 
-<skos_relatedMatch#type>
+<Concept/skos_relatedMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:relatedMatch ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_relatedMatch#cardinality>
+<Concept/skos_relatedMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -258,14 +257,14 @@
 
 # skos:exactMatch ##############################################################
 
-<skos_exactMatch#type>
+<Concept/skos_exactMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:exactMatch ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_exactMatch#cardinality>
+<Concept/skos_exactMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -275,14 +274,14 @@
 
 # skos:closeMatch ##############################################################
 
-<skos_closeMatch#type>
+<Concept/skos_closeMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:closeMatch ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_closeMatch#cardinality>
+<Concept/skos_closeMatch#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -292,14 +291,14 @@
 
 # skos:note ####################################################################
 
-<skos_note#type>
+<Concept/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_note#datatype>
+<Concept/skos_note#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
@@ -309,7 +308,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_note#cardinality>
+<Concept/skos_note#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -319,14 +318,14 @@
 
 # skos:notation ################################################################
 
-<skos_notation#type>
+<Concept/skos_notation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:notation ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_notation#datatype>
+<Concept/skos_notation#datatype>
   a sh:PropertyConstraint ;
   sh:description "skos:notation should be assigned with a typed literal" ;
   dc:type esc:datatype ;
@@ -334,7 +333,7 @@
   #prescribe as typed literal
 .
 
-<skos_notation#cardinality>
+<Concept/skos_notation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -344,14 +343,14 @@
 
 # skos:inScheme ################################################################
 
-<skos_inScheme#type>
+<Concept/skos_inScheme#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:inScheme ;
   sh:nodeKind sh:IRI ;
 .
 
-<skos_inScheme#cardinality>
+<Concept/skos_inScheme#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;

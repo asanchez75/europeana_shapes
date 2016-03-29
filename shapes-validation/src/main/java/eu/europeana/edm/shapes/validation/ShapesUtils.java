@@ -18,10 +18,8 @@ import org.apache.jena.util.FileUtils;
 import org.topbraid.shacl.vocabulary.SH;
 import org.topbraid.spin.util.JenaUtil;
 
-import eu.europeana.edm.shapes.RunValidator;
 import static eu.europeana.edm.shapes.validation.SHACLNamespace.*;
 import static eu.europeana.edm.shapes.validation.ShapesConstants.*;
-import static eu.europeana.edm.EDMNamespace.*;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
@@ -33,13 +31,6 @@ public class ShapesUtils
      * Public Methods
      **************************************************************************/
 
-    public static Model getSHACL()
-    {
-        Model m = JenaUtil.createDefaultModel();
-        InputStream is = SH.class.getResourceAsStream("/etc/shacl.ttl");
-        m.read(is, SH.BASE_URI, FileUtils.langTurtle);
-        return m;
-    }
 
     // Load the shapes Model (here, includes the dataModel 
     // because that has templates in it)

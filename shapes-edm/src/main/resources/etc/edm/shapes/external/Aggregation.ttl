@@ -9,21 +9,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdaGr2: <http://rdvocab.info/ElementsGr2/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
-@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
-@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation#> .
-@base         <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/> .
 
-@prefix ProvidedCHO: <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#base> .
-@prefix WebResource: <http://www.europeana.eu/schemas/edm/shapes/external/WebResource#base> .
+@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+
+@base                <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix ProvidedCHO: <ProvidedCHO#base> .
+@prefix WebResource: <WebResource#base> .
 
 ################################################################################
 # Shape Graph for ore:Aggregation
 ################################################################################
 
-:
+<Aggregation>
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for edm:ProvidedCHO Class"^^xsd:string ;
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
@@ -33,7 +31,7 @@
 # Base Shape for the ore:Aggregation Class
 ################################################################################
 
-:base
+<Aggregation#base>
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
   sh:description """This shape gathers all constraints that apply to a 
@@ -42,45 +40,45 @@
   sh:scopeClass ore:Aggregation ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ] ;
-  sh:constraint      :correlation ;
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Aggregation#correlation> ;
 
   # DC properties
-  sh:property        <dc_rights#type> ;
-  sh:property        <dc_rights#cardinality> ;
-  sh:property        <dc_rights#redundancy> ;
+  sh:property        <Aggregation/dc_rights#type> ;
+  sh:property        <Aggregation/dc_rights#cardinality> ;
+  sh:property        <Aggregation/dc_rights#redundancy> ;
 
   # EDM properties
-  sh:property        <edm_aggregatedCHO#type> ;
-  sh:property        <edm_aggregatedCHO#cardinality> ;
-  sh:property        <edm_aggregatedCHO#range-class> ;
-  sh:property        <edm_dataProvider#cardinality> ;
-  sh:property        <edm_hasView#type> ;
-  sh:property        <edm_hasView#cardinality> ;
-  sh:property        <edm_hasView#range-class> ;
-  sh:property        <edm_isShownAt#type> ;
-  sh:property        <edm_isShownAt#cardinality> ;
-  sh:property        <edm_isShownAt#range-class> ;
-  sh:property        <edm_isShownBy#type> ;
-  sh:property        <edm_isShownBy#cardinality> ;
-  sh:property        <edm_isShownBy#range-class> ;
-  sh:property        <edm_object#type> ;
-  sh:property        <edm_object#cardinality> ;
-  sh:property        <edm_object#range-class> ;
-  sh:property        <edm_provider#cardinality> ;
-  sh:property        <edm_rights#type> ;
-  sh:property        <edm_rights#cardinality> ;
-  sh:property        <edm_rights#values> ;
-  sh:property        <edm_ugc#type> ;
-  sh:property        <edm_ugc#cardinality> ;
-  sh:property        <edm_unstored#type> ;
-  sh:property        <edm_unstored#cardinality> ;
+  sh:property        <Aggregation/edm_aggregatedCHO#type> ;
+  sh:property        <Aggregation/edm_aggregatedCHO#cardinality> ;
+  sh:property        <Aggregation/edm_aggregatedCHO#range-class> ;
+  sh:property        <Aggregation/edm_dataProvider#cardinality> ;
+  sh:property        <Aggregation/edm_hasView#type> ;
+  sh:property        <Aggregation/edm_hasView#cardinality> ;
+  sh:property        <Aggregation/edm_hasView#range-class> ;
+  sh:property        <Aggregation/edm_isShownAt#type> ;
+  sh:property        <Aggregation/edm_isShownAt#cardinality> ;
+  sh:property        <Aggregation/edm_isShownAt#range-class> ;
+  sh:property        <Aggregation/edm_isShownBy#type> ;
+  sh:property        <Aggregation/edm_isShownBy#cardinality> ;
+  sh:property        <Aggregation/edm_isShownBy#range-class> ;
+  sh:property        <Aggregation/edm_object#type> ;
+  sh:property        <Aggregation/edm_object#cardinality> ;
+  sh:property        <Aggregation/edm_object#range-class> ;
+  sh:property        <Aggregation/edm_provider#cardinality> ;
+  sh:property        <Aggregation/edm_rights#type> ;
+  sh:property        <Aggregation/edm_rights#cardinality> ;
+  sh:property        <Aggregation/edm_rights#values> ;
+  sh:property        <Aggregation/edm_ugc#type> ;
+  sh:property        <Aggregation/edm_ugc#cardinality> ;
+  sh:property        <Aggregation/edm_unstored#type> ;
+  sh:property        <Aggregation/edm_unstored#cardinality> ;
 .
 
 
 # class level constraints ######################################################
 
-:correlation
+<Aggregation#correlation>
   a sh:Constraint ;
   sh:description """At least one edm:isShownAt or edm:isShownBy should be 
                     present""" ;
@@ -95,14 +93,14 @@
 
 # dc:rights ####################################################################
 
-<dc_rights#type>
+<Aggregation/dc_rights#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:rights ;
   sh:nodeKind sh:Literal ;
 .
 
-<dc_rights#cardinality>
+<Aggregation/dc_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -110,7 +108,7 @@
   sh:minCount 0 ;
 .
 
-<dc_rights#redundancy>
+<Aggregation/dc_rights#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """dc:rights should not be the same as edm:rights, if true
@@ -123,14 +121,14 @@
 
 # edm:aggregatedCHO ############################################################
 
-<edm_aggregatedCHO#type>
+<Aggregation/edm_aggregatedCHO#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:aggregatedCHO ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_aggregatedCHO#cardinality>
+<Aggregation/edm_aggregatedCHO#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -139,7 +137,7 @@
   sh:maxCount 1 ;
 .
 
-<edm_aggregatedCHO#range-class>
+<Aggregation/edm_aggregatedCHO#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:ProvidedCHO" ;
 # sh:description "Check that the URI refers to an existing CHO" ;
@@ -153,7 +151,7 @@
 
 # edm:dataProvider #############################################################
 
-<edm_dataProvider#cardinality>
+<Aggregation/edm_dataProvider#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -164,14 +162,14 @@
 
 # edm:hasView ##################################################################
 
-<edm_hasView#type>
+<Aggregation/edm_hasView#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:hasView ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_hasView#cardinality>
+<Aggregation/edm_hasView#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -180,7 +178,7 @@
 .
 
 #not in the spreadsheet
-<edm_hasView#range-class>
+<Aggregation/edm_hasView#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the pointed media resolves to a landing page" ;
@@ -195,14 +193,14 @@
 
 # edm:isShownAt ################################################################
 
-<edm_isShownAt#type>
+<Aggregation/edm_isShownAt#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isShownAt ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isShownAt#cardinality>
+<Aggregation/edm_isShownAt#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -211,7 +209,7 @@
   sh:maxCount 1 ;
 .
 
-<edm_isShownAt#range-class>
+<Aggregation/edm_isShownAt#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the pointed media resolves to a landing page" ;
@@ -226,14 +224,14 @@
 
 # edm:isShownBy ################################################################
 
-<edm_isShownBy#type>
+<Aggregation/edm_isShownBy#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isShownBy ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isShownBy#cardinality>
+<Aggregation/edm_isShownBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -242,7 +240,7 @@
   sh:maxCount 1 ;
 .
 
-<edm_isShownBy#range-class>
+<Aggregation/edm_isShownBy#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the URI resolves to a media" ;
@@ -258,14 +256,14 @@
 
 # edm:object ###################################################################
 
-<edm_object#type>
+<Aggregation/edm_object#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:object ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_object#cardinality>
+<Aggregation/edm_object#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -273,7 +271,7 @@
   sh:minCount 0 ;
 .
 
-<edm_object#range-class>
+<Aggregation/edm_object#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the URI resolves to a media" ;
@@ -289,7 +287,7 @@
 
 # edm:provider #################################################################
 
-<edm_provider#cardinality>
+<Aggregation/edm_provider#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -300,14 +298,14 @@
 
 # edm:rights ###################################################################
 
-<edm_rights#type>
+<Aggregation/edm_rights#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:rights ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_rights#cardinality>
+<Aggregation/edm_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -315,7 +313,7 @@
   sh:minCount 0 ;
 .
 
-<edm_rights#values>
+<Aggregation/edm_rights#values>
   a sh:PropertyConstraint ;
   dc:type esc:values ;
   sh:description """Check the value is one of the controlled values: 
@@ -340,14 +338,14 @@
 
 # edm:ugc ######################################################################
 
-<edm_ugc#type>
+<Aggregation/edm_ugc#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:ugc ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_ugc#cardinality>
+<Aggregation/edm_ugc#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -358,14 +356,14 @@
 
 # edm:unstored #################################################################
 
-<edm_unstored#type>
+<Aggregation/edm_unstored#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:unstored ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_unstored#cardinality>
+<Aggregation/edm_unstored#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;

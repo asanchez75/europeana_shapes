@@ -9,25 +9,22 @@
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdaGr2:    <http://rdvocab.info/ElementsGr2/> .
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix edm:       <http://www.europeana.eu/schemas/edm/> .
 
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
-@prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 @prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
-@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/Place#> .
-@base         <http://www.europeana.eu/schemas/edm/shapes/external/Place/> .
 
-@prefix Agent:    <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> .
-@prefix Concept:  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> .
-@prefix Place:    <http://www.europeana.eu/schemas/edm/shapes/external/Place#base> .
-@prefix TimeSpan: <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base> .
+@base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix Agent:    <Agent#base> .
+@prefix Concept:  <Concept#base> .
+@prefix Place:    <Place#base> .
+@prefix TimeSpan: <TimeSpan#base> .
 
 ################################################################################
 # Shape Graph for edm:Place
 ################################################################################
 
-:
+<Place>
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for edm:Place Class"^^xsd:string ;
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
@@ -37,7 +34,7 @@
 # Base Shape for the edm:Place Class
 ################################################################################
 
-:base
+<Place:base>
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
   sh:description """This shape gathers all constraints that apply to a 
@@ -46,62 +43,62 @@
   sh:scopeClass edm:Place ;
 
   # class level constraints
-  sh:constraint [ sh:closed true ] ;
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
 
   # SKOS properties
-  sh:property        <skos_prefLabel#type> ;
-  sh:property        <skos_prefLabel#datatype> ;
-  sh:property        <skos_prefLabel#cardinality> ;
-  sh:property        <skos_altLabel#type> ;
-  sh:property        <skos_altLabel#datatype> ;
-  sh:property        <skos_altLabel#cardinality> ;
-  sh:property        <skos_altLabel#redundancy> ;
-  sh:property        <skos_note#type> ;
-  sh:property        <skos_note#datatype> ;
-  sh:property        <skos_note#cardinality> ;
+  sh:property        <Place/skos_prefLabel#type> ;
+  sh:property        <Place/skos_prefLabel#datatype> ;
+  sh:property        <Place/skos_prefLabel#cardinality> ;
+  sh:property        <Place/skos_altLabel#type> ;
+  sh:property        <Place/skos_altLabel#datatype> ;
+  sh:property        <Place/skos_altLabel#cardinality> ;
+  sh:property        <Place/skos_altLabel#redundancy> ;
+  sh:property        <Place/skos_note#type> ;
+  sh:property        <Place/skos_note#datatype> ;
+  sh:property        <Place/skos_note#cardinality> ;
 
   # WGS84 properties
-  sh:property        <wgs84_lat#type> ;
-  sh:property        <wgs84_lat#cardinality> ;
-  sh:property        <wgs84_lat#literal> ;
-  sh:property        <wgs84_lat#correlation> ;
-  sh:property        <wgs84_long#type> ;
-  sh:property        <wgs84_long#cardinality> ;
-  sh:property        <wgs84_long#literal> ;
-  sh:property        <wgs84_long#correlation> ;
-  sh:property        <wgs84_alt#type> ;
-  sh:property        <wgs84_alt#cardinality> ;
-  sh:property        <wgs84_alt#literal> ;
-  sh:constraint      <wgs84_alt#correlation> ;
+  sh:property        <Place/wgs84_lat#type> ;
+  sh:property        <Place/wgs84_lat#cardinality> ;
+  sh:property        <Place/wgs84_lat#literal> ;
+  sh:property        <Place/wgs84_lat#correlation> ;
+  sh:property        <Place/wgs84_long#type> ;
+  sh:property        <Place/wgs84_long#cardinality> ;
+  sh:property        <Place/wgs84_long#literal> ;
+  sh:property        <Place/wgs84_long#correlation> ;
+  sh:property        <Place/wgs84_alt#type> ;
+  sh:property        <Place/wgs84_alt#cardinality> ;
+  sh:property        <Place/wgs84_alt#literal> ;
+  sh:constraint      <Place/wgs84_alt#correlation> ;
 
   # DCTERMS properties
-  sh:property        <dct_hasPart#type> ;
-  sh:property        <dct_hasPart#cardinality> ;
-  sh:property        <dct_hasPart#range-class> ;
-  sh:property        <dct_isPartOf#type> ;
-  sh:property        <dct_isPartOf#cardinality> ;
-  sh:property        <dct_isPartOf#range-class> ;
+  sh:property        <Place/dct_hasPart#type> ;
+  sh:property        <Place/dct_hasPart#cardinality> ;
+  sh:property        <Place/dct_hasPart#range-class> ;
+  sh:property        <Place/dct_isPartOf#type> ;
+  sh:property        <Place/dct_isPartOf#cardinality> ;
+  sh:property        <Place/dct_isPartOf#range-class> ;
 
   # EDM properties
-  sh:property        <edm_isNextInSequence#type> ;
-  sh:property        <edm_isNextInSequence#cardinality> ;
-  sh:property        <edm_isNextInSequence#range-class> ;
+  sh:property        <Place/edm_isNextInSequence#type> ;
+  sh:property        <Place/edm_isNextInSequence#cardinality> ;
+  sh:property        <Place/edm_isNextInSequence#range-class> ;
 
   # OWL properties
-  sh:property        <owl_sameAs#type> ;
-  sh:property        <owl_sameAs#cardinality> ;
+  sh:property        <Place/owl_sameAs#type> ;
+  sh:property        <Place/owl_sameAs#cardinality> ;
 .
 
 # skos:prefLabel ###############################################################
 
-<skos_prefLabel#type>
+<Place/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_prefLabel#datatype>
+<Place/skos_prefLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
@@ -111,7 +108,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_prefLabel#cardinality>
+<Place/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
@@ -124,14 +121,14 @@
 
 # skos:altLabel ################################################################
 
-<skos_altLabel#type>
+<Place/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_altLabel#datatype>
+<Place/skos_altLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
@@ -141,7 +138,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_altLabel#cardinality>
+<Place/skos_altLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -149,7 +146,7 @@
   sh:minCount 0 ;
 .
 
-<skos_altLabel#redundancy>
+<Place/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
@@ -162,14 +159,14 @@
 
 # skos:note ####################################################################
 
-<skos_note#type>
+<Place/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_note#datatype>
+<Place/skos_note#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
@@ -179,7 +176,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_note#cardinality>
+<Place/skos_note#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -189,14 +186,14 @@
 
 # wgs84_pos:lat ################################################################
 
-<wgs84_lat#type>
+<Place/wgs84_lat#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate wgs84_pos:lat ;
   sh:nodeKind sh:Literal ;
 .
 
-<wgs84_lat#cardinality>
+<Place/wgs84_lat#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -205,7 +202,7 @@
   sh:maxCount 1 ;
 .
 
-<wgs84_lat#literal>
+<Place/wgs84_lat#literal>
   a sh:PropertyConstraint ;
   sh:description "The value of wgs84_pos:lat must be a decimal";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
@@ -213,7 +210,7 @@
   sh:pattern "^[-+]?[0-9]*[.]?[0-9]+$" ;
 .
 
-<wgs84_lat#correlation>
+<Place/wgs84_lat#correlation>
   a sh:PropertyConstraint ;
   sh:description "wgs84_pos:lat should be accompanied with a wgs84_pos:long";
   dc:subject "R-68-REQUIRED-PROPERTIES"
@@ -231,14 +228,14 @@
 
 # wgs84_pos:long ###############################################################
 
-<wgs84_long#type>
+<Place/wgs84_long#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate wgs84_pos:long ;
   sh:nodeKind sh:Literal ;
 .
 
-<wgs84_long#cardinality>
+<Place/wgs84_long#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -247,7 +244,7 @@
   sh:maxCount 1 ;
 .
 
-<wgs84_long#literal>
+<Place/wgs84_long#literal>
   a sh:PropertyConstraint ;
   sh:description "The value of wgs84_pos:long must be a decimal";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
@@ -255,7 +252,7 @@
   sh:pattern "^[-+]?[0-9]*[.]?[0-9]+$" ;
 .
 
-<wgs84_long#correlation>
+<Place/wgs84_long#correlation>
   a sh:PropertyConstraint ;
   sh:description "wgs84_pos:long should be accompanied with a wgs84_pos:lat";
   dc:subject "R-68-REQUIRED-PROPERTIES"
@@ -273,14 +270,14 @@
 
 # wgs84_pos:alt ###############################################################
 
-<wgs84_alt#type>
+<Place/wgs84_alt#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate wgs84_pos:alt ;
   sh:nodeKind sh:Literal ;
 .
 
-<wgs84_alt#cardinality>
+<Place/wgs84_alt#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -289,7 +286,7 @@
   sh:maxCount 1 ;
 .
 
-<wgs84_alt#literal>
+<Place/wgs84_alt#literal>
   a sh:PropertyConstraint ;
   sh:description "The value of wgs84_pos:alt must be a decimal";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
@@ -297,7 +294,7 @@
   sh:pattern "^[-+]?[0-9]*[.]?[0-9]+$" ;
 .
 
-<wgs84_alt#correlation>
+<Place/wgs84_alt#correlation>
   a sh:Constraint ;
   sh:description """wgs84_pos:alt should be accompanied with both wgs84_pos:lat
                     and wgs84_pos:long""";
@@ -308,14 +305,14 @@
 
 # dcterms:hasPart ##############################################################
 
-<dct_hasPart#type>
+<Place/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:hasPart ;
   sh:nodeKind sh:IRI ;
 .
 
-<dct_hasPart#cardinality>
+<Place/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -323,27 +320,27 @@
   sh:minCount 0 ;
 .
 
-<dct_hasPart#range-class>
+<Place/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:hasPart must refer to a valid edm:Place" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape Place: ;
   sh:class edm:Place ;
 .
 
 # dcterms:isPartOf #############################################################
 
-<dct_isPartOf#type>
+<Place/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:isPartOf ;
   sh:nodeKind sh:IRI ;
 .
 
-<dct_isPartOf#cardinality>
+<Place/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -351,27 +348,27 @@
   sh:minCount 0 ;
 .
 
-<dct_isPartOf#range-class>
+<Place/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:isPartOf must refer to a valid edm:Place" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape Place: ;
   sh:class edm:Place ;
 .
 
 # edm:isNextInSequence #########################################################
 
-<edm_isNextInSequence#type>
+<Place/edm_isNextInSequence#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isNextInSequence ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isNextInSequence#cardinality>
+<Place/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -379,27 +376,27 @@
   sh:minCount 0 ;
 .
 
-<edm_isNextInSequence#range-class>
+<Place/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:Place" ;
   dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isNextInSequence ;
-  sh:valueShape :base ;
+  sh:valueShape Place: ;
   sh:class edm:Place ;
 .
 
 # owl:sameAs ###################################################################
 
-<owl_sameAs#type>
+<Place/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
 .
 
-<owl_sameAs#cardinality>
+<Place/owl_sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;

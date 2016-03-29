@@ -3,6 +3,7 @@
  */
 package eu.europeana.edm.shapes.validation;
 
+import java.io.InputStream;
 import java.net.URI;
 import java.util.UUID;
 
@@ -11,16 +12,12 @@ import org.apache.jena.graph.compose.MultiUnion;
 import org.apache.jena.query.Dataset;
 import org.topbraid.shacl.arq.SHACLFunctions;
 import org.topbraid.shacl.constraints.ModelConstraintValidator;
+import org.topbraid.shacl.vocabulary.SH;
 import org.topbraid.spin.arq.ARQFactory;
+import org.topbraid.spin.util.JenaUtil;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.RDFNode;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.util.FileUtils;
-import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 
 import eu.europeana.edm.shapes.validation.ShapesConstants.ShapesType;
 import static eu.europeana.edm.shapes.validation.SHACLNamespace.*;
@@ -30,21 +27,20 @@ import static eu.europeana.edm.shapes.validation.ShapesUtils.*;
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
  * @since 8 Dec 2015
  */
-public class TopBraidValidator extends AbsRecordValidator
-                               implements RecordValidator
+public class TopBraidValidator implements ModelValidator
 {
-    private ModelConstraintValidator _validator       = null;
-    private Model                    _validationModel = null;
+    private ModelConstraintValidator _validator         = null;
+    private Model                    _validationModel   = null;
+    private URI                      _shapesURI         = null;
 
-    public TopBraidValidator(Model validationModel)
+    public TopBraidValidator(Model shapesModel)
     {
         _validator       = ModelConstraintValidator.get();
-        _validationModel = validationModel;
-    }
+        _validationModel = getValidationModel(shapesModel);
 
-    public TopBraidValidator(ShapesType type)
-    {
-        this(getValidationModel(type));
+     // (here, using a temporary URI for the shapes graph)
+        String uuid      = UUID.randomUUID().toString();
+        _shapesURI = URI.create("urn:x-shacl-shapes-graph:" + uuid);
     }
 
 
@@ -54,18 +50,14 @@ public class TopBraidValidator extends AbsRecordValidator
 
     public Model validate(Model data)
     {
-        // (here, using a temporary URI for the shapes graph)
-        String uuid      = UUID.randomUUID().toString();
-        URI    shapesURI = URI.create("urn:x-shacl-shapes-graph:" + uuid);
-
         Dataset dataset = ARQFactory.get().getDataset(data);
-        dataset.addNamedModel(shapesURI.toString(), _validationModel);
+        dataset.addNamedModel(_shapesURI.toString(), _validationModel);
 
         Model results = null;
         long time = System.currentTimeMillis();
 
         try {
-            results = _validator.validateModel(dataset, shapesURI
+            results = _validator.validateModel(dataset, _shapesURI
                                              , null, false, null);
         }
         catch (InterruptedException e) {}
@@ -81,7 +73,16 @@ public class TopBraidValidator extends AbsRecordValidator
     /***************************************************************************
      * Public Static Methods
      **************************************************************************/
-    public static Model getValidationModel(Model shapesModel)
+
+    private static Model getSHACL()
+    {
+        Model m = JenaUtil.createDefaultModel();
+        InputStream is = SH.class.getResourceAsStream("/etc/shacl.ttl");
+        m.read(is, SH.BASE_URI, FileUtils.langTurtle);
+        return m;
+    }
+
+    private static Model getValidationModel(Model shapesModel)
     {
         MultiUnion unionGraph = new MultiUnion(new Graph[] {
             getSHACL().getGraph(), shapesModel.getGraph()
@@ -94,24 +95,5 @@ public class TopBraidValidator extends AbsRecordValidator
         // dataModel = SHACLUtil.withDefaultValueTypeInferences(shapesModel);
         SHACLFunctions.registerFunctions(m);
         return m;
-    }
-
-    /***************************************************************************
-     * Private Methods
-     **************************************************************************/
-
-    private static Model getValidationModelForEDMExternal()
-    {
-        return getValidationModel(getShapesForEDMExternal());
-    }
-
-    private static Model getValidationModel(ShapesType type)
-    {
-        switch ( type )
-        {
-            case INTERNAL: return null;
-            case EXTERNAL: return getValidationModelForEDMExternal();
-        }
-        return null;
     }
 }

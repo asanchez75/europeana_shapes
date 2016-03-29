@@ -51,14 +51,6 @@
         <dcterms:issued>WebResource - dcterms:issued</dcterms:issued>
         <edm:isNextInSequence rdf:resource="http://WebResource-edm-isNextInSequence.eu"/>
         <edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
-        <edm:codecName>mpeg2video</edm:codecName>
-        <ebucore:hasMimeType>video/mpeg</ebucore:hasMimeType>
-        <ebucore:fileByteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19480576</ebucore:fileByteSize>
-        <ebucore:duration>40411</ebucore:duration>
-        <ebucore:width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">720</ebucore:width>
-        <ebucore:height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">576</ebucore:height>
-        <ebucore:frameRate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</ebucore:frameRate>
-        <ebucore:orientation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landscape</ebucore:orientation>
      </edm:WebResource>
 
      <edm:WebResource rdf:about="http://www.mimo-db.eu/media/UEDIN/AUDIO/0032195s.mp3">

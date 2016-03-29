@@ -20,6 +20,8 @@ The following table shows an overview of the contraints divided per property:
 |<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_literal">literal</a>|
 |<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_literal">literal</a>|
 |<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_type">Literal</a>||
+|<a href="#rdaGr2_placeOfBirth">rdaGr2:placeOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_placeOfBirth_cardinality">0..1</a>|||
+|<a href="#rdaGr2_placeOfDeath">rdaGr2:placeOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_placeOfDeath_cardinality">0..1</a>|||
 |<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|<a href="#edm_shapes_external_Agent_rdaGr2_professionOrOccupation_cardinality">0..?</a>|||
 |<a href="#edm_begin">edm:begin</a>|<a href="#edm_shapes_external_Agent_edm_begin_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_edm_begin_type">Literal</a>|<a href="#edm_shapes_external_Agent_edm_begin_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_edm_begin_literal">literal</a>, <a href="#edm_shapes_external_Agent_edm_begin_redundancy">redundancy</a>|
 |<a href="#edm_end">edm:end</a>|<a href="#edm_shapes_external_Agent_edm_end_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_edm_end_type">Literal</a>|<a href="#edm_shapes_external_Agent_edm_end_literal">literal</a>, <a href="#edm_shapes_external_Agent_edm_end_redundancy">redundancy</a>|
@@ -328,7 +330,7 @@ The following table shows an overview of the contraints divided per property:
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape Agent: ;
   sh:class edm:Agent ;
 .
 ```
@@ -383,7 +385,7 @@ The following table shows an overview of the contraints divided per property:
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape Agent: ;
   sh:class edm:Agent ;
 .
 ```
@@ -775,6 +777,46 @@ The following table shows an overview of the contraints divided per property:
   dc:type esc:type ;
   sh:predicate rdaGr2:gender ;
   sh:nodeKind sh:Literal ;
+.
+```
+#### Property <a id="rdaGr2_placeOfBirth" target="_blank" href="http://rdvocab.info/ElementsGr2/placeOfBirth">http://rdvocab.info/ElementsGr2/placeOfBirth</a>
+------
+###### <a id="edm_shapes_external_Agent_rdaGr2_placeOfBirth_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  sh:predicate rdaGr2:placeOfBirth ;
+  sh:minCount 0 ;
+  sh:maxCount 1 ;
+.
+```
+#### Property <a id="rdaGr2_placeOfDeath" target="_blank" href="http://rdvocab.info/ElementsGr2/placeOfDeath">http://rdvocab.info/ElementsGr2/placeOfDeath</a>
+------
+###### <a id="edm_shapes_external_Agent_rdaGr2_placeOfDeath_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality</a>
+------
+<table>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
+</table>
+*Shape definition in Turtle syntax:*
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  sh:predicate rdaGr2:placeOfDeath ;
+  sh:minCount 0 ;
+  sh:maxCount 1 ;
 .
 ```
 #### Property <a id="rdaGr2_professionOrOccupation" target="_blank" href="http://rdvocab.info/ElementsGr2/professionOrOccupation">http://rdvocab.info/ElementsGr2/professionOrOccupation</a>

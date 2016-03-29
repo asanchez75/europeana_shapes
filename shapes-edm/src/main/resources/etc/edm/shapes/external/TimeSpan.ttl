@@ -9,18 +9,18 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdaGr2: <http://rdvocab.info/ElementsGr2/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
+
 @prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
-@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#> .
-@base         <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/> .
+
+@base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix TimeSpan: <TimeSpan#base> .
 
 ################################################################################
 # Shape Graph for edm:TimeSpan
 ################################################################################
 
-:
+<TimeSpan>
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for edm:TimeSpan Class"^^xsd:string ;
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
@@ -30,7 +30,7 @@
 # Base Shape for the edm:TimeSpan Class
 ################################################################################
 
-:base
+<TimeSpan#base>
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
   sh:description """This shape gathers all constraints that apply to a 
@@ -39,55 +39,55 @@
   sh:scopeClass edm:TimeSpan ;
 
   # class level constraints
-  sh:constraint [ sh:closed true ] ;
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
 
   # SKOS properties
-  sh:property        <skos_prefLabel#type> ;
-  sh:property        <skos_prefLabel#datatype> ;
-  sh:property        <skos_prefLabel#cardinality> ;
-  sh:property        <skos_altLabel#type> ;
-  sh:property        <skos_altLabel#datatype> ;
-  sh:property        <skos_altLabel#cardinality> ;
-  sh:property        <skos_altLabel#redundancy> ;
-  sh:property        <skos_note#type> ;
-  sh:property        <skos_note#datatype> ;
-  sh:property        <skos_note#cardinality> ;
+  sh:property        <TimeSpan/skos_prefLabel#type> ;
+  sh:property        <TimeSpan/skos_prefLabel#datatype> ;
+  sh:property        <TimeSpan/skos_prefLabel#cardinality> ;
+  sh:property        <TimeSpan/skos_altLabel#type> ;
+  sh:property        <TimeSpan/skos_altLabel#datatype> ;
+  sh:property        <TimeSpan/skos_altLabel#cardinality> ;
+  sh:property        <TimeSpan/skos_altLabel#redundancy> ;
+  sh:property        <TimeSpan/skos_note#type> ;
+  sh:property        <TimeSpan/skos_note#datatype> ;
+  sh:property        <TimeSpan/skos_note#cardinality> ;
 
   # DCTERMS properties
-  sh:property        <dct_hasPart#type> ;
-  sh:property        <dct_hasPart#cardinality> ;
-  sh:property        <dct_hasPart#range-class> ;
-  sh:property        <dct_isPartOf#type> ;
-  sh:property        <dct_isPartOf#cardinality> ;
-  sh:property        <dct_isPartOf#range-class> ;
+  sh:property        <TimeSpan/dct_hasPart#type> ;
+  sh:property        <TimeSpan/dct_hasPart#cardinality> ;
+  sh:property        <TimeSpan/dct_hasPart#range-class> ;
+  sh:property        <TimeSpan/dct_isPartOf#type> ;
+  sh:property        <TimeSpan/dct_isPartOf#cardinality> ;
+  sh:property        <TimeSpan/dct_isPartOf#range-class> ;
 
   # EDM properties
-  sh:property        <edm_begin#type> ;
-  sh:property        <edm_begin#cardinality> ;
-  sh:property        <edm_begin#literal> ;
-  sh:property        <edm_begin#correlation> ;
-  sh:property        <edm_end#type> ;
-  sh:property        <edm_end#cardinality> ;
-  sh:property        <edm_end#literal> ;
-  sh:property        <edm_isNextInSequence#type> ;
-  sh:property        <edm_isNextInSequence#cardinality> ;
-  sh:property        <edm_isNextInSequence#range-class> ;
+  sh:property        <TimeSpan/edm_begin#type> ;
+  sh:property        <TimeSpan/edm_begin#cardinality> ;
+  sh:property        <TimeSpan/edm_begin#literal> ;
+  sh:property        <TimeSpan/edm_begin#correlation> ;
+  sh:property        <TimeSpan/edm_end#type> ;
+  sh:property        <TimeSpan/edm_end#cardinality> ;
+  sh:property        <TimeSpan/edm_end#literal> ;
+  sh:property        <TimeSpan/edm_isNextInSequence#type> ;
+  sh:property        <TimeSpan/edm_isNextInSequence#cardinality> ;
+  sh:property        <TimeSpan/edm_isNextInSequence#range-class> ;
 
   # OWL properties
-  sh:property        <owl_sameAs#type> ;
-  sh:property        <owl_sameAs#cardinality> ;
+  sh:property        <TimeSpan/owl_sameAs#type> ;
+  sh:property        <TimeSpan/owl_sameAs#cardinality> ;
 .
 
 # skos:prefLabel ###############################################################
 
-<skos_prefLabel#type>
+<TimeSpan/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_prefLabel#datatype>
+<TimeSpan/skos_prefLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
@@ -97,7 +97,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_prefLabel#cardinality>
+<TimeSpan/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
@@ -110,14 +110,14 @@
 
 # skos:altLabel ################################################################
 
-<skos_altLabel#type>
+<TimeSpan/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_altLabel#datatype>
+<TimeSpan/skos_altLabel#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
@@ -127,7 +127,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_altLabel#cardinality>
+<TimeSpan/skos_altLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -135,7 +135,7 @@
   sh:minCount 0 ;
 .
 
-<skos_altLabel#redundancy>
+<TimeSpan/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
@@ -148,14 +148,14 @@
 
 # skos:note ####################################################################
 
-<skos_note#type>
+<TimeSpan/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
 .
 
-<skos_note#datatype>
+<TimeSpan/skos_note#datatype>
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
@@ -165,7 +165,7 @@
   sh:severity sh:Warning ;
 .
 
-<skos_note#cardinality>
+<TimeSpan/skos_note#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -175,14 +175,14 @@
 
 # dcterms:hasPart ##############################################################
 
-<dct_hasPart#type>
+<TimeSpan/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:hasPart ;
   sh:nodeKind sh:IRI ;
 .
 
-<dct_hasPart#cardinality>
+<TimeSpan/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -190,27 +190,27 @@
   sh:minCount 0 ;
 .
 
-<dct_hasPart#range-class>
+<TimeSpan/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:hasPart must refer to a valid edm:TimeSpan" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape TimeSpan: ;
   sh:class edm:TimeSpan ;
 .
 
 # dcterms:isPartOf #############################################################
 
-<dct_isPartOf#type>
+<TimeSpan/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:isPartOf ;
   sh:nodeKind sh:IRI ;
 .
 
-<dct_isPartOf#cardinality>
+<TimeSpan/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -218,27 +218,27 @@
   sh:minCount 0 ;
 .
 
-<dct_isPartOf#range-class>
+<TimeSpan/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:isPartOf must refer to a valid edm:TimeSpan" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape TimeSpan: ;
   sh:class edm:TimeSpan ;
 .
 
 # edm:begin ####################################################################
 
-<edm_begin#type>
+<TimeSpan/edm_begin#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:begin ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_begin#cardinality>
+<TimeSpan/edm_begin#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -247,7 +247,7 @@
   sh:maxCount 1 ;
 .
 
-<edm_begin#literal>
+<TimeSpan/edm_begin#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -259,7 +259,7 @@
 .
 
 #NEED TO CHECK FOR SEVERAL PAIRS AND WHEN ONE OF THEM IS MISSING!
-<edm_begin#correlation>
+<TimeSpan/edm_begin#correlation>
   a sh:PropertyConstraint ;
   sh:description "edm:begin must be earlier or equals than edm:end";
   dc:type esc:correlation ;
@@ -270,14 +270,14 @@
 
 # edm:end ######################################################################
 
-<edm_end#type>
+<TimeSpan/edm_end#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:end ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_end#cardinality>
+<TimeSpan/edm_end#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -286,7 +286,7 @@
   sh:maxCount 1 ;
 .
 
-<edm_end#literal>
+<TimeSpan/edm_end#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -299,14 +299,14 @@
 
 # edm:isNextInSequence #########################################################
 
-<edm_isNextInSequence#type>
+<TimeSpan/edm_isNextInSequence#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isNextInSequence ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isNextInSequence#cardinality>
+<TimeSpan/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -314,27 +314,27 @@
   sh:minCount 0 ;
 .
 
-<edm_isNextInSequence#range-class>
+<TimeSpan/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:TimeSpan" ;
   dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isNextInSequence ;
-  sh:valueShape :base ;
+  sh:valueShape TimeSpan: ;
   sh:class edm:TimeSpan ;
 .
 
 # owl:sameAs ###################################################################
 
-<owl_sameAs#type>
+<TimeSpan/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
 .
 
-<owl_sameAs#cardinality>
+<TimeSpan/owl_sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;

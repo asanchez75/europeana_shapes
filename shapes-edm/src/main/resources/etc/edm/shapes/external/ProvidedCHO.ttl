@@ -9,25 +9,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdaGr2: <http://rdvocab.info/ElementsGr2/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
-@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
-@prefix esh:  <http://www.europeana.eu/schemas/edm/shapes/external/> .
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#> .
-@base         <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/> .
 
-@prefix Agent:    <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> .
-@prefix Concept:  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> .
-@prefix Place:    <http://www.europeana.eu/schemas/edm/shapes/external/Place#base> .
-@prefix TimeSpan: <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base> .
+@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+@prefix tpl:  <http://www.europeana.eu/schemas/edm/shapes/template#>   .
+
+@base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix Agent:    <Agent#base> .
+@prefix Concept:  <Concept#base> .
+@prefix Place:    <Place#base> .
+@prefix TimeSpan: <TimeSpan#base> .
 
 ################################################################################
 # Shape Graph for edm:ProvidedCHO
 ################################################################################
 
-:
+<ProvidedCHO>
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for edm:ProvidedCHO Class"^^xsd:string ;
+
+  # Import shape template library
+  sh:shapesGraph tpl: ;
+
+  # SHACL language
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
 .
 
@@ -35,7 +39,7 @@
 # Base Shape for the edm:ProvidedCHO Class
 ################################################################################
 
-:base
+<ProvidedCHO#base>
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
   sh:description """This shape gathers all constraints that apply to a 
@@ -44,110 +48,110 @@
   sh:scopeClass edm:ProvidedCHO ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ] ;
-  sh:constraint      :correlation ;
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <ProvidedCHO#correlation> ;
 
   # DC properties
-  sh:property        <dc_contributor#cardinality> ;
-  sh:property        <dc_contributor#range-class> ;
-  sh:property        <dc_coverage#cardinality> ;
-  sh:property        <dc_coverage#range-class> ;
-  sh:property        <dc_coverage#subproperty_1> ;
-  sh:constraint      <dc_coverage#subproperty_2> ;
-  sh:property        <dc_creator#cardinality> ;
-  sh:property        <dc_creator#range-class> ;
-  sh:property        <dc_date#cardinality> ;
-  sh:property        <dc_date#range-class> ;
-  sh:property        <dc_date#literal> ;
-  sh:property        <dc_date#subproperty_1> ;
-  sh:constraint      <dc_date#subproperty_2> ;
-  sh:property        <dc_description#cardinality> ;
-  sh:property        <dc_format#cardinality> ;
-  sh:property        <dc_identifier#type> ;
-  sh:property        <dc_identifier#cardinality> ;
-  sh:property        <dc_language#type> ;
-  sh:property        <dc_language#cardinality> ;
-  sh:property        <dc_language#values> ;
-  sh:property        <dc_publisher#cardinality> ;
-  sh:property        <dc_publisher#range-class> ;
-  sh:property        <dc_rights#cardinality> ;
-  sh:constraint      <dc_rights#redundancy> ;
-  sh:property        <dc_subject#cardinality> ;
-  sh:property        <dc_subject#range-class> ;
-  sh:property        <dc_subject#multiplevalue> ;
-  sh:property        <dc_title#type> ;
-  sh:property        <dc_title#cardinality> ;
-  sh:property        <dc_type#cardinality> ;
-  sh:property        <dc_type#range-class> ;
+  sh:property        <ProvidedCHO/dc_contributor#cardinality> ;
+  sh:property        <ProvidedCHO/dc_contributor#range-class> ;
+  sh:property        <ProvidedCHO/dc_coverage#cardinality> ;
+  sh:property        <ProvidedCHO/dc_coverage#range-class> ;
+  sh:property        <ProvidedCHO/dc_coverage#subproperty_1> ;
+  sh:constraint      <ProvidedCHO/dc_coverage#subproperty_2> ;
+  sh:property        <ProvidedCHO/dc_creator#cardinality> ;
+  sh:property        <ProvidedCHO/dc_creator#range-class> ;
+  sh:property        <ProvidedCHO/dc_date#cardinality> ;
+  sh:property        <ProvidedCHO/dc_date#range-class> ;
+  sh:property        <ProvidedCHO/dc_date#literal> ;
+  sh:property        <ProvidedCHO/dc_date#subproperty_1> ;
+  sh:constraint      <ProvidedCHO/dc_date#subproperty_2> ;
+  sh:property        <ProvidedCHO/dc_description#cardinality> ;
+  sh:property        <ProvidedCHO/dc_format#cardinality> ;
+  sh:property        <ProvidedCHO/dc_identifier#type> ;
+  sh:property        <ProvidedCHO/dc_identifier#cardinality> ;
+  sh:property        <ProvidedCHO/dc_language#type> ;
+  sh:property        <ProvidedCHO/dc_language#cardinality> ;
+  sh:property        <ProvidedCHO/dc_language#values> ;
+  sh:property        <ProvidedCHO/dc_publisher#cardinality> ;
+  sh:property        <ProvidedCHO/dc_publisher#range-class> ;
+  sh:property        <ProvidedCHO/dc_rights#cardinality> ;
+  sh:constraint      <ProvidedCHO/dc_rights#redundancy> ;
+  sh:property        <ProvidedCHO/dc_subject#cardinality> ;
+  sh:property        <ProvidedCHO/dc_subject#range-class> ;
+  sh:property        <ProvidedCHO/dc_subject#multiplevalue> ;
+  sh:property        <ProvidedCHO/dc_title#type> ;
+  sh:property        <ProvidedCHO/dc_title#cardinality> ;
+  sh:property        <ProvidedCHO/dc_type#cardinality> ;
+  sh:property        <ProvidedCHO/dc_type#range-class> ;
 
   # DCTERMS properties
-  sh:property        <dct_alternative#cardinality> ;
-  sh:property        <dct_alternative#type> ;
-  sh:property        <dct_alternative#subproperty> ;
-  sh:property        <dct_conformsTo#cardinality> ;
-  sh:property        <dct_created#cardinality> ;
-  sh:property        <dct_created#range-values> ;
-  sh:property        <dct_created#correlation> ;
-  sh:property        <dct_extent#cardinality> ;
-  sh:property        <dct_hasFormat#cardinality> ;
-  sh:property        <dct_hasPart#cardinality> ;
-  sh:property        <dct_hasVersion#cardinality> ;
-  sh:property        <dct_isFormatOf#cardinality> ;
-  sh:property        <dct_isPartOf#cardinality> ;
-  sh:property        <dct_isReferencedBy#cardinality> ;
-  sh:property        <dct_isReplacedBy#cardinality> ;
-  sh:property        <dct_isRequiredBy#cardinality> ;
-  sh:property        <dct_issued#cardinality> ;
-  sh:property        <dct_issued#range-values> ;
-  sh:property        <dct_issued#range-class> ;
-  sh:property        <dct_isVersionOf#cardinality> ;
-  sh:property        <dct_medium#cardinality> ;
-  sh:property        <dct_provenance#cardinality> ;
-  sh:property        <dct_references#cardinality> ;
-  sh:property        <dct_replaces#cardinality> ;
-  sh:property        <dct_requires#cardinality> ;
-  sh:property        <dct_spatial#cardinality> ;
-  sh:property        <dct_tableOfContents#type> ;
-  sh:property        <dct_tableOfContents#cardinality> ;
-  sh:property        <dct_temporal#cardinality> ;
+  sh:property        <ProvidedCHO/dct_alternative#cardinality> ;
+  sh:property        <ProvidedCHO/dct_alternative#type> ;
+  sh:property        <ProvidedCHO/dct_alternative#subproperty> ;
+  sh:property        <ProvidedCHO/dct_conformsTo#cardinality> ;
+  sh:property        <ProvidedCHO/dct_created#cardinality> ;
+  sh:property        <ProvidedCHO/dct_created#range-values> ;
+  sh:property        <ProvidedCHO/dct_created#correlation> ;
+  sh:property        <ProvidedCHO/dct_extent#cardinality> ;
+  sh:property        <ProvidedCHO/dct_hasFormat#cardinality> ;
+  sh:property        <ProvidedCHO/dct_hasPart#cardinality> ;
+  sh:property        <ProvidedCHO/dct_hasVersion#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isFormatOf#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isPartOf#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isReferencedBy#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isReplacedBy#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isRequiredBy#cardinality> ;
+  sh:property        <ProvidedCHO/dct_issued#cardinality> ;
+  sh:property        <ProvidedCHO/dct_issued#range-values> ;
+  sh:property        <ProvidedCHO/dct_issued#range-class> ;
+  sh:property        <ProvidedCHO/dct_isVersionOf#cardinality> ;
+  sh:property        <ProvidedCHO/dct_medium#cardinality> ;
+  sh:property        <ProvidedCHO/dct_provenance#cardinality> ;
+  sh:property        <ProvidedCHO/dct_references#cardinality> ;
+  sh:property        <ProvidedCHO/dct_replaces#cardinality> ;
+  sh:property        <ProvidedCHO/dct_requires#cardinality> ;
+  sh:property        <ProvidedCHO/dct_spatial#cardinality> ;
+  sh:property        <ProvidedCHO/dct_tableOfContents#type> ;
+  sh:property        <ProvidedCHO/dct_tableOfContents#cardinality> ;
+  sh:property        <ProvidedCHO/dct_temporal#cardinality> ;
 
   # EDM properties
-  sh:inverseProperty <edm_aggregatedCHO#correlation> ;
-  sh:property        <edm_currentLocation#type> ;
-  sh:property        <edm_currentLocation#cardinality> ;
-  sh:property        <edm_hasMet#type> ;
-  sh:property        <edm_hasMet#cardinality> ;
-  sh:constraint      <edm_hasMet#range-class> ;
-  sh:property        <edm_hasType#cardinality> ;
-  sh:property        <edm_incorporates#type> ;
-  sh:property        <edm_incorporates#cardinality> ;
-  sh:property        <edm_isDerivativeOf#type> ;
-  sh:property        <edm_isDerivativeOf#cardinality> ;
-  sh:property        <edm_isNextInSequence#type> ;
-  sh:property        <edm_isNextInSequence#cardinality> ;
-  sh:property        <edm_isNextInSequence#range-class> ;
-  sh:property        <edm_isNextInSequence#correlation> ;
-  sh:property        <edm_isRelatedTo#cardinality> ;
-  sh:property        <edm_isRepresentationOf#type> ;
-  sh:property        <edm_isRepresentationOf#cardinality> ;
-  sh:property        <edm_isSimilarTo#type> ;
-  sh:property        <edm_isSimilarTo#cardinality> ;
-  sh:property        <edm_isSuccessorOf#type> ;
-  sh:property        <edm_isSuccessorOf#cardinality> ;
-  sh:property        <edm_realizes#type> ;
-  sh:property        <edm_realizes#cardinality> ;
-  sh:property        <edm_type#type> ;
-  sh:property        <edm_type#cardinality> ;
-  sh:property        <edm_type#values> ;
-  sh:property        <edm_type#correlation> ;
-  sh:property        <edm_unstored#type> ;
-  sh:property        <edm_unstored#cardinality> ;
-  sh:property        <edm_ugc#type> ;
-  sh:property        <edm_ugc#cardinality> ;
+  sh:inverseProperty <ProvidedCHO/edm_aggregatedCHO#correlation> ;
+  sh:property        <ProvidedCHO/edm_currentLocation#type> ;
+  sh:property        <ProvidedCHO/edm_currentLocation#cardinality> ;
+  sh:property        <ProvidedCHO/edm_hasMet#type> ;
+  sh:property        <ProvidedCHO/edm_hasMet#cardinality> ;
+  sh:constraint      <ProvidedCHO/edm_hasMet#range-class> ;
+  sh:property        <ProvidedCHO/edm_hasType#cardinality> ;
+  sh:property        <ProvidedCHO/edm_incorporates#type> ;
+  sh:property        <ProvidedCHO/edm_incorporates#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isDerivativeOf#type> ;
+  sh:property        <ProvidedCHO/edm_isDerivativeOf#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#type> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#range-class> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#correlation> ;
+  sh:property        <ProvidedCHO/edm_isRelatedTo#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isRepresentationOf#type> ;
+  sh:property        <ProvidedCHO/edm_isRepresentationOf#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isSimilarTo#type> ;
+  sh:property        <ProvidedCHO/edm_isSimilarTo#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isSuccessorOf#type> ;
+  sh:property        <ProvidedCHO/edm_isSuccessorOf#cardinality> ;
+  sh:property        <ProvidedCHO/edm_realizes#type> ;
+  sh:property        <ProvidedCHO/edm_realizes#cardinality> ;
+  sh:property        <ProvidedCHO/edm_type#type> ;
+  sh:property        <ProvidedCHO/edm_type#cardinality> ;
+  sh:property        <ProvidedCHO/edm_type#values> ;
+  sh:property        <ProvidedCHO/edm_type#correlation> ;
+  sh:property        <ProvidedCHO/edm_unstored#type> ;
+  sh:property        <ProvidedCHO/edm_unstored#cardinality> ;
+  sh:property        <ProvidedCHO/edm_ugc#type> ;
+  sh:property        <ProvidedCHO/edm_ugc#cardinality> ;
 
   # OWL properties
-  sh:property        <owl_sameAs#type> ;
-  sh:property        <owl_sameAs#cardinality> ;
+  sh:property        <ProvidedCHO/owl_sameAs#type> ;
+  sh:property        <ProvidedCHO/owl_sameAs#cardinality> ;
 .
 
 
@@ -156,7 +160,7 @@
 #:uniqueness ?
 
 # the constraint for edm:type was taken out of this rule
-:correlation
+<ProvidedCHO#correlation>
   a sh:Constraint ;
   sh:description """Check that if edm:ProvidedCHO is present, at least: one 
                     dc:title or sh:description should be present; one dc:subject
@@ -192,7 +196,7 @@
 
 # edm:aggregatedCHO ############################################################
 
-<edm_aggregatedCHO#correlation>
+<ProvidedCHO/edm_aggregatedCHO#correlation>
   a sh:InversePropertyConstraint ;
   sh:description """Check that the URI of the ProvidedCHO and the URI described 
                     in edm:aggregatedCHO are the same.""" ;
@@ -206,7 +210,7 @@
 
 # dc:contributor ###############################################################
 
-<dc_contributor#cardinality>
+<ProvidedCHO/dc_contributor#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -214,7 +218,7 @@
   sh:minCount 0 ;
 .
 
-<dc_contributor#range-class>
+<ProvidedCHO/dc_contributor#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
@@ -235,7 +239,7 @@
 
 # dc:coverage ##################################################################
 
-<dc_coverage#cardinality>
+<ProvidedCHO/dc_coverage#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -243,7 +247,7 @@
   sh:minCount 0 ;
 .
 
-<dc_coverage#range-class>
+<ProvidedCHO/dc_coverage#range-class>
   a sh:PropertyConstraint ;
   sh:description """If the value is a URI, check if it refers to a TimeSpan or a
                     Place that is declared in the document.""" ;
@@ -262,7 +266,7 @@
   ] ;
 .
 
-<dc_coverage#subproperty_1>
+<ProvidedCHO/dc_coverage#subproperty_1>
   a sh:PropertyConstraint ;
   sh:description """If two dc:coverage are present, suggest the use of 
                     dcterms:spatial or dcterms:temporal.""" ;
@@ -274,7 +278,7 @@
   sh:message "Suggest the use of dcterms:spatial or dcterms:temporal" ;
 .
 
-<dc_coverage#subproperty_2>
+<ProvidedCHO/dc_coverage#subproperty_2>
   a sh:Constraint ;
   sh:description """If dc:coverage and dcterms:spatial or dcterms:temporal are 
                     present, check that the value in dc:coverage is not 
@@ -302,7 +306,7 @@
 
 # dc:creator ###################################################################
 
-<dc_creator#cardinality>
+<ProvidedCHO/dc_creator#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -310,7 +314,7 @@
   sh:minCount 0 ;
 .
 
-<dc_creator#range-class>
+<ProvidedCHO/dc_creator#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
@@ -331,7 +335,7 @@
 
 # dc:date ######################################################################
 
-<dc_date#cardinality>
+<ProvidedCHO/dc_date#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -339,7 +343,7 @@
   sh:minCount 0 ;
 .
 
-<dc_date#range-class>
+<ProvidedCHO/dc_date#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
@@ -357,7 +361,7 @@
   sh:class edm:TimeSpan ;
 .
 
-<dc_date#literal>
+<ProvidedCHO/dc_date#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -374,7 +378,7 @@
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 .
 
-<dc_date#subproperty_1>
+<ProvidedCHO/dc_date#subproperty_1>
   a sh:PropertyConstraint ;
   sh:description """If two dc:date are present, suggest the use of 
                     dcterms:created or dcterms:issued.""" ;
@@ -386,7 +390,7 @@
   sh:message "Suggest the use of dcterms:created or dcterms:issued" ;
 .
 
-<dc_date#subproperty_2>
+<ProvidedCHO/dc_date#subproperty_2>
   a sh:Constraint ;
   sh:description """If dc:date and dcterms:created or dcterms:issued are present
                     , check that the value in dc:date is not redundant with 
@@ -409,7 +413,7 @@
 
 # dc:description ###############################################################
 
-<dc_description#cardinality>
+<ProvidedCHO/dc_description#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -420,7 +424,7 @@
 
 # dc:format ####################################################################
 
-<dc_format#cardinality>
+<ProvidedCHO/dc_format#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -431,13 +435,13 @@
 
 # dc:identifier ################################################################
 
-<dc_identifier#type>
+<ProvidedCHO/dc_identifier#type>
   a sh:PropertyConstraint ;
   sh:predicate dc:identifier ;
   sh:nodeKind sh:Literal ;
 .
 
-<dc_identifier#cardinality>
+<ProvidedCHO/dc_identifier#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -448,13 +452,13 @@
 
 # dc:language ##################################################################
 
-<dc_language#type>
+<ProvidedCHO/dc_language#type>
   a sh:PropertyConstraint ;
   sh:predicate dc:language ;
   sh:nodeKind sh:Literal ;
 .
 
-<dc_language#cardinality>
+<ProvidedCHO/dc_language#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -462,7 +466,7 @@
   sh:minCount 0 ;
 .
 
-<dc_language#values>
+<ProvidedCHO/dc_language#values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for language matches ISO 639 two-letter
                     code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
@@ -477,7 +481,7 @@
 
 # dc:publisher #################################################################
 
-<dc_publisher#cardinality>
+<ProvidedCHO/dc_publisher#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -485,7 +489,7 @@
   sh:minCount 0 ;
 .
 
-<dc_publisher#range-class>
+<ProvidedCHO/dc_publisher#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be one to an Agent( the access to the 
                     data and the data itself should be formatted according to 
@@ -506,7 +510,7 @@
 
 # dc:rights ####################################################################
 
-<dc_rights#cardinality>
+<ProvidedCHO/dc_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -514,8 +518,8 @@
   sh:minCount 0 ;
 .
 
-<dc_rights#redundancy>
-  a esh:RedundancyConstraint, sh:Constraint ;
+<ProvidedCHO/dc_rights#redundancy>
+  a tpl:RedundancyConstraint, sh:Constraint ;
   dc:type esc:redundancy ;
   sh:description """Check if dc:rights has the same value than edm:rights of the 
                     Aggregation (either as rdf:resource or literal), if yes the 
@@ -530,7 +534,7 @@
 
 # dc:subject ###################################################################
 
-<dc_subject#cardinality>
+<ProvidedCHO/dc_subject#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -538,7 +542,7 @@
   sh:minCount 0 ;
 .
 
-<dc_subject#range-class>
+<ProvidedCHO/dc_subject#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be one to a Concept( the access to the
                     data and the data itself should be formatted according to 
@@ -556,7 +560,7 @@
   sh:class skos:Concept ;
 .
 
-<dc_subject#multiplevalue>
+<ProvidedCHO/dc_subject#multiplevalue>
   a sh:PropertyConstraint ;
 
   sh:description """If more than one term is in the field, a new dc:subject 
@@ -576,14 +580,14 @@
 
 # dc:title #####################################################################
 
-<dc_title#type>
+<ProvidedCHO/dc_title#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dc:title ;
   sh:nodeKind sh:Literal ;
 .
 
-<dc_title#cardinality>
+<ProvidedCHO/dc_title#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -594,7 +598,7 @@
 
 # dc:type ######################################################################
 
-<dc_type#cardinality>
+<ProvidedCHO/dc_type#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -602,7 +606,7 @@
   sh:minCount 0 ;
 .
 
-<dc_type#range-class>
+<ProvidedCHO/dc_type#range-class>
   a sh:PropertyConstraint ;
   sh:description """If the value is a URI, check if a skos:Concept class is 
                     created.""" ;
@@ -625,7 +629,7 @@
 
 # dcterms:alternative ##########################################################
 
-<dct_alternative#cardinality>
+<ProvidedCHO/dct_alternative#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -633,14 +637,14 @@
   sh:minCount 0 ;
 .
 
-<dct_alternative#type>
+<ProvidedCHO/dct_alternative#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:alternative ;
   sh:nodeKind sh:Literal ;
 .
 
-<dct_alternative#subproperty>
+<ProvidedCHO/dct_alternative#subproperty>
   a sh:PropertyConstraint ;
   dc:type esc:subproperty ;
   sh:description """If dcterms:alternative has the same title than dc:title, 
@@ -655,7 +659,7 @@
 
 # dcterms:conformsTo ###########################################################
 
-<dct_conformsTo#cardinality>
+<ProvidedCHO/dct_conformsTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -666,7 +670,7 @@
 
 # dcterms:created ##############################################################
 
-<dct_created#cardinality>
+<ProvidedCHO/dct_created#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -674,7 +678,7 @@
   sh:minCount 0 ;
 .
 
-<dct_created#range-values>
+<ProvidedCHO/dct_created#range-values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -693,7 +697,7 @@
 .
 
 #ISSUE: values need to be typed as xsd:date!
-<dct_created#correlation>
+<ProvidedCHO/dct_created#correlation>
   a sh:PropertyConstraint ;
 
   sh:description "dcterms:created must be equal or earlier than dcterms:issued";
@@ -709,7 +713,7 @@
 
 # dcterms:extent ###############################################################
 
-<dct_extent#cardinality>
+<ProvidedCHO/dct_extent#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -720,7 +724,7 @@
 
 # dcterms:hasFormat ############################################################
 
-<dct_hasFormat#cardinality>
+<ProvidedCHO/dct_hasFormat#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -731,7 +735,7 @@
 
 # dcterms:hasPart ##############################################################
 
-<dct_hasPart#cardinality>
+<ProvidedCHO/dct_hasPart#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -742,7 +746,7 @@
 
 # dcterms:hasVersion ###########################################################
 
-<dct_hasVersion#cardinality>
+<ProvidedCHO/dct_hasVersion#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -753,7 +757,7 @@
 
 # dcterms:isFormatOf ###########################################################
 
-<dct_isFormatOf#cardinality>
+<ProvidedCHO/dct_isFormatOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -764,7 +768,7 @@
 
 # dcterms:isPartOf #############################################################
 
-<dct_isPartOf#cardinality>
+<ProvidedCHO/dct_isPartOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -775,7 +779,7 @@
 
 # dcterms:isReferencedBy #######################################################
 
-<dct_isReferencedBy#cardinality>
+<ProvidedCHO/dct_isReferencedBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -786,7 +790,7 @@
 
 # dcterms:isReplacedBy #########################################################
 
-<dct_isReplacedBy#cardinality>
+<ProvidedCHO/dct_isReplacedBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -797,7 +801,7 @@
 
 # dcterms:isRequiredBy #########################################################
 
-<dct_isRequiredBy#cardinality>
+<ProvidedCHO/dct_isRequiredBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -808,7 +812,7 @@
 
 # dcterms:issued ###############################################################
 
-<dct_issued#cardinality>
+<ProvidedCHO/dct_issued#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -816,7 +820,7 @@
   sh:minCount 0 ;
 .
 
-<dct_issued#range-values>
+<ProvidedCHO/dct_issued#range-values>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
@@ -834,7 +838,7 @@
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 .
 
-<dct_issued#range-class>
+<ProvidedCHO/dct_issued#range-class>
   a sh:PropertyConstraint ;
   sh:description """the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
@@ -855,7 +859,7 @@
 
 # dcterms:isVersionOf ##########################################################
 
-<dct_isVersionOf#cardinality>
+<ProvidedCHO/dct_isVersionOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -866,7 +870,7 @@
 
 # dcterms:medium ###############################################################
 
-<dct_medium#cardinality>
+<ProvidedCHO/dct_medium#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -877,7 +881,7 @@
 
 # dcterms:provenance ###########################################################
 
-<dct_provenance#cardinality>
+<ProvidedCHO/dct_provenance#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -888,7 +892,7 @@
 
 # dcterms:references ###########################################################
 
-<dct_references#cardinality>
+<ProvidedCHO/dct_references#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -899,7 +903,7 @@
 
 # dcterms:replaces #############################################################
 
-<dct_replaces#cardinality>
+<ProvidedCHO/dct_replaces#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -910,7 +914,7 @@
 
 # dcterms:requires #############################################################
 
-<dct_requires#cardinality>
+<ProvidedCHO/dct_requires#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -921,7 +925,7 @@
 
 # dcterms:spatial ##############################################################
 
-<dct_spatial#cardinality>
+<ProvidedCHO/dct_spatial#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -932,14 +936,14 @@
 
 # dcterms:tableOfContents ######################################################
 
-<dct_tableOfContents#type>
+<ProvidedCHO/dct_tableOfContents#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate dct:tableOfContents ;
   sh:nodeKind sh:Literal ;
 .
 
-<dct_tableOfContents#cardinality>
+<ProvidedCHO/dct_tableOfContents#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -950,7 +954,7 @@
 
 # dcterms:temporal #############################################################
 
-<dct_temporal#cardinality>
+<ProvidedCHO/dct_temporal#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -961,14 +965,14 @@
 
 # edm:currentLocation ##########################################################
 
-<edm_currentLocation#type>
+<ProvidedCHO/edm_currentLocation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:currentLocation ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_currentLocation#cardinality>
+<ProvidedCHO/edm_currentLocation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -979,14 +983,14 @@
 
 # edm:hasMet ###################################################################
 
-<edm_hasMet#type>
+<ProvidedCHO/edm_hasMet#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:hasMet ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_hasMet#cardinality>
+<ProvidedCHO/edm_hasMet#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -994,7 +998,7 @@
   sh:minCount 0 ;
 .
 
-<edm_hasMet#range-class>
+<ProvidedCHO/edm_hasMet#range-class>
   a sh:Constraint ;
   sh:description """A edm:hasMet should reference one of Agent, Place, TimeSpan 
                     or Concept that is declared in the record""" ;
@@ -1015,7 +1019,7 @@
 
 # edm:hasType ###################################################################
 
-<edm_hasType#cardinality>
+<ProvidedCHO/edm_hasType#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1026,14 +1030,14 @@
 
 # edm:incorporates #############################################################
 
-<edm_incorporates#type>
+<ProvidedCHO/edm_incorporates#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:incorporates ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_incorporates#cardinality>
+<ProvidedCHO/edm_incorporates#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1044,14 +1048,14 @@
 
 # edm:isDerivativeOf ###########################################################
 
-<edm_isDerivativeOf#type>
+<ProvidedCHO/edm_isDerivativeOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isDerivativeOf ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isDerivativeOf#cardinality>
+<ProvidedCHO/edm_isDerivativeOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1062,14 +1066,14 @@
 
 # edm:isNextInSequence #########################################################
 
-<edm_isNextInSequence#type>
+<ProvidedCHO/edm_isNextInSequence#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isNextInSequence ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isNextInSequence#cardinality>
+<ProvidedCHO/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1078,7 +1082,7 @@
 .
 
 # Issue requires the full dataset
-<edm_isNextInSequence#range-class>
+<ProvidedCHO/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be a valid edm:ProvidedCHO""" ;
   dc:type esc:range-class ;
@@ -1089,7 +1093,7 @@
 
 # Implement using a SPARQL query
 # Requires the full dataset
-<edm_isNextInSequence#correlation>
+<ProvidedCHO/edm_isNextInSequence#correlation>
   a sh:PropertyConstraint ;
   dc:type esc:correlation ;
   sh:description """The ProvidedCHO referred to by this property must share 
@@ -1101,7 +1105,7 @@
 
 # edm:isRelatedTo ##############################################################
 
-<edm_isRelatedTo#cardinality>
+<ProvidedCHO/edm_isRelatedTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1112,14 +1116,14 @@
 
 # edm:isRepresentationOf #######################################################
 
-<edm_isRepresentationOf#type>
+<ProvidedCHO/edm_isRepresentationOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isRepresentationOf ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isRepresentationOf#cardinality>
+<ProvidedCHO/edm_isRepresentationOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1131,14 +1135,14 @@
 
 # edm:isSimilarTo ##############################################################
 
-<edm_isSimilarTo#type>
+<ProvidedCHO/edm_isSimilarTo#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isSimilarTo ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isSimilarTo#cardinality>
+<ProvidedCHO/edm_isSimilarTo#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1149,14 +1153,14 @@
 
 # edm:isSuccessorOf ############################################################
 
-<edm_isSuccessorOf#type>
+<ProvidedCHO/edm_isSuccessorOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:isSuccessorOf ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_isSuccessorOf#cardinality>
+<ProvidedCHO/edm_isSuccessorOf#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1167,14 +1171,14 @@
 
 # edm:realizes #################################################################
 
-<edm_realizes#type>
+<ProvidedCHO/edm_realizes#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:realizes ;
   sh:nodeKind sh:IRI ;
 .
 
-<edm_realizes#cardinality>
+<ProvidedCHO/edm_realizes#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1185,14 +1189,14 @@
 
 # edm:type #####################################################################
 
-<edm_type#type>
+<ProvidedCHO/edm_type#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:type ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_type#cardinality>
+<ProvidedCHO/edm_type#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1201,7 +1205,7 @@
   sh:maxCount 1 ;
 .
 
-<edm_type#values>
+<ProvidedCHO/edm_type#values>
   a sh:PropertyConstraint ;
   dc:type esc:values ;
   sh:description """The value of edm:type must match one of: 
@@ -1213,7 +1217,7 @@
   sh:in ( "TEXT" "VIDEO" "SOUND" "IMAGE" "3D" ) ;
 .
 
-<edm_type#correlation>
+<ProvidedCHO/edm_type#correlation>
   a sh:PropertyConstraint ;
 # sh:description """Check that if the value of edm:type  is 3D the syntax of 
 #                   dc:format is 3D-PDF """ ;
@@ -1234,14 +1238,14 @@
 
 # edm:unstored #################################################################
 
-<edm_unstored#type>
+<ProvidedCHO/edm_unstored#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:unstored ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_unstored#cardinality>
+<ProvidedCHO/edm_unstored#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1252,14 +1256,14 @@
 
 # edm:ugc ######################################################################
 
-<edm_ugc#type>
+<ProvidedCHO/edm_ugc#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate edm:ugc ;
   sh:nodeKind sh:Literal ;
 .
 
-<edm_ugc#cardinality>
+<ProvidedCHO/edm_ugc#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
@@ -1270,14 +1274,14 @@
 
 # owl:sameAs ###################################################################
 
-<owl_sameAs#type>
+<ProvidedCHO/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
 .
 
-<owl_sameAs#cardinality>
+<ProvidedCHO/owl_sameAs#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;

@@ -279,7 +279,7 @@ The following table shows an overview of the contraints divided per property:
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate dct:hasPart ;
-  sh:valueShape :base ;
+  sh:valueShape WebResource: ;
   sh:class edm:WebResource ;
 .
 ```
@@ -370,7 +370,7 @@ The following table shows an overview of the contraints divided per property:
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate dct:isPartOf ;
-  sh:valueShape :base ;
+  sh:valueShape WebResource: ;
   sh:class edm:WebResource ;
 .
 ```
@@ -549,7 +549,7 @@ The following table shows an overview of the contraints divided per property:
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isNextInSequence ;
-  sh:valueShape :base ;
+  sh:valueShape WebResource: ;
   sh:class edm:WebResource ;
 .
 ```

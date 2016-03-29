@@ -22,7 +22,7 @@ public class RunDocGenerator
 //        File file = new File(dir.getParentFile(), "Shapes.md");
 
         String remoteURL = "../../src/main/resources/etc/edm/shapes/external/";
-        File dir = new File("D:\\work\\git\\Europeana\\shapes\\shapes-def\\");
+        File dir = new File("D:\\work\\git\\Europeana\\shapes\\shapes-edm\\");
         File in  = new File(dir, "src\\main\\resources\\etc\\edm\\shapes\\external");
         File out = new File(dir, "doc\\external\\");
 

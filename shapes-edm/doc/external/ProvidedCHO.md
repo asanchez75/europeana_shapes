@@ -600,7 +600,7 @@ The following table shows an overview of the contraints divided per property:
 *Shape definition in Turtle syntax:*
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO/dc_rights#redundancy>
-  a esh:RedundancyConstraint, sh:Constraint ;
+  a tpl:RedundancyConstraint, sh:Constraint ;
   dc:type esc:redundancy ;
   sh:description """Check if dc:rights has the same value than edm:rights of the 
                     Aggregation (either as rdf:resource or literal), if yes the 

@@ -9,14 +9,15 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/external/> .
 @prefix tpl:  <http://www.europeana.eu/schemas/edm/shapes/template#> .
+
+@base         <http://www.europeana.eu/schemas/edm/shapes/external/> .
 
 ################################################################################
 #                             SHAPE DEFINITIONS                                #
 ################################################################################
 
-:
+<>
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for EDM shapes profile for EDM external"^^xsd:string ;
 
@@ -24,13 +25,13 @@
   owl:imports <http://www.europeana.eu/schemas/edm/rdf/edm.owl> ;
 
   # Import shape definitions for all EDM Classes
-  owl:imports :ProvidedCHO ;
-  owl:imports :Aggregation ;
-  owl:imports :WebResource ;
-  owl:imports :Concept ;
-  owl:imports :Agent ;
-  owl:imports :Place ;
-  owl:imports :TimeSpan ;
+  owl:imports <ProvidedCHO> ;
+  owl:imports <Aggregation> ;
+  owl:imports <WebResource> ;
+  owl:imports <Concept> ;
+  owl:imports <Agent> ;
+  owl:imports <Place> ;
+  owl:imports <TimeSpan> ;
 
   # Import shape template library
   sh:shapesGraph tpl: ;
