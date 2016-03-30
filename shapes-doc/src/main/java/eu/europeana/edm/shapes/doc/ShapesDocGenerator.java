@@ -360,19 +360,20 @@ public class ShapesDocGenerator
         }
     }
 
-    private void printTemplateDocument(Resource scopeClass, PrintStream ps)
+    private void printTemplateDocument(Resource c, PrintStream ps)
     {
-        String name = scopeClass.getLocalName();
+        String name = c.getLocalName();
         String rsrc = _props.getProperty("data.templates." + name.toLowerCase());
         if ( rsrc == null ) { return; }
 
         try
         {
             ps.println();
-            ps.println("**** An example of a " + scopeClass + " class resource");
+            ps.println("#### An example of a resource of type " 
+                     + getPrefixedName(c));
             String str = FileUtils.readWholeFileAsUTF8(
                     ClassLoader.getSystemResourceAsStream(rsrc));
-            ps.println("*Shape definition in Turtle syntax:*");
+//            ps.println("*Shape definition in Turtle syntax:*");
             ps.println("```");
             ps.println(str);
             ps.println("```");

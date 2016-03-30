@@ -29,8 +29,7 @@ The following table shows an overview of the contraints divided per property:
 |<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|<a href="#edm_shapes_external_Agent_edm_isRelatedTo_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_edm_isRelatedTo_type">IRI</a>||
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_Agent_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_owl_sameAs_type">IRI</a>||
 
-**** An example of a http://www.europeana.eu/schemas/edm/Agent class resource
-*Shape definition in Turtle syntax:*
+#### An example of a resource of type edm:Agent
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
