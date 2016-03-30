@@ -2,34 +2,7 @@
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Agent.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)*
 > This shape gathers all constraints that apply to a edm:Agent class
 
-The following table shows an overview of the contraints divided per property:
-
-| Property | Cardinality | Value Type | Constraints |
-| --- | --- | --- | --- |
-|<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Agent_skos_altLabel_redundancy">redundancy</a>|
-|<a href="#skos_note">skos:note</a>|<a href="#edm_shapes_external_Agent_skos_note_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_note_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_note_datatype">datatype</a>|
-|<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#edm_shapes_external_Agent_skos_prefLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_prefLabel_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_prefLabel_datatype">datatype</a>|
-|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_Agent_dc_date_cardinality">0..?</a>||<a href="#edm_shapes_external_Agent_dc_date_literal">literal</a>|
-|<a href="#dc_identifier">dc:identifier</a>|<a href="#edm_shapes_external_Agent_dc_identifier_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dc_identifier_type">Literal</a>||
-|<a href="#dct_hasPart">dct:hasPart</a>|<a href="#edm_shapes_external_Agent_dct_hasPart_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dct_hasPart_type">IRI</a>|<a href="#edm_shapes_external_Agent_dct_hasPart_range-class">range-class</a>|
-|<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_type">IRI</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_range-class">range-class</a>|
-|<a href="#foaf_name">foaf:name</a>|<a href="#edm_shapes_external_Agent_foaf_name_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_foaf_name_type">Literal</a>||
-|<a href="#rdaGr2_biographicalInformation">rdaGr2:biographicalInformation</a>|<a href="#edm_shapes_external_Agent_rdaGr2_biographicalInformation_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_biographicalInformation_type">Literal</a>||
-|<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_literal">literal</a>|
-|<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_literal">literal</a>|
-|<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_literal">literal</a>|
-|<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_literal">literal</a>|
-|<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_type">Literal</a>||
-|<a href="#rdaGr2_placeOfBirth">rdaGr2:placeOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_placeOfBirth_cardinality">0..1</a>|||
-|<a href="#rdaGr2_placeOfDeath">rdaGr2:placeOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_placeOfDeath_cardinality">0..1</a>|||
-|<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|<a href="#edm_shapes_external_Agent_rdaGr2_professionOrOccupation_cardinality">0..?</a>|||
-|<a href="#edm_begin">edm:begin</a>|<a href="#edm_shapes_external_Agent_edm_begin_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_edm_begin_type">Literal</a>|<a href="#edm_shapes_external_Agent_edm_begin_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_edm_begin_literal">literal</a>, <a href="#edm_shapes_external_Agent_edm_begin_redundancy">redundancy</a>|
-|<a href="#edm_end">edm:end</a>|<a href="#edm_shapes_external_Agent_edm_end_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_edm_end_type">Literal</a>|<a href="#edm_shapes_external_Agent_edm_end_literal">literal</a>, <a href="#edm_shapes_external_Agent_edm_end_redundancy">redundancy</a>|
-|<a href="#edm_hasMet">edm:hasMet</a>|<a href="#edm_shapes_external_Agent_edm_hasMet_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_edm_hasMet_type">IRI</a>|<a href="#edm_shapes_external_Agent_edm_hasMet_range-class">range-class</a>|
-|<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|<a href="#edm_shapes_external_Agent_edm_isRelatedTo_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_edm_isRelatedTo_type">IRI</a>||
-|<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_Agent_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_owl_sameAs_type">IRI</a>||
-
-#### An example of a resource of type edm:Agent
+* Below is an example of a resource of type edm:Agent for the resource <>
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -68,6 +41,32 @@ The following table shows an overview of the contraints divided per property:
 </rdf:RDF>
 ```
 
+The following table shows an overview of the contraints divided per property:
+
+| Property | Cardinality | Value Type | Constraints |
+| --- | --- | --- | --- |
+|<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Agent_skos_altLabel_redundancy">redundancy</a>|
+|<a href="#skos_note">skos:note</a>|<a href="#edm_shapes_external_Agent_skos_note_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_note_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_note_datatype">datatype</a>|
+|<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#edm_shapes_external_Agent_skos_prefLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_skos_prefLabel_type">Literal</a>|<a href="#edm_shapes_external_Agent_skos_prefLabel_datatype">datatype</a>|
+|<a href="#dc_date">dc:date</a>|<a href="#edm_shapes_external_Agent_dc_date_cardinality">0..?</a>||<a href="#edm_shapes_external_Agent_dc_date_literal">literal</a>|
+|<a href="#dc_identifier">dc:identifier</a>|<a href="#edm_shapes_external_Agent_dc_identifier_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dc_identifier_type">Literal</a>||
+|<a href="#dct_hasPart">dct:hasPart</a>|<a href="#edm_shapes_external_Agent_dct_hasPart_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dct_hasPart_type">IRI</a>|<a href="#edm_shapes_external_Agent_dct_hasPart_range-class">range-class</a>|
+|<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_type">IRI</a>|<a href="#edm_shapes_external_Agent_dct_isPartOf_range-class">range-class</a>|
+|<a href="#foaf_name">foaf:name</a>|<a href="#edm_shapes_external_Agent_foaf_name_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_foaf_name_type">Literal</a>||
+|<a href="#rdaGr2_biographicalInformation">rdaGr2:biographicalInformation</a>|<a href="#edm_shapes_external_Agent_rdaGr2_biographicalInformation_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_biographicalInformation_type">Literal</a>||
+|<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfBirth_literal">literal</a>|
+|<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfDeath_literal">literal</a>|
+|<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_literal">literal</a>|
+|<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_type">Literal</a>|<a href="#edm_shapes_external_Agent_rdaGr2_dateOfTermination_literal">literal</a>|
+|<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_rdaGr2_gender_type">Literal</a>||
+|<a href="#rdaGr2_placeOfBirth">rdaGr2:placeOfBirth</a>|<a href="#edm_shapes_external_Agent_rdaGr2_placeOfBirth_cardinality">0..1</a>|||
+|<a href="#rdaGr2_placeOfDeath">rdaGr2:placeOfDeath</a>|<a href="#edm_shapes_external_Agent_rdaGr2_placeOfDeath_cardinality">0..1</a>|||
+|<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|<a href="#edm_shapes_external_Agent_rdaGr2_professionOrOccupation_cardinality">0..?</a>|||
+|<a href="#edm_begin">edm:begin</a>|<a href="#edm_shapes_external_Agent_edm_begin_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_edm_begin_type">Literal</a>|<a href="#edm_shapes_external_Agent_edm_begin_correlation">correlation</a>, <a href="#edm_shapes_external_Agent_edm_begin_literal">literal</a>, <a href="#edm_shapes_external_Agent_edm_begin_redundancy">redundancy</a>|
+|<a href="#edm_end">edm:end</a>|<a href="#edm_shapes_external_Agent_edm_end_cardinality">0..1</a>|<a href="#edm_shapes_external_Agent_edm_end_type">Literal</a>|<a href="#edm_shapes_external_Agent_edm_end_literal">literal</a>, <a href="#edm_shapes_external_Agent_edm_end_redundancy">redundancy</a>|
+|<a href="#edm_hasMet">edm:hasMet</a>|<a href="#edm_shapes_external_Agent_edm_hasMet_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_edm_hasMet_type">IRI</a>|<a href="#edm_shapes_external_Agent_edm_hasMet_range-class">range-class</a>|
+|<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|<a href="#edm_shapes_external_Agent_edm_isRelatedTo_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_edm_isRelatedTo_type">IRI</a>||
+|<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_Agent_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_Agent_owl_sameAs_type">IRI</a>||
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
 ------
 ###### <a id="edm_shapes_external_Agent_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality</a>

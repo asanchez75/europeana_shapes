@@ -102,8 +102,8 @@ public class ShapesDocGenerator
             Resource scopeClass = getScopeClass(shape);
             printClassHeader(scopeClass, ps);
             printClassDescription(shape, def, ps);
-            printConstraintTable(shape, ps);
             printTemplateDocument(scopeClass, ps);
+            printConstraintTable(shape, ps);
             printConstraintDefinitions(shape, ps);
             ps.flush();
         }
@@ -261,10 +261,6 @@ public class ShapesDocGenerator
             ps.println("> " + iter.next().getLiteral().getString()
                                   .replaceAll("\\s+", " "));
         }
-        ps.println();
-        ps.println("The following table shows an overview of the contraints "
-                 + "divided per property:");
-        ps.println();
     }
 
     private void printPropertyHeader(Resource prop, PrintStream ps)
@@ -340,6 +336,10 @@ public class ShapesDocGenerator
 
     private void printConstraintTable(Resource shape, PrintStream ps)
     {
+        ps.println();
+        ps.println("The following table shows an overview of the contraints "
+                + "divided per property:");
+        ps.println();
         ps.println("| Property | Cardinality | Value Type | Constraints |");
         ps.println("| --- | --- | --- | --- |");
         for(String uri : getProperties(shape))
@@ -369,8 +369,8 @@ public class ShapesDocGenerator
         try
         {
             ps.println();
-            ps.println("#### An example of a resource of type " 
-                     + getPrefixedName(c));
+            ps.println("* Below is an example of a resource of type " 
+                     + getPrefixedName(c) + " for the resource <>");
             String str = FileUtils.readWholeFileAsUTF8(
                     ClassLoader.getSystemResourceAsStream(rsrc));
 //            ps.println("*Shape definition in Turtle syntax:*");
