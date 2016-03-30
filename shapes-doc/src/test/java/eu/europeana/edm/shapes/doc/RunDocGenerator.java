@@ -5,6 +5,7 @@ package eu.europeana.edm.shapes.doc;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Properties;
 
 import eu.europeana.edm.shapes.doc.ShapesDocGenerator;
 
@@ -21,11 +22,14 @@ public class RunDocGenerator
 //        File dir  = new File(cl.getResource(EDM_EXTERNAL_SHAPES_LOCATION).getFile());
 //        File file = new File(dir.getParentFile(), "Shapes.md");
 
-        String remoteURL = "../../src/main/resources/etc/edm/shapes/external/";
         File dir = new File("D:\\work\\git\\Europeana\\shapes\\shapes-edm\\");
         File in  = new File(dir, "src\\main\\resources\\etc\\edm\\shapes\\external");
         File out = new File(dir, "doc\\external\\");
 
-        new ShapesDocGenerator(remoteURL).genAllDocumentation(in, out);
+        Properties prop = new Properties();
+        prop.setProperty("shapes.src", "../../src/main/resources/etc/edm/shapes/external/");
+        prop.setProperty("data.templates.agent", "etc/edm/data/external/agent_ok1.xml");
+
+        new ShapesDocGenerator(prop).genAllDocumentation(in, out);
     }
 }

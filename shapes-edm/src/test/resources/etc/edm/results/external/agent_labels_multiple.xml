@@ -1,0 +1,15 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sh="http://www.w3.org/ns/shacl#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <sh:focusNode rdf:resource="http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart"/>
+    <sh:subject rdf:resource="http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart"/>
+    <sh:predicate rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    <sh:message>Duplicate use of language tag "en"</sh:message>
+    <sh:sourceTemplate rdf:resource="http://www.w3.org/ns/shacl#AbstractUniqueLangPropertyConstraint"/>
+    <sh:sourceShape rdf:resource="http://www.europeana.eu/schemas/edm/shapes/external/Agent#base"/>
+    <sh:sourceConstraint rdf:resource="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality"/>
+    <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Violation"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#ValidationResult"/>
+  </rdf:Description>
+</rdf:RDF>

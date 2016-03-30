@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:ore="http://www.openarchives.org/ore/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         >
+
+    <edm:Agent rdf:about="http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart">
+
+        <skos:prefLabel rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <skos:altLabel rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <skos:note rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <dc:identifier rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <dcterms:hasPart>xpto</dcterms:hasPart>
+        <dcterms:isPartOf>xpto</dcterms:isPartOf>
+        <foaf:name rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <rdaGr2:biographicalInformation rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <rdaGr2:dateOfBirth rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <rdaGr2:dateOfDeath rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <rdaGr2:dateOfEstablishment rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <rdaGr2:dateOfTermination rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <rdaGr2:gender rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <edm:begin rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <edm:end rdf:resource="http://dbpedia.org/resource/xpto"/>
+        <edm:hasMet>xpto</edm:hasMet>
+        <edm:isRelatedTo>xpto</edm:isRelatedTo>
+        <owl:sameAs>xpto</owl:sameAs>
+
+    </edm:Agent>
+
+</rdf:RDF>

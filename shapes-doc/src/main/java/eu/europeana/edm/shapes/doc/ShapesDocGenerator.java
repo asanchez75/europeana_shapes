@@ -3,6 +3,7 @@
  */
 package eu.europeana.edm.shapes.doc;
 
+import java.awt.SystemColor;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,6 +14,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.TreeSet;
 
 import org.apache.commons.io.IOUtils;
@@ -64,9 +66,9 @@ public class ShapesDocGenerator
     private ShapesDefinitionParser _parser    = new ShapesDefinitionParser();
     private ShapeChecker           _checker   = new ShapeChecker();
     private Map<String,String>     _defs      = null;
-    private String                 _remoteURL = null;
+    private Properties             _props     = null;
 
-    public ShapesDocGenerator(String remoteURL) { _remoteURL = remoteURL; }
+    public ShapesDocGenerator(Properties props) { _props = props; }
 
     public void genAllDocumentation(File dirDef, File dirOut) throws IOException
     {
@@ -101,6 +103,7 @@ public class ShapesDocGenerator
             printClassHeader(scopeClass, ps);
             printClassDescription(shape, def, ps);
             printConstraintTable(shape, ps);
+            printTemplateDocument(scopeClass, ps);
             printConstraintDefinitions(shape, ps);
             ps.flush();
         }
@@ -236,7 +239,7 @@ public class ShapesDocGenerator
 //PRINTING
     private String getRemoteURL(File file)
     {
-        return (_remoteURL + file.getName());
+        return (_props.getProperty("shapes.src") + file.getName());
     }
 
     private void printClassHeader(Resource c, PrintStream ps)
@@ -354,6 +357,27 @@ public class ShapesDocGenerator
             ps.print("|");
             printConstraintReferences(constraints, ps);
             ps.println("|");
+        }
+    }
+
+    private void printTemplateDocument(Resource scopeClass, PrintStream ps)
+    {
+        String name = scopeClass.getLocalName();
+        String rsrc = _props.getProperty("data.templates." + name.toLowerCase());
+        if ( rsrc == null ) { return; }
+
+        try
+        {
+            ps.println("**** Example");
+            String str = FileUtils.readWholeFileAsUTF8(
+                    ClassLoader.getSystemResourceAsStream(rsrc));
+            ps.println("*Shape definition in Turtle syntax:*");
+            ps.println("```");
+            ps.print(str);
+            ps.println("```");
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
