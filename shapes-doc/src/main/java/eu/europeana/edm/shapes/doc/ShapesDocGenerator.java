@@ -368,13 +368,15 @@ public class ShapesDocGenerator
 
         try
         {
-            ps.println("**** Example");
+            ps.println();
+            ps.println("**** An example of a " + scopeClass + " class resource");
             String str = FileUtils.readWholeFileAsUTF8(
                     ClassLoader.getSystemResourceAsStream(rsrc));
             ps.println("*Shape definition in Turtle syntax:*");
             ps.println("```");
-            ps.print(str);
+            ps.println(str);
             ps.println("```");
+            ps.println();
         }
         catch (IOException e) {
             e.printStackTrace();
