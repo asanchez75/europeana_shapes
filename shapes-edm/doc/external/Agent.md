@@ -2,7 +2,7 @@
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Agent.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)*
 > This shape gathers all constraints that apply to a edm:Agent class
 
-* Below is an example of a resource of type edm:Agent for the resource <>
+Below is an example of a resource of type edm:Agent: 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -40,6 +40,7 @@
     </edm:Agent>
 </rdf:RDF>
 ```
+
 
 The following table shows an overview of the contraints divided per property:
 

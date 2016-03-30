@@ -369,8 +369,8 @@ public class ShapesDocGenerator
         try
         {
             ps.println();
-            ps.println("* Below is an example of a resource of type " 
-                     + getPrefixedName(c) + " for the resource <>");
+            ps.println("Below is an example of a resource of type " 
+                     + getPrefixedName(c) + ": ");
             String str = FileUtils.readWholeFileAsUTF8(
                     ClassLoader.getSystemResourceAsStream(rsrc));
 //            ps.println("*Shape definition in Turtle syntax:*");

@@ -1,6 +1,7 @@
 ## Shapes definitions for ore:Aggregation class
 *This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Aggregation.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)*
 > This shape gathers all constraints that apply to a ore:Aggregation class
+
 The following table shows an overview of the contraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
