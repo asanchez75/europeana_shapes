@@ -34,6 +34,7 @@ import org.apache.jena.vocabulary.OWL;
 import org.topbraid.shacl.vocabulary.SH;
 
 import eu.europeana.edm.shapes.validation.ShapeChecker;
+import eu.europeana.github.MarkDownWriter;
 import static org.apache.commons.io.FileUtils.*;
 
 /**
@@ -94,20 +95,20 @@ public class ShapesDocGenerator
         Resource shape = getShape(model);
         if ( shape == null ) { return; }
 
-        PrintStream ps = new PrintStream(out);
+        MarkDownWriter w = new MarkDownWriter(out);
         try {
 
             _defs = _parser.loadDefinitions(def);
 
             Resource scopeClass = getScopeClass(shape);
-            printClassHeader(scopeClass, ps);
-            printClassDescription(shape, def, ps);
-            printTemplateDocument(scopeClass, ps);
-            printConstraintTable(shape, ps);
-            printConstraintDefinitions(shape, ps);
-            ps.flush();
+            printClassHeader(scopeClass, w);
+            printClassDescription(shape, def, w);
+            printTemplateDocument(scopeClass, w);
+            printConstraintTable(shape, w);
+            printConstraintDefinitions(shape, w);
+            w.flush();
         }
-        finally { IOUtils.closeQuietly(ps); }
+        finally { IOUtils.closeQuietly(w); }
     }
 
     private String getFilenameWithoutExt(File file)
@@ -242,83 +243,72 @@ public class ShapesDocGenerator
         return (_props.getProperty("shapes.src") + file.getName());
     }
 
-    private void printClassHeader(Resource c, PrintStream ps)
+    private void printClassHeader(Resource c, MarkDownWriter ps)
     {
-        ps.println("## Shapes definitions for "
-                 + getPrefixedName(c) + " class");
+        ps.printH2("Shapes definitions for " + getPrefixedName(c) + " class");
     }
 
     private void printClassDescription(Resource shape, File file
-                                     , PrintStream ps)
+                                     , MarkDownWriter ps)
     {
         String swURL = "https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc";
-        ps.println("*This document was generated from the [shapes file]("
-                 + getRemoteURL(file) + ") using [this software](" + swURL 
-                 + ")*");
+        ps.printItalic("This document was generated from the [shapes file]("
+                     + getRemoteURL(file) + ") using [this software](" + swURL 
+                     + ")").println();
         StmtIterator iter = shape.listProperties(SH.description);
         while ( iter.hasNext() )
         {
-            ps.println("> " + iter.next().getLiteral().getString()
-                                  .replaceAll("\\s+", " "));
+            String s = iter.next().getLiteral().getString();
+            ps.printQuoted(s.replaceAll("\\s+", " "));
         }
     }
 
-    private void printPropertyHeader(Resource prop, PrintStream ps)
+    private void printPropertyHeader(Resource prop, MarkDownWriter w)
     {
-        ps.print("#### Property ");
+        w.print("#### Property ");
         String uri = prop.getURI();
-        printReference(uri, uri, getLocalReference(prop), true, ps);
-        ps.println();
-        ps.println("------");
+        w.printLink(uri, uri, getLocalReference(prop), true);
+        w.println();
+        w.printSeparator();
     }
 
-    private void printConstraintHeader(Resource constraint, PrintStream ps)
+    private void printConstraintHeader(Resource constraint, MarkDownWriter w)
     {
         String ref = getLocalReference(constraint);
         String uri = constraint.getURI();
-        ps.print("###### ");
-        printReference(uri, uri, ref, true, ps);
-        ps.println();
-        ps.println("------");
-    }
-
-    private void printReference(String name, String url
-                              , String id, boolean target, PrintStream ps)
-    {
-        String strID  = (id == null ? "" : "id=\"" + id + "\" ");
-        String strTrg = (target ? "target=\"_blank\" " : "");
-        ps.print("<a " + strID + strTrg + "href=\"" + url + "\">"
-               + name + "</a>");
+        w.print("###### ");
+        w.printLink(uri, uri, ref, true);
+        w.println();
+        w.printSeparator();
     }
 
     private void printCardinalityConstraint(Collection<Resource> constraints
-                                          , PrintStream ps)
+                                          , MarkDownWriter w)
     {
         for ( Resource constraint : constraints )
         {
             if ( !isCardinalityConstraint(constraint) ) { continue; }
 
-            printReference(getCardinality(constraint)
-                         , "#" + getLocalReference(constraint)
-                         , null, false, ps);
+            w.printLink(getCardinality(constraint)
+                      , "#" + getLocalReference(constraint), null, false);
         }
     }
 
     private void printTypeConstraint(Collection<Resource> constraints
-                                   , PrintStream ps)
+                                   , MarkDownWriter w)
     {
         for ( Resource constraint : constraints )
         {
             if ( !isTypeConstraint(constraint) ) { continue; }
             
-            printReference(getType(constraint)
-                         , "#" + getLocalReference(constraint)
-                         , null, false, ps);
+            w.printLink(getType(constraint)
+                      , "#" + getLocalReference(constraint)
+                      , null, false);
         }
     }
 
     private void printConstraintReferences(Collection<Resource> constraints
-                                         , PrintStream ps)
+                                         , MarkDownWriter w)
     {
         boolean first = true;
         for( Resource constraint : constraints )
@@ -327,40 +317,35 @@ public class ShapesDocGenerator
             if ( isTypeConstraint(constraint)        ) { continue; }
 
             String name = getLocalName(constraint);
-            if ( first ) { first = false; } else { ps.print(", "); }
+            if ( first ) { first = false; } else { w.print(", "); }
 
-            printReference(name, "#" + getLocalReference(constraint), null
-                         , false, ps);
+            w.printLink(name, "#" + getLocalReference(constraint), null, false);
         }
     }
 
-    private void printConstraintTable(Resource shape, PrintStream ps)
+    private void printConstraintTable(Resource shape, MarkDownWriter w)
     {
-        ps.println();
-        ps.println("The following table shows an overview of the contraints "
-                + "divided per property:");
-        ps.println();
-        ps.println("| Property | Cardinality | Value Type | Constraints |");
-        ps.println("| --- | --- | --- | --- |");
+        w.printParagraph("The following table shows an overview of the "
+                       + "contraints divided per property:");
+        w.printTableHeader("Property","Cardinality","Value Type","Constraints");
         for(String uri : getProperties(shape))
         {
             Resource prop = shape.getModel().getResource(uri);
             Collection<Resource> constraints = getConstraints(shape, prop);
-            ps.print("|");
+            w.print("|");
             String name = getPrefixedName(prop);
-            printReference(name, "#" + getLocalReference(prop)
-                         , null, false, ps);
-            ps.print("|");
-            printCardinalityConstraint(constraints, ps);
-            ps.print("|");
-            printTypeConstraint(constraints, ps);
-            ps.print("|");
-            printConstraintReferences(constraints, ps);
-            ps.println("|");
+            w.printLink(name, "#" + getLocalReference(prop), null, false);
+            w.print("|");
+            printCardinalityConstraint(constraints, w);
+            w.print("|");
+            printTypeConstraint(constraints, w);
+            w.print("|");
+            printConstraintReferences(constraints, w);
+            w.println("|");
         }
     }
 
-    private void printTemplateDocument(Resource c, PrintStream ps)
+    private void printTemplateDocument(Resource c, MarkDownWriter w)
     {
         String name = c.getLocalName();
         String rsrc = _props.getProperty("data.templates." + name.toLowerCase());
@@ -368,49 +353,45 @@ public class ShapesDocGenerator
 
         try
         {
-            ps.println();
-            ps.println("Below is an example of a resource of type " 
-                     + getPrefixedName(c) + ": ");
+            w.printParagraph("Below is an example of a resource of type " 
+                            + getPrefixedName(c) + ": ");
             String str = FileUtils.readWholeFileAsUTF8(
                     ClassLoader.getSystemResourceAsStream(rsrc));
 //            ps.println("*Shape definition in Turtle syntax:*");
-            ps.println("```");
-            ps.println(str);
-            ps.println("```");
-            ps.println();
+            w.printCode(str);
         }
         catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void printConstraintDefinitions(Resource shape, PrintStream ps)
+    private void printConstraintDefinitions(Resource shape, MarkDownWriter w)
     {
         for(String uri : getProperties(shape))
         {
             Resource prop = shape.getModel().getResource(uri);
 
-            printPropertyHeader(prop, ps);
+            printPropertyHeader(prop, w);
 
             Collection<Resource> consts = getConstraints(shape, prop);
-            for ( Resource c : consts ) { printConstraintDefinition(c, ps); }
+            for ( Resource c : consts ) { printConstraintDefinition(c, w); }
         }
     }
 
-    private void printConstraintDefinition(Resource constraint, PrintStream ps)
+    private void printConstraintDefinition(Resource constraint,MarkDownWriter w)
     {
-        printConstraintHeader(constraint, ps);
-        printMetadata(constraint, ps);
-        printRule(constraint, ps);
+        printConstraintHeader(constraint, w);
+        printMetadata(constraint, w);
+        printRule(constraint, w);
     }
 
-    private void printMetadata(Resource constraint, PrintStream ps)
+    private void printMetadata(Resource constraint, MarkDownWriter w)
     {
-        ps.println("<table>");
-        printMetadataDescription(constraint, ps);
-        printMetadataSubject(constraint, ps);
-        printMetadataType(constraint, ps);
-        ps.println("</table>");
+        w.println("<table>");
+        printMetadataDescription(constraint, w);
+        printMetadataSubject(constraint, w);
+        printMetadataType(constraint, w);
+        w.println("</table>");
     }
 
     private void printMetadataDescription(Resource constraint, PrintStream ps)
@@ -420,47 +401,45 @@ public class ShapesDocGenerator
         ps.println("</td></tr>");
     }
 
-    private void printMetadataSubject(Resource constraint, PrintStream ps)
+    private void printMetadataSubject(Resource constraint, MarkDownWriter w)
     {
-        ps.print("<tr><th align=\"right\">subject</th><td>");
+        w.print("<tr><th align=\"right\">subject</th><td>");
 
         boolean first = true;
         StmtIterator iter = constraint.listProperties(DC.subject);
         while ( iter.hasNext() )
         {
-            if ( first ) { first = false; } else { ps.print(", "); }
+            if ( first ) { first = false; } else { w.print(", "); }
 
             String subject = iter.next().getObject().asLiteral().getString();
-            printReference(subject, RDFAP.getRequirementURL(subject)
-                         , null, true, ps);
+            w.printLink(subject, RDFAP.getRequirementURL(subject), null, true);
         }
 
-        ps.println("</td></tr>");
+        w.println("</td></tr>");
     }
 
-    private void printMetadataType(Resource constraint, PrintStream ps)
+    private void printMetadataType(Resource constraint, MarkDownWriter w)
     {
-        ps.print("<tr><th align=\"right\">type</th><td>");
+        w.print("<tr><th align=\"right\">type</th><td>");
 
         boolean first = true;
         StmtIterator iter = constraint.listProperties(DC.type);
         while ( iter.hasNext() )
         {
-            if ( first ) { first = false; } else { ps.print(", "); }
+            if ( first ) { first = false; } else { w.print(", "); }
 
             String type = iter.next().getObject().asResource().getURI();
-            printReference(type, type, null, true, ps);
+            w.printLink(type, type, null, true);
         }
 
-        ps.println("</td></tr>");
+        w.println("</td></tr>");
     }
 
-    private void printRule(Resource constraint, PrintStream ps)
+    private void printRule(Resource constraint, MarkDownWriter w)
     {
-        ps.println("*Shape definition in Turtle syntax:*");
-        ps.println("```");
-        ps.print(_defs.get(constraint.getURI()));
-        ps.println("```");
+        w.printItalic("Shape definition in Turtle syntax:");
+        w.println();
+        w.printCode(_defs.get(constraint.getURI()));
     }
 
     private Model loadModel(File file) throws FileNotFoundException

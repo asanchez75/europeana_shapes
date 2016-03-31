@@ -1,5 +1,6 @@
+
 ## Shapes definitions for ore:Aggregation class
-*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Aggregation.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)*
+_This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/Aggregation.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)_
 > This shape gathers all constraints that apply to a ore:Aggregation class
 
 The following table shows an overview of the contraints divided per property:
@@ -26,7 +27,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#cardinality>
   a sh:PropertyConstraint ;
@@ -44,7 +46,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#redundancy>
   a sh:PropertyConstraint ;
@@ -64,7 +67,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#type>
   a sh:PropertyConstraint ;
@@ -82,7 +86,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#cardinality>
   a sh:PropertyConstraint ;
@@ -100,7 +105,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#range-class>
   a sh:PropertyConstraint ;
@@ -121,7 +127,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#type>
   a sh:PropertyConstraint ;
@@ -139,7 +146,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_dataProvider#cardinality>
   a sh:PropertyConstraint ;
@@ -159,7 +167,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#cardinality>
   a sh:PropertyConstraint ;
@@ -176,7 +185,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#range-class>
   a sh:PropertyConstraint ;
@@ -198,7 +208,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#type>
   a sh:PropertyConstraint ;
@@ -216,7 +227,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#cardinality>
   a sh:PropertyConstraint ;
@@ -234,7 +246,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#range-class>
   a sh:PropertyConstraint ;
@@ -256,7 +269,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#type>
   a sh:PropertyConstraint ;
@@ -274,7 +288,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#cardinality>
   a sh:PropertyConstraint ;
@@ -292,7 +307,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#range-class>
   a sh:PropertyConstraint ;
@@ -314,7 +330,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#type>
   a sh:PropertyConstraint ;
@@ -332,7 +349,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#cardinality>
   a sh:PropertyConstraint ;
@@ -349,7 +367,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#range-class>
   a sh:PropertyConstraint ;
@@ -371,7 +390,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#type>
   a sh:PropertyConstraint ;
@@ -389,7 +409,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_provider#cardinality>
   a sh:PropertyConstraint ;
@@ -409,7 +430,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_rights#cardinality>
   a sh:PropertyConstraint ;
@@ -426,7 +448,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_rights#type>
   a sh:PropertyConstraint ;
@@ -443,7 +466,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/37">R-30-DEFINE-VALUE-LISTS</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/423">R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#values">http://www.europeana.eu/schemas/edm/shapes/categories#values</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_rights#values>
   a sh:PropertyConstraint ;
@@ -477,7 +501,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_ugc#cardinality>
   a sh:PropertyConstraint ;
@@ -495,7 +520,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_ugc#type>
   a sh:PropertyConstraint ;
@@ -513,7 +539,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_unstored#cardinality>
   a sh:PropertyConstraint ;
@@ -530,7 +557,8 @@ The following table shows an overview of the contraints divided per property:
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
-*Shape definition in Turtle syntax:*
+_Shape definition in Turtle syntax:_
+
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_unstored#type>
   a sh:PropertyConstraint ;
