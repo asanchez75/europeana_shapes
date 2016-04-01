@@ -132,6 +132,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:prefLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
