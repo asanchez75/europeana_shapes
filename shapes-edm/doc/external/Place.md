@@ -1,6 +1,6 @@
 
 ## Shapes definitions for edm:Place class
-_This document was generated from the [shapes file](/src/main/resources/etc/edm/shapes/external/Place.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)_
+_This document was generated from the [shapes file](/shapes-edm/src/main/resources/etc/edm/shapes/external/Place.ttl) using [this software](https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc)_
 > This shape gathers all constraints that apply to a edm:Place class
 
 The following table shows an overview of the contraints divided per property:
