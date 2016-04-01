@@ -5,4 +5,4 @@ _This document was generated from the testcases available within this [directory
 The following table shows the testcases that were run:
 
 | Test Case | Results | Status |
-| :---  ---:  :--: |
+| :--- | ---: | :--: |

@@ -122,8 +122,9 @@ public class MarkDownWriter extends PrintStream
                 case 'r': print(" ---: "); break;
                 case 'c': print(" :--: "); break;
             }
+            print('|');
         }
-        println('|');
+        println();
         return this;
     }
 

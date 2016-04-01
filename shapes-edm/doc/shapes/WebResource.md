@@ -6,7 +6,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 The following table shows an overview of the contraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
-| :---  :--:  :--:  :--- |
+| :--- | :--: | :--: | :--- |
 |<a href="#dc_description">dc:description</a>|<a href="#edm_shapes_external_WebResource_dc_description_cardinality">0..?</a>|||
 |<a href="#dc_format">dc:format</a>|<a href="#edm_shapes_external_WebResource_dc_format_cardinality">0..?</a>|||
 |<a href="#dc_rights">dc:rights</a>|<a href="#edm_shapes_external_WebResource_dc_rights_cardinality">0..?</a>||<a href="#edm_shapes_external_WebResource_dc_rights_redundancy">redundancy</a>|

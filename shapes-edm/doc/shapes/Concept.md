@@ -6,7 +6,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 The following table shows an overview of the contraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
-| :---  :--:  :--:  :--- |
+| :--- | :--: | :--: | :--- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Concept_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Concept_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Concept_skos_altLabel_redundancy">redundancy</a>|
 |<a href="#skos_broadMatch">skos:broadMatch</a>|<a href="#edm_shapes_external_Concept_skos_broadMatch_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_broadMatch_type">IRI</a>||
 |<a href="#skos_broader">skos:broader</a>|<a href="#edm_shapes_external_Concept_skos_broader_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_broader_type">IRI</a>|<a href="#edm_shapes_external_Concept_skos_broader_range-class">range-class</a>|
