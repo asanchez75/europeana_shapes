@@ -64,9 +64,9 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
         String swURL = "/shapes-doc";
         File file = _config.getFile("shapes.testsuite.data");
-        w.printItalic("This document was generated from the [testcase dir]("
-                    + toRemote(file) + ") using [this software](" + swURL 
-                    + ")").println();
+        w.printItalic("This document was generated from the testcases available "
+                    + "within this {directory] (" + toRemote(file)
+                    + ") using [this software](" + swURL + ")").println();
     }
 
     private void genSummaryTable(Collection<TestCase> col, MarkDownWriter w)
