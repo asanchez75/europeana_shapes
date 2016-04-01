@@ -119,8 +119,8 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             Integer s1 = tc1.getResultSize();
             Integer s2 = tc2.getResultSize();
             if ( s1 != s2 ) {
-                if ( (s1 != null) && (s1 == 0) ) { return  1; }
-                if ( (s2 != null) && (s2 == 0) ) { return -1; }
+                if ( (s1 != null) && (s1 == 0) ) { return -1; }
+                if ( (s2 != null) && (s2 == 0) ) { return  1; }
             }
             return tc1.getDataFile().compareTo(tc2.getDataFile());
         }
