@@ -26,7 +26,7 @@ public class TestSuite extends ArrayList<TestCase>
     public TestSuite loadTests(File data, File result, Lang lang)
     {
         if ( !data.isDirectory() ) {
-            add(new TestCase(data, getResult(result, lang)));
+            add(new TestCase(getID(data), data, getResult(result, lang)));
             return this;
         }
 
@@ -70,6 +70,13 @@ public class TestSuite extends ArrayList<TestCase>
         Collection<TestResult> ret = new ArrayList();
         run(validator, ret);
         return ret;
+    }
+
+    private String getID(File file)
+    {
+        String name = file.getName();
+        int index = name.lastIndexOf('.');
+        return (index > 0 ? name.substring(0, index) : name);
     }
 
     private File getResult(File file, Lang lang)

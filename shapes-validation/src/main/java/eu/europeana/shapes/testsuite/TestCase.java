@@ -29,15 +29,19 @@ import eu.europeana.edm.shapes.validation.RecordValidator;
  */
 public class TestCase
 {
+    private String  _id      = null;
     private File    _data    = null;
     private File    _fResult = null;
     private Model   _mResult = null;
 
-    public TestCase(File data, File result)
+    public TestCase(String id, File data, File result)
     {
+        _id      = id;
         _data    = data;
         _fResult = result;
     }
+
+    public String getID()           { return _id; }
 
     /***************************************************************************
      * Public Methods - Source File

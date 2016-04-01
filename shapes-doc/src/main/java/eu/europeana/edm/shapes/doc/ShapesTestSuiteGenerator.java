@@ -80,8 +80,9 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         for ( TestCase tc : col )
         {
             String name = tc.getDataFile().getName();
-            String dataRef   = "#" + name + "_data";
-            String resultRef = "#" + name + "_result";
+            String id   = tc.getID();
+            String dataRef   = "#" + id + "_data";
+            String resultRef = "#" + id + "_result";
             Integer size = tc.getResultSize();
             w.printTableRow(w.newLink(name              , dataRef)
                           , w.newLink(size == null ? "?" : String.valueOf(size)
@@ -94,11 +95,12 @@ public class ShapesTestSuiteGenerator extends DocGenerator
     {
         for ( TestCase tc : col )
         {
-            String name = tc.getDataFile().getName();
-            String dataRef   = "#" + name + "_data";
-            String resultRef = "#" + name + "_result";
+            String id = tc.getID();
+            String dataRef   = "#" + id + "_data";
+            String resultRef = "#" + id + "_result";
             w.printH4("Test Case: "
-                    + w.newLink(name,toRemote(tc.getDataFile()),dataRef,true));
+                    + w.newLink(tc.getDataFile().getName()
+                              , toRemote(tc.getDataFile()), dataRef, true));
             w.printSeparator();
             w.printCode(tc.getDataAsString(), "XML");
             w.printAnchor(resultRef);
