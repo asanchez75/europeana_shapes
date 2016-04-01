@@ -12,7 +12,7 @@
 
 #### Test Case: <a id="agent_closure.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_closure.xml">agent_closure.xml</a>
 
-```
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:edm="http://www.europeana.eu/schemas/edm/"
@@ -107,7 +107,7 @@ _Result_
 
 #### Test Case: <a id="agent_labels_multiple.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_labels_multiple.xml">agent_labels_multiple.xml</a>
 
-```
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:edm="http://www.europeana.eu/schemas/edm/"
@@ -172,7 +172,7 @@ _Result_
 
 #### Test Case: <a id="agent_labels_nolang.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_labels_nolang.xml">agent_labels_nolang.xml</a>
 
-```
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:edm="http://www.europeana.eu/schemas/edm/"
@@ -250,7 +250,7 @@ _Result_
 
 #### Test Case: <a id="agent_labels_redundant.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_labels_redundant.xml">agent_labels_redundant.xml</a>
 
-```
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:edm="http://www.europeana.eu/schemas/edm/"
@@ -317,7 +317,7 @@ _Result_
 
 #### Test Case: <a id="agent_ok1.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_ok1.xml">agent_ok1.xml</a>
 
-```
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -362,7 +362,7 @@ _Result_
 
 #### Test Case: <a id="agent_prop_types.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_prop_types.xml">agent_prop_types.xml</a>
 
-```
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:edm="http://www.europeana.eu/schemas/edm/"

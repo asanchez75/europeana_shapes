@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.riot.Lang;
 
 import eu.europeana.github.MarkDownWriter;
 import eu.europeana.shapes.testsuite.TestCase;
@@ -32,7 +33,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
     {
         TestSuite ts = new TestSuite();
         ts.loadTests(_config.getFile("shapes.testsuite.data")
-                   , _config.getFile("shapes.testsuite.results"));
+                   , _config.getFile("shapes.testsuite.results"), Lang.TTL);
         Collection<Resource> col = 
                 (Collection<Resource>)_config.get("shapes.classes");
         for ( Resource c : col ) { genFileForClass(ts, c); }
@@ -59,7 +60,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genHeader(Resource c, MarkDownWriter w)
     {
-        w.printH2("Shapes definitions for " + getPrefixedName(c) + " class");
+        w.printH2("Test cases for " + getPrefixedName(c) + " class");
     }
 
     private void genSummaryTable(Collection<TestCase> col, MarkDownWriter w)
@@ -81,8 +82,8 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             String name = tc.getDataFile().getName();
             w.printH4("Test Case: "
                     + w.newLink(name, toRemote(tc.getDataFile()), name, true));
-            w.printCode(tc.getDataAsString());
-            w.printItalic("Result");
+            w.printCode(tc.getDataAsString(), "XML");
+            w.printItalic("Result").println();
             w.printCode(tc.getResultAsString());
         }
     }

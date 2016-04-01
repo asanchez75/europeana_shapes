@@ -117,8 +117,6 @@ public class MarkDownWriter extends PrintStream
 
     public MarkDownWriter printTableRow(Object... cells)
     {
-        println();
-
         print('|');
         for ( Object o : cells ) { print(' ', o, " |"); }
         println();
