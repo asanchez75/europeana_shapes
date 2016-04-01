@@ -60,11 +60,19 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genHeader(Resource c, MarkDownWriter w)
     {
-        w.printH2("Test cases for " + getPrefixedName(c) + " class");
+        w.printH2("Shapes test cases for " + getPrefixedName(c) + " class");
+
+        String swURL = "/shapes-doc";
+        File file = _config.getFile("shapes.testsuite.data");
+        w.printItalic("This document was generated from the [testcase dir]("
+                    + toRemote(file) + ") using [this software](" + swURL 
+                    + ")").println();
     }
 
     private void genSummaryTable(Collection<TestCase> col, MarkDownWriter w)
     {
+        w.printParagraph("The following table shows the testcases that were "
+                       + "run:");
         w.printTableHeader("Test Case", "Results", "Status");
         for ( TestCase tc : col )
         {
@@ -82,6 +90,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             String name = tc.getDataFile().getName();
             w.printH4("Test Case: "
                     + w.newLink(name, toRemote(tc.getDataFile()), name, true));
+            w.printSeparator();
             w.printCode(tc.getDataAsString(), "XML");
             w.printItalic("Result").println();
             w.printCode(tc.getResultAsString());

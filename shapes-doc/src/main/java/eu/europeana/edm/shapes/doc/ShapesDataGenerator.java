@@ -119,17 +119,17 @@ public class ShapesDataGenerator extends DocGenerator
     }
 
     private void printClassDescription(Resource shape, File file
-                                     , MarkDownWriter ps)
+                                     , MarkDownWriter w)
     {
-        String swURL = "https://github.com/hugomanguinhas/europeana_shapes/tree/master/shapes-doc";
-        ps.printItalic("This document was generated from the [shapes file]("
-                     + toRemote(file) + ") using [this software](" + swURL 
-                     + ")").println();
+        String swURL = "/shapes-doc";
+        w.printItalic("This document was generated from the [shapes file]("
+                    + toRemote(file) + ") using [this software](" + swURL 
+                    + ")").println();
         StmtIterator iter = shape.listProperties(SH.description);
         while ( iter.hasNext() )
         {
             String s = iter.next().getLiteral().getString();
-            ps.printQuoted(s.replaceAll("\\s+", " "));
+            w.printQuoted(s.replaceAll("\\s+", " "));
         }
     }
 

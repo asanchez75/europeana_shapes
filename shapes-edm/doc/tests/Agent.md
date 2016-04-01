@@ -1,5 +1,8 @@
 
-## Test cases for edm:Agent class
+## Shapes test cases for edm:Agent class
+_This document was generated from the [testcase dir](/shapes-edm/src/test/resources/etc/edm/data/external) using [this software](/shapes-doc)_
+
+The following table shows the testcases that were run:
 
 | Test Case | Results | Status |
 | --- | --- | --- |
@@ -11,6 +14,7 @@
 | [agent_prop_types.xml](#agent_prop_types.xml) | 30 |  |
 
 #### Test Case: <a id="agent_closure.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_closure.xml">agent_closure.xml</a>
+------
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -106,6 +110,7 @@ _Result_
 ```
 
 #### Test Case: <a id="agent_labels_multiple.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_labels_multiple.xml">agent_labels_multiple.xml</a>
+------
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -171,6 +176,7 @@ _Result_
 ```
 
 #### Test Case: <a id="agent_labels_nolang.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_labels_nolang.xml">agent_labels_nolang.xml</a>
+------
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -249,6 +255,7 @@ _Result_
 ```
 
 #### Test Case: <a id="agent_labels_redundant.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_labels_redundant.xml">agent_labels_redundant.xml</a>
+------
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -316,6 +323,7 @@ _Result_
 ```
 
 #### Test Case: <a id="agent_ok1.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_ok1.xml">agent_ok1.xml</a>
+------
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -361,6 +369,7 @@ _Result_
 ```
 
 #### Test Case: <a id="agent_prop_types.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_prop_types.xml">agent_prop_types.xml</a>
+------
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
