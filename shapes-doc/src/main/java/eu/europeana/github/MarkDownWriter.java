@@ -180,6 +180,11 @@ public class MarkDownWriter extends PrintStream
         return this;
     }
 
+    public MarkDownWriter printAnchor(String id)
+    {
+        print("<a id=\"", id, "\">&nbsp;</a>"); return this;
+    }
+
     public MarkDownWriter printLink(String label, String url)
     {
         print('[', label, ']', '(', url, ')'); return this;
@@ -248,6 +253,11 @@ public class MarkDownWriter extends PrintStream
     public String newQuoted(String txt)
     {
         return appendln("> ", txt).flushBuffer();
+    }
+
+    public String newAnchor(String id)
+    {
+        return append("<a id=\"", id, "\">&nbsp;</a>").flushBuffer();
     }
 
     public String newLink(String label, String url)
