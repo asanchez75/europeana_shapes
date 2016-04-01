@@ -146,9 +146,7 @@ public class ShapesDataGenerator extends DocGenerator
     {
         String ref = getLocalReference(constraint);
         String uri = constraint.getURI();
-        w.print("###### ");
-        w.printLink(uri, uri, ref, true);
-        w.println();
+        w.printH5(w.newLink(uri, uri, ref, true));
         w.printSeparator();
     }
 
@@ -195,8 +193,8 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printConstraintTable(Resource shape, MarkDownWriter w)
     {
-        w.printParagraph("The following constraints are not restricted to a "
-                       + "specific property:");
+        w.printParagraph("The following constraints apply to shape or are not "
+                       + "restricted to a specific property:");
         printClassConstraintsTable(shape, w);
 
         w.printParagraph("The following table shows an overview of the "
@@ -223,8 +221,8 @@ public class ShapesDataGenerator extends DocGenerator
     private void printClassConstraintsTable(Resource shape, MarkDownWriter w)
     {
         w.println("<table>");
-        w.print("<tr><th align=\"right\">Constraint</th><td>");
-        printConstraintReferences(getClassConstraints(shape, new ArrayList()), w);
+        w.print("<tr><th align=\"right\">Constraints</th><td>");
+        printConstraintReferences(getClassConstraints(shape), w);
         w.println("</td></tr>");
         w.println("</table>");
     }
@@ -252,6 +250,13 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printConstraintDefinitions(Resource shape, MarkDownWriter w)
     {
+        w.printH4("Shape level constraints");
+        w.printSeparator();
+        for ( Resource c : getClassConstraints(shape))
+        {
+            printConstraintDefinition(c, w);
+        }
+
         for(String uri : getProperties(shape))
         {
             Resource prop = shape.getModel().getResource(uri);
@@ -396,9 +401,9 @@ public class ShapesDataGenerator extends DocGenerator
         return ret;
     }
 
-    private Collection<Resource> getClassConstraints(Resource shape
-                                                 , Collection<Resource> col)
+    private Collection<Resource> getClassConstraints(Resource shape)
     {
+        Collection<Resource> col = new ArrayList();
         StmtIterator iter = shape.listProperties(SH.constraint);
         while(iter.hasNext())
         {

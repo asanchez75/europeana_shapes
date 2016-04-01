@@ -3,9 +3,9 @@
 _This document was generated from the [shapes file](/shapes-edm/src/main/resources/etc/edm/shapes/external/WebResource.ttl) using this [software](/shapes-doc)_
 > This shape gathers all constraints that apply to a edm:WebResource class
 
-The following constraints are not restricted to a specific property:
+The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraint</th><td></td></tr>
+<tr><th align="right">Constraints</th><td></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -26,9 +26,13 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#dct_issued">dct:issued</a>|<a href="#edm_shapes_external_WebResource_dct_issued_cardinality">0..?</a>||<a href="#edm_shapes_external_WebResource_dct_issued_correlation">correlation</a>, <a href="#edm_shapes_external_WebResource_dct_issued_range-class">range-class</a>, <a href="#edm_shapes_external_WebResource_dct_issued_range-values">range-values</a>|
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_WebResource_edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_WebResource_edm_isNextInSequence_type">IRI</a>|<a href="#edm_shapes_external_WebResource_edm_isNextInSequence_correlation">correlation</a>, <a href="#edm_shapes_external_WebResource_edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#edm_rights">edm:rights</a>|<a href="#edm_shapes_external_WebResource_edm_rights_cardinality">1..?</a>|<a href="#edm_shapes_external_WebResource_edm_rights_type">IRI</a>|<a href="#edm_shapes_external_WebResource_edm_rights_values">values</a>|
+
+#### Shape level constraints
+------
 #### Property <a id="dc_description" target="_blank" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dc_description_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dc_description_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -48,7 +52,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dc_format" target="_blank" href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dc_format_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_format#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_format#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dc_format_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_format#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_format#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -68,7 +73,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dc_rights" target="_blank" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dc_rights_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dc_rights_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -86,7 +92,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dc_rights_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy</a>
+
+##### <a id="edm_shapes_external_WebResource_dc_rights_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dc:rights should not be the same as edm:rights, if true the 
@@ -110,7 +117,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dc_source" target="_blank" href="http://purl.org/dc/elements/1.1/source">http://purl.org/dc/elements/1.1/source</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dc_source_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_source#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_source#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dc_source_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_source#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_source#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -130,7 +138,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_conformsTo" target="_blank" href="http://purl.org/dc/terms/conformsTo">http://purl.org/dc/terms/conformsTo</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_conformsTo_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_conformsTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_conformsTo#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_conformsTo_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_conformsTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_conformsTo#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -150,7 +159,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_created" target="_blank" href="http://purl.org/dc/terms/created">http://purl.org/dc/terms/created</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_created_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_created_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -168,7 +178,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_created_correlation_1" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_created_correlation_1" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued</td></tr>
@@ -188,7 +199,8 @@ _Shape definition in Turtle syntax:_
   sh:lessThanOrEquals dct:issued ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_created_correlation_2" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_created_correlation_2" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued
@@ -212,7 +224,8 @@ _Shape definition in Turtle syntax:_
   #can though be implemented using SPARQL
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_created_range-values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_created_range-values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
@@ -244,7 +257,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_extent" target="_blank" href="http://purl.org/dc/terms/extent">http://purl.org/dc/terms/extent</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_extent_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_extent#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_extent#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_extent_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_extent#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_extent#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -264,7 +278,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -282,7 +297,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:WebResource</td></tr>
@@ -302,7 +318,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:WebResource ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_hasPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_hasPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -321,7 +338,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_hasPartOf" target="_blank" href="http://purl.org/dc/terms/hasPartOf">http://purl.org/dc/terms/hasPartOf</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_hasPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_hasPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPartOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -340,7 +358,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_isFormatOf" target="_blank" href="http://purl.org/dc/terms/isFormatOf">http://purl.org/dc/terms/isFormatOf</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_isFormatOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isFormatOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isFormatOf#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_isFormatOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isFormatOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isFormatOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -360,7 +379,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -378,7 +398,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:WebResource</td></tr>
@@ -398,7 +419,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:WebResource ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#type</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -417,7 +439,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_issued" target="_blank" href="http://purl.org/dc/terms/issued">http://purl.org/dc/terms/issued</a>
 ------
-###### <a id="edm_shapes_external_WebResource_dct_issued_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_issued_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -435,7 +458,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_issued_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#correlation">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#correlation</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_issued_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#correlation">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#correlation</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:issued must be equal or later than dcterms:created 
@@ -459,7 +483,8 @@ _Shape definition in Turtle syntax:_
   #can though be implemented using SPARQL
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_issued_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-class</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_issued_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>the reference should be one to a TimeSpan (the access to 
@@ -489,7 +514,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:TimeSpan ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_dct_issued_range-values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-values</a>
+
+##### <a id="edm_shapes_external_WebResource_dct_issued_range-values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_issued#range-values</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
@@ -521,7 +547,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="edm_isNextInSequence" target="_blank" href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
 ------
-###### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -539,7 +566,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#correlation">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#correlation</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#correlation">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#correlation</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Both WebResources referred to and subject of this property 
@@ -564,7 +592,8 @@ _Shape definition in Turtle syntax:_
 # Implement using a SPARQL query
 .
 ```
-###### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:WebResource</td></tr>
@@ -585,7 +614,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:WebResource ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#type</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -604,7 +634,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="edm_rights" target="_blank" href="http://www.europeana.eu/schemas/edm/rights">http://www.europeana.eu/schemas/edm/rights</a>
 ------
-###### <a id="edm_shapes_external_WebResource_edm_rights_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_rights_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -623,7 +654,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 1 ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_edm_rights_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#type</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_rights_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#type">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -640,7 +672,8 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
-###### <a id="edm_shapes_external_WebResource_edm_rights_values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#values</a>
+
+##### <a id="edm_shapes_external_WebResource_edm_rights_values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#values</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Check the value is one of the controlled values: 

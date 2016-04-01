@@ -3,9 +3,9 @@
 _This document was generated from the [shapes file](/shapes-edm/src/main/resources/etc/edm/shapes/external/Place.ttl) using this [software](/shapes-doc)_
 > This shape gathers all constraints that apply to a edm:Place class
 
-The following constraints are not restricted to a specific property:
+The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraint</th><td></td></tr>
+<tr><th align="right">Constraints</th><td></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -22,9 +22,13 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_Place_dct_isPartOf_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_dct_isPartOf_type">IRI</a>|<a href="#edm_shapes_external_Place_dct_isPartOf_range-class">range-class</a>|
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_Place_edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_edm_isNextInSequence_type">IRI</a>|<a href="#edm_shapes_external_Place_edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_Place_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_owl_sameAs_type">IRI</a>||
+
+#### Shape level constraints
+------
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
 ------
-###### <a id="edm_shapes_external_Place_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -42,7 +46,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype</a>
+
+##### <a id="edm_shapes_external_Place_skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
@@ -62,7 +67,8 @@ _Shape definition in Turtle syntax:_
   sh:severity sh:Warning ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy</a>
+
+##### <a id="edm_shapes_external_Place_skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy</a>
 ------
 <table>
 <tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
@@ -84,7 +90,8 @@ _Shape definition in Turtle syntax:_
   sh:severity sh:Warning ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type</a>
+
+##### <a id="edm_shapes_external_Place_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -103,7 +110,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
 ------
-###### <a id="edm_shapes_external_Place_skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -121,7 +129,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype</a>
+
+##### <a id="edm_shapes_external_Place_skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
@@ -141,7 +150,8 @@ _Shape definition in Turtle syntax:_
   sh:severity sh:Warning ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type</a>
+
+##### <a id="edm_shapes_external_Place_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -160,7 +170,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
 ------
-###### <a id="edm_shapes_external_Place_skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -180,7 +191,8 @@ _Shape definition in Turtle syntax:_
   sh:uniqueLang true ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype</a>
+
+##### <a id="edm_shapes_external_Place_skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype</a>
 ------
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
@@ -200,7 +212,8 @@ _Shape definition in Turtle syntax:_
   sh:severity sh:Warning ;
 .
 ```
-###### <a id="edm_shapes_external_Place_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type</a>
+
+##### <a id="edm_shapes_external_Place_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -225,7 +238,8 @@ _Shape definition in Turtle syntax:_
 ------
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
 ------
-###### <a id="edm_shapes_external_Place_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -243,7 +257,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_Place_dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class</a>
+
+##### <a id="edm_shapes_external_Place_dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:Place</td></tr>
@@ -264,7 +279,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:Place ;
 .
 ```
-###### <a id="edm_shapes_external_Place_dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type</a>
+
+##### <a id="edm_shapes_external_Place_dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -283,7 +299,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 ------
-###### <a id="edm_shapes_external_Place_dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -301,7 +318,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_Place_dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class</a>
+
+##### <a id="edm_shapes_external_Place_dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:Place</td></tr>
@@ -322,7 +340,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:Place ;
 .
 ```
-###### <a id="edm_shapes_external_Place_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type</a>
+
+##### <a id="edm_shapes_external_Place_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -341,7 +360,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="edm_isNextInSequence" target="_blank" href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
 ------
-###### <a id="edm_shapes_external_Place_edm_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_edm_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -359,7 +379,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_Place_edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class</a>
+
+##### <a id="edm_shapes_external_Place_edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class</a>
 ------
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:Place</td></tr>
@@ -380,7 +401,8 @@ _Shape definition in Turtle syntax:_
   sh:class edm:Place ;
 .
 ```
-###### <a id="edm_shapes_external_Place_edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type</a>
+
+##### <a id="edm_shapes_external_Place_edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -399,7 +421,8 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="owl_sameAs" target="_blank" href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
 ------
-###### <a id="edm_shapes_external_Place_owl_sameAs_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality</a>
+
+##### <a id="edm_shapes_external_Place_owl_sameAs_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -417,7 +440,8 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
-###### <a id="edm_shapes_external_Place_owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type</a>
+
+##### <a id="edm_shapes_external_Place_owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type</a>
 ------
 <table>
 <tr><th align="right">description</th><td></td></tr>
