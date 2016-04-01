@@ -143,6 +143,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -352,6 +358,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:hasPart ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
   sh:predicate dct:hasPart ;
   sh:valueShape Agent: ;
   sh:class edm:Agent ;
@@ -410,6 +422,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:hasPart ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
   sh:predicate dct:hasPart ;
   sh:valueShape Agent: ;
   sh:class edm:Agent ;
