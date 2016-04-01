@@ -64,6 +64,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:altLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
