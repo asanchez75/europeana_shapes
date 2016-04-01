@@ -262,13 +262,13 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate dc:date ;
   sh:filterShape [ #restrict only to Literals
       sh:property [
           sh:predicate dc:date ;
           sh:nodeKind sh:Literal ;
       ]
   ] ;
+  sh:predicate dc:date ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 .
@@ -560,6 +560,12 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfBirth ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
   sh:predicate rdaGr2:dateOfBirth ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
@@ -621,6 +627,12 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfDeath ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
   sh:predicate rdaGr2:dateOfDeath ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
@@ -702,6 +714,12 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfEstablishment ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
   sh:predicate rdaGr2:dateOfEstablishment ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
@@ -762,6 +780,12 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfTermination ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
   sh:predicate rdaGr2:dateOfTermination ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
@@ -942,6 +966,12 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate edm:begin ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
   sh:predicate edm:begin ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;

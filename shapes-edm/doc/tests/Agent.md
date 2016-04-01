@@ -11,7 +11,7 @@ The following table shows the testcases that were run:
 | [agent_labels_multiple.xml](#agent_labels_multiple_data) | [1](#agent_labels_multiple_result) |  |
 | [agent_labels_nolang.xml](#agent_labels_nolang_data) | [2](#agent_labels_nolang_result) |  |
 | [agent_labels_redundant.xml](#agent_labels_redundant_data) | [1](#agent_labels_redundant_result) |  |
-| [agent_prop_types.xml](#agent_prop_types_data) | [29](#agent_prop_types_result) |  |
+| [agent_prop_types.xml](#agent_prop_types_data) | [24](#agent_prop_types_result) |  |
 
 #### Test Case: <a id="agent_ok_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_ok.xml">agent_ok.xml</a>
 ------
@@ -416,13 +416,13 @@ The following table shows the testcases that were run:
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must match the pattern ^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
   sh:object            <http://dbpedia.org/resource/xpto> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfDeath> ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/biographicalInformation> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractPatternPropertyConstraint ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
 ] .
 
@@ -471,18 +471,6 @@ The following table shows the testcases that were run:
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must match the pattern ^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-  sh:object            <http://dbpedia.org/resource/xpto> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfEstablishment> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#literal> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractPatternPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
 ] .
 
@@ -555,18 +543,6 @@ The following table shows the testcases that were run:
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must match the pattern ^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-  sh:object            <http://dbpedia.org/resource/xpto> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfBirth> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#literal> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractPatternPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
 ] .
 
@@ -680,30 +656,6 @@ The following table shows the testcases that were run:
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must match the pattern ^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-  sh:object            <http://dbpedia.org/resource/xpto> ;
-  sh:predicate         <http://www.europeana.eu/schemas/edm/begin> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#literal> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractPatternPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must match the pattern ^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-  sh:object            <http://dbpedia.org/resource/xpto> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfTermination> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractPatternPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
   sh:object            "xpto" ;
   sh:predicate         <http://purl.org/dc/terms/hasPart> ;
@@ -747,18 +699,6 @@ The following table shows the testcases that were run:
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/biographicalInformation> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
 ] .
 ```
