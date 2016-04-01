@@ -15,6 +15,8 @@ import java.io.UnsupportedEncodingException;
  */
 public class MarkDownWriter extends PrintStream
 {
+    private StringBuilder _sb = new StringBuilder();
+
     public MarkDownWriter(File file) throws FileNotFoundException
     {
         super(file);
@@ -113,12 +115,12 @@ public class MarkDownWriter extends PrintStream
         return this;
     }
 
-    public MarkDownWriter printTableRow(String... cells)
+    public MarkDownWriter printTableRow(Object... cells)
     {
         println();
 
         print('|');
-        for ( String s : cells ) { print(' ', s, " |"); }
+        for ( Object o : cells ) { print(' ', o, " |"); }
         println();
 
         return this;
@@ -207,8 +209,100 @@ public class MarkDownWriter extends PrintStream
         print(':', emoji, ':'); return this;
     }
 
+
+    /***************************************************************************
+     * Public Generation Methods
+     **************************************************************************/
+
+    public String newBold(String txt)
+    {
+        return append("**", txt, "**").flushBuffer();
+    }
+
+    public String newItalic(String txt)
+    {
+        return append('_', txt, '_').flushBuffer();
+    }
+
+    public String newBoldItalic(String txt)
+    {
+        return append("**_", txt, "_**").flushBuffer();
+    }
+
+    public String newStrike(String txt)
+    {
+        return append("~~", txt, "~~").flushBuffer();
+    }
+
+    public String newQuoted(String txt)
+    {
+        return appendln("> ", txt).flushBuffer();
+    }
+
+    public String newLink(String label, String url)
+    {
+        return append('[', label, ']', '(', url, ')').flushBuffer();
+    }
+
+    public String newLink(String label, String url, String id, boolean target)
+    {
+        String strID  = (id == null ? "" : "id=\"" + id + "\" ");
+        String strTrg = (target ? "target=\"_blank\" " : "");
+        return append("<a ", strID, strTrg, "href=\"", url, "\">"
+                    , label, "</a>").flushBuffer();
+    }
+
+    public String newLinkItem(int indent, String txt)
+    {
+        for ( int i = 0; i < indent; i++ ) { append("  "); }
+        return appendln("- ", txt).flushBuffer();
+    }
+
+    public String newLinkItem(int indent, int order, String txt)
+    {
+        for ( int i = 0; i < indent; i++ ) { append("  "); }
+        return appendln(order, ". ", txt).flushBuffer();
+    }
+
+    public String newTaskItem(boolean checked, String txt)
+    {
+        return append("- [", (checked ? 'x' : ' '), "] ", txt).flushBuffer();
+    }
+
+    public String newUser(String user)
+    {
+        return append('@', user, ' ').flushBuffer();
+    }
+
+    public String newEMOJI(String emoji)
+    {
+        return append(':', emoji, ':').flushBuffer();
+    }
+
     public String escape(String msg)
     {
         return msg.replaceAll("[*_\\-:@]", "\\%0");
+    }
+
+
+    /***************************************************************************
+     * Private Methods
+     **************************************************************************/
+
+    private MarkDownWriter append(Object... objs)
+    {
+        for ( Object o : objs ) { _sb.append(o); }
+        return this;
+    }
+
+    private MarkDownWriter appendln(Object... objs)
+    {
+        append(objs); _sb.append('\n');
+        return this;
+    }
+
+    private String flushBuffer()
+    {
+        try { return _sb.toString(); } finally { _sb.setLength(0); }
     }
 }

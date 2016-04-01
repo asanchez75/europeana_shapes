@@ -27,7 +27,11 @@ public class RunDocGenerator
         File out = new File(dir, "doc\\external\\");
 
         Properties prop = new Properties();
-        prop.setProperty("shapes.src", "../../src/main/resources/etc/edm/shapes/external/");
+        
+        prop.setProperty("shapes.local", "D:\\work\\git\\Europeana\\shapes\\shapes-edm\\");
+        prop.setProperty("shapes.remote", "/");
+        //prop.setProperty("shapes.remote", "../../src/main/resources/etc/edm/shapes/external/");
+
         prop.setProperty("data.templates.agent", "etc/edm/data/external/agent_ok1.xml");
 
         new ShapesDocGenerator(prop).genAllDocumentation(in, out);

@@ -3,7 +3,6 @@
  */
 package eu.europeana.edm.shapes.doc;
 
-import java.awt.SystemColor;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -41,35 +40,19 @@ import static org.apache.commons.io.FileUtils.*;
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
  * @since 8 Mar 2016
  */
-public class ShapesDocGenerator
+public class ShapesDocGenerator extends DocGenerator
 {
-    private static Map<String,String> _prefixes = new LinkedHashMap();
     private static String             CARDINALITY
         = "http://www.europeana.eu/schemas/edm/shapes/categories#cardinality";
     private static String             TYPE
         = "http://www.europeana.eu/schemas/edm/shapes/categories#type";
     private static Comparator<String> COMPARATOR = new PropertyComparator();
 
-    static {
-        _prefixes.put(RDF.uri                                   , "rdf");
-        _prefixes.put("http://www.w3.org/2004/02/skos/core#"    , "skos");
-        _prefixes.put("http://www.w3.org/2003/01/geo/wgs84_pos#", "wgs84_pos");
-        _prefixes.put(DC.NS                                     , "dc");
-        _prefixes.put(DCTerms.NS                                , "dct");
-        _prefixes.put("http://xmlns.com/foaf/0.1/"              , "foaf");
-        _prefixes.put("http://www.openarchives.org/ore/terms/"  , "ore");
-        _prefixes.put("http://rdvocab.info/ElementsGr2/"        , "rdaGr2");
-        _prefixes.put("http://www.europeana.eu/schemas/edm/"    , "edm");
-        _prefixes.put(OWL.NS                                    , "owl");
-        _prefixes.put(SH.NS                                     , SH.PREFIX);
-    }
-
     private ShapesDefinitionParser _parser    = new ShapesDefinitionParser();
     private ShapeChecker           _checker   = new ShapeChecker();
     private Map<String,String>     _defs      = null;
-    private Properties             _props     = null;
 
-    public ShapesDocGenerator(Properties props) { _props = props; }
+    public ShapesDocGenerator(Properties props) { super(props); }
 
     public void genAllDocumentation(File dirDef, File dirOut) throws IOException
     {
@@ -122,17 +105,6 @@ public class ShapesDocGenerator
     {
         ResIterator iter = model.listResourcesWithProperty(RDF.type, SH.Shape);
         return ( iter.hasNext() ? iter.next() : null );
-    }
-
-    private String getPrefixedName(Resource rsrc)
-    {
-        String uri = rsrc.getURI();
-        for ( String ns : _prefixes.keySet() )
-        {
-            if ( !uri.startsWith(ns) ) { continue; }
-            return (_prefixes.get(ns) + ':' + uri.substring(ns.length()));
-        }
-        return uri;
     }
 
     private String getLocalName(Resource rsrc)
@@ -238,11 +210,6 @@ public class ShapesDocGenerator
     }
 
 //PRINTING
-    private String getRemoteURL(File file)
-    {
-        return (_props.getProperty("shapes.src") + file.getName());
-    }
-
     private void printClassHeader(Resource c, MarkDownWriter ps)
     {
         ps.printH2("Shapes definitions for " + getPrefixedName(c) + " class");
@@ -474,5 +441,15 @@ public class ShapesDocGenerator
             }
             return index;
         }
+    }
+
+    /* (non-Javadoc)
+     * @see eu.europeana.edm.shapes.doc.DocGenerator#generate()
+     */
+    @Override
+    public void generate()
+    {
+        // TODO Auto-generated method stub
+        
     }
 }
