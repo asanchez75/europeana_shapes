@@ -15,6 +15,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.riot.Lang;
+import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.riot.RDFLanguages;
 import org.apache.jena.util.FileUtils;
 import org.apache.jena.vocabulary.RDF;
@@ -74,20 +75,11 @@ public class TestCase
         if ( _mResult != null && !refresh) { return _mResult; }
 
         _mResult = ModelFactory.createDefaultModel();
-
-        Lang lang = RDFLanguages.filenameToLang(_fResult.getName());
-        if ( lang == null ) { return _mResult; }
-
-        InputStream is = null;
-        try {
-            is = new FileInputStream(_fResult);
-            _mResult.read(is, lang.getLabel());
-        }
-        catch (IOException e)
+        try { _mResult.read(_fResult.getAbsolutePath()); }
+        catch (Throwable t)
         {
-            logError("Error reading to file: " + _fResult.getAbsolutePath(), e);
+            logError("Error reading to file: " + _fResult.getAbsolutePath(), t);
         }
-        finally { IOUtils.closeQuietly(is); }
 
         return _mResult;
     }

@@ -6,6 +6,8 @@ package eu.europeana.shapes.validation;
 import java.io.File;
 import java.util.Collection;
 
+import org.apache.jena.riot.Lang;
+
 import eu.europeana.edm.shapes.LocalShapesLoader;
 import eu.europeana.edm.shapes.ShapesLoader;
 import eu.europeana.edm.shapes.validation.TopBraidValidator;
@@ -31,7 +33,7 @@ public class RunTestSuite
     {
         File dirTS = new File(DIR, "src\\test\\resources\\etc\\edm\\data\\external");
         File dirRS = new File(DIR, "src\\test\\resources\\etc\\edm\\results\\external");
-        TestSuite ts = new TestSuite().loadTests(dirTS, dirRS);
+        TestSuite ts = new TestSuite().loadTests(dirTS, dirRS, Lang.TTL);
         Collection<TestResult> ret = ts.run(new TopBraidValidator(LOADER.load(NS)));
 
         for ( TestResult tr : ret )

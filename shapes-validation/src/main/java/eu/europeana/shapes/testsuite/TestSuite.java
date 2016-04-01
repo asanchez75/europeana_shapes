@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.riot.Lang;
+import org.apache.jena.riot.RDFLanguages;
+import org.apache.jena.util.FileUtils;
 
 import eu.europeana.edm.shapes.validation.ModelValidator;
 import eu.europeana.edm.shapes.validation.RecordValidator;
@@ -20,16 +23,16 @@ public class TestSuite extends ArrayList<TestCase>
 {
     public TestSuite() {}
 
-    public TestSuite loadTests(File data, File result)
+    public TestSuite loadTests(File data, File result, Lang lang)
     {
         if ( !data.isDirectory() ) {
-            add(new TestCase(data, result)); 
-            return this; 
+            add(new TestCase(data, getResult(result, lang)));
+            return this;
         }
 
         for ( File f : data.listFiles() )
         {
-            loadTests(f, new File(result, f.getName()));
+            loadTests(f, new File(result, f.getName()), lang);
         }
         return this;
     }
@@ -63,5 +66,16 @@ public class TestSuite extends ArrayList<TestCase>
         Collection<TestResult> ret = new ArrayList();
         run(validator, ret);
         return ret;
+    }
+
+    private File getResult(File file, Lang lang)
+    {
+        String name = file.getName();
+        Lang l = RDFLanguages.filenameToLang(name);
+        if ( RDFLanguages.sameLang(l, lang) ) { return file; }
+
+        String ext = FileUtils.getFilenameExt(name);
+        name = name.replace(ext, lang.getFileExtensions().get(0));
+        return new File(file.getParentFile(), name);
     }
 }

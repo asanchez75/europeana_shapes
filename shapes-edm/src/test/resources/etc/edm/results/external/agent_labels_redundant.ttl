@@ -1,0 +1,13 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Value sets of skos:altLabel and  must not share equal values" ;
+  sh:object            "Wolfgang Amadeus Mozart"@en ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#redundancy> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNotEqualsPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .

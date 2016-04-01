@@ -1,5 +1,5 @@
 
-## Shapes definitions for skos:Concept class
+## Test cases for skos:Concept class
 
 | Test Case | Results | Status |
 | --- | --- | --- |
