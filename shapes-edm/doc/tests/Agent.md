@@ -243,7 +243,7 @@ The following table shows the testcases that were run:
   sh:object            "..." ;
   sh:predicate         <http://www.europeana.eu/schemas/edm/wasPresentAt> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  _:b0 ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent#closure> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractClosedNodeConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
@@ -255,7 +255,7 @@ The following table shows the testcases that were run:
   sh:object            "??" ;
   sh:predicate         <http://purl.org/ontology/bibo/suffixName> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  _:b0 ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent#closure> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractClosedNodeConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
@@ -267,7 +267,7 @@ The following table shows the testcases that were run:
   sh:object            "Mozart"@en ;
   sh:predicate         <http://www.w3.org/2004/02/skos/core#hiddenLabel> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  _:b0 ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent#closure> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractClosedNodeConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>

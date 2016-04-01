@@ -42,7 +42,7 @@
   sh:scopeClass edm:Agent ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Agent#closure> ;
 
   # SKOS properties
   sh:property        <Agent/skos_prefLabel#type> ;
@@ -117,6 +117,18 @@
   sh:property        <Agent/owl_sameAs#type> ;
   sh:property        <Agent/owl_sameAs#cardinality> ;
 .
+
+# class level constraints ######################################################
+
+<Agent#closure>
+  sh:description """An edm:Agent resource must be defined using only the 
+                    properties defined in EDM for Agents""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+
 
 # skos:prefLabel ###############################################################
 
