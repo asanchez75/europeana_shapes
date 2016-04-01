@@ -195,8 +195,12 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printConstraintTable(Resource shape, MarkDownWriter w)
     {
+        w.printParagraph("The following constraints are not restricted to a "
+                       + "specific property:");
+        printClassConstraintsTable(shape, w);
+
         w.printParagraph("The following table shows an overview of the "
-                       + "contraints divided per property:");
+                       + "constraints divided per property:");
         w.printTableHeader("Property","Cardinality","Value Type","Constraints");
         w.printTableCols('l', 'c', 'c', 'l');
         for(String uri : getProperties(shape))
@@ -214,6 +218,15 @@ public class ShapesDataGenerator extends DocGenerator
             printConstraintReferences(constraints, w);
             w.println("|");
         }
+    }
+
+    private void printClassConstraintsTable(Resource shape, MarkDownWriter w)
+    {
+        w.println("<table>");
+        w.print("<tr><th align=\"right\">Constraint</th><td>");
+        printConstraintReferences(getClassConstraints(shape, new ArrayList()), w);
+        w.println("</td></tr>");
+        w.println("</table>");
     }
 
     private void printTemplateDocument(Resource c, MarkDownWriter w)
@@ -381,6 +394,19 @@ public class ShapesDataGenerator extends DocGenerator
             ret.add(iter.next().asResource().getURI());
         }
         return ret;
+    }
+
+    private Collection<Resource> getClassConstraints(Resource shape
+                                                 , Collection<Resource> col)
+    {
+        StmtIterator iter = shape.listProperties(SH.constraint);
+        while(iter.hasNext())
+        {
+            Resource constr = iter.next().getObject().asResource();
+            String   uri    = constr.getURI();
+            if ( ShapeChecker.isShapeConstraint(uri) ) { col.add(constr); }
+        }
+        return col;
     }
 
     private Collection<Resource> getConstraints(Resource shape, Resource scope)

@@ -32,6 +32,34 @@ public class ShapeChecker
     private static Pattern PATTERN_PROPERTY_RULE
         = Pattern.compile("^" + PATTERN_PROPERTY + "[#].*$");
 
+    public static boolean isPropertyConstraint(String uri)
+    {
+        if ( uri == null ) { return false; }
+        return PATTERN_PROPERTY_RULE.matcher(uri).matches();
+    }
+
+    public static boolean isPropertyConstraint(Resource rsrc)
+    {
+        return isPropertyConstraint(rsrc.getURI());
+    }
+
+    public static boolean isShapeConstraint(String uri)
+    {
+        if ( uri == null ) { return false; }
+        return PATTERN_CLASS_RULE.matcher(uri).matches();
+    }
+
+    public static boolean isShapeConstraint(Resource rsrc)
+    {
+        return isShapeConstraint(rsrc.getURI());
+    }
+
+    public static boolean isShapeOrPropertyConstraint(String uri)
+    {
+        return ( isPropertyConstraint(uri) || isShapeConstraint(uri) );
+    }
+
+
     public boolean check(Model model)
     {
         boolean ret = true;
@@ -78,7 +106,7 @@ public class ShapeChecker
     {
         boolean ret = true;
         String uri = rsrc.getURI();
-        if ( !refersToBoth(uri) ) { 
+        if ( !isShapeOrPropertyConstraint(uri) ) { 
             ret = false;
             System.err.println("Illegal URI: " + uri);
         }
@@ -97,7 +125,7 @@ public class ShapeChecker
     {
         boolean ret = true;
         String uri = rsrc.getURI();
-        if ( !refersToProperty(uri) ) { 
+        if ( !isPropertyConstraint(uri) ) { 
             ret = false;
             System.err.println("Illegal URI: " + uri);
         }
@@ -110,20 +138,5 @@ public class ShapeChecker
         }
 
         return ret;
-    }
-
-    private boolean refersToProperty(String uri)
-    {
-        return PATTERN_PROPERTY_RULE.matcher(uri).matches();
-    }
-
-    private boolean refersToClass(String uri)
-    {
-        return PATTERN_CLASS_RULE.matcher(uri).matches();
-    }
-
-    private boolean refersToBoth(String uri)
-    {
-        return ( refersToProperty(uri) || refersToClass(uri) );
     }
 }

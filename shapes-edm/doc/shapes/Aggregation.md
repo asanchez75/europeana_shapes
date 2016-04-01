@@ -3,7 +3,12 @@
 _This document was generated from the [shapes file](/shapes-edm/src/main/resources/etc/edm/shapes/external/Aggregation.ttl) using this [software](/shapes-doc)_
 > This shape gathers all constraints that apply to a ore:Aggregation class
 
-The following table shows an overview of the contraints divided per property:
+The following constraints are not restricted to a specific property:
+<table>
+<tr><th align="right">Constraint</th><td><a href="#edm_shapes_external_Aggregation_correlation">correlation</a></td></tr>
+</table>
+
+The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
