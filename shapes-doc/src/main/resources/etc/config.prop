@@ -19,5 +19,5 @@ shapes.testsuite.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\tests
 shapes.edm.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resources\\etc\\edm\\shapes\\external
 shapes.edm.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\shapes
 
-shapes.data.templates.agent=etc/edm/data/external/agent_ok1.xml
+shapes.data.templates.agent=etc/edm/data/external/agent_ok.xml
 

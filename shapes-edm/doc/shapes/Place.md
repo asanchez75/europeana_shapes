@@ -28,8 +28,7 @@ The following table shows an overview of the constraints divided per property:
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
 ------
 
-##### <a id="edm_shapes_external_Place_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -47,8 +46,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
@@ -68,8 +66,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#redundancy</a>
 <table>
 <tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
                     skos:prefLabel</td></tr>
@@ -91,8 +88,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_altLabel#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
@@ -111,8 +107,7 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
 ------
 
-##### <a id="edm_shapes_external_Place_skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -130,8 +125,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
@@ -151,8 +145,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_note#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
@@ -171,8 +164,7 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
 ------
 
-##### <a id="edm_shapes_external_Place_skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -192,8 +184,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
@@ -213,8 +204,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
@@ -239,8 +229,7 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
 ------
 
-##### <a id="edm_shapes_external_Place_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -258,8 +247,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#range-class</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:Place</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
@@ -280,8 +268,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_hasPart#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
@@ -300,8 +287,7 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 ------
 
-##### <a id="edm_shapes_external_Place_dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -319,8 +305,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:Place</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
@@ -341,8 +326,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
@@ -361,8 +345,7 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="edm_isNextInSequence" target="_blank" href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
 ------
 
-##### <a id="edm_shapes_external_Place_edm_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_edm_isNextInSequence_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -380,8 +363,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:Place</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
@@ -402,8 +384,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/edm_isNextInSequence#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>
@@ -422,8 +403,7 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="owl_sameAs" target="_blank" href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
 ------
 
-##### <a id="edm_shapes_external_Place_owl_sameAs_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_owl_sameAs_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
@@ -441,8 +421,7 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### <a id="edm_shapes_external_Place_owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type</a>
-------
+##### Constraint <a id="edm_shapes_external_Place_owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Place/owl_sameAs#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
 <tr><th align="right">subject</th><td></td></tr>

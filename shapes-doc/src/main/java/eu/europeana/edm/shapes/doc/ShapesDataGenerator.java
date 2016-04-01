@@ -146,8 +146,7 @@ public class ShapesDataGenerator extends DocGenerator
     {
         String ref = getLocalReference(constraint);
         String uri = constraint.getURI();
-        w.printH5(w.newLink(uri, uri, ref, true));
-        w.printSeparator();
+        w.printH5("Constraint " + w.newLink(uri, uri, ref, true));
     }
 
     private void printCardinalityConstraint(Collection<Resource> constraints
