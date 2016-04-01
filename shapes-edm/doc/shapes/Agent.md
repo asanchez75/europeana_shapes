@@ -1025,6 +1025,12 @@ _Shape definition in Turtle syntax:_
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
   dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate edm:end ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
   sh:predicate edm:end ;
   #does not check for valid dates but could be expanded
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
