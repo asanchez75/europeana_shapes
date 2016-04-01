@@ -43,13 +43,16 @@ public class RecordValidator
     {
         Model m = createModel();
 
-        String ext  = FileUtils.getFilenameExt(file.getName());
-        Lang   lang = RDFLanguages.fileExtToLang(ext);
+        Lang   lang = RDFLanguages.filenameToLang(file.getName());
         if ( lang == null ) { return m; }
 
         InputStream is = new FileInputStream(file);
         try     { m.read(is, "", lang.getLabel()); }
-        finally { closeQuietly(is);                }
+        catch (Throwable t)
+        {
+            throw new IOException("Error reading file: " + file.getName(), t);
+        }
+        finally { closeQuietly(is); }
 
         return validate(m);
     }

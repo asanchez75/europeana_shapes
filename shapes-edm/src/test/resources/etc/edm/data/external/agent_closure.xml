@@ -8,7 +8,7 @@
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:bibo=""
+         xmlns:bibo="http://purl.org/ontology/bibo/"
          >
 
     <edm:Agent rdf:about="http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart">

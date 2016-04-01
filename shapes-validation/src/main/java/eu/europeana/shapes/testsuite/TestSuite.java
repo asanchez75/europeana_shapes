@@ -3,26 +3,11 @@
  */
 package eu.europeana.shapes.testsuite;
 
-import static eu.europeana.edm.shapes.validation.SHACLNamespace.SHACL_RESULT;
-
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.TreeSet;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.ResIterator;
-import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFLanguages;
-import org.apache.jena.util.FileUtils;
-import org.apache.jena.vocabulary.RDF;
-import org.topbraid.shacl.vocabulary.SH;
+import org.apache.jena.rdf.model.Resource;
 
 import eu.europeana.edm.shapes.validation.ModelValidator;
 import eu.europeana.edm.shapes.validation.RecordValidator;
@@ -47,6 +32,17 @@ public class TestSuite extends ArrayList<TestCase>
             loadTests(f, new File(result, f.getName()));
         }
         return this;
+    }
+
+    public Collection<TestCase> getTestCases(Resource c)
+    {
+        Collection<TestCase> ret = new ArrayList();
+        String keyword = c.getLocalName().toLowerCase();
+        for ( TestCase tc : this )
+        {
+            if (tc.getDataFile().getName().startsWith(keyword)) { ret.add(tc); }
+        }
+        return ret;
     }
 
     public boolean run(ModelValidator validator, Collection<TestResult> results)

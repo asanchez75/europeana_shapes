@@ -56,7 +56,7 @@ public class TestCase
     public Integer getResultSize()
     {
         Model model = getResultModel(false);
-        if ( model == null ) { }
+        if ( model == null ) { return null; }
 
         int i = 0;
         ResIterator iter = model.listResourcesWithProperty(RDF.type
