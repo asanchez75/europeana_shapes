@@ -96,8 +96,8 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         for ( TestCase tc : col )
         {
             String id = tc.getID();
-            String dataRef   = "#" + id + "_data";
-            String resultRef = "#" + id + "_result";
+            String dataRef   = id + "_data";
+            String resultRef = id + "_result";
             w.printH4("Test Case: "
                     + w.newLink(tc.getDataFile().getName()
                               , toRemote(tc.getDataFile()), dataRef, true));
