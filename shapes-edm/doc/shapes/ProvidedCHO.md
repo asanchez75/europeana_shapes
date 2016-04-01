@@ -6,7 +6,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 The following table shows an overview of the contraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
-| --- | --- | --- | --- |
+| :---  :--:  :--:  :--- |
 |<a href="#dc_contributor">dc:contributor</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_cardinality">0..?</a>||<a href="#edm_shapes_external_ProvidedCHO_dc_contributor_range-class">range-class</a>|
 |<a href="#dc_coverage">dc:coverage</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_cardinality">0..?</a>||<a href="#edm_shapes_external_ProvidedCHO_dc_coverage_range-class">range-class</a>, <a href="#edm_shapes_external_ProvidedCHO_dc_coverage_subproperty_1">subproperty_1</a>, <a href="#edm_shapes_external_ProvidedCHO_dc_coverage_subproperty_2">subproperty_2</a>|
 |<a href="#dc_creator">dc:creator</a>|<a href="#edm_shapes_external_ProvidedCHO_dc_creator_cardinality">0..?</a>||<a href="#edm_shapes_external_ProvidedCHO_dc_creator_range-class">range-class</a>|

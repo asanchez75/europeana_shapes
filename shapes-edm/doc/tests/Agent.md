@@ -5,7 +5,7 @@ _This document was generated from the testcases available within this [directory
 The following table shows the testcases that were run:
 
 | Test Case | Results | Status |
-| --- | --- | --- |
+| :---  ---:  :--: |
 | [agent_ok.xml](#agent_ok.xml) | 0 |  |
 | [agent_closure.xml](#agent_closure.xml) | 3 |  |
 | [agent_labels_multiple.xml](#agent_labels_multiple.xml) | 1 |  |

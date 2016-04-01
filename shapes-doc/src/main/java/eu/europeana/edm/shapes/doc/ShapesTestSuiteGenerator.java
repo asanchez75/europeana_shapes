@@ -76,6 +76,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         w.printParagraph("The following table shows the testcases that were "
                        + "run:");
         w.printTableHeader("Test Case", "Results", "Status");
+        w.printTableCols('l', 'r', 'c');
         for ( TestCase tc : col )
         {
             String name = tc.getDataFile().getName();

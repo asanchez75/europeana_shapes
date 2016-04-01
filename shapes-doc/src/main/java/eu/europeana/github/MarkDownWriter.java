@@ -108,10 +108,22 @@ public class MarkDownWriter extends PrintStream
         for ( String s : strs ) { print(" ", s, " |"); }
         println();
 
-        print('|');
-        for ( int i = 0; i < strs.length; i++ ) { print(" --- |"); }
-        println();
 
+        return this;
+    }
+
+    public MarkDownWriter printTableCols(char... cols)
+    {
+        print('|');
+        for ( char col : cols )
+        {
+            switch (col) {
+                case 'l': print(" :--- "); break;
+                case 'r': print(" ---: "); break;
+                case 'c': print(" :--: "); break;
+            }
+        }
+        println('|');
         return this;
     }
 

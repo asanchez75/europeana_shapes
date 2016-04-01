@@ -6,7 +6,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 The following table shows an overview of the contraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
-| --- | --- | --- | --- |
+| :---  :--:  :--:  :--- |
 |<a href="#skos_altLabel">skos:altLabel</a>|<a href="#edm_shapes_external_Place_skos_altLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_skos_altLabel_type">Literal</a>|<a href="#edm_shapes_external_Place_skos_altLabel_datatype">datatype</a>, <a href="#edm_shapes_external_Place_skos_altLabel_redundancy">redundancy</a>|
 |<a href="#skos_note">skos:note</a>|<a href="#edm_shapes_external_Place_skos_note_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_skos_note_type">Literal</a>|<a href="#edm_shapes_external_Place_skos_note_datatype">datatype</a>|
 |<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#edm_shapes_external_Place_skos_prefLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_skos_prefLabel_type">Literal</a>|<a href="#edm_shapes_external_Place_skos_prefLabel_datatype">datatype</a>|

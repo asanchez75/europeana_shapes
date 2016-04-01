@@ -198,6 +198,7 @@ public class ShapesDataGenerator extends DocGenerator
         w.printParagraph("The following table shows an overview of the "
                        + "contraints divided per property:");
         w.printTableHeader("Property","Cardinality","Value Type","Constraints");
+        w.printTableCols('l', 'c', 'c', 'l');
         for(String uri : getProperties(shape))
         {
             Resource prop = shape.getModel().getResource(uri);
