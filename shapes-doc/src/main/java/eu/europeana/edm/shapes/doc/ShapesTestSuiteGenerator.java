@@ -116,11 +116,13 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         @Override
         public int compare(TestCase tc1, TestCase tc2)
         {
-            int s1 = tc1.getResultSize();
-            int s2 = tc2.getResultSize();
-            int ret = s1 - s2;
-            return (ret != 0 ? ret
-                             : tc1.getDataFile().compareTo(tc2.getDataFile()));
+            Integer s1 = tc1.getResultSize();
+            Integer s2 = tc2.getResultSize();
+            if ( s1 != s2 ) {
+                if ( (s1 != null) && (s1 == 0) ) { return  1; }
+                if ( (s2 != null) && (s2 == 0) ) { return -1; }
+            }
+            return tc1.getDataFile().compareTo(tc2.getDataFile());
         }
     }
 }
