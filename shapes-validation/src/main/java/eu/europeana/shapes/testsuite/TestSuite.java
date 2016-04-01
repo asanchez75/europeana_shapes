@@ -39,13 +39,17 @@ public class TestSuite extends ArrayList<TestCase>
 
     public Collection<TestCase> getTestCases(Resource c)
     {
-        Collection<TestCase> ret = new ArrayList();
+        return getTestCases(c, new ArrayList());
+    }
+
+    public Collection<TestCase> getTestCases(Resource c, Collection<TestCase> col)
+    {
         String keyword = c.getLocalName().toLowerCase();
         for ( TestCase tc : this )
         {
-            if (tc.getDataFile().getName().startsWith(keyword)) { ret.add(tc); }
+            if (tc.getDataFile().getName().startsWith(keyword)) { col.add(tc); }
         }
-        return ret;
+        return col;
     }
 
     public boolean run(ModelValidator validator, Collection<TestResult> results)

@@ -6,7 +6,9 @@ package eu.europeana.edm.shapes.doc;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Properties;
+import java.util.TreeSet;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Resource;
@@ -46,7 +48,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genFileForClass(TestSuite suite, Resource c)
     {
-        Collection<TestCase> col = suite.getTestCases(c);
+        Collection<TestCase> col = suite.getTestCases(c, new TreeSet(new TestCaseComparator()));
         MarkDownWriter w = getWriter(getOutputFile(c));
         try {
             genHeader(c, w);
@@ -65,7 +67,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         String swURL = "/shapes-doc";
         File file = _config.getFile("shapes.testsuite.data");
         w.printItalic("This document was generated from the testcases available "
-                    + "within this {directory] (" + toRemote(file)
+                    + "within this [directory] (" + toRemote(file)
                     + ") using [this software](" + swURL + ")").println();
     }
 
@@ -107,5 +109,18 @@ public class ShapesTestSuiteGenerator extends DocGenerator
     {
         String name = c.getLocalName() + ".md";
         return new File(_config.getFile("shapes.testsuite.doc"), name);
+    }
+
+    private static class TestCaseComparator implements Comparator<TestCase>
+    {
+        @Override
+        public int compare(TestCase tc1, TestCase tc2)
+        {
+            int s1 = tc1.getResultSize();
+            int s2 = tc2.getResultSize();
+            int ret = s1 - s2;
+            return (ret != 0 ? ret
+                             : tc1.getDataFile().compareTo(tc2.getDataFile()));
+        }
     }
 }
