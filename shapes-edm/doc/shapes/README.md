@@ -1,5 +1,6 @@
 # Shapes definitions for EDM (external)
-*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)*
+*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)* using this 
+[software](/shapes-doc)
 
 This document presents all shape definitions that make up EDM (in the form 
 which we informally call as external). It is composed of the following 

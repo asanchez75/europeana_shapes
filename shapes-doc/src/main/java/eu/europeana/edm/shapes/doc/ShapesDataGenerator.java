@@ -123,7 +123,7 @@ public class ShapesDataGenerator extends DocGenerator
     {
         String swURL = "/shapes-doc";
         w.printItalic("This document was generated from the [shapes file]("
-                    + toRemote(file) + ") using [this software](" + swURL 
+                    + toRemote(file) + ") using this [software](" + swURL 
                     + ")").println();
         StmtIterator iter = shape.listProperties(SH.description);
         while ( iter.hasNext() )
