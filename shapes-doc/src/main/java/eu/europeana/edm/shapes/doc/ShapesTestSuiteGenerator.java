@@ -80,8 +80,12 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         for ( TestCase tc : col )
         {
             String name = tc.getDataFile().getName();
-            w.printTableRow(w.newLink(name, "#" + name)
-                          , tc.getResultSize()
+            String dataRef   = "#" + name + "_data";
+            String resultRef = "#" + name + "_result";
+            Integer size = tc.getResultSize();
+            w.printTableRow(w.newLink(name              , dataRef)
+                          , w.newLink(size == null ? "?" : String.valueOf(size)
+                                    , resultRef)
                           , "");
         }
     }

@@ -6,12 +6,12 @@ The following table shows the testcases that were run:
 
 | Test Case | Results | Status |
 | :--- | ---: | :--: |
-| [agent_ok.xml](#agent_ok.xml) | 0 |  |
-| [agent_closure.xml](#agent_closure.xml) | 3 |  |
-| [agent_labels_multiple.xml](#agent_labels_multiple.xml) | 1 |  |
-| [agent_labels_nolang.xml](#agent_labels_nolang.xml) | 2 |  |
-| [agent_labels_redundant.xml](#agent_labels_redundant.xml) | 1 |  |
-| [agent_prop_types.xml](#agent_prop_types.xml) | 30 |  |
+| [agent_ok.xml](#agent_ok.xml_data) | [0](#agent_ok.xml_result) |  |
+| [agent_closure.xml](#agent_closure.xml_data) | [3](#agent_closure.xml_result) |  |
+| [agent_labels_multiple.xml](#agent_labels_multiple.xml_data) | [1](#agent_labels_multiple.xml_result) |  |
+| [agent_labels_nolang.xml](#agent_labels_nolang.xml_data) | [2](#agent_labels_nolang.xml_result) |  |
+| [agent_labels_redundant.xml](#agent_labels_redundant.xml_data) | [1](#agent_labels_redundant.xml_result) |  |
+| [agent_prop_types.xml](#agent_prop_types.xml_data) | [30](#agent_prop_types.xml_result) |  |
 
 #### Test Case: <a id="agent_ok.xml" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/data/external/agent_ok.xml">agent_ok.xml</a>
 ------
