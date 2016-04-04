@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -22,6 +22,67 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#edm_shapes_external_Place_dct_isPartOf_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_dct_isPartOf_type">IRI</a>|<a href="#edm_shapes_external_Place_dct_isPartOf_range-class">range-class</a>|
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_Place_edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_edm_isNextInSequence_type">IRI</a>|<a href="#edm_shapes_external_Place_edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_Place_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_Place_owl_sameAs_type">IRI</a>||
+
+#### Shape Body
+------
+_Shape body in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Place#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:Place class""" ;
+
+  sh:scopeClass edm:Place ;
+
+  # class level constraints
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+
+  # SKOS properties
+  sh:property        <Place/skos_prefLabel#type> ;
+  sh:property        <Place/skos_prefLabel#datatype> ;
+  sh:property        <Place/skos_prefLabel#cardinality> ;
+  sh:property        <Place/skos_altLabel#type> ;
+  sh:property        <Place/skos_altLabel#datatype> ;
+  sh:property        <Place/skos_altLabel#cardinality> ;
+  sh:property        <Place/skos_altLabel#redundancy> ;
+  sh:property        <Place/skos_note#type> ;
+  sh:property        <Place/skos_note#datatype> ;
+  sh:property        <Place/skos_note#cardinality> ;
+
+  # WGS84 properties
+  sh:property        <Place/wgs84_lat#type> ;
+  sh:property        <Place/wgs84_lat#cardinality> ;
+  sh:property        <Place/wgs84_lat#literal> ;
+  sh:property        <Place/wgs84_lat#correlation> ;
+  sh:property        <Place/wgs84_long#type> ;
+  sh:property        <Place/wgs84_long#cardinality> ;
+  sh:property        <Place/wgs84_long#literal> ;
+  sh:property        <Place/wgs84_long#correlation> ;
+  sh:property        <Place/wgs84_alt#type> ;
+  sh:property        <Place/wgs84_alt#cardinality> ;
+  sh:property        <Place/wgs84_alt#literal> ;
+  sh:constraint      <Place/wgs84_alt#correlation> ;
+
+  # DCTERMS properties
+  sh:property        <Place/dct_hasPart#type> ;
+  sh:property        <Place/dct_hasPart#cardinality> ;
+  sh:property        <Place/dct_hasPart#range-class> ;
+  sh:property        <Place/dct_isPartOf#type> ;
+  sh:property        <Place/dct_isPartOf#cardinality> ;
+  sh:property        <Place/dct_isPartOf#range-class> ;
+
+  # EDM properties
+  sh:property        <Place/edm_isNextInSequence#type> ;
+  sh:property        <Place/edm_isNextInSequence#cardinality> ;
+  sh:property        <Place/edm_isNextInSequence#range-class> ;
+
+  # OWL properties
+  sh:property        <Place/owl_sameAs#type> ;
+  sh:property        <Place/owl_sameAs#cardinality> ;
+.
+```
 
 #### Shape level constraints
 ------

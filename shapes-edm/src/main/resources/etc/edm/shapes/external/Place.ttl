@@ -34,7 +34,7 @@
 # Base Shape for the edm:Place Class
 ################################################################################
 
-<Place:base>
+<Place#base>
   a sh:Shape ;
   rdfs:subClassOf rdfs:Resource ;
   sh:description """This shape gathers all constraints that apply to a 

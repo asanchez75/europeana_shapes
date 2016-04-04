@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -21,6 +21,60 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#edm_end">edm:end</a>|<a href="#edm_shapes_external_TimeSpan_edm_end_cardinality">0..1</a>|<a href="#edm_shapes_external_TimeSpan_edm_end_type">Literal</a>|<a href="#edm_shapes_external_TimeSpan_edm_end_literal">literal</a>|
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_TimeSpan_edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_edm_isNextInSequence_type">IRI</a>|<a href="#edm_shapes_external_TimeSpan_edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_TimeSpan_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_TimeSpan_owl_sameAs_type">IRI</a>||
+
+#### Shape Body
+------
+_Shape body in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:TimeSpan class""" ;
+
+  sh:scopeClass edm:TimeSpan ;
+
+  # class level constraints
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+
+  # SKOS properties
+  sh:property        <TimeSpan/skos_prefLabel#type> ;
+  sh:property        <TimeSpan/skos_prefLabel#datatype> ;
+  sh:property        <TimeSpan/skos_prefLabel#cardinality> ;
+  sh:property        <TimeSpan/skos_altLabel#type> ;
+  sh:property        <TimeSpan/skos_altLabel#datatype> ;
+  sh:property        <TimeSpan/skos_altLabel#cardinality> ;
+  sh:property        <TimeSpan/skos_altLabel#redundancy> ;
+  sh:property        <TimeSpan/skos_note#type> ;
+  sh:property        <TimeSpan/skos_note#datatype> ;
+  sh:property        <TimeSpan/skos_note#cardinality> ;
+
+  # DCTERMS properties
+  sh:property        <TimeSpan/dct_hasPart#type> ;
+  sh:property        <TimeSpan/dct_hasPart#cardinality> ;
+  sh:property        <TimeSpan/dct_hasPart#range-class> ;
+  sh:property        <TimeSpan/dct_isPartOf#type> ;
+  sh:property        <TimeSpan/dct_isPartOf#cardinality> ;
+  sh:property        <TimeSpan/dct_isPartOf#range-class> ;
+
+  # EDM properties
+  sh:property        <TimeSpan/edm_begin#type> ;
+  sh:property        <TimeSpan/edm_begin#cardinality> ;
+  sh:property        <TimeSpan/edm_begin#literal> ;
+  sh:property        <TimeSpan/edm_begin#correlation> ;
+  sh:property        <TimeSpan/edm_end#type> ;
+  sh:property        <TimeSpan/edm_end#cardinality> ;
+  sh:property        <TimeSpan/edm_end#literal> ;
+  sh:property        <TimeSpan/edm_isNextInSequence#type> ;
+  sh:property        <TimeSpan/edm_isNextInSequence#cardinality> ;
+  sh:property        <TimeSpan/edm_isNextInSequence#range-class> ;
+
+  # OWL properties
+  sh:property        <TimeSpan/owl_sameAs#type> ;
+  sh:property        <TimeSpan/owl_sameAs#cardinality> ;
+.
+```
 
 #### Shape level constraints
 ------

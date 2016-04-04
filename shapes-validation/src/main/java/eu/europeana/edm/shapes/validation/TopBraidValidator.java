@@ -19,10 +19,6 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.util.FileUtils;
 
-import eu.europeana.edm.shapes.validation.ShapesConstants.ShapesType;
-import static eu.europeana.edm.shapes.validation.SHACLNamespace.*;
-import static eu.europeana.edm.shapes.validation.ShapesUtils.*;
-
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
  * @since 8 Dec 2015
@@ -64,7 +60,7 @@ public class TopBraidValidator implements ModelValidator
 
         long elapsed = System.currentTimeMillis() - time;
         System.out.println("Validator executed in " + elapsed + "ms");
-        results.setNsPrefix(SHACL_PREFIX, SHACL_NS);
+        results.setNsPrefix(SH.PREFIX, SH.NS);
 
         return results;
     }

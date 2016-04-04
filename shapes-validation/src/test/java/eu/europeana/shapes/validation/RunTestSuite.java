@@ -5,6 +5,7 @@ package eu.europeana.shapes.validation;
 
 import java.io.File;
 import java.util.Collection;
+import java.util.Properties;
 
 import org.apache.jena.riot.Lang;
 
@@ -20,21 +21,19 @@ import eu.europeana.shapes.testsuite.TestSuite;
  */
 public class RunTestSuite
 {
-    private static File         DIR    = new File("D:\\work\\git\\Europeana\\shapes\\shapes-edm\\");
-    private static ShapesLoader LOADER = null;
     private static String       NS     = "http://www.europeana.eu/schemas/edm/shapes/external/";
-
-    static {
-        LOADER = new LocalShapesLoader(
-                 new File(DIR, "src\\main\\resources\\etc\\edm\\shapes"));
-    }
 
     public static final void main(String[] args) throws Exception
     {
-        File dirTS = new File(DIR, "src\\test\\resources\\etc\\edm\\data\\external");
-        File dirRS = new File(DIR, "src\\test\\resources\\etc\\edm\\results\\external");
+        Properties props = new Properties();
+        props.load(ClassLoader.getSystemResourceAsStream("etc/config.prop"));
+
+        LocalShapesLoader loader = new LocalShapesLoader(new File(props.getProperty("shapes.edm.data")));
+
+        File dirTS = new File(props.getProperty("shapes.testsuite.data"));
+        File dirRS = new File(props.getProperty("shapes.testsuite.results"));
         TestSuite ts = new TestSuite().loadTests(dirTS, dirRS, Lang.TTL);
-        Collection<TestResult> ret = ts.run(new TopBraidValidator(LOADER.load(NS)));
+        Collection<TestResult> ret = ts.run(new TopBraidValidator(loader.load(NS)));
 
         for ( TestResult tr : ret )
         {
@@ -42,15 +41,4 @@ public class RunTestSuite
                              + ">: " + tr.isOK());
         }
     }
-
-    /*
-    public static void print(Model results, PrintStream ps)
-    {
-        ps.println(results);
-        ResIterator iter = results.listResourcesWithProperty(
-                results.getProperty(RDF_TYPE)
-              , results.getResource(SHACL_RESULT));
-        while(iter.hasNext()) { print(iter.nextResource(), ps); }
-    }
-    */
 }

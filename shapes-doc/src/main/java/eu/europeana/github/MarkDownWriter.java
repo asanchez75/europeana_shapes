@@ -164,6 +164,7 @@ public class MarkDownWriter extends PrintStream
 
     public MarkDownWriter printCode(String code)
     {
+        if ( code == null         ) { return this; }
         if ( !code.contains("\n") ) { print("`", code, "`"); return this; }
 
         println();

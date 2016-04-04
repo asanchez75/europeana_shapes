@@ -17,6 +17,7 @@ import org.topbraid.spin.util.JenaUtil;
 
 import eu.europeana.ld.deref.Dereferencer;
 import static org.apache.commons.io.IOUtils.*;
+import static eu.europeana.edm.shapes.validation.ValidationUtils.*;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
@@ -39,22 +40,14 @@ public class RecordValidator
         this(validator, Lang.RDFXML.getContentType().getType());
     }
 
+
+    /***************************************************************************
+     * Public Methods
+     **************************************************************************/
+
     public Model validate(File file) throws IOException
     {
-        Model m = createModel();
-
-        Lang   lang = RDFLanguages.filenameToLang(file.getName());
-        if ( lang == null ) { return m; }
-
-        InputStream is = new FileInputStream(file);
-        try     { m.read(is, "", lang.getLabel()); }
-        catch (Throwable t)
-        {
-            throw new IOException("Error reading file: " + file.getName(), t);
-        }
-        finally { closeQuietly(is); }
-
-        return validate(m);
+        return validate(loadModel(file));
     }
 
     public Model validate(File file, String mime) throws IOException
@@ -64,15 +57,7 @@ public class RecordValidator
 
     public Model validate(InputStream is, String mime) throws IOException
     {
-        Model m = createModel();
-
-        Lang lang = RDFLanguages.contentTypeToLang(mime);
-        if ( lang == null ) { return null; }
-
-        try     { m.read(is, "", lang.getLabel()); }
-        finally { closeQuietly(is);                }
-
-        return validate(m);
+        return validate(loadModel(is, mime));
     }
 
     public Model validate(String url) throws HttpException
@@ -84,6 +69,11 @@ public class RecordValidator
     {
         return validate(_dereference.dereference(url, mime));
     }
+
+
+    /***************************************************************************
+     * Protected Methods
+     **************************************************************************/
 
     protected Model createModel() { return JenaUtil.createDefaultModel(); }
 

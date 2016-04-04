@@ -220,7 +220,7 @@ public class ShapesDataGenerator extends DocGenerator
     private void printClassConstraintsTable(Resource shape, MarkDownWriter w)
     {
         w.println("<table>");
-        w.print("<tr><th align=\"right\">Constraints</th><td>");
+        w.print("<tr><th align=\"right\">Constraints</th><td width='100%'>");
         printConstraintReferences(getClassConstraints(shape), w);
         w.println("</td></tr>");
         w.println("</table>");
@@ -229,7 +229,7 @@ public class ShapesDataGenerator extends DocGenerator
     private void printTemplateDocument(Resource c, MarkDownWriter w)
     {
         String name = c.getLocalName();
-        String rsrc = _config.getProperty("data.templates."
+        String rsrc = _config.getProperty("shapes.data.templates."
                                         + name.toLowerCase());
         if ( rsrc == null ) { return; }
 
@@ -249,8 +249,10 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printConstraintDefinitions(Resource shape, MarkDownWriter w)
     {
-        w.printH4("Shape level constraints");
-        w.printSeparator();
+        w.printH4("Shape Body").printSeparator();
+        printShapeBody(shape, w);
+
+        w.printH4("Shape level constraints").printSeparator();
         for ( Resource c : getClassConstraints(shape))
         {
             printConstraintDefinition(c, w);
@@ -265,6 +267,12 @@ public class ShapesDataGenerator extends DocGenerator
             Collection<Resource> consts = getConstraints(shape, prop);
             for ( Resource c : consts ) { printConstraintDefinition(c, w); }
         }
+    }
+
+    private void printShapeBody(Resource shape, MarkDownWriter w)
+    {
+        w.printItalic("Shape body in Turtle syntax:").println();
+        w.printCode(_defs.get(shape.getURI()));
     }
 
     private void printConstraintDefinition(Resource constraint,MarkDownWriter w)

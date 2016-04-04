@@ -88,9 +88,7 @@ public class ShapesDefinitionParser
         private State newStartWithURI(String line)
         {
             String uri = line.substring(1, line.indexOf('>'));
-            if ( uri.startsWith("http") ) {
-                return _sDefinition.start(line, uri);
-            }
+            if (uri.startsWith("http")) { return _sDefinition.start(line,uri); }
 
             return _sDefinition.start(line, (_base == null ? "" : _base) + uri);
         }

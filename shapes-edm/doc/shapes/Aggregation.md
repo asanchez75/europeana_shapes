@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td><a href="#edm_shapes_external_Aggregation_correlation">correlation</a></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#edm_shapes_external_Aggregation_correlation">correlation</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -23,6 +23,56 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#edm_rights">edm:rights</a>|<a href="#edm_shapes_external_Aggregation_edm_rights_cardinality">0..?</a>|<a href="#edm_shapes_external_Aggregation_edm_rights_type">IRI</a>|<a href="#edm_shapes_external_Aggregation_edm_rights_values">values</a>|
 |<a href="#edm_ugc">edm:ugc</a>|<a href="#edm_shapes_external_Aggregation_edm_ugc_cardinality">1..?</a>|<a href="#edm_shapes_external_Aggregation_edm_ugc_type">Literal</a>||
 |<a href="#edm_unstored">edm:unstored</a>|<a href="#edm_shapes_external_Aggregation_edm_unstored_cardinality">0..?</a>|<a href="#edm_shapes_external_Aggregation_edm_unstored_type">Literal</a>||
+
+#### Shape Body
+------
+_Shape body in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Aggregation#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    ore:Aggregation class""" ;
+
+  sh:scopeClass ore:Aggregation ;
+
+  # class level constraints
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Aggregation#correlation> ;
+
+  # DC properties
+  sh:property        <Aggregation/dc_rights#type> ;
+  sh:property        <Aggregation/dc_rights#cardinality> ;
+  sh:property        <Aggregation/dc_rights#redundancy> ;
+
+  # EDM properties
+  sh:property        <Aggregation/edm_aggregatedCHO#type> ;
+  sh:property        <Aggregation/edm_aggregatedCHO#cardinality> ;
+  sh:property        <Aggregation/edm_aggregatedCHO#range-class> ;
+  sh:property        <Aggregation/edm_dataProvider#cardinality> ;
+  sh:property        <Aggregation/edm_hasView#type> ;
+  sh:property        <Aggregation/edm_hasView#cardinality> ;
+  sh:property        <Aggregation/edm_hasView#range-class> ;
+  sh:property        <Aggregation/edm_isShownAt#type> ;
+  sh:property        <Aggregation/edm_isShownAt#cardinality> ;
+  sh:property        <Aggregation/edm_isShownAt#range-class> ;
+  sh:property        <Aggregation/edm_isShownBy#type> ;
+  sh:property        <Aggregation/edm_isShownBy#cardinality> ;
+  sh:property        <Aggregation/edm_isShownBy#range-class> ;
+  sh:property        <Aggregation/edm_object#type> ;
+  sh:property        <Aggregation/edm_object#cardinality> ;
+  sh:property        <Aggregation/edm_object#range-class> ;
+  sh:property        <Aggregation/edm_provider#cardinality> ;
+  sh:property        <Aggregation/edm_rights#type> ;
+  sh:property        <Aggregation/edm_rights#cardinality> ;
+  sh:property        <Aggregation/edm_rights#values> ;
+  sh:property        <Aggregation/edm_ugc#type> ;
+  sh:property        <Aggregation/edm_ugc#cardinality> ;
+  sh:property        <Aggregation/edm_unstored#type> ;
+  sh:property        <Aggregation/edm_unstored#cardinality> ;
+.
+```
 
 #### Shape level constraints
 ------

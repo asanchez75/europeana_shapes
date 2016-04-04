@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -26,6 +26,59 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#dct_issued">dct:issued</a>|<a href="#edm_shapes_external_WebResource_dct_issued_cardinality">0..?</a>||<a href="#edm_shapes_external_WebResource_dct_issued_correlation">correlation</a>, <a href="#edm_shapes_external_WebResource_dct_issued_range-class">range-class</a>, <a href="#edm_shapes_external_WebResource_dct_issued_range-values">range-values</a>|
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_shapes_external_WebResource_edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_shapes_external_WebResource_edm_isNextInSequence_type">IRI</a>|<a href="#edm_shapes_external_WebResource_edm_isNextInSequence_correlation">correlation</a>, <a href="#edm_shapes_external_WebResource_edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#edm_rights">edm:rights</a>|<a href="#edm_shapes_external_WebResource_edm_rights_cardinality">1..?</a>|<a href="#edm_shapes_external_WebResource_edm_rights_type">IRI</a>|<a href="#edm_shapes_external_WebResource_edm_rights_values">values</a>|
+
+#### Shape Body
+------
+_Shape body in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:WebResource class""" ;
+
+  sh:scopeClass edm:WebResource ;
+
+  # class level constraints
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+
+  # DC properties
+  sh:property        <WebResource/dc_description#cardinality> ;
+  sh:property        <WebResource/dc_format#cardinality> ;
+  sh:property        <WebResource/dc_rights#cardinality> ;
+  sh:property        <WebResource/dc_rights#redundancy> ;
+  sh:property        <WebResource/dc_source#cardinality> ;
+
+  # DCTERMS properties
+  sh:property        <WebResource/dct_conformsTo#cardinality> ;
+  sh:property        <WebResource/dct_created#cardinality> ;
+  sh:property        <WebResource/dct_created#range-values> ;
+  sh:property        <WebResource/dct_created#correlation_1> ;
+  sh:property        <WebResource/dct_created#correlation_2> ;
+  sh:property        <WebResource/dct_extent#cardinality> ;
+  sh:property        <WebResource/dct_hasPartOf#type> ;
+  sh:property        <WebResource/dct_hasPart#cardinality> ;
+  sh:property        <WebResource/dct_hasPart#range-class> ;
+  sh:property        <WebResource/dct_isFormatOf#cardinality> ;
+  sh:property        <WebResource/dct_isPartOf#type> ;
+  sh:property        <WebResource/dct_isPartOf#cardinality> ;
+  sh:property        <WebResource/dct_isPartOf#range-class> ;
+  sh:property        <WebResource/dct_issued#cardinality> ;
+  sh:property        <WebResource/dct_issued#range-values> ;
+  sh:property        <WebResource/dct_issued#range-class> ;
+  sh:property        <WebResource/dct_issued#correlation> ;
+
+  # EDM properties
+  sh:property        <WebResource/edm_isNextInSequence#type> ;
+  sh:property        <WebResource/edm_isNextInSequence#cardinality> ;
+  sh:property        <WebResource/edm_isNextInSequence#range-class> ;
+  sh:property        <WebResource/edm_isNextInSequence#correlation> ;
+  sh:property        <WebResource/edm_rights#type> ;
+  sh:property        <WebResource/edm_rights#cardinality> ;
+  sh:property        <WebResource/edm_rights#values> ;
+.
+```
 
 #### Shape level constraints
 ------

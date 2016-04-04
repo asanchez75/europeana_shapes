@@ -1,15 +1,3 @@
-
-#shapes.edm.local=D:\work\git\Europeana\shapes\shapes-edm\src\main\resources\etc\edm\shapes\
-#shapes.edm.remote=/
-#shapes.edm.doc.output=D:\work\git\Europeana\shapes\shapes-edm\doc\
-#shapes.edm.doc.output.tests=D:\work\git\Europeana\shapes\shapes-edm\doc\tests\
-#shapes.src=../../src/main/resources/etc/edm/shapes/external/
-
-#shapes.doc.edm.local=D:\work\git\Europeana\shapes\shapes-edm\doc\
-#shapes.doc.edm.remote=
-#shapes.doc.testsuite.local=
-#shapes.doc.testsuite.remote=
-
 shapes.local=D:\\work\\git\\Europeana\\shapes\\
 shapes.remote=/
 
@@ -20,4 +8,3 @@ shapes.edm.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resourc
 shapes.edm.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\shapes
 
 shapes.data.templates.agent=etc/edm/data/external/agent_ok.xml
-

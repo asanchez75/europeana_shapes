@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -25,6 +25,58 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#edm_shapes_external_Concept_skos_prefLabel_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_prefLabel_type">Literal</a>|<a href="#edm_shapes_external_Concept_skos_prefLabel_datatype">datatype</a>|
 |<a href="#skos_related">skos:related</a>|<a href="#edm_shapes_external_Concept_skos_related_cardinality">0..?</a><a href="#edm_shapes_external_Concept_skos_relatedMatch_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_related_type">IRI</a><a href="#edm_shapes_external_Concept_skos_relatedMatch_type">IRI</a>||
 |<a href="#skos_relatedMatch">skos:relatedMatch</a>|<a href="#edm_shapes_external_Concept_skos_relatedMatch_cardinality">0..?</a>|<a href="#edm_shapes_external_Concept_skos_relatedMatch_type">IRI</a>||
+
+#### Shape Body
+------
+_Shape body in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    skos:Concept class""" ;
+
+  sh:scopeClass skos:Concept ;
+
+  # class level constraints
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+
+  # SKOS properties
+  sh:property        <Concept/skos_prefLabel#type> ;
+  sh:property        <Concept/skos_prefLabel#datatype> ;
+  sh:property        <Concept/skos_prefLabel#cardinality> ;
+  sh:property        <Concept/skos_altLabel#type> ;
+  sh:property        <Concept/skos_altLabel#datatype> ;
+  sh:property        <Concept/skos_altLabel#cardinality> ;
+  sh:property        <Concept/skos_altLabel#redundancy> ;
+  sh:property        <Concept/skos_broader#type> ;
+  sh:property        <Concept/skos_broader#cardinality> ;
+  sh:property        <Concept/skos_broader#range-class> ;
+  sh:property        <Concept/skos_narrower#type> ;
+  sh:property        <Concept/skos_narrower#cardinality> ;
+  sh:property        <Concept/skos_related#type> ;
+  sh:property        <Concept/skos_related#cardinality> ;
+  sh:property        <Concept/skos_broadMatch#type> ;
+  sh:property        <Concept/skos_broadMatch#cardinality> ;
+  sh:property        <Concept/skos_narrowMatch#type> ;
+  sh:property        <Concept/skos_narrowMatch#cardinality> ;
+  sh:property        <Concept/skos_relatedMatch#type> ;
+  sh:property        <Concept/skos_relatedMatch#cardinality> ;
+  sh:property        <Concept/skos_exactMatch#type> ;
+  sh:property        <Concept/skos_exactMatch#cardinality> ;
+  sh:property        <Concept/skos_closeMatch#type> ;
+  sh:property        <Concept/skos_closeMatch#cardinality> ;
+  sh:property        <Concept/skos_note#type> ;
+  sh:property        <Concept/skos_note#datatype> ;
+  sh:property        <Concept/skos_note#cardinality> ;
+  sh:property        <Concept/skos_notation#type> ;
+  sh:property        <Concept/skos_notation#datatype> ;
+  sh:property        <Concept/skos_notation#cardinality> ;
+  sh:property        <Concept/skos_inScheme#type> ;
+  sh:property        <Concept/skos_inScheme#cardinality> ;
+.
+```
 
 #### Shape level constraints
 ------

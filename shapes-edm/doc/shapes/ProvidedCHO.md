@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td><a href="#edm_shapes_external_ProvidedCHO_correlation">correlation</a></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#edm_shapes_external_ProvidedCHO_correlation">correlation</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -64,6 +64,127 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#edm_ugc">edm:ugc</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_ugc_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_ugc_type">Literal</a>||
 |<a href="#edm_unstored">edm:unstored</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_unstored_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_edm_unstored_type">Literal</a>||
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#edm_shapes_external_ProvidedCHO_owl_sameAs_cardinality">0..?</a>|<a href="#edm_shapes_external_ProvidedCHO_owl_sameAs_type">IRI</a>||
+
+#### Shape Body
+------
+_Shape body in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a 
+                    edm:ProvidedCHO class""" ;
+
+  sh:scopeClass edm:ProvidedCHO ;
+
+  # class level constraints
+  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <ProvidedCHO#correlation> ;
+
+  # DC properties
+  sh:property        <ProvidedCHO/dc_contributor#cardinality> ;
+  sh:property        <ProvidedCHO/dc_contributor#range-class> ;
+  sh:property        <ProvidedCHO/dc_coverage#cardinality> ;
+  sh:property        <ProvidedCHO/dc_coverage#range-class> ;
+  sh:property        <ProvidedCHO/dc_coverage#subproperty_1> ;
+  sh:constraint      <ProvidedCHO/dc_coverage#subproperty_2> ;
+  sh:property        <ProvidedCHO/dc_creator#cardinality> ;
+  sh:property        <ProvidedCHO/dc_creator#range-class> ;
+  sh:property        <ProvidedCHO/dc_date#cardinality> ;
+  sh:property        <ProvidedCHO/dc_date#range-class> ;
+  sh:property        <ProvidedCHO/dc_date#literal> ;
+  sh:property        <ProvidedCHO/dc_date#subproperty_1> ;
+  sh:constraint      <ProvidedCHO/dc_date#subproperty_2> ;
+  sh:property        <ProvidedCHO/dc_description#cardinality> ;
+  sh:property        <ProvidedCHO/dc_format#cardinality> ;
+  sh:property        <ProvidedCHO/dc_identifier#type> ;
+  sh:property        <ProvidedCHO/dc_identifier#cardinality> ;
+  sh:property        <ProvidedCHO/dc_language#type> ;
+  sh:property        <ProvidedCHO/dc_language#cardinality> ;
+  sh:property        <ProvidedCHO/dc_language#values> ;
+  sh:property        <ProvidedCHO/dc_publisher#cardinality> ;
+  sh:property        <ProvidedCHO/dc_publisher#range-class> ;
+  sh:property        <ProvidedCHO/dc_rights#cardinality> ;
+  sh:constraint      <ProvidedCHO/dc_rights#redundancy> ;
+  sh:property        <ProvidedCHO/dc_subject#cardinality> ;
+  sh:property        <ProvidedCHO/dc_subject#range-class> ;
+  sh:property        <ProvidedCHO/dc_subject#multiplevalue> ;
+  sh:property        <ProvidedCHO/dc_title#type> ;
+  sh:property        <ProvidedCHO/dc_title#cardinality> ;
+  sh:property        <ProvidedCHO/dc_type#cardinality> ;
+  sh:property        <ProvidedCHO/dc_type#range-class> ;
+
+  # DCTERMS properties
+  sh:property        <ProvidedCHO/dct_alternative#cardinality> ;
+  sh:property        <ProvidedCHO/dct_alternative#type> ;
+  sh:property        <ProvidedCHO/dct_alternative#subproperty> ;
+  sh:property        <ProvidedCHO/dct_conformsTo#cardinality> ;
+  sh:property        <ProvidedCHO/dct_created#cardinality> ;
+  sh:property        <ProvidedCHO/dct_created#range-values> ;
+  sh:property        <ProvidedCHO/dct_created#correlation> ;
+  sh:property        <ProvidedCHO/dct_extent#cardinality> ;
+  sh:property        <ProvidedCHO/dct_hasFormat#cardinality> ;
+  sh:property        <ProvidedCHO/dct_hasPart#cardinality> ;
+  sh:property        <ProvidedCHO/dct_hasVersion#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isFormatOf#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isPartOf#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isReferencedBy#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isReplacedBy#cardinality> ;
+  sh:property        <ProvidedCHO/dct_isRequiredBy#cardinality> ;
+  sh:property        <ProvidedCHO/dct_issued#cardinality> ;
+  sh:property        <ProvidedCHO/dct_issued#range-values> ;
+  sh:property        <ProvidedCHO/dct_issued#range-class> ;
+  sh:property        <ProvidedCHO/dct_isVersionOf#cardinality> ;
+  sh:property        <ProvidedCHO/dct_medium#cardinality> ;
+  sh:property        <ProvidedCHO/dct_provenance#cardinality> ;
+  sh:property        <ProvidedCHO/dct_references#cardinality> ;
+  sh:property        <ProvidedCHO/dct_replaces#cardinality> ;
+  sh:property        <ProvidedCHO/dct_requires#cardinality> ;
+  sh:property        <ProvidedCHO/dct_spatial#cardinality> ;
+  sh:property        <ProvidedCHO/dct_tableOfContents#type> ;
+  sh:property        <ProvidedCHO/dct_tableOfContents#cardinality> ;
+  sh:property        <ProvidedCHO/dct_temporal#cardinality> ;
+
+  # EDM properties
+  sh:inverseProperty <ProvidedCHO/edm_aggregatedCHO#correlation> ;
+  sh:property        <ProvidedCHO/edm_currentLocation#type> ;
+  sh:property        <ProvidedCHO/edm_currentLocation#cardinality> ;
+  sh:property        <ProvidedCHO/edm_hasMet#type> ;
+  sh:property        <ProvidedCHO/edm_hasMet#cardinality> ;
+  sh:constraint      <ProvidedCHO/edm_hasMet#range-class> ;
+  sh:property        <ProvidedCHO/edm_hasType#cardinality> ;
+  sh:property        <ProvidedCHO/edm_incorporates#type> ;
+  sh:property        <ProvidedCHO/edm_incorporates#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isDerivativeOf#type> ;
+  sh:property        <ProvidedCHO/edm_isDerivativeOf#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#type> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#range-class> ;
+  sh:property        <ProvidedCHO/edm_isNextInSequence#correlation> ;
+  sh:property        <ProvidedCHO/edm_isRelatedTo#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isRepresentationOf#type> ;
+  sh:property        <ProvidedCHO/edm_isRepresentationOf#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isSimilarTo#type> ;
+  sh:property        <ProvidedCHO/edm_isSimilarTo#cardinality> ;
+  sh:property        <ProvidedCHO/edm_isSuccessorOf#type> ;
+  sh:property        <ProvidedCHO/edm_isSuccessorOf#cardinality> ;
+  sh:property        <ProvidedCHO/edm_realizes#type> ;
+  sh:property        <ProvidedCHO/edm_realizes#cardinality> ;
+  sh:property        <ProvidedCHO/edm_type#type> ;
+  sh:property        <ProvidedCHO/edm_type#cardinality> ;
+  sh:property        <ProvidedCHO/edm_type#values> ;
+  sh:property        <ProvidedCHO/edm_type#correlation> ;
+  sh:property        <ProvidedCHO/edm_unstored#type> ;
+  sh:property        <ProvidedCHO/edm_unstored#cardinality> ;
+  sh:property        <ProvidedCHO/edm_ugc#type> ;
+  sh:property        <ProvidedCHO/edm_ugc#cardinality> ;
+
+  # OWL properties
+  sh:property        <ProvidedCHO/owl_sameAs#type> ;
+  sh:property        <ProvidedCHO/owl_sameAs#cardinality> ;
+.
+```
 
 #### Shape level constraints
 ------

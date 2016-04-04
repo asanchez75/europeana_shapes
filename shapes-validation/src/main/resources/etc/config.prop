@@ -1,0 +1,3 @@
+shapes.edm.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resources\\etc\\edm\\shapes\\external
+shapes.testsuite.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\data\\external
+shapes.testsuite.results=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\results\\external
