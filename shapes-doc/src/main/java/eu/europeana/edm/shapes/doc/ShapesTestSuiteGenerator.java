@@ -62,13 +62,21 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genHeader(Resource c, MarkDownWriter w)
     {
-        w.printH2("Shapes test cases for " + getPrefixedName(c) + " class");
+        String className = getPrefixedName(c);
+        w.printH2("Shapes test cases for " + className + " class");
 
         String swURL = "/shapes-doc";
-        File file = _config.getFile("shapes.testsuite.data");
+        File testsuite = _config.getFile("shapes.testsuite.data");
         w.printItalic("This document was generated from the testcases available "
-                    + "within this [directory] (" + toRemote(file)
+                    + "within this [directory] (" + toRemote(testsuite)
                     + ") using this [software](" + swURL + ")").println();
+
+        File shapesDoc = _config.getFile("shapes.edm.doc");
+        File shapeDoc  = new File(shapesDoc, c.getLocalName() + ".ttl");
+        w.printParagraph(
+            "This document contains test cases that target constraints that are"
+          + " specific to resources of type " + className + " which are defined "
+          + " within this [shape definition](" + toRemote(shapeDoc) + ")");
     }
 
     private void genSummaryTable(Collection<TestCase> col, MarkDownWriter w)

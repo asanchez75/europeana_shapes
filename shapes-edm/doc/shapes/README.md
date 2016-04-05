@@ -17,10 +17,10 @@ documents, one for each EDM class:
 
 This section explains the main design choices:
 
-- **One shapes file per EDM class:** A shapes ontology was created for each 
-class in order to split the complete shapes definition for EDM into smaller and 
-manageable files. Each file corresponds to a sub-ontology which is linked 
-(using the *owl:imports* property) to through the main ontology file defined in 
+- **One shapes file per EDM class:** A shapes ontology was created for each EDM
+class, in order to split the shapes definition for EDM into smaller and 
+manageable files. Each file corresponds then to a sub-ontology which is linked to 
+(using the *owl:imports* property) from the main ontology file defined in 
 [EDM.ttl](../../src/main/resources/etc/edm/shapes/external/EDM.ttl).
 
 - **Constraints are isolated per EDM requirement:** Each rule is expressed in 
@@ -32,12 +32,12 @@ own descriptive information (metadata).
 #### Syntax for identifiers
 
 The following syntax was defined to all constraints that relate to an EDM 
-validation requirement:
+validation requirement, in particular:
 
-- in particular, for general constraints applied to a class:
+- for constraints that are applied to a class:
 > \<namespace\>/\<classname\>#\<category\>
 
-- and for constraints specific to a property: 
+- for constraints specific to a property: 
 > \<namespace\>/\<classname\>/\<property\>#\<category\>
 
 Where:
@@ -54,6 +54,10 @@ Examples:
 #### Classification
 
 *Work in progress...*
+
+## Testing and Reporting
+
+
 
 ## Known limitations and possible improvements
 

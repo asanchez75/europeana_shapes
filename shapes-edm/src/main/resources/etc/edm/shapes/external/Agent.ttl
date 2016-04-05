@@ -158,6 +158,7 @@
 <Agent/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
@@ -368,6 +369,7 @@
 <Agent/edm_begin#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one edm:begin" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:begin ;
   sh:minCount 0 ;
@@ -424,6 +426,7 @@
 <Agent/edm_end#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one edm:end" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:end ;
   sh:minCount 0 ;
@@ -552,6 +555,7 @@
 <Agent/rdaGr2_dateOfBirth#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one rdaGr2:dateOfBirth" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:minCount 0 ;
@@ -598,6 +602,7 @@
 <Agent/rdaGr2_dateOfDeath#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one rdaGr2:dateOfDeath" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:minCount 0 ;
@@ -711,6 +716,7 @@
 <Agent/rdaGr2_gender#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one rdaGr2:gender" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:gender ;
   sh:minCount 0 ;
@@ -722,6 +728,7 @@
 <Agent/rdaGr2_placeOfBirth#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one rdaGr2:placeOfBirth" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:placeOfBirth ;
   sh:minCount 0 ;
@@ -733,6 +740,7 @@
 <Agent/rdaGr2_placeOfDeath#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one rdaGr2:placeOfDeath" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:placeOfDeath ;
   sh:minCount 0 ;

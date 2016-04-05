@@ -100,8 +100,8 @@ public class ShapesDataGenerator extends DocGenerator
             Resource scopeClass = getScopeClass(shape);
             printClassHeader(scopeClass, w);
             printClassDescription(shape, def, w);
-            printTemplateDocument(scopeClass, w);
             printConstraintTable(shape, w);
+            printTemplateDocument(scopeClass, w);
             printConstraintDefinitions(shape, w);
             w.flush();
         }
