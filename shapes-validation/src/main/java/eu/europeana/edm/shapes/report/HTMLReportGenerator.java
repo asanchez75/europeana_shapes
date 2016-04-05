@@ -113,8 +113,9 @@ public class HTMLReportGenerator implements ReportGenerator
 
     private void printEntry(Entry entry, int index, PrintStream ps)
     {
-        ps.print("<tr><td>");
-        for ( int i = 1; i < index; i++ ) { ps.print("&nbsp;&nbsp;&nbsp;&nbsp;"); }
+        String css = "padding-left:" + (index*20) + "px";
+        ps.print("<tr><td style='" + css + "'>");
+        //for ( int i = 1; i < index; i++ ) { ps.print("&nbsp;&nbsp;&nbsp;&nbsp;"); }
         ps.print(getTitle(entry.getValue()));
         ps.println("</td>");
         printSumCols(entry, ps);
@@ -123,7 +124,8 @@ public class HTMLReportGenerator implements ReportGenerator
 
     private void printGrouping(Cluster cluster, int index, PrintStream ps)
     {
-        ps.print("<tr><td>");
+        String css = "padding-left:" + (index*20) + "px";
+        ps.print("<tr><td colspan='3' style='" + css + "'>");
         for ( int i = 1; i < index; i++ ) { ps.print("&nbsp;&nbsp;&nbsp;&nbsp;"); }
         ps.print(getTitle(cluster.getValue()));
         ps.println("</td>");

@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -23,7 +24,7 @@ public class MarkDownTemplate
     private static final String PREFIX = "#?";
     private static final String SUFFIX = "?#";
 
-    private Set<String> _keywords;
+    private Set<String> _keywords = new HashSet();
     private String      _text;
 
     public void parse(File file) throws IOException
@@ -52,6 +53,7 @@ public class MarkDownTemplate
 
             cursor = iE + 2;
         }
+        _text = s;
     }
 
     public void print(File file, Map<String,String> replacements)
@@ -68,8 +70,8 @@ public class MarkDownTemplate
         for ( String keyword : _keywords )
         {
             String value = replacements.get(keyword);
-            text = text.replaceAll(PREFIX + keyword + SUFFIX
-                                 , (value == null ? "" : value));
+            text = text.replace(PREFIX + keyword + SUFFIX
+                              , (value == null ? "" : value));
         }
         ps.print(text);
         ps.flush();

@@ -39,6 +39,8 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
     public void generate()
     {
         File dir = _config.getFile("shapes.datasets.src");
+        if ( !dir.exists() ) { return; }
+
         for ( File file : dir.listFiles() )
         {
             if ( file.isDirectory() ) { continue; }
@@ -54,6 +56,8 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
 
     private void processDataset(File src)
     {
+        System.out.println("Processing dataset: " + src);
+
         String id = getFilenameWithoutExt(src);
         File data = getDataFile(id);
         if ( !data.exists() ) { return; }
@@ -66,6 +70,8 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
     {
         File result = getResultFile(id);
         if ( data.lastModified() < result.lastModified() ) { return result; }
+
+        System.out.println("Validating dataset: " + data);
 
         Model shapes = EDMShapesConfig.getEDMShapes();
         DatasetValidator validator = new DatasetValidator(
@@ -85,6 +91,8 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
         File doc = getDocFile(id);
         if ( result.lastModified() < doc.lastModified() 
           && src.lastModified() < doc.lastModified()) { return doc; }
+
+        System.out.println("Generating report: " + doc);
 
         try {
             Map<String,String> replacements = new HashMap();

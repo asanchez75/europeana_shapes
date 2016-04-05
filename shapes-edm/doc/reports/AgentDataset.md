@@ -2,7 +2,7 @@
 _This document was generated from the [shapes file](/shapes-edm/src/main/resources/etc/edm/shapes/external/Agent.ttl) using this [software](/shapes-doc)_
 
 <table><tr><td></td>
-<td>perRecord</td><td>total</td></tr><tr><td colspan='3' style=' + css + '>edm:Agent</td>
+<td>perRecord</td><td>total</td></tr><tr><td colspan='3' style='padding-left:20px'>edm:Agent</td>
 </tr>
 <tr><td style='padding-left:40px'>There must be at most one edm:end</td>
 <td align='right'>46</td><td align='right'>46</td></tr>
