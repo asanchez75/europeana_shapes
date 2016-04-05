@@ -7,9 +7,11 @@ import static org.apache.commons.io.IOUtils.closeQuietly;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFLanguages;
@@ -45,5 +47,14 @@ public class ValidationUtils
         finally { closeQuietly(is);                }
 
         return m;
+    }
+
+    public static void storeModel(Model m, File file) throws IOException
+    {
+        Lang lang = RDFLanguages.filenameToLang(file.getName());
+        if ( lang == null ) { return; }
+
+        FileOutputStream fos = new FileOutputStream(file);
+        try { m.write(fos); } finally { IOUtils.closeQuietly(fos); }
     }
 }

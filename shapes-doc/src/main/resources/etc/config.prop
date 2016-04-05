@@ -1,10 +1,16 @@
 shapes.local=D:\\work\\git\\Europeana\\shapes\\
 shapes.remote=/
 
+shapes.edm.ns=http://www.europeana.eu/schemas/edm/shapes/external/
+shapes.edm.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resources\\etc\\edm\\shapes\\external
+shapes.edm.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\shapes
+
 shapes.testsuite.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\data\\external
 shapes.testsuite.results=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\results\\external
 shapes.testsuite.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\tests
-shapes.edm.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resources\\etc\\edm\\shapes\\external
-shapes.edm.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\shapes
+
+shapes.datasets.src=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\
+shapes.datasets.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\data\\
+shapes.datasets.results=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\results\\
 
 shapes.data.templates.agent=etc/edm/data/external/agent_ok.xml

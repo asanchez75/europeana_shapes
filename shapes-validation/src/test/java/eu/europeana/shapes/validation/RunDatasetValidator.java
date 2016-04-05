@@ -23,6 +23,7 @@ import eu.europeana.edm.shapes.validation.DatasetValidator;
 import eu.europeana.edm.shapes.validation.RecordValidator;
 import eu.europeana.edm.shapes.validation.ShapeChecker;
 import eu.europeana.edm.shapes.validation.TopBraidValidator;
+import eu.europeana.edm.shapes.validation.ValidationUtils;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
@@ -34,11 +35,21 @@ public class RunDatasetValidator
 
     public static final void main(String[] args) throws Exception
     {
-        File file = new File("C:\\Users\\Hugo\\Google Drive\\Europeana\\Entity Collection\\entities\\agents\\agents_dbpedia.xml");
+        File file = new File("D:\\work\\git\\Europeana\\shapes\\shapes-validation\\src\\test\\resources\\etc\\agents_sample.xml");
         Properties props = new Properties();
         props.load(ClassLoader.getSystemResourceAsStream("etc/config.prop"));
-        LocalShapesLoader loader = new LocalShapesLoader(new File(props.getProperty("shapes.edm.data")));
-        DatasetValidator validator = new DatasetValidator(new TopBraidValidator(loader.load(NS)));
-        validator.validate(file);
+        LocalShapesLoader loader    = new LocalShapesLoader(new File(props.getProperty("shapes.edm.data")));
+        DatasetValidator  validator = new DatasetValidator(new TopBraidValidator(loader.load(NS)));
+        Model result = validator.validate(file);
+
+        ValidationUtils.storeModel(result, getOutputFile(file));
+    }
+
+    private static final File getOutputFile(File file)
+    {
+        String name = file.getName();
+        File parent = file.getParentFile();
+        String ext  = FileUtils.getFilenameExt(name);
+        return new File(parent, name.replaceFirst(ext, "validation.xml"));
     }
 }

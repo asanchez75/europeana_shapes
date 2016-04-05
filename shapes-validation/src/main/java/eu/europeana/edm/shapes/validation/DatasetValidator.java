@@ -19,10 +19,7 @@ public class DatasetValidator
 {
     private ModelValidator _validator;
 
-    public DatasetValidator(ModelValidator validator)
-    {
-        _validator = validator;
-    }
+    public DatasetValidator(ModelValidator validator) { _validator = validator;}
 
     public Model validate(File file) throws IOException
     {

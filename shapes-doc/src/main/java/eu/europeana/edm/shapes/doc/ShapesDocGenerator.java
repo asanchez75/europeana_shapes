@@ -16,5 +16,6 @@ public class ShapesDocGenerator extends DocGenerator
     {
         new ShapesDataGenerator(_config).generate();
         new ShapesTestSuiteGenerator(_config).generate();
+        new ShapesDatasetValidationGenerator(_config).generate();
     }
 }
