@@ -2,7 +2,7 @@
 _This document was generated from the [shapes file](/shapes-edm/src/main/resources/etc/edm/shapes/external/Agent.ttl) using this [software](/shapes-doc)_
 
 ### Validaton Report
-
+ 
 <table><tr><td></td>
 <td>perRecord</td><td>total</td></tr><tr><th colspan='3' style='padding-left:20px'>Violated constraints related to class edm:Agent</th>
 </tr>
