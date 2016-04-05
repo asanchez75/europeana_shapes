@@ -16,7 +16,7 @@ by the type of the resource and then by constraint.
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td>
 <td align='right'>291</td><td align='right'>296</td></tr>
-<tr><td style='padding-left:40px'>http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type</td>
+<tr><td style='padding-left:40px'>Values for edm:isRelatedTo must be Resources</td>
 <td align='right'>6</td><td align='right'>17</td></tr>
 <tr><td style='padding-left:40px'>There must be at most one rdaGr2:dateOfBirth</td>
 <td align='right'>94</td><td align='right'>94</td></tr>

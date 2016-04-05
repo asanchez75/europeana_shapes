@@ -135,6 +135,7 @@
 <Agent/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:prefLabel must be Literals" ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
 .
@@ -172,6 +173,7 @@
 <Agent/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:altLabel must be Literals" ;
   sh:predicate skos:altLabel ;
   sh:nodeKind sh:Literal ;
 .
@@ -216,6 +218,7 @@
 <Agent/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:note must be Literals" ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
 .
@@ -277,6 +280,7 @@
 <Agent/dc_identifier#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for dc:identifier must be Literals" ;
   sh:predicate dc:identifier ;
   sh:nodeKind sh:Literal ;
 .
@@ -294,6 +298,7 @@
 <Agent/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for dcterms:hasPart must be Resources" ;
   sh:predicate dct:hasPart ;
   sh:nodeKind sh:IRI ;
 .
@@ -328,6 +333,7 @@
 <Agent/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for dcterms:isPartOf must be Resources" ;
   sh:predicate dct:isPartOf ;
   sh:nodeKind sh:IRI ;
 .
@@ -362,6 +368,7 @@
 <Agent/edm_begin#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:being must be Literals" ;
   sh:predicate edm:begin ;
   sh:nodeKind sh:Literal ;
 .
@@ -419,6 +426,7 @@
 <Agent/edm_end#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:end must be Literals" ;
   sh:predicate edm:end ;
   sh:nodeKind sh:Literal ;
 .
@@ -466,6 +474,7 @@
 <Agent/edm_hasMet#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:hasMet must be Resources" ;
   sh:predicate edm:hasMet ;
   sh:nodeKind sh:IRI ;
 .
@@ -497,6 +506,7 @@
 <Agent/edm_isRelatedTo#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:isRelatedTo must be Resources" ;
   sh:predicate edm:isRelatedTo ;
   sh:nodeKind sh:IRI ;
 .
@@ -514,6 +524,7 @@
 <Agent/foaf_name#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for foaf:name must be Literals" ;
   sh:predicate foaf:name ;
   sh:nodeKind sh:Literal ;
 .
@@ -531,6 +542,7 @@
 <Agent/rdaGr2_biographicalInformation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:biographicalInformation must be Literals" ;
   sh:predicate rdaGr2:biographicalInformation ;
   sh:nodeKind sh:Literal ;
 .
@@ -548,6 +560,7 @@
 <Agent/rdaGr2_dateOfBirth#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfBirth must be Literals" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:nodeKind sh:Literal ;
 .
@@ -595,6 +608,7 @@
 <Agent/rdaGr2_dateOfDeath#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfDeath must be Literals" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:nodeKind sh:Literal ;
 .
@@ -631,6 +645,7 @@
 <Agent/rdaGr2_dateOfEstablishment#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfEstablishment must be Literals" ;
   sh:predicate rdaGr2:dateOfEstablishment ;
   sh:nodeKind sh:Literal ;
 .
@@ -675,6 +690,7 @@
 <Agent/rdaGr2_dateOfTermination#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfTermination must be Literals" ;
   sh:predicate rdaGr2:dateOfTermination ;
   sh:nodeKind sh:Literal ;
 .
@@ -709,6 +725,7 @@
 <Agent/rdaGr2_gender#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:gender must be Literals" ;
   sh:predicate rdaGr2:gender ;
   sh:nodeKind sh:Literal ;
 .
@@ -762,6 +779,7 @@
 <Agent/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for owl:sameAs must be Resources" ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
 .
