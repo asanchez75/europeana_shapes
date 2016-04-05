@@ -72,17 +72,16 @@ public class ShapesTestSuiteGenerator extends DocGenerator
                     + ") using this [software](" + swURL + ")").println();
 
         File shapesDoc = _config.getFile("shapes.edm.doc");
-        File shapeDoc  = new File(shapesDoc, c.getLocalName() + ".ttl");
+        File shapeDoc  = new File(shapesDoc, c.getLocalName() + ".md");
         w.printParagraph(
             "This document contains test cases that target constraints that are"
           + " specific to resources of type " + className + " which are defined "
-          + " within this [shape definition](" + toRemote(shapeDoc) + ")");
+          + " within this [shape definition](" + toRemote(shapeDoc) + ")."
+          + " The following table shows the testcases that were run:");
     }
 
     private void genSummaryTable(Collection<TestCase> col, MarkDownWriter w)
     {
-        w.printParagraph("The following table shows the testcases that were "
-                       + "run:");
         w.printTableHeader("Test Case", "Results", "Status");
         w.printTableCols('l', 'r', 'c');
         for ( TestCase tc : col )
