@@ -7,7 +7,7 @@ The table below shows an overview of the constraint violations that were
 identified when applying the EDM shape definition. The results are grouped first 
 by the type of the resource and then by constraint.
 
-<table><tr><td></td>
+<table><tr><td></td> 
 <td>Nr. of resources</td><td>Nr. of violations</td></tr><tr><th align='left' colspan='3' style='padding-left:20px'>Violated constraints related to class edm:Agent</th>
 </tr>
 <tr><td><p style='padding-left:40px'>There must be at most one edm:end</p></td>
