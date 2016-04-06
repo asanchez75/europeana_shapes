@@ -57,16 +57,6 @@ public abstract class DocGenerator
      * Protected Methods
      **************************************************************************/
 
-    protected String toRemote(File file)
-    {
-        String dir = _config.getProperty("shapes.local");
-        if ( !file.getAbsolutePath().startsWith(dir) ) { return null; }
-
-        String relative = file.getAbsolutePath().substring(dir.length());
-        String baseurl = _config.getProperty("shapes.remote");
-        return (baseurl + relative.replaceAll("\\\\", "/"));
-    }
-
     protected MarkDownWriter getWriter(File file)
     {
         try {
@@ -77,6 +67,7 @@ public abstract class DocGenerator
         catch (FileNotFoundException e) { throw new RuntimeException(e); }
     }
 
+    /*
     protected String getPrefixedName(Resource rsrc)
     {
         String uri = rsrc.getURI();
@@ -87,4 +78,5 @@ public abstract class DocGenerator
         }
         return uri;
     }
+    */
 }

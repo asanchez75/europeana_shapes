@@ -115,16 +115,15 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printClassHeader(Resource c, MarkDownWriter ps)
     {
-        ps.printH2("Shapes definitions for " + getPrefixedName(c) + " class");
+        ps.printH2("Shapes definitions for " + _config.getPrefixedName(c) + " class");
     }
 
     private void printClassDescription(Resource shape, File file
                                      , MarkDownWriter w)
     {
-        String swURL = "/shapes-doc";
         w.printItalic("This document was generated from the [shapes file]("
-                    + toRemote(file) + ") using this [software](" + swURL 
-                    + ")").println();
+                    + _config.toRemote(file) + ") using this [software](/shapes-doc)")
+                    .println();
         StmtIterator iter = shape.listProperties(SH.description);
         while ( iter.hasNext() )
         {
@@ -144,7 +143,7 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printConstraintHeader(Resource constraint, MarkDownWriter w)
     {
-        String ref = getLocalReference(constraint);
+        String ref = _config.getShapeConstraintLocalRef(constraint);
         String uri = constraint.getURI();
         w.printH5("Constraint " + w.newLink(uri, uri, ref, true));
     }
@@ -157,7 +156,8 @@ public class ShapesDataGenerator extends DocGenerator
             if ( !isCardinalityConstraint(constraint) ) { continue; }
 
             w.printLink(getCardinality(constraint)
-                      , "#" + getLocalReference(constraint), null, false);
+                      , "#" + _config.getShapeConstraintLocalRef(constraint)
+                      , null, false);
         }
     }
 
@@ -169,7 +169,7 @@ public class ShapesDataGenerator extends DocGenerator
             if ( !isTypeConstraint(constraint) ) { continue; }
             
             w.printLink(getType(constraint)
-                      , "#" + getLocalReference(constraint)
+                      , "#" + _config.getShapeConstraintLocalRef(constraint)
                       , null, false);
         }
     }
@@ -186,7 +186,8 @@ public class ShapesDataGenerator extends DocGenerator
             String name = getLocalName(constraint);
             if ( first ) { first = false; } else { w.print(", "); }
 
-            w.printLink(name, "#" + getLocalReference(constraint), null, false);
+            w.printLink(name, "#" + _config.getShapeConstraintLocalRef(constraint)
+                      , null, false);
         }
     }
 
@@ -205,7 +206,7 @@ public class ShapesDataGenerator extends DocGenerator
             Resource prop = shape.getModel().getResource(uri);
             Collection<Resource> constraints = getConstraints(shape, prop);
             w.print("|");
-            String name = getPrefixedName(prop);
+            String name = _config.getPrefixedName(prop);
             w.printLink(name, "#" + getLocalReference(prop), null, false);
             w.print("|");
             printCardinalityConstraint(constraints, w);
@@ -236,7 +237,7 @@ public class ShapesDataGenerator extends DocGenerator
         try
         {
             w.printParagraph("Below is an example of a resource of type " 
-                           + getPrefixedName(c) + ": ");
+                           + _config.getPrefixedName(c) + ": ");
             String str = FileUtils.readWholeFileAsUTF8(
                     ClassLoader.getSystemResourceAsStream(rsrc));
 //            ps.println("*Shape definition in Turtle syntax:*");
@@ -376,7 +377,7 @@ public class ShapesDataGenerator extends DocGenerator
 
     private String getLocalReference(Resource rsrc)
     {
-        String name = getPrefixedName(rsrc);
+        String name = _config.getPrefixedName(rsrc);
         return name.replace("://", "_").replaceAll("[/#.:]", "_");
     }
 

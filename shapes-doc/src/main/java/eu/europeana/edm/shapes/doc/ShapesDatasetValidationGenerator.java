@@ -13,10 +13,12 @@ import java.util.Map;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.WriterOutputStream;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.FileUtils;
 
 import eu.europeana.edm.shapes.EDMShapesConfig;
 import eu.europeana.edm.shapes.report.HTMLReportGenerator;
+import eu.europeana.edm.shapes.report.ReportGenerator.ReferenceGenerator;
 import eu.europeana.edm.shapes.validation.DatasetValidator;
 import eu.europeana.edm.shapes.validation.TopBraidValidator;
 import eu.europeana.edm.shapes.validation.ValidationUtils;
@@ -27,6 +29,7 @@ import eu.europeana.github.MarkDownTemplate;
  * @since 8 Mar 2016
  */
 public class ShapesDatasetValidationGenerator extends DocGenerator
+                                              implements ReferenceGenerator
 {
 
     public ShapesDatasetValidationGenerator(GeneratorConfig cfg) { super(cfg); }
@@ -47,6 +50,16 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
 
             if ( file.getName().endsWith(".md")) { processDataset(file); }
         }
+    }
+
+
+    /***************************************************************************
+     * Public Methods - Reference Generator
+     **************************************************************************/
+    @Override
+    public String generate(Resource r)
+    {
+        return _config.getShapeConstraintRef(r);
     }
 
 
@@ -114,7 +127,7 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
         PrintStream  ps = new PrintStream(new WriterOutputStream(sw));
         try {
             Model shapes = EDMShapesConfig.getEDMShapes();
-            new HTMLReportGenerator(query, shapes).generate(model, ps);
+            new HTMLReportGenerator(query, shapes, this).generate(model, ps);
             ps.flush();
             return sw.getBuffer().toString();
         }

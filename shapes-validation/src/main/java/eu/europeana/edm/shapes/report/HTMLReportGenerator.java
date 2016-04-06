@@ -34,13 +34,16 @@ public class HTMLReportGenerator implements ReportGenerator
     private String   _query;
     private Model    _shapes;
 
-    private List<String> _sumCols = Arrays.asList("perRecord", "total");
+    private List<String>       _sumCols = Arrays.asList("perRecord", "total");
     private Map<String,String> _prefixes;
+    private ReferenceGenerator _refGen;
 
-    public HTMLReportGenerator(String query, Model shapes)
+    public HTMLReportGenerator(String query, Model shapes
+                             , ReferenceGenerator refGen)
     {
         _query  = query;
         _shapes = shapes;
+        _refGen = refGen;
     }
 
 
@@ -113,9 +116,16 @@ public class HTMLReportGenerator implements ReportGenerator
 
     private void printEntry(Entry entry, int index, PrintStream ps)
     {
+        RDFNode node = entry.getValue();
         String css = "padding-left:" + (index*20) + "px";
         ps.print("<tr><td><div style='" + css + "'>");
-        ps.print(getTitle(entry.getValue()));
+        String title = getTitle(node);
+        String ref   = _refGen.generate(_shapes.getResource(node.asResource().getURI()));
+        if ( ref != null ) {
+            ps.print("<a href='" + ref + "'>"); ps.print(title); 
+            ps.print("</a>");
+        }
+        else { ps.print(title); }
         ps.println("</div></td>");
         printSumCols(entry, ps);
         ps.println("</tr>");
@@ -172,18 +182,21 @@ public class HTMLReportGenerator implements ReportGenerator
         return null;
     }
 
+    private boolean isConstraint(Resource r)
+    {
+        return ( isType(r, SH.Constraint) 
+              || isType(r, SH.PropertyConstraint)
+              || isType(r, SH.ConstraintTemplate) );
+    }
+
     private String getTitle(RDFNode node)
     {
-        if ( !node.isResource()          ) { return ""; }
+        if ( !node.isResource() ) { return ""; }
         Resource r1 = node.asResource();
         Resource r2 = _shapes.getResource(r1.getURI());
 
-        if ( isType(r2, SH.Constraint) 
-          || isType(r2, SH.PropertyConstraint)
-          || isType(r2, SH.ConstraintTemplate) ) {
-            return getConstraintTitle(r1, r2);
-        }
-        if ( isType(r2, SH.Shape)      ) { return getShapeTitle(r2);          }
+        if ( isConstraint(r2)     ) { return getConstraintTitle(r1, r2); }
+        if ( isType(r2, SH.Shape) ) { return getShapeTitle(r2);          }
         return "";
     }
 

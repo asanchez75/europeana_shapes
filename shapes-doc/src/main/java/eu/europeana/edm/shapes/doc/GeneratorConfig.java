@@ -13,6 +13,7 @@ import java.util.Properties;
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.ResourceFactory;
+import org.topbraid.shacl.vocabulary.SH;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
@@ -42,6 +43,57 @@ public class GeneratorConfig extends Properties
     {
         String path = getProperty(key);
         return ( path == null ? null : new File(path) );
+    }
+
+    public String toRemote(File file)
+    {
+        String dir = getProperty("shapes.local");
+        if ( !file.getAbsolutePath().startsWith(dir) ) { return null; }
+
+        String relative = file.getAbsolutePath().substring(dir.length());
+        String baseurl = getProperty("shapes.remote");
+        return (baseurl + relative.replaceAll("\\\\", "/"));
+    }
+
+    public String getPrefixedName(Resource rsrc)
+    {
+        String prefix = rsrc.getModel().getNsURIPrefix(rsrc.getNameSpace());
+        return ( prefix == null ? rsrc.getURI()
+                                : prefix + ":" + rsrc.getLocalName() );
+    }
+
+    public String getShapeOntologyRef(Resource edmClass)
+    {
+        return toRemote(new File(getFile("shapes.edm.doc")
+                               , edmClass.getLocalName() + ".md"));
+    }
+
+    public Resource getShapeForConstraint(Resource c)
+    {
+        String uri = c.getURI();
+        String ns  = getProperty("shapes.edm.ns");
+        if ( !uri.startsWith(ns) ) { return null; }
+
+        int i = uri.indexOf('/', ns.length());
+        String cURI = uri.substring(0, i);
+        return c.getModel().getResource(cURI);
+    }
+
+    public String getShapeConstraintRef(Resource c)
+    {
+        Resource shape = getShapeForConstraint(c);
+        if ( shape == null ) { return null; }
+
+        String ref = getShapeOntologyRef(shape);
+        return ref + "#" + getShapeConstraintLocalRef(c);
+    }
+
+    public String getShapeConstraintLocalRef(Resource c)
+    {
+        String ns   = getProperty("shapes.edm.ns");
+        String uri  = c.getURI();
+        String name = uri.substring(uri.indexOf('/', ns.length())+1);
+        return name.replace("://", "_").replaceAll("[/#.:]", "_");
     }
 
     private void loadEDMClasses()

@@ -62,13 +62,13 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genHeader(Resource c, MarkDownWriter w)
     {
-        String className = getPrefixedName(c);
+        String className = _config.getPrefixedName(c);
         w.printH2("Test cases for " + className + " class");
 
         String swURL = "/shapes-doc";
         File testsuite = _config.getFile("shapes.testsuite.data");
         w.printItalic("This document was generated from the testcases available "
-                    + "within this [directory] (" + toRemote(testsuite)
+                    + "within this [directory] (" + _config.toRemote(testsuite)
                     + ") using this [software](" + swURL + ")").println();
 
         File shapesDoc = _config.getFile("shapes.edm.doc");
@@ -76,7 +76,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         w.printParagraph(
             "This document contains test cases that target constraints that are"
           + " specific to resources of type " + className + " and which are"
-          + " defined within this [shape definition](" + toRemote(shapeDoc)
+          + " defined within this [shape definition](" + _config.toRemote(shapeDoc)
           + "). The validation results were generated using"
           + " [TopBraid SHACL](http://github.com/TopQuadrant/shacl) validator. "
           + " The following table shows the testcases that were run:");
@@ -109,7 +109,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             String resultRef = id + "_result";
             w.printH4("Test Case: "
                     + w.newLink(tc.getDataFile().getName()
-                              , toRemote(tc.getDataFile()), dataRef, true));
+                              , _config.toRemote(tc.getDataFile()), dataRef, true));
             w.printSeparator();
             w.printCode(tc.getDataAsString(), "XML");
             w.printAnchor(resultRef);
