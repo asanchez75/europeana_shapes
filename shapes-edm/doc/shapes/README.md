@@ -57,7 +57,19 @@ Examples:
 
 ## Testing and Reporting
 
+So that we could test the shape definitions and the validation output, we have
+created a test suite for each of the EDM classes:
+- [ore:Aggregation](../tests/Aggregation.md)
+- [edm:ProvidedCHO](../tests/ProvidedCHO.md)
+- [edm:WebResource](../tests/WebResource.md)
+- [edm:Agent](../tests/Agent.md)
+- [edm:Place](../tests/Place.md)
+- [skos:Concept](../tests/Concept.md)
+- [edm:TimeSpan](../tests/TimeSpan.md)
 
+Besides testing, we have already started to work on reports that aggregate
+the result of a validation over a full dataset:
+- [DBpedia Agents Dataset](../reports/AgentDataset.md)
 
 ## Known limitations and possible improvements
 
@@ -109,17 +121,18 @@ language, like the following:
 
 - **Shapes are limited to resource nodes:** The same way as shapes can be 
 defined for resources, there should also be a way to define shapes that apply to
-literals. The main interest of this option is to be able to reuse such shapes on 
-several constraints.
+literals, but also, to xml:lang. The main interest of this option is to be able 
+to reuse such shapes on several properties, or even, over a full range of literals
+using scopes.
 > As an example, in EDM there are a significant number of properties whose 
-> values are dates, for which, we would  like to validate against the same 
+> values are dates, for which, we would like to validate against the same 
 > pattern. The following pattern 
 > ```sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;``` 
 > was defined for dates, but could be further expanded to consider correct 
 > values for day, month, etc. 
 
 
-- **Missing some inverse comparison properties:** SHACL defines properties for 
+- **Missing (some) inverse comparison properties:** SHACL defines properties for 
 comparing datatyped literals such as sh:equals, sh:lessThan and sh:lessThanOrEqual,
  but is missing their inverse (e.g. sh:moreThan) with the exception of sh:equals
 (ie. notEquals). For the sake of consistency and also because there can be 

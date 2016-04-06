@@ -18,35 +18,35 @@ The results are grouped first by the type of resource and then by violating
 constraint. The complete list of results is stored in this 
 [file](/shapes-edm/src/test/resources/etc/edm/datasets/results/AgentDataset.xml).
 
-<table><tr><td></td>
-<td>Nr. of resources</td><td>Nr. of violations</td></tr><tr><th align='left' colspan='3' style='padding-left:20px'>Violated constraints related to class edm:Agent</th>
+<table><tr><td>Constraints that were violated</td>
+<th>Nr. of resources</th><th>Nr. of violations</th></tr><tr><th align='left' colspan='3' style='padding-left:20px'>Violated constraints related to class edm:Agent</th>
 </tr>
-<tr><td><p style='padding-left:40px'>There must be at most one edm:end</p></td>
+<tr><td><div style='padding-left:40px'>There must be at most one edm:end</div></td>
 <td align='right'>46</td><td align='right'>46</td></tr>
-<tr><td><p style='padding-left:40px'>Check that the value for date matches ISO 8601 starting with
+<tr><td><div style='padding-left:40px'>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</p></td>
+                    YYYY-MM-DD</div></td>
 <td align='right'>291</td><td align='right'>296</td></tr>
-<tr><td><p style='padding-left:40px'>Values for edm:isRelatedTo must be Resources</p></td>
+<tr><td><div style='padding-left:40px'>Values for edm:isRelatedTo must be Resources</div></td>
 <td align='right'>6</td><td align='right'>17</td></tr>
-<tr><td><p style='padding-left:40px'>There must be at most one rdaGr2:dateOfBirth</p></td>
+<tr><td><div style='padding-left:40px'>There must be at most one rdaGr2:dateOfBirth</div></td>
 <td align='right'>94</td><td align='right'>94</td></tr>
-<tr><td><p style='padding-left:40px'>rdaGr2:dateOfBirth must be earlier or equals than 
-                    rdaGr2:dateOfDeath</p></td>
+<tr><td><div style='padding-left:40px'>rdaGr2:dateOfBirth must be earlier or equals than 
+                    rdaGr2:dateOfDeath</div></td>
 <td align='right'>16</td><td align='right'>20</td></tr>
-<tr><td><p style='padding-left:40px'>Check that the value for date matches ISO 8601 starting with
+<tr><td><div style='padding-left:40px'>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</p></td>
+                    YYYY-MM-DD</div></td>
 <td align='right'>578</td><td align='right'>589</td></tr>
-<tr><td><p style='padding-left:40px'>There must be at most one rdaGr2:dateOfDeath</p></td>
+<tr><td><div style='padding-left:40px'>There must be at most one rdaGr2:dateOfDeath</div></td>
 <td align='right'>46</td><td align='right'>46</td></tr>
-<tr><td><p style='padding-left:40px'>Check that the value for date matches ISO 8601 starting with
+<tr><td><div style='padding-left:40px'>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</p></td>
+                    YYYY-MM-DD</div></td>
 <td align='right'>291</td><td align='right'>296</td></tr>
-<tr><td><p style='padding-left:40px'>There must be at most one rdaGr2:placeOfBirth</p></td>
+<tr><td><div style='padding-left:40px'>There must be at most one rdaGr2:placeOfBirth</div></td>
 <td align='right'>637</td><td align='right'>637</td></tr>
-<tr><td><p style='padding-left:40px'>There must be at most one rdaGr2:placeOfDeath</p></td>
+<tr><td><div style='padding-left:40px'>There must be at most one rdaGr2:placeOfDeath</div></td>
 <td align='right'>192</td><td align='right'>192</td></tr>
 <table>
 
