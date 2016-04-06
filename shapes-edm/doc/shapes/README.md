@@ -69,7 +69,7 @@ created a test suite for each of the EDM classes:
 
 Besides testing, we have already started to work on reports that aggregate
 the result of a validation over a full dataset:
-- [DBpedia Agents Dataset](../reports/AgentDataset.md)
+- [DBpedia Agents Dataset](../reports/DBpediaAgents.md)
 
 ## Known limitations and possible improvements
 

@@ -11,7 +11,12 @@ shapes.testsuite.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\tests
 
 shapes.datasets.src=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\
 shapes.datasets.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\data\\
-shapes.datasets.result=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\results\\
+shapes.datasets.results=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\results\\
 shapes.datasets.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\reports
 
 shapes.data.templates.agent=etc/edm/data/external/agent_ok.xml
+
+# report configuration
+
+shapes.validation.report.msg.sum.total=Nr. of violations
+shapes.validation.report.msg.sum.perRecord=Nr. of resources

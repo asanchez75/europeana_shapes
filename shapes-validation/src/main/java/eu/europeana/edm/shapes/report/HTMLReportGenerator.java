@@ -103,10 +103,10 @@ public class HTMLReportGenerator implements ReportGenerator
 
     private void printHeaders(PrintStream ps)
     {
-        ps.println("<table><tr><td></td>");
+        ps.println("<table><tr><th>List of constraints that were violated</th>");
         for ( String col : _sumCols )
         {
-            ps.print("<td>" + col + "</td>");
+            ps.print("<th>" + getSumColTitle(col) + "</th>");
         }
         ps.print("</tr>");
     }
@@ -114,10 +114,9 @@ public class HTMLReportGenerator implements ReportGenerator
     private void printEntry(Entry entry, int index, PrintStream ps)
     {
         String css = "padding-left:" + (index*20) + "px";
-        ps.print("<tr><td style='" + css + "'>");
-        //for ( int i = 1; i < index; i++ ) { ps.print("&nbsp;&nbsp;&nbsp;&nbsp;"); }
+        ps.print("<tr><td><div style='" + css + "'>");
         ps.print(getTitle(entry.getValue()));
-        ps.println("</td>");
+        ps.println("</div></td>");
         printSumCols(entry, ps);
         ps.println("</tr>");
     }
@@ -125,11 +124,11 @@ public class HTMLReportGenerator implements ReportGenerator
     private void printGrouping(Cluster cluster, int index, PrintStream ps)
     {
         String css = "padding-left:" + (index*20) + "px";
-        ps.print("<tr><td colspan='3' style='" + css + "'>");
+        ps.print("<tr><th align='left' colspan='3' style='" + css + "'>");
         for ( int i = 1; i < index; i++ ) { ps.print("&nbsp;&nbsp;&nbsp;&nbsp;"); }
         ps.print(getTitle(cluster.getValue()));
-        ps.println("</td>");
-        
+        ps.println("</th>");
+
         //printSumCols(entry, ps);
         ps.println("</tr>");
     }
@@ -148,6 +147,13 @@ public class HTMLReportGenerator implements ReportGenerator
     /***************************************************************************
      * Private Methods - Titles and Values 
      **************************************************************************/
+
+    private String getSumColTitle(String col)
+    {
+        if ( col.equals("perRecord") ) { return "Nr. of resources";  }
+        if ( col.equals("total")     ) { return "Nr. of violations"; }
+        return col;
+    }
 
     private String getPrefixedName(Resource r)
     {
@@ -197,7 +203,7 @@ public class HTMLReportGenerator implements ReportGenerator
             String value = getPropertyValue(r, SH.description);
             return (value != null ? value : "");
         }
-        return getPrefixedName(c);
+        return "Violated constraints related to class " + getPrefixedName(c);
     }
 
     private String getValue(RDFNode node)

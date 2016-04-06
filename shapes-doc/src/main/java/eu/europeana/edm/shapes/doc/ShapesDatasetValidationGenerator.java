@@ -143,7 +143,7 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
 
     private File getResultFile(String name)
     {
-        return new File(_config.getFile("shapes.datasets.result"), name + ".xml");
+        return new File(_config.getFile("shapes.datasets.results"), name + ".xml");
     }
 
     private File getDocFile(String name)
