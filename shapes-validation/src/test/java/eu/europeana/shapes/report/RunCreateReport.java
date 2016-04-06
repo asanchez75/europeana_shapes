@@ -38,7 +38,7 @@ public class RunCreateReport
         File src = new File(dir, "agents_sample.validation.xml");
         File rpt = new File(dir, "agents_sample.validation.html");
 
-        String query = FileUtils.readFileToString(new File("D:\\work\\git\\Europeana\\shapes\\shapes-validation\\src\\main\\resources\\etc\\report.sparql"));
+        String query = FileUtils.readFileToString(new File("D:\\work\\git\\Europeana\\shapes\\shapes-validation\\src\\main\\resources\\etc\\reports\\report.sparql"));
         Model model = ValidationUtils.loadModel(src);
 
         File file = new File("D:\\work\\git\\Europeana\\shapes\\shapes-validation\\src\\test\\resources\\etc\\agents_sample.xml");

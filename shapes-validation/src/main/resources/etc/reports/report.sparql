@@ -1,0 +1,11 @@
+PREFIX sh:  <http://www.w3.org/ns/shacl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?shape ?constraint (COUNT(DISTINCT ?node) AS ?perRecord) (COUNT(?node) AS ?total)
+WHERE {
+  ?result rdf:type sh:ValidationResult ;
+          sh:sourceShape ?shape ;
+          sh:sourceConstraint ?constraint ;
+          sh:focusNode ?node
+}
+GROUP BY ?shape ?constraint
+ORDER BY ?shape ?constraint

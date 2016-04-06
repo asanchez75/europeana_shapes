@@ -29,7 +29,7 @@ import eu.europeana.github.MarkDownTemplate;
 public class ShapesDatasetValidationGenerator extends DocGenerator
 {
 
-    public ShapesDatasetValidationGenerator(GeneratorConfig config) { super(config); }
+    public ShapesDatasetValidationGenerator(GeneratorConfig cfg) { super(cfg); }
 
 
     /***************************************************************************
@@ -129,7 +129,7 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
     private String getReportQuery() throws IOException
     {
         return FileUtils.readWholeFileAsUTF8(
-                ClassLoader.getSystemResourceAsStream("etc/report.sparql"));
+            ClassLoader.getSystemResourceAsStream("etc/reports/report.sparql"));
     }
 
     /***************************************************************************

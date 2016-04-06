@@ -48,7 +48,8 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genFileForClass(TestSuite suite, Resource c)
     {
-        Collection<TestCase> col = suite.getTestCases(c, new TreeSet(new TestCaseComparator()));
+        Collection<TestCase> col = new TreeSet(new TestCaseComparator());
+        col = suite.getTestCases(c, col);
         MarkDownWriter w = getWriter(getOutputFile(c));
         try {
             genHeader(c, w);
@@ -57,7 +58,6 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             w.flush();
         }
         finally { IOUtils.closeQuietly(w); }
-        
     }
 
     private void genHeader(Resource c, MarkDownWriter w)
@@ -93,7 +93,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             String dataRef   = "#" + id + "_data";
             String resultRef = "#" + id + "_result";
             Integer size = tc.getResultSize();
-            w.printTableRow(w.newLink(name              , dataRef)
+            w.printTableRow(w.newLink(name, dataRef)
                           , w.newLink(size == null ? "?" : String.valueOf(size)
                                     , resultRef)
                           , "");

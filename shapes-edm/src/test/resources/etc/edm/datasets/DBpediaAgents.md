@@ -5,7 +5,7 @@ _This document was generated using this [software](/shapes-doc)_
 
 This [Dataset]
 (/shapes-edm/src/test/resources/etc/edm/datasets/data/DBpediaAgents.xml) 
-is a sample of a selective harvest from [DBPedia](http://wiki.dbpedia.org) 
+is a sample (2097) of a selective harvest from [DBPedia](http://wiki.dbpedia.org) 
 containing only resources of type edm:Agent and which is currently being used as 
 the target of [Semantic Enrichment](https://docs.google.com/document/d/1JvjrWMTpMIH7WnuieNqcT0zpJAXUPo6x4uMBj1pEx0Y) 
 at Europeana.
