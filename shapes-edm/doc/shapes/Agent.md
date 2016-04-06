@@ -259,7 +259,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for skos:altLabel must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -269,6 +269,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:altLabel must be Literals" ;
   sh:predicate skos:altLabel ;
   sh:nodeKind sh:Literal ;
 .
@@ -322,7 +323,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for skos:note must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -332,6 +333,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:note must be Literals" ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
 .
@@ -388,7 +390,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for skos:prefLabel must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -398,6 +400,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:prefLabel must be Literals" ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
 .
@@ -474,7 +477,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_dc_identifier_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for dc:identifier must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -484,6 +487,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for dc:identifier must be Literals" ;
   sh:predicate dc:identifier ;
   sh:nodeKind sh:Literal ;
 .
@@ -538,7 +542,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for dcterms:hasPart must be Resources</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -548,6 +552,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for dcterms:hasPart must be Resources" ;
   sh:predicate dct:hasPart ;
   sh:nodeKind sh:IRI ;
 .
@@ -602,7 +607,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for dcterms:isPartOf must be Resources</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -612,6 +617,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for dcterms:isPartOf must be Resources" ;
   sh:predicate dct:isPartOf ;
   sh:nodeKind sh:IRI ;
 .
@@ -639,7 +645,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_foaf_name_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for foaf:name must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -649,6 +655,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for foaf:name must be Literals" ;
   sh:predicate foaf:name ;
   sh:nodeKind sh:Literal ;
 .
@@ -676,7 +683,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_rdaGr2_biographicalInformation_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for rdaGr2:biographicalInformation must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -686,6 +693,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:biographicalInformation must be Literals" ;
   sh:predicate rdaGr2:biographicalInformation ;
   sh:nodeKind sh:Literal ;
 .
@@ -765,7 +773,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_rdaGr2_dateOfBirth_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for rdaGr2:dateOfBirth must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -775,6 +783,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfBirth must be Literals" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:nodeKind sh:Literal ;
 .
@@ -833,7 +842,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_rdaGr2_dateOfDeath_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for rdaGr2:dateOfDeath must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -843,6 +852,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfDeath must be Literals" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:nodeKind sh:Literal ;
 .
@@ -920,7 +930,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_rdaGr2_dateOfEstablishment_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for rdaGr2:dateOfEstablishment must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -930,6 +940,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfEstablishment must be Literals" ;
   sh:predicate rdaGr2:dateOfEstablishment ;
   sh:nodeKind sh:Literal ;
 .
@@ -986,7 +997,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_rdaGr2_dateOfTermination_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for rdaGr2:dateOfTermination must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -996,6 +1007,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:dateOfTermination must be Literals" ;
   sh:predicate rdaGr2:dateOfTermination ;
   sh:nodeKind sh:Literal ;
 .
@@ -1025,7 +1037,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_rdaGr2_gender_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for rdaGr2:gender must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -1035,6 +1047,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for rdaGr2:gender must be Literals" ;
   sh:predicate rdaGr2:gender ;
   sh:nodeKind sh:Literal ;
 .
@@ -1198,7 +1211,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_edm_begin_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for edm:being must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -1208,6 +1221,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:being must be Literals" ;
   sh:predicate edm:begin ;
   sh:nodeKind sh:Literal ;
 .
@@ -1288,7 +1302,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_edm_end_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for edm:end must be Literals</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -1298,6 +1312,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:end must be Literals" ;
   sh:predicate edm:end ;
   sh:nodeKind sh:Literal ;
 .
@@ -1349,7 +1364,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_edm_hasMet_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for edm:hasMet must be Resources</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -1359,6 +1374,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:hasMet must be Resources" ;
   sh:predicate edm:hasMet ;
   sh:nodeKind sh:IRI ;
 .
@@ -1386,7 +1402,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_edm_isRelatedTo_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for edm:isRelatedTo must be Resources</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -1396,6 +1412,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for edm:isRelatedTo must be Resources" ;
   sh:predicate edm:isRelatedTo ;
   sh:nodeKind sh:IRI ;
 .
@@ -1423,7 +1440,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="edm_shapes_external_Agent_owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>Values for owl:sameAs must be Resources</td></tr>
 <tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#type">http://www.europeana.eu/schemas/edm/shapes/categories#type</a></td></tr>
 </table>
@@ -1433,6 +1450,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for owl:sameAs must be Resources" ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
 .
