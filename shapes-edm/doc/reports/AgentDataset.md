@@ -18,7 +18,7 @@ The results are grouped first by the type of resource and then by violating
 constraint. The complete list of results is stored in this 
 [file](/shapes-edm/src/test/resources/etc/edm/datasets/results/AgentDataset.xml).
 
-<table><tr><td>Constraints that were violated</td>
+<table><tr><th>List of constraints that were violated</th>
 <th>Nr. of resources</th><th>Nr. of violations</th></tr><tr><th align='left' colspan='3' style='padding-left:20px'>Violated constraints related to class edm:Agent</th>
 </tr>
 <tr><td><div style='padding-left:40px'>There must be at most one edm:end</div></td>
