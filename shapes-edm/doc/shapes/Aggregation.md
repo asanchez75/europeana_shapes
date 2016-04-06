@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_Aggregation_correlation">correlation</a></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_Aggregation_correlation">correlation</a>, <a href="#http_www_europeana_eu_schemas_edm_shapes_external_Aggregation_closure">closure</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -38,7 +38,7 @@ _Shape body in Turtle syntax:_
   sh:scopeClass ore:Aggregation ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Aggregation#closure> ;
   sh:constraint      <Aggregation#correlation> ;
 
   # DC properties
@@ -98,6 +98,26 @@ _Shape definition in Turtle syntax:_
     [ sh:property [ sh:predicate edm:isShownAt ; sh:minCount 1 ; ] ]
     [ sh:property [ sh:predicate edm:isShownBy ; sh:minCount 1 ; ] ]
   ) ;
+.
+```
+
+##### Constraint <a id="http_www_europeana_eu_schemas_edm_shapes_external_Aggregation_closure" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation#closure">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation#closure</a>
+<table>
+<tr><th align="right">description</th><td>An ore:Aggregation resource must be defined using only the 
+                    properties defined in EDM for Aggregations</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
+</table>
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Aggregation#closure>
+  sh:description """An ore:Aggregation resource must be defined using only the 
+                    properties defined in EDM for Aggregations""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
 .
 ```
 #### Property <a id="dc_rights" target="_blank" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>

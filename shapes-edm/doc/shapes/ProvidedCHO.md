@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_ProvidedCHO_correlation">correlation</a></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_ProvidedCHO_closure">closure</a>, <a href="#http_www_europeana_eu_schemas_edm_shapes_external_ProvidedCHO_correlation">correlation</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -79,7 +79,7 @@ _Shape body in Turtle syntax:_
   sh:scopeClass edm:ProvidedCHO ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <ProvidedCHO#closure> ;
   sh:constraint      <ProvidedCHO#correlation> ;
 
   # DC properties
@@ -188,6 +188,26 @@ _Shape body in Turtle syntax:_
 
 #### Shape level constraints
 ------
+
+##### Constraint <a id="http_www_europeana_eu_schemas_edm_shapes_external_ProvidedCHO_closure" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#closure">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#closure</a>
+<table>
+<tr><th align="right">description</th><td>An edm:ProvidedCHO resource must be defined using only the 
+                    properties defined in EDM for Provided CHOs</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
+</table>
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#closure>
+  sh:description """An edm:ProvidedCHO resource must be defined using only the 
+                    properties defined in EDM for Provided CHOs""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+```
 
 ##### Constraint <a id="http_www_europeana_eu_schemas_edm_shapes_external_ProvidedCHO_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#correlation">http://www.europeana.eu/schemas/edm/shapes/external/ProvidedCHO#correlation</a>
 <table>

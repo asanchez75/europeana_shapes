@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td width='100%'></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_WebResource_closure">closure</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -41,7 +41,7 @@ _Shape body in Turtle syntax:_
   sh:scopeClass edm:WebResource ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <WebResource#closure> ;
 
   # DC properties
   sh:property        <WebResource/dc_description#cardinality> ;
@@ -82,6 +82,26 @@ _Shape body in Turtle syntax:_
 
 #### Shape level constraints
 ------
+
+##### Constraint <a id="http_www_europeana_eu_schemas_edm_shapes_external_WebResource_closure" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource#closure">http://www.europeana.eu/schemas/edm/shapes/external/WebResource#closure</a>
+<table>
+<tr><th align="right">description</th><td>An edm:WebResource resource must be defined using only the 
+                    properties defined in EDM for WebResources</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
+</table>
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource#closure>
+  sh:description """An edm:WebResource resource must be defined using only the 
+                    properties defined in EDM for WebResources""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+```
 #### Property <a id="dc_description" target="_blank" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
 ------
 

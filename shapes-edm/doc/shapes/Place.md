@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td width='100%'></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_Place_closure">closure</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -37,7 +37,7 @@ _Shape body in Turtle syntax:_
   sh:scopeClass edm:Place ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Place#closure> ;
 
   # SKOS properties
   sh:property        <Place/skos_prefLabel#type> ;
@@ -86,6 +86,26 @@ _Shape body in Turtle syntax:_
 
 #### Shape level constraints
 ------
+
+##### Constraint <a id="http_www_europeana_eu_schemas_edm_shapes_external_Place_closure" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place#closure">http://www.europeana.eu/schemas/edm/shapes/external/Place#closure</a>
+<table>
+<tr><th align="right">description</th><td>An edm:Place resource must be defined using only the 
+                    properties defined in EDM for Places</td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
+</table>
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Place#closure>
+  sh:description """An edm:Place resource must be defined using only the 
+                    properties defined in EDM for Places""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+```
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
 ------
 
@@ -121,6 +141,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:altLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -200,6 +226,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -227,7 +259,7 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality</a>
 <table>
-<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">description</th><td>There must be at most one skos:prefLabel per language</td></tr>
 <tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
@@ -237,6 +269,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Place/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
@@ -259,6 +292,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:prefLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
