@@ -21,7 +21,7 @@ EDM defines two flavours
 ##Documentation
 
 As part of this project is also some documentation that is generated from the 
-shapes files, see [EDM external](doc/external/EDM.md). This documentation was generated using the software available at []().
+shapes files, see [EDM external](doc/shapes/README.md). This documentation was generated using this [software](/shapes-doc).
 
 ## License
 Copyright 2007-2012 The Europeana Foundation Licenced under the EUPL, 
