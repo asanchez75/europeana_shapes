@@ -49,6 +49,11 @@ the specific language governing permissions and limitations under the Licence.
 
     <dependencies>
         <dependency>
+            <groupId>eu.europeana</groupId>
+            <artifactId>shapes-edm</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>

@@ -39,7 +39,7 @@
   sh:scopeClass edm:TimeSpan ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <TimeSpan#closure> ;
 
   # SKOS properties
   sh:property        <TimeSpan/skos_prefLabel#type> ;
@@ -78,6 +78,18 @@
   sh:property        <TimeSpan/owl_sameAs#cardinality> ;
 .
 
+# class level constraints ######################################################
+
+<TimeSpan#closure>
+  sh:description """An edm:TimeSpan resource must be defined using only the 
+                    properties defined in EDM for Time Spans""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+
+
 # skos:prefLabel ###############################################################
 
 <TimeSpan/skos_prefLabel#type>
@@ -92,6 +104,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:prefLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -100,6 +118,7 @@
 <TimeSpan/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
@@ -122,6 +141,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:altLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -160,6 +185,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -241,6 +272,7 @@
 <TimeSpan/edm_begin#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one edm:begin" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:begin ;
   sh:minCount 0 ;
@@ -280,6 +312,7 @@
 <TimeSpan/edm_end#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one edm:end" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:end ;
   sh:minCount 0 ;

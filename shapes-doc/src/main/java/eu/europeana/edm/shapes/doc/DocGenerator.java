@@ -67,7 +67,6 @@ public abstract class DocGenerator
         catch (FileNotFoundException e) { throw new RuntimeException(e); }
     }
 
-    /*
     protected String getPrefixedName(Resource rsrc)
     {
         String uri = rsrc.getURI();
@@ -78,5 +77,4 @@ public abstract class DocGenerator
         }
         return uri;
     }
-    */
 }

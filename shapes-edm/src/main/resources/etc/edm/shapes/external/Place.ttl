@@ -43,7 +43,7 @@
   sh:scopeClass edm:Place ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Place#closure> ;
 
   # SKOS properties
   sh:property        <Place/skos_prefLabel#type> ;
@@ -89,6 +89,18 @@
   sh:property        <Place/owl_sameAs#cardinality> ;
 .
 
+# class level constraints ######################################################
+
+<Place#closure>
+  sh:description """An edm:Place resource must be defined using only the 
+                    properties defined in EDM for Places""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+
+
 # skos:prefLabel ###############################################################
 
 <Place/skos_prefLabel#type>
@@ -103,6 +115,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:prefLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -111,6 +129,7 @@
 <Place/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
@@ -133,6 +152,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:altLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -171,6 +196,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -196,6 +227,7 @@
 <Place/wgs84_lat#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one wgs84_pos:lat" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate wgs84_pos:lat ;
   sh:minCount 0 ;
@@ -238,6 +270,7 @@
 <Place/wgs84_long#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one wgs84_pos:long" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate wgs84_pos:long ;
   sh:minCount 0 ;
@@ -280,6 +313,7 @@
 <Place/wgs84_alt#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one wgs84_pos:alt" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate wgs84_pos:alt ;
   sh:minCount 0 ;

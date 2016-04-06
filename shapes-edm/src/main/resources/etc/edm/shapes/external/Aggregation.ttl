@@ -40,7 +40,7 @@
   sh:scopeClass ore:Aggregation ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Aggregation#closure> ;
   sh:constraint      <Aggregation#correlation> ;
 
   # DC properties
@@ -77,6 +77,15 @@
 
 
 # class level constraints ######################################################
+
+<Aggregation#closure>
+  sh:description """An ore:Aggregation resource must be defined using only the 
+                    properties defined in EDM for Aggregations""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
 
 <Aggregation#correlation>
   a sh:Constraint ;

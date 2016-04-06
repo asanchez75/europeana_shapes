@@ -98,6 +98,7 @@ public class TestCase
         Lang lang = RDFLanguages.filenameToLang(_fResult.getName());
         if ( lang == null ) { return; }
 
+        _fResult.getParentFile().mkdirs();
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(_fResult);

@@ -62,7 +62,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
 
     private void genHeader(Resource c, MarkDownWriter w)
     {
-        String className = _config.getPrefixedName(c);
+        String className = getPrefixedName(c);
         w.printH2("Test cases for " + className + " class");
 
         String swURL = "/shapes-doc";

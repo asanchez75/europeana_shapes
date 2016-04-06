@@ -48,7 +48,7 @@
   sh:scopeClass edm:ProvidedCHO ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <ProvidedCHO#closure> ;
   sh:constraint      <ProvidedCHO#correlation> ;
 
   # DC properties
@@ -156,6 +156,15 @@
 
 
 # class level constraints ######################################################
+
+<ProvidedCHO#closure>
+  sh:description """An edm:ProvidedCHO resource must be defined using only the 
+                    properties defined in EDM for Provided CHOs""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
 
 #:uniqueness ?
 

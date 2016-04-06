@@ -39,7 +39,7 @@
   sh:scopeClass skos:Concept ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <Concept#closure> ;
 
   # SKOS properties
   sh:property        <Concept/skos_prefLabel#type> ;
@@ -76,11 +76,24 @@
   sh:property        <Concept/skos_inScheme#cardinality> ;
 .
 
+# class level constraints ######################################################
+
+<Concept#closure>
+  sh:description """An skos:Concept resource must be defined using only the 
+                    properties defined in EDM for Concepts""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+
+
 # skos:prefLabel ###############################################################
 
 <Concept/skos_prefLabel#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:prefLabel must be Literals" ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
 .
@@ -90,6 +103,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:prefLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -98,6 +117,7 @@
 <Concept/skos_prefLabel#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
   dc:subject "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
@@ -109,6 +129,7 @@
 
 <Concept/skos_altLabel#type>
   a sh:PropertyConstraint ;
+  sh:description "Values for skos:altLabel must be Literals" ;
   dc:type esc:type ;
   sh:predicate skos:altLabel ;
   sh:nodeKind sh:Literal ;
@@ -119,6 +140,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:altLabel ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -148,6 +175,7 @@
 <Concept/skos_broader#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:broader must be Resources" ;
   sh:predicate skos:broader ;
   sh:nodeKind sh:IRI ;
 .
@@ -165,6 +193,12 @@
   sh:description "skos:broader must refer to a valid skos:Concept" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+#  sh:filterShape [
+#      sh:property [
+#          sh:predicate skos:altLabel ;
+#          sh:nodeKind sh:IRI ;
+#      ]
+#  ] ;
   sh:predicate skos:broader ;
   sh:valueShape Concept: ;
   sh:class edm:Concept ;
@@ -175,6 +209,7 @@
 <Concept/skos_narrower#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:narrower must be Resources" ;
   sh:predicate skos:narrower ;
   sh:nodeKind sh:IRI ;
 .
@@ -192,6 +227,7 @@
 <Concept/skos_related#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:related must be Resources" ;
   sh:predicate skos:related ;
   sh:nodeKind sh:IRI ;
 .
@@ -209,6 +245,7 @@
 <Concept/skos_broadMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:broadMatch must be Resources" ;
   sh:predicate skos:broadMatch ;
   sh:nodeKind sh:IRI ;
 .
@@ -226,6 +263,7 @@
 <Concept/skos_narrowMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:narrowMatch must be Resources" ;
   sh:predicate skos:narrowMatch ;
   sh:nodeKind sh:IRI ;
 .
@@ -243,6 +281,7 @@
 <Concept/skos_relatedMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:relatedMatch must be Resources" ;
   sh:predicate skos:relatedMatch ;
   sh:nodeKind sh:IRI ;
 .
@@ -260,6 +299,7 @@
 <Concept/skos_exactMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:exactMatch must be Resources" ;
   sh:predicate skos:exactMatch ;
   sh:nodeKind sh:IRI ;
 .
@@ -277,6 +317,7 @@
 <Concept/skos_closeMatch#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:closeMatch must be Resources" ;
   sh:predicate skos:closeMatch ;
   sh:nodeKind sh:IRI ;
 .
@@ -294,6 +335,7 @@
 <Concept/skos_note#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:note must be Literals" ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
 .
@@ -303,6 +345,12 @@
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
   dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
@@ -321,6 +369,7 @@
 <Concept/skos_notation#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:notation must be Literals" ;
   sh:predicate skos:notation ;
   sh:nodeKind sh:Literal ;
 .
@@ -329,6 +378,12 @@
   a sh:PropertyConstraint ;
   sh:description "skos:notation should be assigned with a typed literal" ;
   dc:type esc:datatype ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:notation ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
   sh:predicate skos:notation ;
   #prescribe as typed literal
 .
@@ -346,6 +401,7 @@
 <Concept/skos_inScheme#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
+  sh:description "Values for skos:inScheme must be Resources" ;
   sh:predicate skos:inScheme ;
   sh:nodeKind sh:IRI ;
 .
@@ -357,4 +413,3 @@
   sh:predicate skos:inScheme ;
   sh:minCount 0 ;
 .
-

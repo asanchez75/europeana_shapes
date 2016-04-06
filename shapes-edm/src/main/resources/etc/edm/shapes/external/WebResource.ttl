@@ -43,7 +43,7 @@
   sh:scopeClass edm:WebResource ;
 
   # class level constraints
-  sh:constraint      [ sh:closed true ; sh:ignoredProperties (rdf:type) ] ;
+  sh:constraint      <WebResource#closure> ;
 
   # DC properties
   sh:property        <WebResource/dc_description#cardinality> ;
@@ -80,6 +80,18 @@
   sh:property        <WebResource/edm_rights#cardinality> ;
   sh:property        <WebResource/edm_rights#values> ;
 .
+
+# class level constraints ######################################################
+
+<WebResource#closure>
+  sh:description """An edm:WebResource resource must be defined using only the 
+                    properties defined in EDM for WebResources""" ;
+  dc:type esc:closure ;
+  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  sh:closed true ;
+  sh:ignoredProperties (rdf:type) ;
+.
+
 
 # dc:description ###############################################################
 

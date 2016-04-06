@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.topbraid.shacl.vocabulary.SH;
@@ -57,7 +58,10 @@ public class GeneratorConfig extends Properties
 
     public String getPrefixedName(Resource rsrc)
     {
-        String prefix = rsrc.getModel().getNsURIPrefix(rsrc.getNameSpace());
+        Model  m      = rsrc.getModel();
+        if ( m == null ) { return null; }
+
+        String prefix = m.getNsURIPrefix(rsrc.getNameSpace());
         return ( prefix == null ? rsrc.getURI()
                                 : prefix + ":" + rsrc.getLocalName() );
     }
