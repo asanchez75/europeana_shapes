@@ -75,8 +75,10 @@ public class ShapesTestSuiteGenerator extends DocGenerator
         File shapeDoc  = new File(shapesDoc, c.getLocalName() + ".md");
         w.printParagraph(
             "This document contains test cases that target constraints that are"
-          + " specific to resources of type " + className + " which are defined "
-          + " within this [shape definition](" + toRemote(shapeDoc) + ")."
+          + " specific to resources of type " + className + " and which are"
+          + " defined within this [shape definition](" + toRemote(shapeDoc)
+          + "). The validation results were generated using"
+          + " [TopBraid SHACL](http://github.com/TopQuadrant/shacl) validator. "
           + " The following table shows the testcases that were run:");
     }
 

@@ -57,8 +57,8 @@ Examples:
 
 ## Testing and Reporting
 
-So that we could test the shape definitions and the validation output, we have
-created a test suite for each of the EDM classes:
+So that we could test the EDM shape definitions and the validation output, we 
+have created a test suite for each of the EDM classes:
 - [ore:Aggregation](../tests/Aggregation.md)
 - [edm:ProvidedCHO](../tests/ProvidedCHO.md)
 - [edm:WebResource](../tests/WebResource.md)
