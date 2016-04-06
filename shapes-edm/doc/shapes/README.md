@@ -59,13 +59,13 @@ Examples:
 
 So that we could test the EDM shape definitions and the validation output, we 
 have created a test suite for each of the EDM classes:
-- [ore:Aggregation](../tests/Aggregation.md)
-- [edm:ProvidedCHO](../tests/ProvidedCHO.md)
-- [edm:WebResource](../tests/WebResource.md)
+- ~~[ore:Aggregation](../tests/Aggregation.md)~~
+- ~~[edm:ProvidedCHO](../tests/ProvidedCHO.md)~~
+- ~~[edm:WebResource](../tests/WebResource.md)~~
 - [edm:Agent](../tests/Agent.md)
-- [edm:Place](../tests/Place.md)
-- [skos:Concept](../tests/Concept.md)
-- [edm:TimeSpan](../tests/TimeSpan.md)
+- ~~[edm:Place](../tests/Place.md)~~
+- ~~[skos:Concept](../tests/Concept.md)~~
+- ~~[edm:TimeSpan](../tests/TimeSpan.md)~~
 
 Besides testing, we have already started to work on reports that aggregate
 the result of a validation over a full dataset:
