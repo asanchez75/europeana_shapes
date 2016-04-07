@@ -6,3 +6,391 @@ This document contains test cases that target constraints that are specific to r
 
 | Test Case | Results | Status |
 | :--- | ---: | :--: |
+| [ok.xml](#ok_data) | [0](#ok_result) |  |
+| [cardinality.xml](#cardinality_data) | [1](#cardinality_result) |  |
+| [closure.xml](#closure_data) | [1](#closure_result) |  |
+| [nolang.xml](#nolang_data) | [3](#nolang_result) |  |
+| [prop_types.xml](#prop_types_data) | [13](#prop_types_result) |  |
+| [redundancy.xml](#redundancy_data) | [1](#redundancy_result) |  |
+
+#### Test Case: <a id="ok_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/concept/ok.xml">ok.xml</a>
+------
+
+```XML
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel xml:lang="en">Contemporary art</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Art contemporain</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Arte contemporânea</skos:prefLabel>
+        <skos:note xml:lang="en">Contemporary art is art produced at the present period in time. Contemporary art includes, and develops from, Postmodern art, which is itself a successor to Modern art. In vernacular English, "modern" and "contemporary" are synonyms, resulting in some conflation of the terms "modern art" and "contemporary art" by non-specialists.</skos:note>
+        <skos:note xml:lang="fr">L'expression « art contemporain » désigne de façon générale et globale l'ensemble des œuvres produites depuis 1945 à nos jours, et ce quels qu'en soient le style et la pratique esthétique. Dans cette classification périodique, l'art contemporain succède à l'art moderne (1850-1945). Cette désignation s'applique également aux musées, institutions, galeries, foires, salons, biennales montrant les œuvres de cette période.L'expression « art contemporain » est aussi utilisée en France, avec un sens plus restreint, pour désigner les pratiques esthétiques et réalisations d'artistes revendiquant « une avancée dans la progression des avant-gardes » et une transgression des frontières entre les domaines artistiques (dépassant la frontière de ce que le sens commun considère comme étant de l'art, c'est-à-dire les arts plastiques, en expérimentant le théâtre, le cinéma, la vidéo, la littérature). On parle aussi d'art contemporain pour désigner, par convention, l'art des années 1960 et d'après. Le pop art marquerait, de ce fait, une rupture par rapport à l'art moderne.</skos:note>
+        <skos:note xml:lang="pt">Não há um consenso entre os autores sobre o início do período contemporâneo na arte. Neste artigo considera-se que a arte contemporânea, em seus estilos, escolas e movimentos, tenha surgido por volta da segunda metade do século XX, mais precisamente após a Segunda Guerra Mundial, como ação de ruptura com a arte moderna.Depois da guerra os artistas mostraram-se voltados às verdades do inconsciente e interessados pela reconstrução da sociedade. Sobrepôs-se aos costumes, a necessidade da produção em massa. Quando surgia um movimento na arte, este revelava-se por meio das variadas linguagens, através da constante experimentação de novas técnicas.A arte contemporânea se mostrou mais evidente na década de 60, período que muitos estudos consideram o início do seu estado de plenitude. A efervescência cultural da década começou a questionar a sociedade do pós-guerra, rebelando-se contra o estilo de vida difundido no cinema, na moda, na televisão e na literatura. Além disso, os avanços tecnológicos foram convulsivamente impulsionados pela corrida espacial e, como mostra dessa influência, as formas dos objetos tornam-se, quase subitamente, aerodinâmicas, alusivas ao espaço, com forte recorrência ao brilho do vinil. A ciência e a tecnologia abriram caminho à percepção das pessoas, de que a arte feita por outros, poderia estar a traduzir as suas próprias vidas.A consciência ecológica e o reaproveitamento de materiais são temas recorrentes, que se popularizaram no final do século XX. Em paralelo, a revolução digital e a consequente globalização, por meio da internet, formam o período mais recente da contemporaneidade.</skos:note>
+        <skos:related rdf:resource="http://dbpedia.org/resource/Category:Postmodernism"/>
+        <skos:related rdf:resource="http://dbpedia.org/resource/Category:Contemporary_art"/>
+        <skos:related rdf:resource="http://dbpedia.org/resource/Category:Postmodern_art"/>
+        <skos:exactMatch rdf:resource="http://rdf.freebase.com/ns/m.0h0vk"/>
+        <skos:exactMatch rdf:resource="http://wikidata.dbpedia.org/resource/Q186030"/>
+        <skos:exactMatch rdf:resource="http://wikidata.org/entity/Q186030"/>
+        <skos:exactMatch rdf:resource="http://yago-knowledge.org/resource/Contemporary_art"/>
+        <skos:exactMatch rdf:resource="http://fr.dbpedia.org/resource/Art_contemporain"/>
+        <skos:inScheme rdf:resource="http://www.eionet.europa.eu/gemet"/>
+    </skos:Concept>
+</rdf:RDF>
+```
+<a id="ok_result">&nbsp;</a>_Below is the output generated by TopBraid SHACL validator in Turtle syntax:_
+
+```
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+```
+
+#### Test Case: <a id="cardinality_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/concept/cardinality.xml">cardinality.xml</a>
+------
+
+```XML
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel xml:lang="en">Contemporary art</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Art contemporain</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Another pref label</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>
+```
+<a id="cardinality_result">&nbsp;</a>_Below is the output generated by TopBraid SHACL validator in Turtle syntax:_
+
+```
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Duplicate use of language tag \"en\"" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractUniqueLangPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+```
+
+#### Test Case: <a id="closure_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/concept/closure.xml">closure.xml</a>
+------
+
+```XML
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <owl:sameAs rdf:resource="http://data.europeana.eu/concept/base/C1"/>
+    </skos:Concept>
+</rdf:RDF>
+```
+<a id="closure_result">&nbsp;</a>_Below is the output generated by TopBraid SHACL validator in Turtle syntax:_
+
+```
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Invalid triple for closed shape" ;
+  sh:object            <http://data.europeana.eu/concept/base/C1> ;
+  sh:predicate         <http://www.w3.org/2002/07/owl#sameAs> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#closure> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractClosedNodeConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+```
+
+#### Test Case: <a id="nolang_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/concept/nolang.xml">nolang.xml</a>
+------
+
+```XML
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel xml:lang="en">Contemporary art</skos:prefLabel>
+        <skos:note xml:lang="en">Contemporary art is art produced at the present period in time. Contemporary art includes, and develops from, Postmodern art, which is itself a successor to Modern art. In vernacular English, "modern" and "contemporary" are synonyms, resulting in some conflation of the terms "modern art" and "contemporary art" by non-specialists.</skos:note>
+        <skos:prefLabel>Arte contemporânea</skos:prefLabel>
+        <skos:altLabel>Art contemporain</skos:altLabel>
+        <skos:note>Não há um consenso entre os autores sobre o início do período contemporâneo na arte. Neste artigo considera-se que a arte contemporânea, em seus estilos, escolas e movimentos, tenha surgido por volta da segunda metade do século XX, mais precisamente após a Segunda Guerra Mundial, como ação de ruptura com a arte moderna.Depois da guerra os artistas mostraram-se voltados às verdades do inconsciente e interessados pela reconstrução da sociedade. Sobrepôs-se aos costumes, a necessidade da produção em massa. Quando surgia um movimento na arte, este revelava-se por meio das variadas linguagens, através da constante experimentação de novas técnicas.A arte contemporânea se mostrou mais evidente na década de 60, período que muitos estudos consideram o início do seu estado de plenitude. A efervescência cultural da década começou a questionar a sociedade do pós-guerra, rebelando-se contra o estilo de vida difundido no cinema, na moda, na televisão e na literatura. Além disso, os avanços tecnológicos foram convulsivamente impulsionados pela corrida espacial e, como mostra dessa influência, as formas dos objetos tornam-se, quase subitamente, aerodinâmicas, alusivas ao espaço, com forte recorrência ao brilho do vinil. A ciência e a tecnologia abriram caminho à percepção das pessoas, de que a arte feita por outros, poderia estar a traduzir as suas próprias vidas.A consciência ecológica e o reaproveitamento de materiais são temas recorrentes, que se popularizaram no final do século XX. Em paralelo, a revolução digital e a consequente globalização, por meio da internet, formam o período mais recente da contemporaneidade.</skos:note>
+    </skos:Concept>
+</rdf:RDF>
+```
+<a id="nolang_result">&nbsp;</a>_Below is the output generated by TopBraid SHACL validator in Turtle syntax:_
+
+```
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must have datatype rdf:langString" ;
+  sh:object            "Art contemporain" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#datatype> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must have datatype rdf:langString" ;
+  sh:object            "Arte contemporânea" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#datatype> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must have datatype rdf:langString" ;
+  sh:object            "Não há um consenso entre os autores sobre o início do período contemporâneo na arte. Neste artigo considera-se que a arte contemporânea, em seus estilos, escolas e movimentos, tenha surgido por volta da segunda metade do século XX, mais precisamente após a Segunda Guerra Mundial, como ação de ruptura com a arte moderna.Depois da guerra os artistas mostraram-se voltados às verdades do inconsciente e interessados pela reconstrução da sociedade. Sobrepôs-se aos costumes, a necessidade da produção em massa. Quando surgia um movimento na arte, este revelava-se por meio das variadas linguagens, através da constante experimentação de novas técnicas.A arte contemporânea se mostrou mais evidente na década de 60, período que muitos estudos consideram o início do seu estado de plenitude. A efervescência cultural da década começou a questionar a sociedade do pós-guerra, rebelando-se contra o estilo de vida difundido no cinema, na moda, na televisão e na literatura. Além disso, os avanços tecnológicos foram convulsivamente impulsionados pela corrida espacial e, como mostra dessa influência, as formas dos objetos tornam-se, quase subitamente, aerodinâmicas, alusivas ao espaço, com forte recorrência ao brilho do vinil. A ciência e a tecnologia abriram caminho à percepção das pessoas, de que a arte feita por outros, poderia estar a traduzir as suas próprias vidas.A consciência ecológica e o reaproveitamento de materiais são temas recorrentes, que se popularizaram no final do século XX. Em paralelo, a revolução digital e a consequente globalização, por meio da internet, formam o período mais recente da contemporaneidade." ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#note> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#datatype> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+```
+
+#### Test Case: <a id="prop_types_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/concept/prop_types.xml">prop_types.xml</a>
+------
+
+```XML
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel rdf:resource="http://dbpedia.org/resource/xpto1"/>
+        <skos:altLabel rdf:resource="http://dbpedia.org/resource/xpto2"/>
+        <skos:broader>broader</skos:broader>
+        <skos:narrower>narrower</skos:narrower>
+        <skos:related>related</skos:related>
+        <skos:broadMatch>broadMatch</skos:broadMatch>
+        <skos:narrowMatch>narrowMatch</skos:narrowMatch>
+        <skos:relatedMatch>narrowMatch</skos:relatedMatch>
+        <skos:exactMatch>exactMatch</skos:exactMatch>
+        <skos:closeMatch>closeMatch</skos:closeMatch>
+        <skos:note rdf:resource="http://dbpedia.org/resource/xpto3"/>
+        <skos:notation rdf:resource="http://dbpedia.org/resource/xpto4"/>
+        <skos:inScheme>inScheme</skos:inScheme>
+    </skos:Concept>
+</rdf:RDF>
+```
+<a id="prop_types_result">&nbsp;</a>_Below is the output generated by TopBraid SHACL validator in Turtle syntax:_
+
+```
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "related" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#related> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_related#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "narrower" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrower> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto3> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#note> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto1> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "closeMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_closeMatch#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "exactMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_exactMatch#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "broader" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#broader> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto4> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "broadMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#broadMatch> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "inScheme" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#inScheme> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto2> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "narrowMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrowMatch> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "narrowMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#relatedMatch> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+```
+
+#### Test Case: <a id="redundancy_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/concept/redundancy.xml">redundancy.xml</a>
+------
+
+```XML
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:ebucore="http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#"
+         xmlns:ore="http://www.openarchives.org/ore/terms/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:rdaGr2="http://rdvocab.info/ElementsGr2/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel xml:lang="en">Contemporary art</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Contemporary art</skos:altLabel>
+    </skos:Concept>
+</rdf:RDF>
+```
+<a id="redundancy_result">&nbsp;</a>_Below is the output generated by TopBraid SHACL validator in Turtle syntax:_
+
+```
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Value sets of skos:altLabel and  must not share equal values" ;
+  sh:object            "Contemporary art"@en ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#redundancy> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNotEqualsPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+```

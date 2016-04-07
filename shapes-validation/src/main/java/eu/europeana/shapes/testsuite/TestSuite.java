@@ -47,7 +47,8 @@ public class TestSuite extends ArrayList<TestCase>
         String keyword = c.getLocalName().toLowerCase();
         for ( TestCase tc : this )
         {
-            if (tc.getDataFile().getName().startsWith(keyword)) { col.add(tc); }
+            File file = tc.getDataFile().getParentFile();
+            if (file.getName().equals(keyword)) { col.add(tc); }
         }
         return col;
     }
