@@ -22,6 +22,31 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|<a href="#edm_isNextInSequence_cardinality">0..?</a>|<a href="#edm_isNextInSequence_type">IRI</a>|<a href="#edm_isNextInSequence_range-class">range-class</a>|
 |<a href="#owl_sameAs">owl:sameAs</a>|<a href="#owl_sameAs_cardinality">0..?</a>|<a href="#owl_sameAs_type">IRI</a>||
 
+Below is an example of a resource of type edm:TimeSpan: 
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         >
+    <edm:TimeSpan rdf:about="http://semium.org/time/19xx_2_third">
+        <skos:prefLabel xml:lang="en">Mid 20th century</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Milieu du 20e siècle</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Mitte des 20. Jahrhunderts</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">Metà del 20° secolo</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Middle of the 20th Century</skos:altLabel>
+        <edm:begin>1934-01-01</edm:begin>
+        <edm:end>1966-12-31</edm:end>
+        <dcterms:hasPart rdf:resource="http://semium.org/time/1939"/>
+        <dcterms:isPartOf rdf:resource="http://semium.org/time/19xx"/>
+        <edm:isNextInSequence rdf:resource="http://semium.org/time/19xx_3_third"/>
+    </edm:TimeSpan>
+</rdf:RDF>
+```
+
 #### Shape Body
 ------
 _Shape body in Turtle syntax:_

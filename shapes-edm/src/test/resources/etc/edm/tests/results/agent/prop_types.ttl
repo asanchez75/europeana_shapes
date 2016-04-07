@@ -3,46 +3,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto13> ;
-  sh:predicate         <http://www.europeana.eu/schemas/edm/end> ;
+  sh:object            <http://dbpedia.org/resource/xpto4> ;
+  sh:predicate         <http://purl.org/dc/elements/1.1/identifier> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
-  sh:object            "xpto" ;
-  sh:predicate         <http://purl.org/dc/terms/hasPart> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto7> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfBirth> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto12> ;
-  sh:predicate         <http://www.europeana.eu/schemas/edm/begin> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
@@ -67,6 +31,18 @@
   sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfDeath> ;
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto10> ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfTermination> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
@@ -147,18 +123,6 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto4> ;
-  sh:predicate         <http://purl.org/dc/elements/1.1/identifier> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
   sh:object            <http://dbpedia.org/resource/xpto1> ;
   sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
   sh:severity          sh:Violation ;
@@ -175,18 +139,6 @@
   sh:predicate         <http://www.w3.org/2004/02/skos/core#note> ;
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto10> ;
-  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfTermination> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
@@ -211,6 +163,54 @@
   sh:predicate         <http://xmlns.com/foaf/0.1/name> ;
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto13> ;
+  sh:predicate         <http://www.europeana.eu/schemas/edm/end> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "xpto" ;
+  sh:predicate         <http://purl.org/dc/terms/hasPart> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto7> ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfBirth> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto12> ;
+  sh:predicate         <http://www.europeana.eu/schemas/edm/begin> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>

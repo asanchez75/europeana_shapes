@@ -3,10 +3,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
   sh:message           "Values must have datatype rdf:langString" ;
-  sh:object            "Mozart, Wolfgang Amadeus" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+  sh:object            "Wolfgang Amadeus Mozart" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
   sh:severity          sh:Warning ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
@@ -15,10 +15,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
   sh:message           "Values must have datatype rdf:langString" ;
-  sh:object            "Wolfgang Amadeus Mozart" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  sh:object            "Mozart, Wolfgang Amadeus" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
   sh:severity          sh:Warning ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
   sh:sourceTemplate    sh:AbstractDatatypePropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>

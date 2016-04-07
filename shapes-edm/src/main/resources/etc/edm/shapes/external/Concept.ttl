@@ -193,12 +193,12 @@
   sh:description "skos:broader must refer to a valid skos:Concept" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
-#  sh:filterShape [
-#      sh:property [
-#          sh:predicate skos:altLabel ;
-#          sh:nodeKind sh:IRI ;
-#      ]
-#  ] ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:broader ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
   sh:predicate skos:broader ;
   sh:valueShape Concept: ;
   sh:class edm:Concept ;

@@ -26,6 +26,33 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#skos_related">skos:related</a>|<a href="#skos_related_cardinality">0..?</a><a href="#skos_relatedMatch_cardinality">0..?</a>|<a href="#skos_related_type">IRI</a><a href="#skos_relatedMatch_type">IRI</a>||
 |<a href="#skos_relatedMatch">skos:relatedMatch</a>|<a href="#skos_relatedMatch_cardinality">0..?</a>|<a href="#skos_relatedMatch_type">IRI</a>||
 
+Below is an example of a resource of type skos:Concept: 
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel xml:lang="en">Contemporary art</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Art contemporain</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Arte contemporânea</skos:prefLabel>
+        <skos:note xml:lang="en">Contemporary art is art produced at the present period in time. Contemporary art includes, and develops from, Postmodern art, which is itself a successor to Modern art. In vernacular English, "modern" and "contemporary" are synonyms, resulting in some conflation of the terms "modern art" and "contemporary art" by non-specialists.</skos:note>
+        <skos:note xml:lang="fr">L'expression « art contemporain » désigne de façon générale et globale l'ensemble des œuvres produites depuis 1945 à nos jours, et ce quels qu'en soient le style et la pratique esthétique. Dans cette classification périodique, l'art contemporain succède à l'art moderne (1850-1945). Cette désignation s'applique également aux musées, institutions, galeries, foires, salons, biennales montrant les œuvres de cette période.L'expression « art contemporain » est aussi utilisée en France, avec un sens plus restreint, pour désigner les pratiques esthétiques et réalisations d'artistes revendiquant « une avancée dans la progression des avant-gardes » et une transgression des frontières entre les domaines artistiques (dépassant la frontière de ce que le sens commun considère comme étant de l'art, c'est-à-dire les arts plastiques, en expérimentant le théâtre, le cinéma, la vidéo, la littérature). On parle aussi d'art contemporain pour désigner, par convention, l'art des années 1960 et d'après. Le pop art marquerait, de ce fait, une rupture par rapport à l'art moderne.</skos:note>
+        <skos:note xml:lang="pt">Não há um consenso entre os autores sobre o início do período contemporâneo na arte. Neste artigo considera-se que a arte contemporânea, em seus estilos, escolas e movimentos, tenha surgido por volta da segunda metade do século XX, mais precisamente após a Segunda Guerra Mundial, como ação de ruptura com a arte moderna.Depois da guerra os artistas mostraram-se voltados às verdades do inconsciente e interessados pela reconstrução da sociedade. Sobrepôs-se aos costumes, a necessidade da produção em massa. Quando surgia um movimento na arte, este revelava-se por meio das variadas linguagens, através da constante experimentação de novas técnicas.A arte contemporânea se mostrou mais evidente na década de 60, período que muitos estudos consideram o início do seu estado de plenitude. A efervescência cultural da década começou a questionar a sociedade do pós-guerra, rebelando-se contra o estilo de vida difundido no cinema, na moda, na televisão e na literatura. Além disso, os avanços tecnológicos foram convulsivamente impulsionados pela corrida espacial e, como mostra dessa influência, as formas dos objetos tornam-se, quase subitamente, aerodinâmicas, alusivas ao espaço, com forte recorrência ao brilho do vinil. A ciência e a tecnologia abriram caminho à percepção das pessoas, de que a arte feita por outros, poderia estar a traduzir as suas próprias vidas.A consciência ecológica e o reaproveitamento de materiais são temas recorrentes, que se popularizaram no final do século XX. Em paralelo, a revolução digital e a consequente globalização, por meio da internet, formam o período mais recente da contemporaneidade.</skos:note>
+        <skos:related rdf:resource="http://dbpedia.org/resource/Category:Postmodernism"/>
+        <skos:related rdf:resource="http://dbpedia.org/resource/Category:Contemporary_art"/>
+        <skos:related rdf:resource="http://dbpedia.org/resource/Category:Postmodern_art"/>
+        <skos:exactMatch rdf:resource="http://rdf.freebase.com/ns/m.0h0vk"/>
+        <skos:exactMatch rdf:resource="http://wikidata.dbpedia.org/resource/Q186030"/>
+        <skos:exactMatch rdf:resource="http://wikidata.org/entity/Q186030"/>
+        <skos:exactMatch rdf:resource="http://yago-knowledge.org/resource/Contemporary_art"/>
+        <skos:exactMatch rdf:resource="http://fr.dbpedia.org/resource/Art_contemporain"/>
+        <skos:inScheme rdf:resource="http://www.eionet.europa.eu/gemet"/>
+    </skos:Concept>
+</rdf:RDF>
+```
+
 #### Shape Body
 ------
 _Shape body in Turtle syntax:_
@@ -259,12 +286,12 @@ _Shape definition in Turtle syntax:_
   sh:description "skos:broader must refer to a valid skos:Concept" ;
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
-#  sh:filterShape [
-#      sh:property [
-#          sh:predicate skos:altLabel ;
-#          sh:nodeKind sh:IRI ;
-#      ]
-#  ] ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:broader ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
   sh:predicate skos:broader ;
   sh:valueShape Concept: ;
   sh:class edm:Concept ;

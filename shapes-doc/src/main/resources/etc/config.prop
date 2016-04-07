@@ -14,7 +14,10 @@ shapes.datasets.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\re
 shapes.datasets.results=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\datasets\\results\\
 shapes.datasets.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\reports
 
-shapes.data.templates.agent=etc/edm/tests/data/agent/agent_ok.xml
+shapes.data.templates.agent=etc/edm/tests/data/agent/ok.xml
+shapes.data.templates.place=etc/edm/tests/data/place/ok.xml
+shapes.data.templates.concept=etc/edm/tests/data/concept/ok.xml
+shapes.data.templates.timespan=etc/edm/tests/data/timespan/ok.xml
 
 # report configuration
 
