@@ -37,8 +37,9 @@ public class RunTestSuite
 
         for ( TestResult tr : ret )
         {
-            System.out.println("Test <" + tr.getTestCase().getDataFile().getName()
-                             + ">: " + tr.isOK());
+            System.out.println(
+               "Test <" + tr.getTestCase().getDataFile().getAbsolutePath()
+             + ">: " + tr.isOK());
         }
     }
 }

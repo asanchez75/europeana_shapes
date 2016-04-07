@@ -43,8 +43,8 @@ This document contains test cases that target constraints that are specific to r
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://sws.geonames.org/2988507/> ;
   sh:message           "Values must be instances of edm:Place" ;
-  sh:object            <http://sws.geonames.org/6269274/> ;
-  sh:predicate         <http://purl.org/dc/terms/hasPart> ;
+  sh:object            <http://sws.geonames.org/3017382/> ;
+  sh:predicate         <http://purl.org/dc/terms/isPartOf> ;
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Place/dct_isPartOf#range-class> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Place#base> ;

@@ -389,6 +389,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:hasPart ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
   sh:predicate dct:hasPart ;
   sh:valueShape Place: ;
   sh:class edm:Place ;
@@ -447,7 +453,13 @@ _Shape definition in Turtle syntax:_
   dc:type esc:range-class ;
   dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:predicate dct:hasPart ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:isPartOf ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:predicate dct:isPartOf ;
   sh:valueShape Place: ;
   sh:class edm:Place ;
 .
@@ -505,6 +517,12 @@ _Shape definition in Turtle syntax:_
   dc:type esc:range-class ;
   dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate edm:isNextInSequence ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
   sh:predicate edm:isNextInSequence ;
   sh:valueShape Place: ;
   sh:class edm:Place ;

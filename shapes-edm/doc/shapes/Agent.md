@@ -595,7 +595,7 @@ _Shape definition in Turtle syntax:_
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
-          sh:predicate dct:hasPart ;
+          sh:predicate dct:isPartOf ;
           sh:nodeKind sh:IRI ;
       ]
   ] ;

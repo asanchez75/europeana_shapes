@@ -64,7 +64,7 @@ have created a test suite for each of the EDM classes:
 - ~~[edm:WebResource](../tests/WebResource.md)~~
 - [edm:Agent](../tests/Agent.md)
 - ~~[edm:Place](../tests/Place.md)~~
-- ~~[skos:Concept](../tests/Concept.md)~~
+- [skos:Concept](../tests/Concept.md)
 - ~~[edm:TimeSpan](../tests/TimeSpan.md)~~
 
 Besides testing, we have already started to work on reports that aggregate
