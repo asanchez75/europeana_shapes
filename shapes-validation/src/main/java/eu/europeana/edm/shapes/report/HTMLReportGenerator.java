@@ -56,7 +56,7 @@ public class HTMLReportGenerator implements ReportGenerator
         Cluster tree = loadResultsAsTree(model);
 
         printHeaders(ps);
-        printResult(tree, 0 , ps);
+        if ( !tree.isEmpty() ) { printResult(tree, 0 , ps); }
         ps.println("<table>");
     }
 
@@ -250,6 +250,8 @@ public class HTMLReportGenerator implements ReportGenerator
     private Cluster loadResultsAsTree(Model model)
     {
         Cluster tree = new Cluster(null, null);
+        if ( model.isEmpty() ) { return tree; }
+
         QueryExecution eng = QueryExecutionFactory.create(_query, model);
         try {
             ResultSet    rs    = eng.execSelect();
