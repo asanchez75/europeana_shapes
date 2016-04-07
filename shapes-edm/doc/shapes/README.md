@@ -69,6 +69,7 @@ have created a test suite for each of the EDM classes:
 
 Besides testing, we have already started to work on reports that aggregate
 the result of a validation over a full dataset:
+- [DBpedia Concepts Dataset](../reports/DBpediaConcepts.md)
 - [DBpedia Agents Dataset](../reports/DBpediaAgents.md)
 
 ## Known limitations and possible improvements
@@ -95,7 +96,7 @@ must be earlier than edm:end."*
 - **Constraints are limited to a single focus node:** typically, a SHACL 
 constraint is applied to a focus node and the value range of a property. 
 The only way to get around it, is to define templates using SPARQL 
-which greatly opens the expressive power of the SHACL. However, using SPARQL 
+which greatly opens the expressive power of SHACL. However, using SPARQL 
 looses the declarative advantage of using SHACL in the first place, especially
 given that in many situations the only thing missing is a way to select a second
 focus node.
