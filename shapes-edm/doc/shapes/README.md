@@ -87,10 +87,10 @@ additional challenge as for some of them the values should obey to a
 specific format (e.g. geospatial coordinates) even though not explicit stated 
 through a datatype, but for others there may be more than one format possible 
 (e.g. dc:date). In both cases, there should be a way to make the datatype 
-explicit or be determined so that comparative functions can still be applied. 
+explicit or be determined so that comparative functions can still be applied.~~
 > Looking at the EDM requirements, the following should be supported:
 > *"Check that, if edm:begin and edm:end are present in an edm:Agent, edm:begin 
-must be earlier than edm:end."*~~
+must be earlier than edm:end."*
 
 
 - **Constraints are limited to a single focus node:** typically, a SHACL 
