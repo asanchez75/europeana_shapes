@@ -50,24 +50,18 @@
   sh:property        <Agent/skos_prefLabel#cardinality> ;
   sh:property        <Agent/skos_altLabel#type> ;
   sh:property        <Agent/skos_altLabel#datatype> ;
-  sh:property        <Agent/skos_altLabel#cardinality> ;
   sh:property        <Agent/skos_altLabel#redundancy> ;
   sh:property        <Agent/skos_note#type> ;
   sh:property        <Agent/skos_note#datatype> ;
-  sh:property        <Agent/skos_note#cardinality> ;
 
   # DC properties
-  sh:property        <Agent/dc_date#cardinality> ;
   sh:property        <Agent/dc_date#literal> ;
   sh:property        <Agent/dc_identifier#type> ;
-  sh:property        <Agent/dc_identifier#cardinality> ;
 
   # DCTERMS properties
   sh:property        <Agent/dct_hasPart#type> ;
-  sh:property        <Agent/dct_hasPart#cardinality> ;
   sh:property        <Agent/dct_hasPart#range-class> ;
   sh:property        <Agent/dct_isPartOf#type> ;
-  sh:property        <Agent/dct_isPartOf#cardinality> ;
   sh:property        <Agent/dct_isPartOf#range-class> ;
 
   # EDM properties
@@ -81,18 +75,14 @@
   sh:property        <Agent/edm_end#literal> ;
   sh:constraint      <Agent/edm_end#redundancy> ;
   sh:property        <Agent/edm_hasMet#type> ;
-  sh:property        <Agent/edm_hasMet#cardinality> ;
   sh:property        <Agent/edm_hasMet#range-class> ;
   sh:property        <Agent/edm_isRelatedTo#type> ;
-  sh:property        <Agent/edm_isRelatedTo#cardinality> ;
 
   # FOAF properties
   sh:property        <Agent/foaf_name#type> ;
-  sh:property        <Agent/foaf_name#cardinality> ;
 
   # RDAGR2 properties
   sh:property        <Agent/rdaGr2_biographicalInformation#type> ;
-  sh:property        <Agent/rdaGr2_biographicalInformation#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#type> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#literal> ;
@@ -101,11 +91,9 @@
   sh:property        <Agent/rdaGr2_dateOfDeath#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfDeath#literal> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#type> ;
-  sh:property        <Agent/rdaGr2_dateOfEstablishment#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#literal> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#correlation> ;
   sh:property        <Agent/rdaGr2_dateOfTermination#type> ;
-  sh:property        <Agent/rdaGr2_dateOfTermination#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfTermination#literal> ;
   sh:property        <Agent/rdaGr2_gender#type> ;
   sh:property        <Agent/rdaGr2_gender#cardinality> ;
@@ -115,7 +103,6 @@
 
   # OWL properties
   sh:property        <Agent/owl_sameAs#type> ;
-  sh:property        <Agent/owl_sameAs#cardinality> ;
 .
 
 # class level constraints ######################################################
@@ -124,9 +111,18 @@
   sh:description """An edm:Agent resource must be defined using only the 
                     properties defined in EDM for Agents""" ;
   dc:type esc:closure ;
-  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  dc:relation "R-206-DEFINE-ALLOWED-NAMESPACES" ;
   sh:closed true ;
-  sh:ignoredProperties (rdf:type) ;
+  sh:ignoredProperties (
+    rdf:type 
+    skos:prefLabel skos:altLabel skos:note
+    dc:date dc:identifier dct:hasPart dct:isPartOf
+    edm:begin edm:end edm:hasMet edm:isRelatedTo foaf:name
+    rdaGr2:biographicalInformation rdaGr2:dateOfBirth rdaGr2:dateOfDeath
+    rdaGr2:dateOfEstablishment rdaGr2:dateOfTermination rdaGr2:gender 
+    rdaGr2:placeOfBirth rdaGr2:placeOfDeath rdaGr2:professionOrOccupation
+    owl:sameAs
+  ) ;
 .
 
 
@@ -144,7 +140,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:prefLabel ;
@@ -160,7 +156,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one skos:prefLabel per language" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS"
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
   sh:minCount 0 ;
@@ -182,7 +178,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:altLabel ;
@@ -194,20 +190,12 @@
   sh:severity sh:Warning ;
 .
 
-<Agent/skos_altLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:altLabel ;
-  sh:minCount 0 ;
-.
-
 <Agent/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
                     skos:prefLabel""" ;
-  dc:subject "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
   sh:predicate  skos:altLabel ;
   sh:notEquals  skos:prefLabel ;
   sh:severity sh:Warning ;
@@ -227,7 +215,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:note ;
@@ -239,31 +227,14 @@
   sh:severity sh:Warning ;
 .
 
-<Agent/skos_note#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:note ;
-  sh:minCount 0 ;
-.
-
-
 # dc:date ######################################################################
-
-<Agent/dc_date#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:date ;
-  sh:minCount 0 ;
-.
 
 <Agent/dc_date#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [ #restrict only to Literals
       sh:property [
           sh:predicate dc:date ;
@@ -285,14 +256,6 @@
   sh:nodeKind sh:Literal ;
 .
 
-<Agent/dc_identifier#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:identifier ;
-  sh:minCount 0 ;
-.
-
 # dcterms:hasPart ##############################################################
 
 <Agent/dct_hasPart#type>
@@ -303,19 +266,11 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Agent/dct_hasPart#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:hasPart ;
-  sh:minCount 0 ;
-.
-
 <Agent/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description """dcterms:hasPart must refer to a valid edm:Agent""" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
@@ -338,19 +293,11 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Agent/dct_isPartOf#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:isPartOf ;
-  sh:minCount 0 ;
-.
-
 <Agent/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description """dcterms:isPartOf must refer to a valid edm:Agent""" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
@@ -377,7 +324,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one edm:begin" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:begin ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -388,7 +335,7 @@
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate edm:begin ;
@@ -405,7 +352,7 @@
   a sh:PropertyConstraint ;
   sh:description "edm:begin must be earlier or equals than edm:end";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate edm:begin ;
   sh:lessThanOrEquals edm:end ;
 .
@@ -415,7 +362,7 @@
   dc:type esc:redundancy ;
   sh:description """edm:begin should not be the same as rdaGr2:dateOfBirth
                   , if true the field is redundant""" ;
-  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:severity sh:Warning ;
   sh:predicate edm:begin ;
   sh:notEquals rdaGr2:dateOfBirth ;
@@ -435,7 +382,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one edm:end" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:end ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -446,7 +393,7 @@
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate edm:end ;
@@ -463,7 +410,7 @@
   dc:type esc:redundancy ;
   sh:description """edm:end should not be the same as rdaGr2:dateOfDeath
                   , if true the field is redundant""" ;
-  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:severity sh:Warning ;
   sh:predicate edm:end ;
   sh:notEquals rdaGr2:dateOfDeath ;
@@ -477,14 +424,6 @@
   sh:description "Values for edm:hasMet must be Resources" ;
   sh:predicate edm:hasMet ;
   sh:nodeKind sh:IRI ;
-.
-
-<Agent/edm_hasMet#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:hasMet ;
-  sh:minCount 0 ;
 .
 
 <Agent/edm_hasMet#range-class>
@@ -511,14 +450,6 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Agent/edm_isRelatedTo#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:isRelatedTo ;
-  sh:minCount 0 ;
-.
-
 # foaf:name ####################################################################
 
 <Agent/foaf_name#type>
@@ -529,14 +460,6 @@
   sh:nodeKind sh:Literal ;
 .
 
-<Agent/foaf_name#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate foaf:name ;
-  sh:minCount 0 ;
-.
-
 # rdaGr2:biographicalInformation ###############################################
 
 <Agent/rdaGr2_biographicalInformation#type>
@@ -545,14 +468,6 @@
   sh:description "Values for rdaGr2:biographicalInformation must be Literals" ;
   sh:predicate rdaGr2:biographicalInformation ;
   sh:nodeKind sh:Literal ;
-.
-
-<Agent/rdaGr2_biographicalInformation#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:biographicalInformation ;
-  sh:minCount 0 ;
 .
 
 # rdaGr2:dateOfBirth ###########################################################
@@ -569,7 +484,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:dateOfBirth" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -580,7 +495,7 @@
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfBirth ;
@@ -597,7 +512,7 @@
   sh:description """rdaGr2:dateOfBirth must be earlier or equals than 
                     rdaGr2:dateOfDeath""";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:lessThanOrEquals rdaGr2:dateOfDeath ;
 .
@@ -617,7 +532,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:dateOfDeath" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -628,7 +543,7 @@
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfDeath ;
@@ -650,20 +565,12 @@
   sh:nodeKind sh:Literal ;
 .
 
-<Agent/rdaGr2_dateOfEstablishment#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:dateOfEstablishment ;
-  sh:minCount 0 ;
-.
-
 <Agent/rdaGr2_dateOfEstablishment#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfEstablishment ;
@@ -680,7 +587,7 @@
   sh:description """rdaGr2:dateOfEstablishment must be earlier or equals than 
                     rdaGr2:dateOfTermination""";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate rdaGr2:dateOfEstablishment ;
   sh:lessThanOrEquals rdaGr2:dateOfTermination ;
 .
@@ -695,20 +602,12 @@
   sh:nodeKind sh:Literal ;
 .
 
-<Agent/rdaGr2_dateOfTermination#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:dateOfTermination ;
-  sh:minCount 0 ;
-.
-
 <Agent/rdaGr2_dateOfTermination#literal>
   a sh:PropertyConstraint ;
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfTermination ;
@@ -734,7 +633,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:gender" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:gender ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -746,7 +645,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:placeOfBirth" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:placeOfBirth ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -758,7 +657,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:placeOfDeath" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:placeOfDeath ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -769,7 +668,7 @@
 <Agent/rdaGr2_professionOrOccupation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:professionOrOccupation ;
   sh:minCount 0 ;
 .
@@ -782,12 +681,4 @@
   sh:description "Values for owl:sameAs must be Resources" ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
-.
-
-<Agent/owl_sameAs#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate owl:sameAs ;
-  sh:minCount 0 ;
 .

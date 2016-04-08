@@ -47,33 +47,21 @@
   sh:property        <Concept/skos_prefLabel#cardinality> ;
   sh:property        <Concept/skos_altLabel#type> ;
   sh:property        <Concept/skos_altLabel#datatype> ;
-  sh:property        <Concept/skos_altLabel#cardinality> ;
   sh:property        <Concept/skos_altLabel#redundancy> ;
   sh:property        <Concept/skos_broader#type> ;
-  sh:property        <Concept/skos_broader#cardinality> ;
   sh:property        <Concept/skos_broader#range-class> ;
   sh:property        <Concept/skos_narrower#type> ;
-  sh:property        <Concept/skos_narrower#cardinality> ;
   sh:property        <Concept/skos_related#type> ;
-  sh:property        <Concept/skos_related#cardinality> ;
   sh:property        <Concept/skos_broadMatch#type> ;
-  sh:property        <Concept/skos_broadMatch#cardinality> ;
   sh:property        <Concept/skos_narrowMatch#type> ;
-  sh:property        <Concept/skos_narrowMatch#cardinality> ;
   sh:property        <Concept/skos_relatedMatch#type> ;
-  sh:property        <Concept/skos_relatedMatch#cardinality> ;
   sh:property        <Concept/skos_exactMatch#type> ;
-  sh:property        <Concept/skos_exactMatch#cardinality> ;
   sh:property        <Concept/skos_closeMatch#type> ;
-  sh:property        <Concept/skos_closeMatch#cardinality> ;
   sh:property        <Concept/skos_note#type> ;
   sh:property        <Concept/skos_note#datatype> ;
-  sh:property        <Concept/skos_note#cardinality> ;
   sh:property        <Concept/skos_notation#type> ;
   sh:property        <Concept/skos_notation#datatype> ;
-  sh:property        <Concept/skos_notation#cardinality> ;
   sh:property        <Concept/skos_inScheme#type> ;
-  sh:property        <Concept/skos_inScheme#cardinality> ;
 .
 
 # class level constraints ######################################################
@@ -82,9 +70,14 @@
   sh:description """An skos:Concept resource must be defined using only the 
                     properties defined in EDM for Concepts""" ;
   dc:type esc:closure ;
-  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  dc:relation "R-206-DEFINE-ALLOWED-NAMESPACES" ;
   sh:closed true ;
-  sh:ignoredProperties (rdf:type) ;
+  sh:ignoredProperties (
+    rdf:type
+    skos:prefLabel skos:altLabel skos:broader skos:narrower skos:related
+    skos:broadMatch skos:narrowMatch skos:relatedMatch
+    skos:exactMatch skos:closeMatch skos:note skos:notation skos:inScheme
+  ) ;
 .
 
 
@@ -102,7 +95,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:prefLabel ;
@@ -118,7 +111,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one skos:prefLabel per language" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS"
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
   sh:minCount 0 ;
@@ -139,7 +132,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:altLabel ;
@@ -151,20 +144,12 @@
   sh:severity sh:Warning ;
 .
 
-<Concept/skos_altLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:altLabel ;
-  sh:minCount 0 ;
-.
-
 <Concept/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
                     skos:prefLabel""" ;
-  dc:subject "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
   sh:predicate  skos:altLabel ;
   sh:notEquals  skos:prefLabel ;
   sh:severity sh:Warning ;
@@ -180,19 +165,11 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Concept/skos_broader#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:broader ;
-  sh:minCount 0 ;
-.
-
 <Concept/skos_broader#range-class>
   a sh:PropertyConstraint ;
   sh:description "skos:broader must refer to a valid skos:Concept" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:broader ;
@@ -214,14 +191,6 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Concept/skos_narrower#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:narrower ;
-  sh:minCount 0 ;
-.
-
 # skos:related #################################################################
 
 <Concept/skos_related#type>
@@ -230,14 +199,6 @@
   sh:description "Values for skos:related must be Resources" ;
   sh:predicate skos:related ;
   sh:nodeKind sh:IRI ;
-.
-
-<Concept/skos_related#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:related ;
-  sh:minCount 0 ;
 .
 
 # skos:broadMatch ##############################################################
@@ -250,14 +211,6 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Concept/skos_broadMatch#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:broadMatch ;
-  sh:minCount 0 ;
-.
-
 # skos:narrowMatch #############################################################
 
 <Concept/skos_narrowMatch#type>
@@ -266,14 +219,6 @@
   sh:description "Values for skos:narrowMatch must be Resources" ;
   sh:predicate skos:narrowMatch ;
   sh:nodeKind sh:IRI ;
-.
-
-<Concept/skos_narrowMatch#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:narrowMatch ;
-  sh:minCount 0 ;
 .
 
 # skos:relatedMatch ############################################################
@@ -286,14 +231,6 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Concept/skos_relatedMatch#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:relatedMatch ;
-  sh:minCount 0 ;
-.
-
 # skos:exactMatch ##############################################################
 
 <Concept/skos_exactMatch#type>
@@ -304,14 +241,6 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Concept/skos_exactMatch#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:exactMatch ;
-  sh:minCount 0 ;
-.
-
 # skos:closeMatch ##############################################################
 
 <Concept/skos_closeMatch#type>
@@ -320,14 +249,6 @@
   sh:description "Values for skos:closeMatch must be Resources" ;
   sh:predicate skos:closeMatch ;
   sh:nodeKind sh:IRI ;
-.
-
-<Concept/skos_closeMatch#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:closeMatch ;
-  sh:minCount 0 ;
 .
 
 # skos:note ####################################################################
@@ -344,7 +265,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:note ;
@@ -354,14 +275,6 @@
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
-.
-
-<Concept/skos_note#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:note ;
-  sh:minCount 0 ;
 .
 
 # skos:notation ################################################################
@@ -388,14 +301,6 @@
   #prescribe as typed literal
 .
 
-<Concept/skos_notation#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:notation ;
-  sh:minCount 0 ;
-.
-
 # skos:inScheme ################################################################
 
 <Concept/skos_inScheme#type>
@@ -404,12 +309,4 @@
   sh:description "Values for skos:inScheme must be Resources" ;
   sh:predicate skos:inScheme ;
   sh:nodeKind sh:IRI ;
-.
-
-<Concept/skos_inScheme#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:inScheme ;
-  sh:minCount 0 ;
 .

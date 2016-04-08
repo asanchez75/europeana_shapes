@@ -19,9 +19,9 @@ import org.topbraid.spin.util.JenaUtil;
 
 import eu.europeana.edm.shapes.LocalShapesLoader;
 import eu.europeana.edm.shapes.ShapesLoader;
+import eu.europeana.edm.shapes.check.ShapeChecker;
 import eu.europeana.edm.shapes.validation.DatasetValidator;
 import eu.europeana.edm.shapes.validation.RecordValidator;
-import eu.europeana.edm.shapes.validation.ShapeChecker;
 import eu.europeana.edm.shapes.validation.TopBraidValidator;
 import eu.europeana.edm.shapes.validation.ValidationUtils;
 

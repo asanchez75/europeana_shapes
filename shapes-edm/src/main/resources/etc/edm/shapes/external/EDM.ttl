@@ -39,4 +39,3 @@
   # SHACL language
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
 .
-

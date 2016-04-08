@@ -22,7 +22,7 @@ import org.apache.jena.util.FileUtils;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 
-import eu.europeana.edm.shapes.validation.ShapeChecker;
+import eu.europeana.edm.shapes.check.ShapeChecker;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>

@@ -46,39 +46,31 @@
   sh:constraint      <WebResource#closure> ;
 
   # DC properties
-  sh:property        <WebResource/dc_description#cardinality> ;
-  sh:property        <WebResource/dc_format#cardinality> ;
-  sh:property        <WebResource/dc_rights#cardinality> ;
+  sh:property        <WebResource/dc_creator#range-class> ;
   sh:property        <WebResource/dc_rights#redundancy> ;
-  sh:property        <WebResource/dc_source#cardinality> ;
 
   # DCTERMS properties
-  sh:property        <WebResource/dct_conformsTo#cardinality> ;
-  sh:property        <WebResource/dct_created#cardinality> ;
   sh:property        <WebResource/dct_created#range-values> ;
   sh:property        <WebResource/dct_created#correlation_1> ;
   sh:property        <WebResource/dct_created#correlation_2> ;
-  sh:property        <WebResource/dct_extent#cardinality> ;
-  sh:property        <WebResource/dct_hasPartOf#type> ;
-  sh:property        <WebResource/dct_hasPart#cardinality> ;
+  sh:property        <WebResource/dct_hasPart#type> ;
   sh:property        <WebResource/dct_hasPart#range-class> ;
-  sh:property        <WebResource/dct_isFormatOf#cardinality> ;
   sh:property        <WebResource/dct_isPartOf#type> ;
-  sh:property        <WebResource/dct_isPartOf#cardinality> ;
   sh:property        <WebResource/dct_isPartOf#range-class> ;
-  sh:property        <WebResource/dct_issued#cardinality> ;
   sh:property        <WebResource/dct_issued#range-values> ;
   sh:property        <WebResource/dct_issued#range-class> ;
   sh:property        <WebResource/dct_issued#correlation> ;
 
   # EDM properties
   sh:property        <WebResource/edm_isNextInSequence#type> ;
-  sh:property        <WebResource/edm_isNextInSequence#cardinality> ;
   sh:property        <WebResource/edm_isNextInSequence#range-class> ;
   sh:property        <WebResource/edm_isNextInSequence#correlation> ;
   sh:property        <WebResource/edm_rights#type> ;
   sh:property        <WebResource/edm_rights#cardinality> ;
   sh:property        <WebResource/edm_rights#values> ;
+
+  # OWL properties
+  sh:property        <WebResource/owl_sameAs#type> ;
 .
 
 # class level constraints ######################################################
@@ -87,86 +79,52 @@
   sh:description """An edm:WebResource resource must be defined using only the 
                     properties defined in EDM for WebResources""" ;
   dc:type esc:closure ;
-  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  dc:relation "R-206-DEFINE-ALLOWED-NAMESPACES" ;
   sh:closed true ;
-  sh:ignoredProperties (rdf:type) ;
+  sh:ignoredProperties (
+    rdf:type 
+    dc:creator dc:description dc:format dc:rights dc:source
+    dct:conformsTo dct:created dct:extent 
+    dct:hasPart dct:isFormatOf dct:isPartOf dct:issued
+    edm:isNextInSequence edm:rights
+    owl:sameAs
+  ) ;
 .
 
+# dc:creator ###################################################################
 
-# dc:description ###############################################################
-
-<WebResource/dc_description#cardinality>
+<WebResource/dc_creator#range-class>
   a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:description ;
-  sh:minCount 0 ;
+  sh:description """the reference should be one to an Agent (the access to the 
+                    data and the data itself should be formatted according to 
+                    the Agent specifications.)""" ;
+  dc:type esc:range-class ;
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:predicate dc:creator ;
+  sh:filterShape [ #restrict only to nodes
+      sh:property [
+          sh:predicate dc:creator ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:valueShape Agent: ;
+  sh:class edm:Agent ;
 .
-
-# dc:format ####################################################################
-
-<WebResource/dc_format#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:format ;
-  sh:minCount 0 ;
-.
-
 
 # dc:rights ####################################################################
-
-<WebResource/dc_rights#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:rights ;
-  sh:minCount 0 ;
-.
 
 <WebResource/dc_rights#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """dc:rights should not be the same as edm:rights, if true the 
                     field is redundant""" ;
-  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:severity sh:Warning ;
   sh:predicate dc:rights ;
   sh:notEquals edm:rights ;
 .
 
-
-# dc:source ####################################################################
-
-<WebResource/dc_source#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:source ;
-  sh:minCount 0 ;
-.
-
-
-# dct:conformsTo ###############################################################
-
-<WebResource/dct_conformsTo#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:conformsTo ;
-  sh:minCount 0 ;
-.
-
-
 # dct:created ##################################################################
-
-<WebResource/dct_created#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:created ;
-  sh:minCount 0 ;
-.
 
 #not in the spreadsheet
 <WebResource/dct_created#range-values>
@@ -175,7 +133,7 @@
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""" ;
   dc:type esc:range-value ;
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:predicate dct:created ;
   sh:filterShape [ #restrict only to Literals
     sh:property [
@@ -192,7 +150,7 @@
   dc:type esc:correlation ;
   sh:description "dcterms:created must be equal or earlier than dcterms:issued";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate dct:created ;
   sh:lessThanOrEquals dct:issued ;
 .
@@ -204,63 +162,32 @@
   sh:description """dcterms:created must be equal or earlier than dcterms:issued
                     and dcterms:created in edm:ProvidedCHO""";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate dct:created ;
 
   #requires a second focus node (ie. ProvidedCHO)
   #can though be implemented using SPARQL
 .
 
-
-# dct:extent ###################################################################
-
-<WebResource/dct_extent#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:extent ;
-  sh:minCount 0 ;
-.
-
-
 # dct:hasPart ##################################################################
 
 #not the same as in ProvidedCHO
-<WebResource/dct_hasPartOf#type>
+<WebResource/dct_hasPart#type>
   a sh:PropertyConstraint ;
   dc:type esc:type ;
-  sh:predicate dct:hasPartOf ;
-  sh:nodeKind sh:IRI ;
-.
-
-<WebResource/dct_hasPart#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate dct:hasPart ;
-  sh:minCount 0 ;
+  sh:nodeKind sh:IRI ;
 .
 
 <WebResource/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:hasPart must refer to a valid edm:WebResource" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate dct:hasPart ;
   sh:valueShape WebResource: ;
   sh:class edm:WebResource ;
 .
-
-# dct:isFormatOf ###############################################################
-
-<WebResource/dct_isFormatOf#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:isFormatOf ;
-  sh:minCount 0 ;
-.
-
 
 # dct:isPartOf #################################################################
 
@@ -272,33 +199,17 @@
   sh:nodeKind sh:IRI ;
 .
 
-<WebResource/dct_isPartOf#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:isPartOf ;
-  sh:minCount 0 ;
-.
-
 <WebResource/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:isPartOf must refer to a valid edm:WebResource" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate dct:isPartOf ;
   sh:valueShape WebResource: ;
   sh:class edm:WebResource ;
 .
 
 # dct:issued ###################################################################
-
-<WebResource/dct_issued#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:issued ;
-  sh:minCount 0 ;
-.
 
 #not in the spreadsheet
 <WebResource/dct_issued#range-values>
@@ -307,7 +218,7 @@
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""" ;
   dc:type esc:range-value ;
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:predicate dct:issued ;
   sh:filterShape [ #restrict only to Literals
     sh:property [
@@ -326,7 +237,7 @@
                     the data and the data itself should be formatted according 
                     to the TimeSpan specifications.)""" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
   sh:predicate dct:issued ;
   sh:filterShape [
       sh:property [
@@ -344,7 +255,7 @@
   sh:description """dcterms:issued must be equal or later than dcterms:created 
                     and dcterms:issued of the ProvidedCHO""" ;
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate dct:issued ;
 
   #requires a second focus node (ie. ProvidedCHO)
@@ -360,19 +271,11 @@
   sh:nodeKind sh:IRI ;
 .
 
-<WebResource/edm_isNextInSequence#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:isNextInSequence ;
-  sh:minCount 0 ;
-.
-
 <WebResource/edm_isNextInSequence#range-class>
   a sh:PropertyConstraint ;
   sh:description """The reference should be a valid edm:WebResource""" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isNextInSequence ;
   sh:valueShape WebResource: ;
@@ -387,7 +290,7 @@
 # sh:description """Check that if WebResource 2 is PartOf WebResource X and 
 #                   IsNextInSequence WebResource 1 and WebResource 2 are part of
 #                   WebResource X""" ;
-  dc:subject "?" ;
+  dc:relation "?" ;
   sh:predicate edm:isNextInSequence ;
 
 # Implement using a SPARQL query
@@ -406,7 +309,7 @@
 <WebResource/edm_rights#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:rights;
   sh:minCount 0 ;
   sh:minCount 1 ;
@@ -417,8 +320,8 @@
   dc:type esc:values ;
   sh:description """Check the value is one of the controlled values: 
              http://pro.europeana.eu/web/guest/available-rights-statements """ ;
-  dc:subject "R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES"
-           , "R-30-DEFINE-VALUE-LISTS" ;
+  dc:relation "R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES"
+            , "R-30-DEFINE-VALUE-LISTS" ;
   sh:predicate edm:rights ;
   sh:in ( <http://creativecommons.org/publicdomain/mark/1.0/> 
           <http://www.europeana.eu/rights/out-of-copyright-non-commercial/>
@@ -435,3 +338,11 @@
           <http://www.europeana.eu/rights/unknown/> ) ;
 .
 
+# owl:sameAs ###################################################################
+
+<WebResource/owl_sameAs#type>
+  a sh:PropertyConstraint ;
+  dc:type esc:type ;
+  sh:predicate owl:sameAs ;
+  sh:nodeKind sh:IRI ;
+.

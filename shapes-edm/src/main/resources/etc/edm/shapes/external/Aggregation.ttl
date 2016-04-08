@@ -45,16 +45,14 @@
 
   # DC properties
   sh:property        <Aggregation/dc_rights#type> ;
-  sh:property        <Aggregation/dc_rights#cardinality> ;
   sh:property        <Aggregation/dc_rights#redundancy> ;
 
-  # EDM properties
+  # EDM properties 
   sh:property        <Aggregation/edm_aggregatedCHO#type> ;
   sh:property        <Aggregation/edm_aggregatedCHO#cardinality> ;
   sh:property        <Aggregation/edm_aggregatedCHO#range-class> ;
   sh:property        <Aggregation/edm_dataProvider#cardinality> ;
   sh:property        <Aggregation/edm_hasView#type> ;
-  sh:property        <Aggregation/edm_hasView#cardinality> ;
   sh:property        <Aggregation/edm_hasView#range-class> ;
   sh:property        <Aggregation/edm_isShownAt#type> ;
   sh:property        <Aggregation/edm_isShownAt#cardinality> ;
@@ -63,18 +61,14 @@
   sh:property        <Aggregation/edm_isShownBy#cardinality> ;
   sh:property        <Aggregation/edm_isShownBy#range-class> ;
   sh:property        <Aggregation/edm_object#type> ;
-  sh:property        <Aggregation/edm_object#cardinality> ;
   sh:property        <Aggregation/edm_object#range-class> ;
   sh:property        <Aggregation/edm_provider#cardinality> ;
   sh:property        <Aggregation/edm_rights#type> ;
-  sh:property        <Aggregation/edm_rights#cardinality> ;
   sh:property        <Aggregation/edm_rights#values> ;
   sh:property        <Aggregation/edm_ugc#type> ;
   sh:property        <Aggregation/edm_ugc#cardinality> ;
   sh:property        <Aggregation/edm_unstored#type> ;
-  sh:property        <Aggregation/edm_unstored#cardinality> ;
 .
-
 
 # class level constraints ######################################################
 
@@ -82,9 +76,13 @@
   sh:description """An ore:Aggregation resource must be defined using only the 
                     properties defined in EDM for Aggregations""" ;
   dc:type esc:closure ;
-  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  dc:relation "R-206-DEFINE-ALLOWED-NAMESPACES" ;
   sh:closed true ;
-  sh:ignoredProperties (rdf:type) ;
+  sh:ignoredProperties (
+    rdf:type dc:rights
+    edm:aggregatedCHO edm:dataProvider edm:hasView edm:isShownAt 
+    edm:isShownBy edm:object edm:provider edm:rights edm:ugc edm:unstored
+  ) ;
 .
 
 <Aggregation#correlation>
@@ -92,7 +90,7 @@
   sh:description """At least one edm:isShownAt or edm:isShownBy should be 
                     present""" ;
   dc:type esc:correlation ;
-  dc:subject "R-68-REQUIRED-PROPERTIES"
+  dc:relation "R-68-REQUIRED-PROPERTIES"
            , "R-67-BOOLEAN-PROPERTY-PATTERNS" ;
   sh:or (
     [ sh:property [ sh:predicate edm:isShownAt ; sh:minCount 1 ; ] ]
@@ -109,20 +107,12 @@
   sh:nodeKind sh:Literal ;
 .
 
-<Aggregation/dc_rights#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:rights ;
-  sh:minCount 0 ;
-.
-
 <Aggregation/dc_rights#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """dc:rights should not be the same as edm:rights, if true
                     the field is redundant""" ;
-  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:severity sh:Warning ;
   sh:predicate dc:rights ;
   sh:notEquals edm:rights ;
@@ -140,7 +130,7 @@
 <Aggregation/edm_aggregatedCHO#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:aggregatedCHO ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -151,8 +141,8 @@
   sh:description "The reference should be a valid edm:ProvidedCHO" ;
 # sh:description "Check that the URI refers to an existing CHO" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
-           , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:aggregatedCHO ;
   sh:valueShape ProvidedCHO: ;
   sh:class edm:ProvidedCHO ;
@@ -163,7 +153,7 @@
 <Aggregation/edm_dataProvider#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:dataProvider ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -178,21 +168,13 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Aggregation/edm_hasView#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:hasView ;
-  sh:minCount 0 ;
-.
-
 #not in the spreadsheet
 <Aggregation/edm_hasView#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the pointed media resolves to a landing page" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:hasView ;
@@ -212,7 +194,7 @@
 <Aggregation/edm_isShownAt#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isShownAt ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -223,7 +205,7 @@
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the pointed media resolves to a landing page" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isShownAt ;
@@ -243,7 +225,7 @@
 <Aggregation/edm_isShownBy#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isShownBy ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -254,14 +236,13 @@
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the URI resolves to a media" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:isShownBy ;
   sh:valueShape WebResource: ;
   sh:class edm:WebResource ;
 .
-
 
 # edm:object ###################################################################
 
@@ -272,20 +253,12 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Aggregation/edm_object#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:object ;
-  sh:minCount 0 ;
-.
-
 <Aggregation/edm_object#range-class>
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:WebResource" ;
 # sh:description "Check that the URI resolves to a media" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:predicate edm:object ;
@@ -293,13 +266,12 @@
   sh:class edm:WebResource ;
 .
 
-
 # edm:provider #################################################################
 
 <Aggregation/edm_provider#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:provider ;
   sh:minCount 1 ;
   sh:maxCount 1 ;
@@ -314,20 +286,12 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Aggregation/edm_rights#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:rights ;
-  sh:minCount 0 ;
-.
-
 <Aggregation/edm_rights#values>
   a sh:PropertyConstraint ;
   dc:type esc:values ;
   sh:description """Check the value is one of the controlled values: 
              http://pro.europeana.eu/web/guest/available-rights-statements """ ;
-  dc:subject "R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES"
+  dc:relation "R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES"
            , "R-30-DEFINE-VALUE-LISTS" ;
   sh:predicate edm:rights ;
   sh:in ( <http://creativecommons.org/publicdomain/mark/1.0/> 
@@ -357,7 +321,7 @@
 <Aggregation/edm_ugc#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:ugc ;
   sh:minCount 0 ;
   sh:minCount 1 ;
@@ -370,12 +334,4 @@
   dc:type esc:type ;
   sh:predicate edm:unstored ;
   sh:nodeKind sh:Literal ;
-.
-
-<Aggregation/edm_unstored#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:unstored ;
-  sh:minCount 0 ;
 .

@@ -12,28 +12,29 @@ The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
-|<a href="#skos_altLabel">skos:altLabel</a>|<a href="#skos_altLabel_cardinality">0..?</a>|<a href="#skos_altLabel_type">Literal</a>|<a href="#skos_altLabel_datatype">datatype</a>, <a href="#skos_altLabel_redundancy">redundancy</a>|
-|<a href="#skos_note">skos:note</a>|<a href="#skos_note_cardinality">0..?</a>|<a href="#skos_note_type">Literal</a>|<a href="#skos_note_datatype">datatype</a>|
+|<a href="#rdf_type">rdf:type</a>|0..*|||
+|<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>|<a href="#skos_altLabel_datatype">datatype</a>, <a href="#skos_altLabel_redundancy">redundancy</a>|
+|<a href="#skos_note">skos:note</a>|0..*|<a href="#skos_note_type">Literal</a>|<a href="#skos_note_datatype">datatype</a>|
 |<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#skos_prefLabel_cardinality">0..?</a>|<a href="#skos_prefLabel_type">Literal</a>|<a href="#skos_prefLabel_datatype">datatype</a>|
-|<a href="#dc_date">dc:date</a>|<a href="#dc_date_cardinality">0..?</a>||<a href="#dc_date_literal">literal</a>|
-|<a href="#dc_identifier">dc:identifier</a>|<a href="#dc_identifier_cardinality">0..?</a>|<a href="#dc_identifier_type">Literal</a>||
-|<a href="#dct_hasPart">dct:hasPart</a>|<a href="#dct_hasPart_cardinality">0..?</a>|<a href="#dct_hasPart_type">IRI</a>|<a href="#dct_hasPart_range-class">range-class</a>|
-|<a href="#dct_isPartOf">dct:isPartOf</a>|<a href="#dct_isPartOf_cardinality">0..?</a>|<a href="#dct_isPartOf_type">IRI</a>|<a href="#dct_isPartOf_range-class">range-class</a>|
-|<a href="#foaf_name">foaf:name</a>|<a href="#foaf_name_cardinality">0..?</a>|<a href="#foaf_name_type">Literal</a>||
-|<a href="#rdaGr2_biographicalInformation">rdaGr2:biographicalInformation</a>|<a href="#rdaGr2_biographicalInformation_cardinality">0..?</a>|<a href="#rdaGr2_biographicalInformation_type">Literal</a>||
+|<a href="#dc_date">dc:date</a>|0..*||<a href="#dc_date_literal">literal</a>|
+|<a href="#dc_identifier">dc:identifier</a>|0..*|<a href="#dc_identifier_type">Literal</a>||
+|<a href="#dct_hasPart">dct:hasPart</a>|0..*|<a href="#dct_hasPart_type">IRI</a>|<a href="#dct_hasPart_range-class">range-class</a>|
+|<a href="#dct_isPartOf">dct:isPartOf</a>|0..*|<a href="#dct_isPartOf_type">IRI</a>|<a href="#dct_isPartOf_range-class">range-class</a>|
+|<a href="#foaf_name">foaf:name</a>|0..*|<a href="#foaf_name_type">Literal</a>||
+|<a href="#rdaGr2_biographicalInformation">rdaGr2:biographicalInformation</a>|0..*|<a href="#rdaGr2_biographicalInformation_type">Literal</a>||
 |<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#rdaGr2_dateOfBirth_cardinality">0..1</a>|<a href="#rdaGr2_dateOfBirth_type">Literal</a>|<a href="#rdaGr2_dateOfBirth_correlation">correlation</a>, <a href="#rdaGr2_dateOfBirth_literal">literal</a>|
 |<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#rdaGr2_dateOfDeath_cardinality">0..1</a>|<a href="#rdaGr2_dateOfDeath_type">Literal</a>|<a href="#rdaGr2_dateOfDeath_literal">literal</a>|
-|<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|<a href="#rdaGr2_dateOfEstablishment_cardinality">0..?</a>|<a href="#rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#rdaGr2_dateOfEstablishment_literal">literal</a>|
-|<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|<a href="#rdaGr2_dateOfTermination_cardinality">0..?</a>|<a href="#rdaGr2_dateOfTermination_type">Literal</a>|<a href="#rdaGr2_dateOfTermination_literal">literal</a>|
+|<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|0..*|<a href="#rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#rdaGr2_dateOfEstablishment_literal">literal</a>|
+|<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|0..*|<a href="#rdaGr2_dateOfTermination_type">Literal</a>|<a href="#rdaGr2_dateOfTermination_literal">literal</a>|
 |<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#rdaGr2_gender_cardinality">0..1</a>|<a href="#rdaGr2_gender_type">Literal</a>||
 |<a href="#rdaGr2_placeOfBirth">rdaGr2:placeOfBirth</a>|<a href="#rdaGr2_placeOfBirth_cardinality">0..1</a>|||
 |<a href="#rdaGr2_placeOfDeath">rdaGr2:placeOfDeath</a>|<a href="#rdaGr2_placeOfDeath_cardinality">0..1</a>|||
 |<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|<a href="#rdaGr2_professionOrOccupation_cardinality">0..?</a>|||
 |<a href="#edm_begin">edm:begin</a>|<a href="#edm_begin_cardinality">0..1</a>|<a href="#edm_begin_type">Literal</a>|<a href="#edm_begin_correlation">correlation</a>, <a href="#edm_begin_literal">literal</a>, <a href="#edm_begin_redundancy">redundancy</a>|
 |<a href="#edm_end">edm:end</a>|<a href="#edm_end_cardinality">0..1</a>|<a href="#edm_end_type">Literal</a>|<a href="#edm_end_literal">literal</a>, <a href="#edm_end_redundancy">redundancy</a>|
-|<a href="#edm_hasMet">edm:hasMet</a>|<a href="#edm_hasMet_cardinality">0..?</a>|<a href="#edm_hasMet_type">IRI</a>|<a href="#edm_hasMet_range-class">range-class</a>|
-|<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|<a href="#edm_isRelatedTo_cardinality">0..?</a>|<a href="#edm_isRelatedTo_type">IRI</a>||
-|<a href="#owl_sameAs">owl:sameAs</a>|<a href="#owl_sameAs_cardinality">0..?</a>|<a href="#owl_sameAs_type">IRI</a>||
+|<a href="#edm_hasMet">edm:hasMet</a>|0..*|<a href="#edm_hasMet_type">IRI</a>|<a href="#edm_hasMet_range-class">range-class</a>|
+|<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|0..*|<a href="#edm_isRelatedTo_type">IRI</a>||
+|<a href="#owl_sameAs">owl:sameAs</a>|0..*|<a href="#owl_sameAs_type">IRI</a>||
 
 Below is an example of a resource of type edm:Agent: 
 
@@ -97,24 +98,18 @@ _Shape body in Turtle syntax:_
   sh:property        <Agent/skos_prefLabel#cardinality> ;
   sh:property        <Agent/skos_altLabel#type> ;
   sh:property        <Agent/skos_altLabel#datatype> ;
-  sh:property        <Agent/skos_altLabel#cardinality> ;
   sh:property        <Agent/skos_altLabel#redundancy> ;
   sh:property        <Agent/skos_note#type> ;
   sh:property        <Agent/skos_note#datatype> ;
-  sh:property        <Agent/skos_note#cardinality> ;
 
   # DC properties
-  sh:property        <Agent/dc_date#cardinality> ;
   sh:property        <Agent/dc_date#literal> ;
   sh:property        <Agent/dc_identifier#type> ;
-  sh:property        <Agent/dc_identifier#cardinality> ;
 
   # DCTERMS properties
   sh:property        <Agent/dct_hasPart#type> ;
-  sh:property        <Agent/dct_hasPart#cardinality> ;
   sh:property        <Agent/dct_hasPart#range-class> ;
   sh:property        <Agent/dct_isPartOf#type> ;
-  sh:property        <Agent/dct_isPartOf#cardinality> ;
   sh:property        <Agent/dct_isPartOf#range-class> ;
 
   # EDM properties
@@ -128,18 +123,14 @@ _Shape body in Turtle syntax:_
   sh:property        <Agent/edm_end#literal> ;
   sh:constraint      <Agent/edm_end#redundancy> ;
   sh:property        <Agent/edm_hasMet#type> ;
-  sh:property        <Agent/edm_hasMet#cardinality> ;
   sh:property        <Agent/edm_hasMet#range-class> ;
   sh:property        <Agent/edm_isRelatedTo#type> ;
-  sh:property        <Agent/edm_isRelatedTo#cardinality> ;
 
   # FOAF properties
   sh:property        <Agent/foaf_name#type> ;
-  sh:property        <Agent/foaf_name#cardinality> ;
 
   # RDAGR2 properties
   sh:property        <Agent/rdaGr2_biographicalInformation#type> ;
-  sh:property        <Agent/rdaGr2_biographicalInformation#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#type> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#literal> ;
@@ -148,11 +139,9 @@ _Shape body in Turtle syntax:_
   sh:property        <Agent/rdaGr2_dateOfDeath#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfDeath#literal> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#type> ;
-  sh:property        <Agent/rdaGr2_dateOfEstablishment#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#literal> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#correlation> ;
   sh:property        <Agent/rdaGr2_dateOfTermination#type> ;
-  sh:property        <Agent/rdaGr2_dateOfTermination#cardinality> ;
   sh:property        <Agent/rdaGr2_dateOfTermination#literal> ;
   sh:property        <Agent/rdaGr2_gender#type> ;
   sh:property        <Agent/rdaGr2_gender#cardinality> ;
@@ -162,7 +151,6 @@ _Shape body in Turtle syntax:_
 
   # OWL properties
   sh:property        <Agent/owl_sameAs#type> ;
-  sh:property        <Agent/owl_sameAs#cardinality> ;
 .
 ```
 
@@ -173,7 +161,7 @@ _Shape body in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>An edm:Agent resource must be defined using only the 
                     properties defined in EDM for Agents</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -183,36 +171,29 @@ _Shape definition in Turtle syntax:_
   sh:description """An edm:Agent resource must be defined using only the 
                     properties defined in EDM for Agents""" ;
   dc:type esc:closure ;
-  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  dc:relation "R-206-DEFINE-ALLOWED-NAMESPACES" ;
   sh:closed true ;
-  sh:ignoredProperties (rdf:type) ;
+  sh:ignoredProperties (
+    rdf:type 
+    skos:prefLabel skos:altLabel skos:note
+    dc:date dc:identifier dct:hasPart dct:isPartOf
+    edm:begin edm:end edm:hasMet edm:isRelatedTo foaf:name
+    rdaGr2:biographicalInformation rdaGr2:dateOfBirth rdaGr2:dateOfDeath
+    rdaGr2:dateOfEstablishment rdaGr2:dateOfTermination rdaGr2:gender 
+    rdaGr2:placeOfBirth rdaGr2:placeOfDeath rdaGr2:professionOrOccupation
+    owl:sameAs
+  ) ;
 .
 ```
+#### Property <a id="rdf_type" target="_blank" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a>
+------
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
 ------
-
-##### Constraint <a id="skos_altLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:altLabel ;
-  sh:minCount 0 ;
-.
-```
 
 ##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -222,7 +203,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:altLabel ;
@@ -239,7 +220,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
                     skos:prefLabel</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -250,7 +231,7 @@ _Shape definition in Turtle syntax:_
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
                     skos:prefLabel""" ;
-  dc:subject "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
   sh:predicate  skos:altLabel ;
   sh:notEquals  skos:prefLabel ;
   sh:severity sh:Warning ;
@@ -277,28 +258,10 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
 ------
 
-##### Constraint <a id="skos_note_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:note ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -308,7 +271,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:note ;
@@ -344,7 +307,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one skos:prefLabel per language</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -354,7 +317,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one skos:prefLabel per language" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS"
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
   sh:minCount 0 ;
@@ -365,7 +328,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -375,7 +338,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:prefLabel ;
@@ -408,30 +371,12 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dc_date" target="_blank" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
 ------
 
-##### Constraint <a id="dc_date_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:date ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="dc_date_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal</a>
 <table>
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -442,7 +387,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [ #restrict only to Literals
       sh:property [
           sh:predicate dc:date ;
@@ -456,24 +401,6 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dc_identifier" target="_blank" href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a>
 ------
-
-##### Constraint <a id="dc_identifier_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dc:identifier ;
-  sh:minCount 0 ;
-.
-```
 
 ##### Constraint <a id="dc_identifier_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type</a>
 <table>
@@ -495,28 +422,10 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
 ------
 
-##### Constraint <a id="dct_hasPart_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:hasPart ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:Agent</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -526,7 +435,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   sh:description """dcterms:hasPart must refer to a valid edm:Agent""" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
@@ -560,28 +469,10 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 ------
 
-##### Constraint <a id="dct_isPartOf_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:isPartOf ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:Agent</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -591,7 +482,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   sh:description """dcterms:isPartOf must refer to a valid edm:Agent""" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
@@ -625,24 +516,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="foaf_name" target="_blank" href="http://xmlns.com/foaf/0.1/name">http://xmlns.com/foaf/0.1/name</a>
 ------
 
-##### Constraint <a id="foaf_name_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate foaf:name ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="foaf_name_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for foaf:name must be Literals</td></tr>
@@ -662,24 +535,6 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="rdaGr2_biographicalInformation" target="_blank" href="http://rdvocab.info/ElementsGr2/biographicalInformation">http://rdvocab.info/ElementsGr2/biographicalInformation</a>
 ------
-
-##### Constraint <a id="rdaGr2_biographicalInformation_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:biographicalInformation ;
-  sh:minCount 0 ;
-.
-```
 
 ##### Constraint <a id="rdaGr2_biographicalInformation_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type</a>
 <table>
@@ -704,7 +559,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="rdaGr2_dateOfBirth_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one rdaGr2:dateOfBirth</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -714,7 +569,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:dateOfBirth" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -725,7 +580,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>rdaGr2:dateOfBirth must be earlier or equals than 
                     rdaGr2:dateOfDeath</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -736,7 +591,7 @@ _Shape definition in Turtle syntax:_
   sh:description """rdaGr2:dateOfBirth must be earlier or equals than 
                     rdaGr2:dateOfDeath""";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate rdaGr2:dateOfBirth ;
   sh:lessThanOrEquals rdaGr2:dateOfDeath ;
 .
@@ -747,7 +602,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -758,7 +613,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfBirth ;
@@ -794,7 +649,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="rdaGr2_dateOfDeath_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one rdaGr2:dateOfDeath</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -804,7 +659,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:dateOfDeath" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:dateOfDeath ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -816,7 +671,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -827,7 +682,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfDeath ;
@@ -860,29 +715,11 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="rdaGr2_dateOfEstablishment" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfEstablishment">http://rdvocab.info/ElementsGr2/dateOfEstablishment</a>
 ------
 
-##### Constraint <a id="rdaGr2_dateOfEstablishment_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:dateOfEstablishment ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="rdaGr2_dateOfEstablishment_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation</a>
 <table>
 <tr><th align="right">description</th><td>rdaGr2:dateOfEstablishment must be earlier or equals than 
                     rdaGr2:dateOfTermination</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -893,7 +730,7 @@ _Shape definition in Turtle syntax:_
   sh:description """rdaGr2:dateOfEstablishment must be earlier or equals than 
                     rdaGr2:dateOfTermination""";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate rdaGr2:dateOfEstablishment ;
   sh:lessThanOrEquals rdaGr2:dateOfTermination ;
 .
@@ -904,7 +741,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -915,7 +752,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfEstablishment ;
@@ -948,30 +785,12 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="rdaGr2_dateOfTermination" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfTermination">http://rdvocab.info/ElementsGr2/dateOfTermination</a>
 ------
 
-##### Constraint <a id="rdaGr2_dateOfTermination_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:dateOfTermination ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="rdaGr2_dateOfTermination_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal</a>
 <table>
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -982,7 +801,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate rdaGr2:dateOfTermination ;
@@ -1018,7 +837,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="rdaGr2_gender_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one rdaGr2:gender</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1028,7 +847,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:gender" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:gender ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -1058,7 +877,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="rdaGr2_placeOfBirth_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one rdaGr2:placeOfBirth</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1068,7 +887,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:placeOfBirth" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:placeOfBirth ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -1080,7 +899,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="rdaGr2_placeOfDeath_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one rdaGr2:placeOfDeath</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1090,7 +909,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one rdaGr2:placeOfDeath" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:placeOfDeath ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -1102,7 +921,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="rdaGr2_professionOrOccupation_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1111,7 +930,7 @@ _Shape definition in Turtle syntax:_
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate rdaGr2:professionOrOccupation ;
   sh:minCount 0 ;
 .
@@ -1122,7 +941,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_begin_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one edm:begin</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1132,7 +951,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one edm:begin" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:begin ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -1142,7 +961,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_begin_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#correlation</a>
 <table>
 <tr><th align="right">description</th><td>edm:begin must be earlier or equals than edm:end</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1152,7 +971,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   sh:description "edm:begin must be earlier or equals than edm:end";
   dc:type esc:correlation ;
-  dc:subject "R-43-LITERAL-VALUE-COMPARISON" ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate edm:begin ;
   sh:lessThanOrEquals edm:end ;
 .
@@ -1163,7 +982,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1174,7 +993,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate edm:begin ;
@@ -1191,7 +1010,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>edm:begin should not be the same as rdaGr2:dateOfBirth
                   , if true the field is redundant</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1202,7 +1021,7 @@ _Shape definition in Turtle syntax:_
   dc:type esc:redundancy ;
   sh:description """edm:begin should not be the same as rdaGr2:dateOfBirth
                   , if true the field is redundant""" ;
-  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:severity sh:Warning ;
   sh:predicate edm:begin ;
   sh:notEquals rdaGr2:dateOfBirth ;
@@ -1232,7 +1051,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_end_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one edm:end</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1242,7 +1061,7 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one edm:end" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:end ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -1254,7 +1073,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1265,7 +1084,7 @@ _Shape definition in Turtle syntax:_
   sh:description """Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD""";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:filterShape [
     sh:property [
       sh:predicate edm:end ;
@@ -1282,7 +1101,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>edm:end should not be the same as rdaGr2:dateOfDeath
                   , if true the field is redundant</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -1293,7 +1112,7 @@ _Shape definition in Turtle syntax:_
   dc:type esc:redundancy ;
   sh:description """edm:end should not be the same as rdaGr2:dateOfDeath
                   , if true the field is redundant""" ;
-  dc:subject "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
   sh:severity sh:Warning ;
   sh:predicate edm:end ;
   sh:notEquals rdaGr2:dateOfDeath ;
@@ -1319,24 +1138,6 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="edm_hasMet" target="_blank" href="http://www.europeana.eu/schemas/edm/hasMet">http://www.europeana.eu/schemas/edm/hasMet</a>
 ------
-
-##### Constraint <a id="edm_hasMet_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:hasMet ;
-  sh:minCount 0 ;
-.
-```
 
 ##### Constraint <a id="edm_hasMet_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class</a>
 <table>
@@ -1382,24 +1183,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="edm_isRelatedTo" target="_blank" href="http://www.europeana.eu/schemas/edm/isRelatedTo">http://www.europeana.eu/schemas/edm/isRelatedTo</a>
 ------
 
-##### Constraint <a id="edm_isRelatedTo_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate edm:isRelatedTo ;
-  sh:minCount 0 ;
-.
-```
-
 ##### Constraint <a id="edm_isRelatedTo_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for edm:isRelatedTo must be Resources</td></tr>
@@ -1419,24 +1202,6 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="owl_sameAs" target="_blank" href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
 ------
-
-##### Constraint <a id="owl_sameAs_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate owl:sameAs ;
-  sh:minCount 0 ;
-.
-```
 
 ##### Constraint <a id="owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type</a>
 <table>

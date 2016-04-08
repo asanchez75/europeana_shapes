@@ -11,6 +11,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeSet;
 
@@ -18,6 +19,8 @@ import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.NodeIterator;
 import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFList;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
@@ -28,7 +31,7 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.DC;
 import org.topbraid.shacl.vocabulary.SH;
 
-import eu.europeana.edm.shapes.validation.ShapeChecker;
+import eu.europeana.edm.shapes.check.ShapeChecker;
 import eu.europeana.github.MarkDownWriter;
 import static org.apache.commons.io.FileUtils.*;
 
@@ -158,7 +161,9 @@ public class ShapesDataGenerator extends DocGenerator
             w.printLink(getCardinality(constraint)
                       , "#" + _config.getShapeConstraintLocalRef(constraint)
                       , null, false);
+            return;
         }
+        w.print("0..*");
     }
 
     private void printTypeConstraint(Collection<Resource> constraints
@@ -193,6 +198,7 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printConstraintTable(Resource shape, MarkDownWriter w)
     {
+        Model model = shape.getModel();
         w.printParagraph("The following constraints apply to shape or are not "
                        + "restricted to a specific property:");
         printClassConstraintsTable(shape, w);
@@ -203,7 +209,7 @@ public class ShapesDataGenerator extends DocGenerator
         w.printTableCols('l', 'c', 'c', 'l');
         for(String uri : getProperties(shape))
         {
-            Resource prop = shape.getModel().getResource(uri);
+            Resource prop = model.getResource(uri);
             Collection<Resource> constraints = getConstraints(shape, prop);
             w.print("|");
             String name = _config.getPrefixedName(prop);
@@ -259,9 +265,10 @@ public class ShapesDataGenerator extends DocGenerator
             printConstraintDefinition(c, w);
         }
 
+        Model model = shape.getModel();
         for(String uri : getProperties(shape))
         {
-            Resource prop = shape.getModel().getResource(uri);
+            Resource prop = model.getResource(uri);
 
             printPropertyHeader(prop, w);
 
@@ -398,14 +405,28 @@ public class ShapesDataGenerator extends DocGenerator
         return (stmt == null ? "" : getLocalName(stmt.getResource()));
     }
 
-    private Collection<String> getProperties(Resource c)
+    private Collection<String> getProperties(Resource s)
     {
         Collection<String> ret = new TreeSet(COMPARATOR);
-        NodeIterator iter = c.getModel().listObjectsOfProperty(SH.predicate);
-        while(iter.hasNext())
+
+        Model model = s.getModel();
+        Property p = model.getProperty(SH.NS + "ignoredProperties");
+        StmtIterator iter = model.listStatements(null, p, (RDFNode)null);
+        while ( iter.hasNext() )
         {
-            ret.add(iter.next().asResource().getURI());
+            Statement stmt = iter.next();
+            if ( !s.hasProperty(SH.constraint,stmt.getSubject()) ) { continue; }
+
+            RDFNode node = stmt.getObject();
+            if ( !node.canAs(RDFList.class) ) { continue; }
+
+            Iterator<RDFNode> iter2 = node.as(RDFList.class).iterator();
+            while ( iter2.hasNext() )
+            {
+                ret.add(iter2.next().asResource().getURI());
+            }
         }
+
         return ret;
     }
 

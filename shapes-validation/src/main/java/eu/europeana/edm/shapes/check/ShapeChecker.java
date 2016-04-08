@@ -1,7 +1,7 @@
 /**
  * 
  */
-package eu.europeana.edm.shapes.validation;
+package eu.europeana.edm.shapes.check;
 
 import java.util.regex.Pattern;
 

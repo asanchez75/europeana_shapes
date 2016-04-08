@@ -51,11 +51,9 @@
   sh:property        <Place/skos_prefLabel#cardinality> ;
   sh:property        <Place/skos_altLabel#type> ;
   sh:property        <Place/skos_altLabel#datatype> ;
-  sh:property        <Place/skos_altLabel#cardinality> ;
   sh:property        <Place/skos_altLabel#redundancy> ;
   sh:property        <Place/skos_note#type> ;
   sh:property        <Place/skos_note#datatype> ;
-  sh:property        <Place/skos_note#cardinality> ;
 
   # WGS84 properties
   sh:property        <Place/wgs84_lat#type> ;
@@ -73,10 +71,8 @@
 
   # DCTERMS properties
   sh:property        <Place/dct_hasPart#type> ;
-  sh:property        <Place/dct_hasPart#cardinality> ;
   sh:property        <Place/dct_hasPart#range-class> ;
   sh:property        <Place/dct_isPartOf#type> ;
-  sh:property        <Place/dct_isPartOf#cardinality> ;
   sh:property        <Place/dct_isPartOf#range-class> ;
 
   # EDM properties
@@ -86,7 +82,6 @@
 
   # OWL properties
   sh:property        <Place/owl_sameAs#type> ;
-  sh:property        <Place/owl_sameAs#cardinality> ;
 .
 
 # class level constraints ######################################################
@@ -95,9 +90,16 @@
   sh:description """An edm:Place resource must be defined using only the 
                     properties defined in EDM for Places""" ;
   dc:type esc:closure ;
-  dc:subject "R-206-DEFINE-ALLOWED-NAMESPACES" ;
+  dc:relation "R-206-DEFINE-ALLOWED-NAMESPACES" ;
   sh:closed true ;
-  sh:ignoredProperties (rdf:type) ;
+  sh:ignoredProperties (
+    rdf:type 
+    skos:prefLabel skos:altLabel skos:note
+    wgs84_pos:lat wgs84_pos:long wgs84_pos:alt
+    dct:hasPart dct:isPartOf
+    edm:isNextInSequence
+    owl:sameAs
+  ) ;
 .
 
 
@@ -114,7 +116,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:prefLabel ;
@@ -130,7 +132,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one skos:prefLabel per language" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS"
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
            , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
   sh:predicate skos:prefLabel ;
   sh:minCount 0 ;
@@ -151,7 +153,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:altLabel ;
@@ -163,20 +165,12 @@
   sh:severity sh:Warning ;
 .
 
-<Place/skos_altLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:altLabel ;
-  sh:minCount 0 ;
-.
-
 <Place/skos_altLabel#redundancy>
   a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """skos:altLabel should not have the same labels than in 
                     skos:prefLabel""" ;
-  dc:subject "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
   sh:predicate  skos:altLabel ;
   sh:notEquals  skos:prefLabel ;
   sh:severity sh:Warning ;
@@ -195,7 +189,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:datatype ;
   sh:description "Ideally all skos:note should have a language tag" ;
-  dc:subject "R-48-MISSING-LANGUAGE-TAGS" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
   sh:filterShape [
       sh:property [
           sh:predicate skos:note ;
@@ -205,14 +199,6 @@
   sh:predicate skos:note ;
   sh:datatype rdf:langString ;
   sh:severity sh:Warning ;
-.
-
-<Place/skos_note#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate skos:note ;
-  sh:minCount 0 ;
 .
 
 # wgs84_pos:lat ################################################################
@@ -228,7 +214,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one wgs84_pos:lat" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate wgs84_pos:lat ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -237,7 +223,7 @@
 <Place/wgs84_lat#literal>
   a sh:PropertyConstraint ;
   sh:description "The value of wgs84_pos:lat must be a decimal";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:predicate wgs84_pos:lat ;
   sh:pattern "^[-+]?[0-9]*[.]?[0-9]+$" ;
 .
@@ -245,7 +231,7 @@
 <Place/wgs84_lat#correlation>
   a sh:PropertyConstraint ;
   sh:description "wgs84_pos:lat should be accompanied with a wgs84_pos:long";
-  dc:subject "R-68-REQUIRED-PROPERTIES"
+  dc:relation "R-68-REQUIRED-PROPERTIES"
            , "R-67-BOOLEAN-PROPERTY-PATTERNS" ;
   dc:type esc:correlation ;
   sh:predicate wgs84_pos:lat ;
@@ -271,7 +257,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one wgs84_pos:long" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate wgs84_pos:long ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -280,7 +266,7 @@
 <Place/wgs84_long#literal>
   a sh:PropertyConstraint ;
   sh:description "The value of wgs84_pos:long must be a decimal";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:predicate wgs84_pos:long ;
   sh:pattern "^[-+]?[0-9]*[.]?[0-9]+$" ;
 .
@@ -288,7 +274,7 @@
 <Place/wgs84_long#correlation>
   a sh:PropertyConstraint ;
   sh:description "wgs84_pos:long should be accompanied with a wgs84_pos:lat";
-  dc:subject "R-68-REQUIRED-PROPERTIES"
+  dc:relation "R-68-REQUIRED-PROPERTIES"
            , "R-67-BOOLEAN-PROPERTY-PATTERNS" ;
   dc:type esc:correlation ;
   sh:predicate wgs84_pos:long ;
@@ -314,7 +300,7 @@
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
   sh:description "There must be at most one wgs84_pos:alt" ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate wgs84_pos:alt ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
@@ -323,7 +309,7 @@
 <Place/wgs84_alt#literal>
   a sh:PropertyConstraint ;
   sh:description "The value of wgs84_pos:alt must be a decimal";
-  dc:subject "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
   sh:predicate wgs84_pos:alt ;
   sh:pattern "^[-+]?[0-9]*[.]?[0-9]+$" ;
 .
@@ -332,7 +318,7 @@
   a sh:Constraint ;
   sh:description """wgs84_pos:alt should be accompanied with both wgs84_pos:lat
                     and wgs84_pos:long""";
-  dc:subject "R-68-REQUIRED-PROPERTIES"
+  dc:relation "R-68-REQUIRED-PROPERTIES"
            , "R-67-BOOLEAN-PROPERTY-PATTERNS" ;
   dc:type esc:correlation ;
 .
@@ -346,19 +332,11 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Place/dct_hasPart#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:hasPart ;
-  sh:minCount 0 ;
-.
-
 <Place/dct_hasPart#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:hasPart must refer to a valid edm:Place" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
@@ -380,19 +358,11 @@
   sh:nodeKind sh:IRI ;
 .
 
-<Place/dct_isPartOf#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate dct:isPartOf ;
-  sh:minCount 0 ;
-.
-
 <Place/dct_isPartOf#range-class>
   a sh:PropertyConstraint ;
   sh:description "dcterms:isPartOf must refer to a valid edm:Place" ;
   dc:type esc:range-class ;
-  dc:subject "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
            , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
   sh:filterShape [
       sh:property [
@@ -414,10 +384,11 @@
   sh:nodeKind sh:IRI ;
 .
 
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 <Place/edm_isNextInSequence#cardinality>
   a sh:PropertyConstraint ;
   dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
   sh:predicate edm:isNextInSequence ;
   sh:minCount 0 ;
 .
@@ -426,7 +397,7 @@
   a sh:PropertyConstraint ;
   sh:description "The reference should be a valid edm:Place" ;
   dc:type esc:range-class ;
-  dc:subject "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
+  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
   sh:filterShape [
       sh:property [
@@ -446,12 +417,4 @@
   dc:type esc:type ;
   sh:predicate owl:sameAs ;
   sh:nodeKind sh:IRI ;
-.
-
-<Place/owl_sameAs#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:subject "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate owl:sameAs ;
-  sh:minCount 0 ;
 .
