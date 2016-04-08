@@ -77,7 +77,7 @@ the result of a validation over a full dataset:
 We identified the following limitations while using SHACL to express the EDM
 validation requirements:
 
-- **Comparison constraints are limited to datatyped literals:** SHACL provides
+- ~~**Comparison constraints are limited to datatyped literals:** SHACL provides
 functions to compare datatyped literal (e.g. sh:lessThan, sh:equals, sh:notEquals) values between properties. It uses the associated datatype to determine how the 
 values can be compared, which is the typical behaviour for typed programming 
 languages. However, most properties defined or adopted by EDM do not prescribe a
@@ -90,7 +90,7 @@ through a datatype, but for others there may be more than one format possible
 explicit or be determined so that comparative functions can still be applied. 
 > Looking at the EDM requirements, the following should be supported:
 > *"Check that, if edm:begin and edm:end are present in an edm:Agent, edm:begin 
-must be earlier than edm:end."*
+must be earlier than edm:end."*~~
 
 
 - **Constraints are limited to a single focus node:** typically, a SHACL 
