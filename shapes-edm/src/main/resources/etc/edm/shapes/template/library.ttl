@@ -51,3 +51,58 @@
 .
 
 
+:DisjointConstraint
+    a sh:ConstraintTemplate ;
+    rdfs:subClassOf sh:TemplateConstraint ;
+    rdfs:label "Disjoint constraint between nodes" ;
+    rdfs:comment "Tests if the range of a property is a typed literal";
+    sh:argument [
+        sh:predicate sh:predicate ;
+        sh:class rdf:Property ;
+        sh:name "predicate" ;
+        sh:description "The property of the focus node." ;
+    ] ;
+    sh:argument [
+        sh:predicate sh:disjointWith ;
+        sh:class rdf:Property ;
+        sh:name "disjointWith" ;
+        sh:description "List of properties that the property must be disjoint with." ;
+    ] ;
+    sh:message "Not a typed literal" ;
+    sh:sparql """
+      SELECT $this ($this AS ?subject) $predicate (?value AS ?object)
+      WHERE {
+        $this $predicate ?value .
+        FILTER (!isLiteral(?value) || NOT EXISTS {
+            GRAPH $shapesGraph {
+                $predicates (rdf:rest*)/rdf:first ?disjointWith .
+            }
+            FILTER (?disjointWith = rdfs:Resource
+                || (?disjointWith = rdf:List && EXISTS { ?value rdf:first ?any }))
+        })
+      }
+    """ ;
+.
+
+:TypedLiteralConstraint
+    a sh:ConstraintTemplate ;
+    rdfs:subClassOf sh:TemplateConstraint ;
+    rdfs:label "Co-occurrence constraint between nodes" ;
+    rdfs:comment "Tests if the range of a property is a typed literal";
+    sh:argument [
+        sh:predicate sh:predicate ;
+        sh:class rdf:Property ;
+        sh:name "predicate" ;
+        sh:description "The property of the focus node." ;
+    ] ;
+    sh:message "Not a typed literal" ;
+    sh:sparql """
+      SELECT ?this (?this as ?subject) $predicate (?value AS ?object)
+      WHERE {
+        $this $predicate ?value .
+        BIND (datatype(?value) AS ?dt) .
+        FILTER ( isLiteral(?value) && ( (?dt = xsd:string)
+                                     || (?dt = rdf:langString ) ) ) .
+      }
+    """ ;
+.

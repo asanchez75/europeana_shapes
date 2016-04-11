@@ -11,3 +11,27 @@
   sh:sourceTemplate    sh:AbstractNotEqualsPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
 ] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Value sets of edm:end and  must not share equal values" ;
+  sh:object            "1791-12-05" ;
+  sh:predicate         <http://www.europeana.eu/schemas/edm/end> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#redundancy> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNotEqualsPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Value sets of edm:begin and  must not share equal values" ;
+  sh:object            "1756-01-27" ;
+  sh:predicate         <http://www.europeana.eu/schemas/edm/begin> ;
+  sh:severity          sh:Warning ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#redundancy> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractNotEqualsPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .

@@ -117,11 +117,11 @@ _Shape body in Turtle syntax:_
   sh:property        <Agent/edm_begin#cardinality> ;
   sh:property        <Agent/edm_begin#literal> ;
   sh:property        <Agent/edm_begin#correlation> ;
-  sh:constraint      <Agent/edm_begin#redundancy> ;
+  sh:property        <Agent/edm_begin#redundancy> ;
   sh:property        <Agent/edm_end#type> ;
   sh:property        <Agent/edm_end#cardinality> ;
   sh:property        <Agent/edm_end#literal> ;
-  sh:constraint      <Agent/edm_end#redundancy> ;
+  sh:property        <Agent/edm_end#redundancy> ;
   sh:property        <Agent/edm_hasMet#type> ;
   sh:property        <Agent/edm_hasMet#range-class> ;
   sh:property        <Agent/edm_isRelatedTo#type> ;
@@ -1017,7 +1017,7 @@ _Shape definition in Turtle syntax:_
 
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#redundancy>
-  a sh:Constraint ;
+  a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """edm:begin should not be the same as rdaGr2:dateOfBirth
                   , if true the field is redundant""" ;
@@ -1108,7 +1108,7 @@ _Shape definition in Turtle syntax:_
 
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#redundancy>
-  a sh:Constraint ;
+  a sh:PropertyConstraint ;
   dc:type esc:redundancy ;
   sh:description """edm:end should not be the same as rdaGr2:dateOfDeath
                   , if true the field is redundant""" ;

@@ -61,6 +61,7 @@
   sh:property        <ProvidedCHO/dc_date#literal> ;
   sh:property        <ProvidedCHO/dc_date#subproperty_1> ;
   sh:constraint      <ProvidedCHO/dc_date#subproperty_2> ;
+  sh:property        <ProvidedCHO/dc_description#datatype> ;
   sh:property        <ProvidedCHO/dc_identifier#type> ;
   sh:property        <ProvidedCHO/dc_language#type> ;
   sh:property        <ProvidedCHO/dc_language#values> ;
@@ -347,6 +348,24 @@
       sh:notEquals dct:issued ;
     ]
   )
+.
+
+# dc:description ###############################################################
+
+<ProvidedCHO/dc_description#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all dc:description should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dc:description ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate dc:description ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
 .
 
 # dc:identifier ################################################################

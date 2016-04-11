@@ -12,6 +12,7 @@
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 
 @prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+@prefix tpl:  <http://www.europeana.eu/schemas/edm/shapes/template#> .
 
 @base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
 @prefix Concept:  <Concept#base> .
@@ -24,6 +25,7 @@
   rdf:type owl:Ontology, sh:Graph ;
   owl:versionInfo "Draft version for skos:Concept Class"^^xsd:string ;
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
+  sh:shapesGraph tpl: ;
 .
 
 ################################################################################
@@ -60,7 +62,7 @@
   sh:property        <Concept/skos_note#type> ;
   sh:property        <Concept/skos_note#datatype> ;
   sh:property        <Concept/skos_notation#type> ;
-  sh:property        <Concept/skos_notation#datatype> ;
+  sh:constraint      <Concept/skos_notation#datatype> ;
   sh:property        <Concept/skos_inScheme#type> ;
 .
 
@@ -181,6 +183,18 @@
   sh:class edm:Concept ;
 .
 
+<Concept/skos_broader#disjoint>
+  a tpl:DisjointConstraint ;
+  sh:description "skos:broader must be disjoint with " ;
+  dc:type esc:disjoint ;
+  sh:predicate skos:broader ;
+  sh:disjointWith (
+    skos:narrower skos:related
+    skos:broadMatch skos:narrowMatch skos:relatedMatch
+    skos:exactMatch skos:closeMatch
+  );
+.
+
 # skos:narrower ################################################################
 
 <Concept/skos_narrower#type>
@@ -288,17 +302,10 @@
 .
 
 <Concept/skos_notation#datatype>
-  a sh:PropertyConstraint ;
+  a tpl:TypedLiteralConstraint ;
   sh:description "skos:notation should be assigned with a typed literal" ;
   dc:type esc:datatype ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:notation ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
   sh:predicate skos:notation ;
-  #prescribe as typed literal
 .
 
 # skos:inScheme ################################################################

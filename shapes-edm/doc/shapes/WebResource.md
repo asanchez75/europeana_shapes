@@ -14,7 +14,7 @@ The following table shows an overview of the constraints divided per property:
 | :--- | :--: | :--: | :--- |
 |<a href="#rdf_type">rdf:type</a>|0..*|||
 |<a href="#dc_creator">dc:creator</a>|0..*||<a href="#dc_creator_range-class">range-class</a>|
-|<a href="#dc_description">dc:description</a>|0..*|||
+|<a href="#dc_description">dc:description</a>|0..*||<a href="#dc_description_datatype">datatype</a>|
 |<a href="#dc_format">dc:format</a>|0..*|||
 |<a href="#dc_rights">dc:rights</a>|0..*||<a href="#dc_rights_redundancy">redundancy</a>|
 |<a href="#dc_source">dc:source</a>|0..*|||
@@ -53,6 +53,7 @@ _Shape body in Turtle syntax:_
   sh:property        <WebResource/dct_created#range-values> ;
   sh:property        <WebResource/dct_created#correlation_1> ;
   sh:property        <WebResource/dct_created#correlation_2> ;
+  sh:property        <WebResource/dc_description#datatype> ;
   sh:property        <WebResource/dct_hasPart#type> ;
   sh:property        <WebResource/dct_hasPart#range-class> ;
   sh:property        <WebResource/dct_isPartOf#type> ;
@@ -139,6 +140,32 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="dc_description" target="_blank" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
 ------
+
+##### Constraint <a id="dc_description_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype</a>
+<table>
+<tr><th align="right">description</th><td>Ideally all dc:description should have a language tag</td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
+</table>
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all dc:description should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dc:description ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate dc:description ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+```
 #### Property <a id="dc_format" target="_blank" href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
 ------
 #### Property <a id="dc_rights" target="_blank" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
@@ -185,7 +212,6 @@ _Shape definition in Turtle syntax:_
   a sh:PropertyConstraint ;
   dc:type esc:correlation ;
   sh:description "dcterms:created must be equal or earlier than dcterms:issued";
-  dc:type esc:correlation ;
   dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
   sh:predicate dct:created ;
   sh:lessThanOrEquals dct:issued ;

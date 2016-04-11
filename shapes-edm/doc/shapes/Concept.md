@@ -89,7 +89,7 @@ _Shape body in Turtle syntax:_
   sh:property        <Concept/skos_note#type> ;
   sh:property        <Concept/skos_note#datatype> ;
   sh:property        <Concept/skos_notation#type> ;
-  sh:property        <Concept/skos_notation#datatype> ;
+  sh:constraint      <Concept/skos_notation#datatype> ;
   sh:property        <Concept/skos_inScheme#type> ;
 .
 ```
@@ -370,17 +370,10 @@ _Shape definition in Turtle syntax:_
 
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype>
-  a sh:PropertyConstraint ;
+  a tpl:TypedLiteralConstraint ;
   sh:description "skos:notation should be assigned with a typed literal" ;
   dc:type esc:datatype ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:notation ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
   sh:predicate skos:notation ;
-  #prescribe as typed literal
 .
 ```
 

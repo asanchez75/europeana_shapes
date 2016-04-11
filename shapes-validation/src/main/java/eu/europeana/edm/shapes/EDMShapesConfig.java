@@ -23,7 +23,7 @@ public class EDMShapesConfig
 
     static {
         Properties props = loadConfig();
-        _shapesLoader   = loadShapesLoader(props);
+        _shapesLoader   = newShapesLoader(props);
         _edmShapesModel = loadEDMShapesModel(props);
     }
 
@@ -42,9 +42,15 @@ public class EDMShapesConfig
         return props;
     }
 
-    private static ShapesLoader loadShapesLoader(Properties props)
+    public static ShapesLoader newShapesLoader(Properties props)
     {
-        return new LocalShapesLoader(new File(props.getProperty("shapes.edm.data")));
+        String shapes  = props.getProperty("shapes.edm.data");
+        String library = props.getProperty("shapes.edm.library");
+        LocalShapesLoader loader = new LocalShapesLoader();
+        loader.inspect(new File(shapes));
+        loader.inspect(new File(library));
+        loader.importDependencies();
+        return loader;
     }
 
     private static Model loadEDMShapesModel(Properties props)

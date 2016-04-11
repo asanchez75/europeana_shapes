@@ -1,0 +1,13 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be instances of edm:Concept" ;
+  sh:object            <http://dbpedia.org/resource/xpto1> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#broader> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractClassPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .

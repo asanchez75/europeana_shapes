@@ -3,6 +3,7 @@ shapes.remote=/
 
 shapes.edm.ns=http://www.europeana.eu/schemas/edm/shapes/external/
 shapes.edm.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resources\\etc\\edm\\shapes\\external
+shapes.edm.library=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\main\\resources\\etc\\edm\\shapes\\template\\
 shapes.edm.doc=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\doc\\shapes
 
 shapes.testsuite.data=D:\\work\\git\\Europeana\\shapes\\shapes-edm\\src\\test\\resources\\etc\\edm\\tests\\data\\
