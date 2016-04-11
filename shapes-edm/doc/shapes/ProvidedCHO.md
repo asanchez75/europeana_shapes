@@ -12,7 +12,6 @@ The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
-|<a href="#rdf_type">rdf:type</a>|0..*|||
 |<a href="#dc_contributor">dc:contributor</a>|0..*||<a href="#dc_contributor_range-class">range-class</a>|
 |<a href="#dc_coverage">dc:coverage</a>|0..*||<a href="#dc_coverage_range-class">range-class</a>, <a href="#dc_coverage_subproperty_1">subproperty_1</a>, <a href="#dc_coverage_subproperty_2">subproperty_2</a>|
 |<a href="#dc_creator">dc:creator</a>|0..*||<a href="#dc_creator_range-class">range-class</a>|
@@ -223,8 +222,6 @@ _Shape definition in Turtle syntax:_
   ) ;
 .
 ```
-#### Property <a id="rdf_type" target="_blank" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a>
-------
 #### Property <a id="dc_contributor" target="_blank" href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a>
 ------
 

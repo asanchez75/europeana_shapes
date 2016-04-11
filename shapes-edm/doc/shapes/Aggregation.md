@@ -12,7 +12,6 @@ The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
-|<a href="#rdf_type">rdf:type</a>|0..*|||
 |<a href="#dc_rights">dc:rights</a>|0..*|<a href="#dc_rights_type">Literal</a>|<a href="#dc_rights_redundancy">redundancy</a>|
 |<a href="#edm_aggregatedCHO">edm:aggregatedCHO</a>|<a href="#edm_aggregatedCHO_cardinality">1..1</a>|<a href="#edm_aggregatedCHO_type">IRI</a>|<a href="#edm_aggregatedCHO_range-class">range-class</a>|
 |<a href="#edm_dataProvider">edm:dataProvider</a>|<a href="#edm_dataProvider_cardinality">1..1</a>|||
@@ -120,8 +119,6 @@ _Shape definition in Turtle syntax:_
   ) ;
 .
 ```
-#### Property <a id="rdf_type" target="_blank" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a>
-------
 #### Property <a id="dc_rights" target="_blank" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
 ------
 

@@ -423,7 +423,10 @@ public class ShapesDataGenerator extends DocGenerator
             Iterator<RDFNode> iter2 = node.as(RDFList.class).iterator();
             while ( iter2.hasNext() )
             {
-                ret.add(iter2.next().asResource().getURI());
+                Resource r = iter2.next().asResource();
+                if ( RDF.type.equals(r) ) { continue; }
+
+                ret.add(r.getURI());
             }
         }
 

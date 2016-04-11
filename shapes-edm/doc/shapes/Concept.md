@@ -12,7 +12,6 @@ The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
-|<a href="#rdf_type">rdf:type</a>|0..*|||
 |<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>|<a href="#skos_altLabel_datatype">datatype</a>, <a href="#skos_altLabel_redundancy">redundancy</a>|
 |<a href="#skos_broadMatch">skos:broadMatch</a>|0..*|<a href="#skos_broadMatch_type">IRI</a>||
 |<a href="#skos_broader">skos:broader</a>|0..*|<a href="#skos_broader_type">IRI</a>|<a href="#skos_broader_range-class">range-class</a>|
@@ -121,8 +120,6 @@ _Shape definition in Turtle syntax:_
   ) ;
 .
 ```
-#### Property <a id="rdf_type" target="_blank" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a>
-------
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
 ------
 
