@@ -10,7 +10,6 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.WriterOutputStream;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
@@ -23,6 +22,8 @@ import eu.europeana.edm.shapes.validation.DatasetValidator;
 import eu.europeana.edm.shapes.validation.TopBraidValidator;
 import eu.europeana.edm.shapes.validation.ValidationUtils;
 import eu.europeana.github.MarkDownTemplate;
+
+import static org.apache.commons.io.IOUtils.*;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
@@ -108,11 +109,10 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
         System.out.println("Generating report: " + doc);
 
         try {
-            Map<String,String> replacements = new HashMap();
-            replacements.put("report", getReport(result));
             MarkDownTemplate template = new MarkDownTemplate();
-            template.parse(src);
-            template.print(doc, replacements);
+            template.parse(src)
+                    .newReplacement("report", getReport(result))
+                    .print(doc);
         }
         catch (IOException e) { e.printStackTrace(); }
 
@@ -131,7 +131,7 @@ public class ShapesDatasetValidationGenerator extends DocGenerator
             ps.flush();
             return sw.getBuffer().toString();
         }
-        finally { IOUtils.closeQuietly(ps); }
+        finally { closeQuietly(ps); }
     }
 
 

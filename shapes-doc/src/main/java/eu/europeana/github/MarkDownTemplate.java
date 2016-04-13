@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -24,21 +25,22 @@ public class MarkDownTemplate
     private static final String PREFIX = "#?";
     private static final String SUFFIX = "?#";
 
-    private Set<String> _keywords = new HashSet();
-    private String      _text;
+    private Set<String>        _keywords = new HashSet();
+    private String             _text;
+    private Map<String,String> _replacements = new HashMap();
 
-    public void parse(File file) throws IOException
+    public MarkDownTemplate parse(File file) throws IOException
     {
-        parse(org.apache.commons.io.FileUtils.readFileToString(file));
+        return parse(org.apache.commons.io.FileUtils.readFileToString(file));
     }
 
-    public void parse(InputStream is) throws IOException
+    public MarkDownTemplate parse(InputStream is) throws IOException
     {
-        try     { parse(FileUtils.readWholeFileAsUTF8(is)); }
-        finally { IOUtils.closeQuietly(is);                 }
+        try     { return parse(FileUtils.readWholeFileAsUTF8(is)); }
+        finally { IOUtils.closeQuietly(is);                        }
     }
 
-    public void parse(String s)
+    public MarkDownTemplate parse(String s)
     {
         int cursor = 0;
         while ( true )
@@ -54,26 +56,75 @@ public class MarkDownTemplate
             cursor = iE + 2;
         }
         _text = s;
+        return this;
     }
 
-    public void print(File file, Map<String,String> replacements)
-           throws IOException
+    public MarkDownTemplate clearReplacements()
+    {
+        _replacements.clear(); return this;
+    }
+
+    public MarkDownTemplate newReplacements(Map<String,String> replacements)
+    {
+        for ( Map.Entry<String, String> entry : replacements.entrySet() )
+        {
+            newReplacement(entry.getKey(), entry.getValue());
+        }
+        return this;
+    }
+
+    public MarkDownTemplate newReplacement(String key, String value)
+    {
+        if ( _keywords.contains(key) ) { _replacements.put(key, value); }
+        return this;
+    }
+
+    public MarkDownTemplate print(File file) throws IOException
     {
         PrintStream ps = new PrintStream(file);
-        try     { print(ps, replacements);  }
-        finally { IOUtils.closeQuietly(ps); }
+        try { print(ps); } finally { IOUtils.closeQuietly(ps); }
+        return this;
     }
 
-    public void print(PrintStream ps, Map<String,String> replacements)
+    public MarkDownTemplate print(PrintStream ps)
     {
         String text = _text;
         for ( String keyword : _keywords )
         {
-            String value = replacements.get(keyword);
+            String value = _replacements.get(keyword);
             text = text.replace(PREFIX + keyword + SUFFIX
                               , (value == null ? "" : value));
         }
         ps.print(text);
         ps.flush();
+        return this;
     }
+
+    /*
+    private void buildFile(File doc) throws FileNotFoundException
+    {
+        PrintStream ps = null;
+        try {
+            ps = new PrintStream(doc);
+            int cursor = 0;
+            int len    = _template.length();
+            while ( true )
+            {
+                int iS = _template.indexOf("#?", cursor);
+                if (iS < 0) { ps.append(_template, cursor, len); break; }
+
+                int iE = _template.indexOf("?#", iS);
+                if (iE < 0) { ps.append(_template, cursor, len); break; }
+
+                String key = _template.substring(iS+2, iE);
+                ps.append(_template, cursor, iS);
+                ps.append(_replace.get(key));
+
+                cursor = iE + 2;
+            }
+            ps.flush();
+        }
+        finally { IOUtils.closeQuietly(ps); }
+    }
+    */
 }

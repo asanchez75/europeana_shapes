@@ -10,7 +10,7 @@
         <skos:related>related</skos:related>
         <skos:broadMatch>broadMatch</skos:broadMatch>
         <skos:narrowMatch>narrowMatch</skos:narrowMatch>
-        <skos:relatedMatch>narrowMatch</skos:relatedMatch>
+        <skos:relatedMatch>relatedMatch</skos:relatedMatch>
         <skos:exactMatch>exactMatch</skos:exactMatch>
         <skos:closeMatch>closeMatch</skos:closeMatch>
         <skos:note rdf:resource="http://dbpedia.org/resource/xpto3"/>

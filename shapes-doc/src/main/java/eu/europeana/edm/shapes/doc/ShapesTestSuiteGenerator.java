@@ -4,19 +4,18 @@
 package eu.europeana.edm.shapes.doc;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.Properties;
 import java.util.TreeSet;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.riot.Lang;
 
 import eu.europeana.github.MarkDownWriter;
 import eu.europeana.shapes.testsuite.TestCase;
 import eu.europeana.shapes.testsuite.TestSuite;
+
+import static org.apache.commons.io.IOUtils.*;
 
 /**
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
@@ -57,7 +56,7 @@ public class ShapesTestSuiteGenerator extends DocGenerator
             genListing(col, w);
             w.flush();
         }
-        finally { IOUtils.closeQuietly(w); }
+        finally { closeQuietly(w); }
     }
 
     private void genHeader(Resource c, MarkDownWriter w)

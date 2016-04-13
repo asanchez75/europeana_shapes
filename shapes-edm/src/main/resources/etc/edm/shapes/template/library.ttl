@@ -51,11 +51,12 @@
 .
 
 
-:DisjointConstraint
+:DisjointPropertyConstraint
     a sh:ConstraintTemplate ;
     rdfs:subClassOf sh:TemplateConstraint ;
     rdfs:label "Disjoint constraint between nodes" ;
-    rdfs:comment "Tests if the range of a property is a typed literal";
+    rdfs:comment "Tests if the properties are disjoint";
+    sh:message "Value sets of {$predicate} and {?object} must be disjoint" ;
     sh:argument [
         sh:predicate sh:predicate ;
         sh:class rdf:Property ;
@@ -66,23 +67,51 @@
         sh:predicate sh:disjointWith ;
         sh:class rdf:Property ;
         sh:name "disjointWith" ;
-        sh:description "List of properties that the property must be disjoint with." ;
+        sh:description "List of properties that this property must be disjoint with." ;
     ] ;
-    sh:message "Not a typed literal" ;
     sh:sparql """
       SELECT $this ($this AS ?subject) $predicate (?value AS ?object)
       WHERE {
         $this $predicate ?value .
-        FILTER (!isLiteral(?value) || NOT EXISTS {
+        FILTER EXISTS {
             GRAPH $shapesGraph {
-                $predicates (rdf:rest*)/rdf:first ?disjointWith .
+                $disjointWith (rdf:rest*)/rdf:first ?disjoint .
             }
-            FILTER (?disjointWith = rdfs:Resource
-                || (?disjointWith = rdf:List && EXISTS { ?value rdf:first ?any }))
-        })
+            FILTER EXISTS { $this ?disjoint ?value }
+        }
       }
     """ ;
 .
+
+:DisjointConstraint
+    a sh:ConstraintTemplate ;
+    rdfs:subClassOf sh:TemplateConstraint ;
+    rdfs:label "Disjoint constraint between nodes" ;
+    rdfs:comment "Tests if the properties are disjoint";
+    sh:message "Value sets of {?predicate} must be disjoint with the specified list of properties" ;
+    sh:argument [
+        sh:predicate sh:disjointProperties ;
+        sh:class rdf:Property ;
+        sh:name "disjointProperties" ;
+        sh:description "List of properties that this property must be disjoint with." ;
+    ] ;
+    sh:sparql """
+      SELECT $this ($this AS ?subject) (?property1 AS ?predicate) (?value AS ?object)
+      WHERE {
+        GRAPH $shapesGraph {
+            $disjointProperties (rdf:rest*)/rdf:first ?property1 .
+        }
+        $this ?property1 ?value .
+        FILTER EXISTS {
+            GRAPH $shapesGraph {
+                $disjointProperties (rdf:rest*)/rdf:first ?property2 .
+            }
+            $this ?property2 ?value . FILTER (?property2 != ?property1)
+        }
+      }
+    """ ;
+.
+
 
 :TypedLiteralConstraint
     a sh:ConstraintTemplate ;

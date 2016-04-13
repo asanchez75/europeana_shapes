@@ -13,7 +13,7 @@ import eu.europeana.edm.shapes.doc.ShapesDataGenerator;
  * @author Hugo Manguinhas <hugo.manguinhas@europeana.eu>
  * @since 8 Mar 2016
  */
-public class RunDocGenerator
+public class RunShapesDocGeneration
 {
 
     public static final void main(String[] args) throws IOException

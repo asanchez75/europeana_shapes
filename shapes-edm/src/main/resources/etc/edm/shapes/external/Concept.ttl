@@ -52,6 +52,7 @@
   sh:property        <Concept/skos_altLabel#redundancy> ;
   sh:property        <Concept/skos_broader#type> ;
   sh:property        <Concept/skos_broader#range-class> ;
+  sh:constraint      <Concept/skos_broader#disjoint> ;
   sh:property        <Concept/skos_narrower#type> ;
   sh:property        <Concept/skos_related#type> ;
   sh:property        <Concept/skos_broadMatch#type> ;
@@ -175,7 +176,10 @@
   sh:filterShape [
       sh:property [
           sh:predicate skos:broader ;
-          sh:nodeKind sh:IRI ;
+#          sh:nodeKind sh:IRI ;
+          sh:valueShape [
+            sh:property [ sh:predicate rdf:type ; sh:minCount 1; ]
+          ]
       ]
   ] ;
   sh:predicate skos:broader ;
@@ -183,17 +187,36 @@
   sh:class edm:Concept ;
 .
 
+#<Concept/skos_broader#disjoint2>
+#  a sh:Constraint ;
+#  sh:description """skos:broader must be disjoint with: skos:narrower
+#                  , skos:related, skos:broadMatch, skos:narrowMatch
+#                  , skos:relatedMatch, skos:exactMatch, skos:closeMatch.""" ;
+#  dc:type esc:disjoint ;
+#  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+#  sh:severity sh:Warning ;
+#  sh:and (
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:narrower ;     ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:related ;      ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:broadMatch ;   ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:narrowMatch ;  ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:relatedMatch ; ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:exactMatch ;   ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:closeMatch ;   ] ]
+#  );
+#.
+
 <Concept/skos_broader#disjoint>
   a tpl:DisjointConstraint ;
   sh:description "skos:broader must be disjoint with " ;
   dc:type esc:disjoint ;
-  sh:predicate skos:broader ;
-  sh:disjointWith (
-    skos:narrower skos:related
+  sh:disjointProperties (
+    skos:broader skos:narrower skos:related
     skos:broadMatch skos:narrowMatch skos:relatedMatch
     skos:exactMatch skos:closeMatch
   );
 .
+
 
 # skos:narrower ################################################################
 

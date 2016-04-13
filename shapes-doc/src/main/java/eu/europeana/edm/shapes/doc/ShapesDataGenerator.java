@@ -15,9 +15,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeSet;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.NodeIterator;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFList;
 import org.apache.jena.rdf.model.RDFNode;
@@ -33,6 +31,8 @@ import org.topbraid.shacl.vocabulary.SH;
 
 import eu.europeana.edm.shapes.check.ShapeChecker;
 import eu.europeana.github.MarkDownWriter;
+
+import static org.apache.commons.io.IOUtils.*;
 import static org.apache.commons.io.FileUtils.*;
 
 /**
@@ -108,7 +108,7 @@ public class ShapesDataGenerator extends DocGenerator
             printConstraintDefinitions(shape, w);
             w.flush();
         }
-        finally { IOUtils.closeQuietly(w); }
+        finally { closeQuietly(w); }
     }
 
 
@@ -360,7 +360,7 @@ public class ShapesDataGenerator extends DocGenerator
             model.read(fis, "urn:dummy", FileUtils.langTurtle);
             return model;
         }
-        finally { IOUtils.closeQuietly(fis); }
+        finally { closeQuietly(fis); }
     }
 
     private String getFilenameWithoutExt(File file)
