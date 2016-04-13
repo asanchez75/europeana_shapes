@@ -5,7 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 
 The following constraints apply to shape or are not restricted to a specific property:
 <table>
-<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_Concept_closure">closure</a></td></tr>
+<tr><th align="right">Constraints</th><td width='100%'><a href="#http_www_europeana_eu_schemas_edm_shapes_external_Concept_closure">closure</a>, <a href="#http_www_europeana_eu_schemas_edm_shapes_external_Concept_disjoint">disjoint</a></td></tr>
 </table>
 
 The following table shows an overview of the constraints divided per property:
@@ -14,7 +14,7 @@ The following table shows an overview of the constraints divided per property:
 | :--- | :--: | :--: | :--- |
 |<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>|<a href="#skos_altLabel_datatype">datatype</a>, <a href="#skos_altLabel_redundancy">redundancy</a>|
 |<a href="#skos_broadMatch">skos:broadMatch</a>|0..*|<a href="#skos_broadMatch_type">IRI</a>||
-|<a href="#skos_broader">skos:broader</a>|0..*|<a href="#skos_broader_type">IRI</a>|<a href="#skos_broader_disjoint">disjoint</a>, <a href="#skos_broader_range-class">range-class</a>|
+|<a href="#skos_broader">skos:broader</a>|0..*|<a href="#skos_broader_type">IRI</a>|<a href="#skos_broader_range-class">range-class</a>|
 |<a href="#skos_closeMatch">skos:closeMatch</a>|0..*|<a href="#skos_closeMatch_type">IRI</a>||
 |<a href="#skos_exactMatch">skos:exactMatch</a>|0..*|<a href="#skos_exactMatch_type">IRI</a>||
 |<a href="#skos_inScheme">skos:inScheme</a>|0..*|<a href="#skos_inScheme_type">IRI</a>||
@@ -68,6 +68,7 @@ _Shape body in Turtle syntax:_
 
   # class level constraints
   sh:constraint      <Concept#closure> ;
+  sh:constraint      <Concept#disjoint> ;
 
   # SKOS properties
   sh:property        <Concept/skos_prefLabel#type> ;
@@ -78,7 +79,6 @@ _Shape body in Turtle syntax:_
   sh:property        <Concept/skos_altLabel#redundancy> ;
   sh:property        <Concept/skos_broader#type> ;
   sh:property        <Concept/skos_broader#range-class> ;
-  sh:constraint      <Concept/skos_broader#disjoint> ;
   sh:property        <Concept/skos_narrower#type> ;
   sh:property        <Concept/skos_related#type> ;
   sh:property        <Concept/skos_broadMatch#type> ;
@@ -119,6 +119,34 @@ _Shape definition in Turtle syntax:_
     skos:broadMatch skos:narrowMatch skos:relatedMatch
     skos:exactMatch skos:closeMatch skos:note skos:notation skos:inScheme
   ) ;
+.
+```
+
+##### Constraint <a id="http_www_europeana_eu_schemas_edm_shapes_external_Concept_disjoint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint">http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint</a>
+<table>
+<tr><th align="right">description</th><td>The value set of properties skos:broader, skos:narrower,
+                    skos:related, skos:broadMatch, skos:narrowMatch, 
+                    skos:relatedMatch, skos:exactMatch, skos:closeMatch,
+                    skos:broader must be disjoint</td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#disjoint">http://www.europeana.eu/schemas/edm/shapes/categories#disjoint</a></td></tr>
+</table>
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint>
+  a tpl:DisjointConstraint ;
+  dc:type esc:disjoint ;
+  sh:description """The value set of properties skos:broader, skos:narrower,
+                    skos:related, skos:broadMatch, skos:narrowMatch, 
+                    skos:relatedMatch, skos:exactMatch, skos:closeMatch,
+                    skos:broader must be disjoint""" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:disjointProperties (
+    skos:broader skos:narrower skos:related
+    skos:broadMatch skos:narrowMatch skos:relatedMatch
+    skos:exactMatch skos:closeMatch
+  );
 .
 ```
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
@@ -211,27 +239,6 @@ _Shape definition in Turtle syntax:_
 ```
 #### Property <a id="skos_broader" target="_blank" href="http://www.w3.org/2004/02/skos/core#broader">http://www.w3.org/2004/02/skos/core#broader</a>
 ------
-
-##### Constraint <a id="skos_broader_disjoint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint</a>
-<table>
-<tr><th align="right">description</th><td>skos:broader must be disjoint with </td></tr>
-<tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#disjoint">http://www.europeana.eu/schemas/edm/shapes/categories#disjoint</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint>
-  a tpl:DisjointConstraint ;
-  sh:description "skos:broader must be disjoint with " ;
-  dc:type esc:disjoint ;
-  sh:disjointProperties (
-    skos:broader skos:narrower skos:related
-    skos:broadMatch skos:narrowMatch skos:relatedMatch
-    skos:exactMatch skos:closeMatch
-  );
-.
-```
 
 ##### Constraint <a id="skos_broader_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class</a>
 <table>

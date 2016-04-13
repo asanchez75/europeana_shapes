@@ -42,6 +42,7 @@
 
   # class level constraints
   sh:constraint      <Concept#closure> ;
+  sh:constraint      <Concept#disjoint> ;
 
   # SKOS properties
   sh:property        <Concept/skos_prefLabel#type> ;
@@ -52,7 +53,6 @@
   sh:property        <Concept/skos_altLabel#redundancy> ;
   sh:property        <Concept/skos_broader#type> ;
   sh:property        <Concept/skos_broader#range-class> ;
-  sh:constraint      <Concept/skos_broader#disjoint> ;
   sh:property        <Concept/skos_narrower#type> ;
   sh:property        <Concept/skos_related#type> ;
   sh:property        <Concept/skos_broadMatch#type> ;
@@ -83,6 +83,20 @@
   ) ;
 .
 
+<Concept#disjoint>
+  a tpl:DisjointConstraint ;
+  dc:type esc:disjoint ;
+  sh:description """The value set of properties skos:broader, skos:narrower,
+                    skos:related, skos:broadMatch, skos:narrowMatch, 
+                    skos:relatedMatch, skos:exactMatch, skos:closeMatch,
+                    skos:broader must be disjoint""" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:disjointProperties (
+    skos:broader skos:narrower skos:related
+    skos:broadMatch skos:narrowMatch skos:relatedMatch
+    skos:exactMatch skos:closeMatch
+  );
+.
 
 # skos:prefLabel ###############################################################
 
@@ -205,18 +219,6 @@
 #    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:closeMatch ;   ] ]
 #  );
 #.
-
-<Concept/skos_broader#disjoint>
-  a tpl:DisjointConstraint ;
-  sh:description "skos:broader must be disjoint with " ;
-  dc:type esc:disjoint ;
-  sh:disjointProperties (
-    skos:broader skos:narrower skos:related
-    skos:broadMatch skos:narrowMatch skos:relatedMatch
-    skos:exactMatch skos:closeMatch
-  );
-.
-
 
 # skos:narrower ################################################################
 
