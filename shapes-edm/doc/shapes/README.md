@@ -13,6 +13,11 @@ documents, one for each EDM class:
 - [skos:Concept](Concept.md)
 - [edm:TimeSpan](TimeSpan.md)
 
+In addition to previous shape definitions, a Template Library was designed
+to support some of the requirements that were not met by existing SHACL 
+functions:
+- [EDM Template Library](library.md)
+
 ## Design choices
 
 This section explains the main design choices:
@@ -140,12 +145,32 @@ situations where inverting the order may not be ideal, such functions should be
 available.
 
 - **Better support for disjointness of properties:** It is possible to define
-that the range of two properties is disjoint using the sh:notEquals. However,
-in case several properties must be disjoint amongst each other, it is necessary
-to create a sh:PropertyConstraint for each pair of properties, namely C(n,2).
-This could be simplified if sh:notEquals could be used more than once per 
-sh:PropertyConstraint. Another option would be to define a function at the level
-of a shape stating the group of properties that must be pairwise disjoint.
+that the range of two properties is disjoint using the sh:notEquals.
 > As an example, in EDM all SKOS relation properties should be disjoint, namely: 
 > skos:broadMatch, skos:narrowMatch, skos:relatedMatch, skos:broader, 
 > skos:narrower, skos:related, skos:exactMatch, skos:closeMatch
+However, in case several properties must be disjoint amongst each other, it is
+necessary to create a sh:PropertyConstraint for each pair of properties, namely C(n,2).
+This could be simplified if sh:notEquals could be used more than once per 
+sh:PropertyConstraint. Another option would be to define a function (ie. SHACL 
+constraint template) at the level of a shape listing the properties that must 
+be pairwise disjoint, which was the option that we adopted. Below is the Shape
+definition using the sh:ConstraintTemplate defined 
+[here](library.md#DisjointConstraint).
+```
+<http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint>
+  a etp:DisjointConstraint ;
+  dc:type esc:disjoint ;
+  sh:description """The value set of properties skos:broader, skos:narrower,
+                    skos:related, skos:broadMatch, skos:narrowMatch, 
+                    skos:relatedMatch, skos:exactMatch, skos:closeMatch,
+                    skos:broader must be disjoint""" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:disjointProperties (
+    skos:broader skos:narrower skos:related
+    skos:broadMatch skos:narrowMatch skos:relatedMatch
+    skos:exactMatch skos:closeMatch
+  );
+.
+```
+
