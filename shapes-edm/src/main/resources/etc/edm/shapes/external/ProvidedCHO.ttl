@@ -12,7 +12,7 @@
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 
 @prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
-@prefix tpl:  <http://www.europeana.eu/schemas/edm/shapes/template#>   .
+@prefix etp:  <http://www.europeana.eu/schemas/edm/shapes/library#>   .
 
 @base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
 @prefix Agent:    <Agent#base> .
@@ -29,7 +29,7 @@
   owl:versionInfo "Draft version for edm:ProvidedCHO Class"^^xsd:string ;
 
   # Import shape template library
-  sh:shapesGraph tpl: ;
+  sh:shapesGraph etp: ;
 
   # SHACL language
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;
@@ -419,7 +419,7 @@
 # dc:rights ####################################################################
 
 <ProvidedCHO/dc_rights#redundancy>
-  a tpl:RedundancyConstraint, sh:Constraint ;
+  a etp:RedundancyConstraint, sh:Constraint ;
   dc:type esc:redundancy ;
   sh:description """Check if dc:rights has the same value than edm:rights of the 
                     Aggregation (either as rdf:resource or literal), if yes the 

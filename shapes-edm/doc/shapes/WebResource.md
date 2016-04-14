@@ -81,7 +81,7 @@ _Shape body in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>An edm:WebResource resource must be defined using only the 
                     properties defined in EDM for WebResources</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -111,7 +111,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>the reference should be one to an Agent (the access to the 
                     data and the data itself should be formatted according to 
                     the Agent specifications.)</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -141,7 +141,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="dc_description_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all dc:description should have a language tag</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -172,7 +172,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>dc:rights should not be the same as edm:rights, if true the 
                     field is redundant</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -199,7 +199,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="dct_created_correlation_1" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -219,7 +219,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued
                     and dcterms:created in edm:ProvidedCHO</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -244,7 +244,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-value">http://www.europeana.eu/schemas/edm/shapes/categories#range-value</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -276,7 +276,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_hasPart#range-class</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -317,7 +317,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_isPartOf#range-class</a>
 <table>
 <tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -357,7 +357,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>dcterms:issued must be equal or later than dcterms:created 
                     and dcterms:issued of the ProvidedCHO</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -382,7 +382,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>the reference should be one to a TimeSpan (the access to 
                     the data and the data itself should be formatted according 
                     to the TimeSpan specifications.)</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -412,7 +412,7 @@ _Shape definition in Turtle syntax:_
 <tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
                     the year and hyphenating the day and month parts: 
                     YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-value">http://www.europeana.eu/schemas/edm/shapes/categories#range-value</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -443,7 +443,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>Both WebResources referred to and subject of this property 
                     must share the same parent, if present</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">?</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -467,7 +467,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_isNextInSequence#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -507,7 +507,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_rights_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/edm_rights#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -544,7 +544,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>Check the value is one of the controlled values: 
              http://pro.europeana.eu/web/guest/available-rights-statements </td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/37">R-30-DEFINE-VALUE-LISTS</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/423">R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#values">http://www.europeana.eu/schemas/edm/shapes/categories#values</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_

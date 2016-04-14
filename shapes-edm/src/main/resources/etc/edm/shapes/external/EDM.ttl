@@ -9,7 +9,7 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix edm:  <http://www.europeana.eu/schemas/edm/> .
 
-@prefix tpl:  <http://www.europeana.eu/schemas/edm/shapes/template#> .
+@prefix etp:  <http://www.europeana.eu/schemas/edm/shapes/library#> .
 
 @base         <http://www.europeana.eu/schemas/edm/shapes/external/> .
 
@@ -34,7 +34,7 @@
   owl:imports <TimeSpan> ;
 
   # Import shape template library
-  sh:shapesGraph tpl: ;
+  sh:shapesGraph etp: ;
 
   # SHACL language
   sh:shapesGraph <http://www.w3.org/ns/shacl> ;

@@ -101,7 +101,7 @@ _Shape body in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>An skos:Concept resource must be defined using only the 
                     properties defined in EDM for Concepts</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -128,14 +128,14 @@ _Shape definition in Turtle syntax:_
                     skos:related, skos:broadMatch, skos:narrowMatch, 
                     skos:relatedMatch, skos:exactMatch, skos:closeMatch,
                     skos:broader must be disjoint</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#disjoint">http://www.europeana.eu/schemas/edm/shapes/categories#disjoint</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
 
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint>
-  a tpl:DisjointConstraint ;
+  a etp:DisjointConstraint ;
   dc:type esc:disjoint ;
   sh:description """The value set of properties skos:broader, skos:narrower,
                     skos:related, skos:broadMatch, skos:narrowMatch, 
@@ -155,7 +155,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -182,7 +182,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
                     skos:prefLabel</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -243,7 +243,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_broader_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class</a>
 <table>
 <tr><th align="right">description</th><td>skos:broader must refer to a valid skos:Concept</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -399,7 +399,7 @@ _Shape definition in Turtle syntax:_
 
 ```
 <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype>
-  a tpl:TypedLiteralConstraint ;
+  a etp:TypedLiteralConstraint ;
   sh:description "skos:notation should be assigned with a typed literal" ;
   dc:type esc:datatype ;
   sh:predicate skos:notation ;
@@ -429,7 +429,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -475,7 +475,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality</a>
 <table>
 <tr><th align="right">description</th><td>There must be at most one skos:prefLabel per language</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -496,7 +496,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#datatype</a>
 <table>
 <tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_

@@ -166,13 +166,25 @@ This document contains test cases that target constraints that are specific to r
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://example.org/xpto> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Not a typed literal" ;
   sh:object            "123"@en ;
   sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#TypedLiteralConstraint> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#TypedLiteralConstraint> ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
 ] .
 
@@ -184,19 +196,7 @@ This document contains test cases that target constraints that are specific to r
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#TypedLiteralConstraint> ;
-  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://example.org/xpto> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#TypedLiteralConstraint> ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
 ] .
 ```
@@ -226,25 +226,13 @@ This document contains test cases that target constraints that are specific to r
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Value sets of skos:narrower must be disjoint with the specified list of properties" ;
+  sh:message           "Value sets of skos:broadMatch must be disjoint with the specified list of properties" ;
   sh:object            <http://dbpedia.org/resource/xpto1> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrower> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#broadMatch> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#DisjointConstraint> ;
-  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Value sets of skos:related must be disjoint with the specified list of properties" ;
-  sh:object            <http://dbpedia.org/resource/xpto1> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#related> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#DisjointConstraint> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#DisjointConstraint> ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
 ] .
 
@@ -254,9 +242,21 @@ This document contains test cases that target constraints that are specific to r
   sh:object            <http://dbpedia.org/resource/xpto1> ;
   sh:predicate         <http://www.w3.org/2004/02/skos/core#broader> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#DisjointConstraint> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#DisjointConstraint> ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Value sets of skos:related must be disjoint with the specified list of properties" ;
+  sh:object            <http://dbpedia.org/resource/xpto1> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#related> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#DisjointConstraint> ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
 ] .
 
@@ -266,21 +266,21 @@ This document contains test cases that target constraints that are specific to r
   sh:object            <http://dbpedia.org/resource/xpto1> ;
   sh:predicate         <http://www.w3.org/2004/02/skos/core#narrowMatch> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#DisjointConstraint> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#DisjointConstraint> ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
 ] .
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Value sets of skos:broadMatch must be disjoint with the specified list of properties" ;
+  sh:message           "Value sets of skos:narrower must be disjoint with the specified list of properties" ;
   sh:object            <http://dbpedia.org/resource/xpto1> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#broadMatch> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrower> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#disjoint> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/template#DisjointConstraint> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#DisjointConstraint> ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
 ] .
 ```

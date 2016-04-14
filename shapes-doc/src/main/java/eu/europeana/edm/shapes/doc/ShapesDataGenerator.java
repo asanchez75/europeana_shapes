@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeSet;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFList;
@@ -25,13 +26,13 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.util.FileUtils;
 import org.topbraid.spin.util.JenaUtil;
+import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.DC;
 import org.topbraid.shacl.vocabulary.SH;
 
 import eu.europeana.edm.shapes.check.ShapeChecker;
 import eu.europeana.github.MarkDownWriter;
-
 import static org.apache.commons.io.IOUtils.*;
 import static org.apache.commons.io.FileUtils.*;
 
@@ -62,6 +63,16 @@ public class ShapesDataGenerator extends DocGenerator
     {
         genAllDocumentation(_config.getFile("shapes.edm.data")
                           , _config.getFile("shapes.edm.doc"));
+        File library = _config.getFile("shapes.edm.library");
+        try {
+            buildLibraryDoc(library
+                          , _config.getFile("shapes.edm.doc"));
+        }
+        catch (IOException e)
+        {
+            throw new RuntimeException(
+                    "Error processing file: " + library.getAbsolutePath(), e);
+        }
     }
 
 
@@ -109,6 +120,105 @@ public class ShapesDataGenerator extends DocGenerator
             w.flush();
         }
         finally { closeQuietly(w); }
+    }
+
+    /*
+    private void processRoot(File def, Model model)
+    {
+        String ns = _config.getProperty("shapes.edm.ns");
+        Resource shapeOnt = model.getResource(ns);
+        if ( model.getRequiredProperty(shapeOnt, RDF.type) == null ) { return; }
+
+        StmtIterator iter = shapeOnt.listProperties(SH.shapesGraph);
+        while ( iter.hasNext() )
+        {
+            iter.next().getResource();
+        }
+    }
+    /*
+
+
+    /***************************************************************************
+     * Private Methods - Library
+     **************************************************************************/
+
+    private void buildLibraryDoc(File src, File dirOut) throws IOException
+    {
+        if ( src.isDirectory() ) { return; }
+
+        File out = new File(dirOut, getFilenameWithoutExt(src) + ".md");
+
+        Model    model = loadModel(src);
+
+
+        Resource resource = null;
+        ResIterator iter = model.listResourcesWithProperty(RDF.type
+                                                         , OWL.Ontology);
+        try {
+            if ( !iter.hasNext() ) { return; }
+            resource = iter.next();
+        }
+        finally { iter.close(); }
+
+        MarkDownWriter w    = new MarkDownWriter(out);
+        try {
+            _defs = _parser.loadDefinitions(src);
+            printLibrary(resource, src, w);
+            w.flush();
+        }
+        finally { closeQuietly(w); }
+    }
+
+    private void printLibrary(Resource ontology, File src, MarkDownWriter w)
+    {
+        printLibraryDescription(ontology, src, w);
+        printFunctionsIndex(ontology, w);
+        printFunctions(ontology, w);
+    }
+
+    private void printLibraryDescription(Resource library, File file
+                                       , MarkDownWriter w)
+    {
+        w.printH2("Shapes Template Library for EDM");
+        w.printItalic("This document was generated from the [shapes file]("
+                    + _config.toRemote(file) + ") using this [software](/shapes-doc)")
+                    .println();
+        /*
+        StmtIterator iter = library.listProperties(SH.description);
+        while ( iter.hasNext() )
+        {
+            String s = iter.next().getLiteral().getString();
+            w.printQuoted(s.replaceAll("\\s+", " "));
+        }
+        */
+    }
+
+    private void printFunctionsIndex(Resource ontology, MarkDownWriter w)
+    {
+        w.printParagraph("Below is the index of all functions defined"
+                       + " in this Library:");
+        ResIterator iter = ontology.getModel().listResourcesWithProperty(
+                RDF.type, SH.ConstraintTemplate);
+        while ( iter.hasNext() )
+        {
+            String name = iter.next().getLocalName();
+            w.printLinkItem(0, w.newLink(name, "#" + name, name, false));
+        }
+    }
+
+    private void printFunctions(Resource ontology, MarkDownWriter w)
+    {
+        ResIterator iter = ontology.getModel().listResourcesWithProperty(
+                RDF.type, SH.ConstraintTemplate);
+        while ( iter.hasNext() ) { printFunction(iter.next(), w); }
+    }
+
+    private void printFunction(Resource function, MarkDownWriter w)
+    {
+        String name = function.getLocalName();
+        w.printH5("Template " + w.newLink(name, function.getURI(), name, true));
+
+        printRule(function, w);
     }
 
 
@@ -311,7 +421,7 @@ public class ShapesDataGenerator extends DocGenerator
         w.print("<tr><th align=\"right\">subject</th><td>");
 
         boolean first = true;
-        StmtIterator iter = constraint.listProperties(DC.subject);
+        StmtIterator iter = constraint.listProperties(DC.relation);
         while ( iter.hasNext() )
         {
             if ( first ) { first = false; } else { w.print(", "); }

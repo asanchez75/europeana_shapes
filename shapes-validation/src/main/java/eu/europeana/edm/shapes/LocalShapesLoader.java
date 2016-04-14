@@ -40,13 +40,11 @@ public class LocalShapesLoader implements ShapesLoader
     @Override
     public Model load(String url) { return _cache.get(url); }
 
-    public void inspect(File dir)
+    public void inspect(File file)
     {
-        for ( File file : dir.listFiles() )
-        {
-            if ( file.isDirectory() ) { inspect(file);   }
-            else                      { loadModel(file); }
-        }
+        if ( !file.isDirectory() ) { loadModel(file); return; }
+
+        for ( File f : file.listFiles() ) { inspect(f); }
     }
 
     private void loadModel(File file)

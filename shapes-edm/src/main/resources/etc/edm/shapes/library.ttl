@@ -4,8 +4,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 
-@prefix :     <http://www.europeana.eu/schemas/edm/shapes/template#> .
-@prefix etp:  <http://www.europeana.eu/schemas/edm/shapes/template#> .
+@prefix :     <http://www.europeana.eu/schemas/edm/shapes/library#> .
+@prefix etp:  <http://www.europeana.eu/schemas/edm/shapes/library#> .
 
 ################################################################################
 #                         SHAPE TEMPLATE DEFINITIONS                           #

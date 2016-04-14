@@ -76,7 +76,7 @@ _Shape body in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>At least one edm:isShownAt or edm:isShownBy should be 
                     present</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/74">R-67-BOOLEAN-PROPERTY-PATTERNS</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/75">R-68-REQUIRED-PROPERTIES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -100,7 +100,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>An ore:Aggregation resource must be defined using only the 
                     properties defined in EDM for Aggregations</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="null">R-206-DEFINE-ALLOWED-NAMESPACES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#closure">http://www.europeana.eu/schemas/edm/shapes/categories#closure</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -126,7 +126,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>dc:rights should not be the same as edm:rights, if true
                     the field is redundant</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -166,7 +166,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_aggregatedCHO_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -185,7 +185,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_aggregatedCHO_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:ProvidedCHO</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -226,7 +226,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_dataProvider_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_dataProvider#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_dataProvider#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -247,7 +247,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_hasView_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -289,7 +289,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_isShownAt_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -308,7 +308,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_isShownAt_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -350,7 +350,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_isShownBy_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -369,7 +369,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_isShownBy_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -411,7 +411,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_object_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#range-class</a>
 <table>
 <tr><th align="right">description</th><td>The reference should be a valid edm:WebResource</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/455">R-171bis-VALIDATE-RESOURCE-MEDIA-TYPE-FROM-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -453,7 +453,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_provider_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_provider#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_provider#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -492,7 +492,7 @@ _Shape definition in Turtle syntax:_
 <table>
 <tr><th align="right">description</th><td>Check the value is one of the controlled values: 
              http://pro.europeana.eu/web/guest/available-rights-statements </td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/37">R-30-DEFINE-VALUE-LISTS</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/423">R-210-DEFINE-EXCLUSIVELY-ALLOWED-PROPERTIES</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#values">http://www.europeana.eu/schemas/edm/shapes/categories#values</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
@@ -527,7 +527,7 @@ _Shape definition in Turtle syntax:_
 ##### Constraint <a id="edm_ugc_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_ugc#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_ugc#cardinality</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
 <tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
