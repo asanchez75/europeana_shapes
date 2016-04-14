@@ -9,6 +9,7 @@ Below is the index of all functions defined in this Library:
 - <a id="RedundancyConstraint" href="#RedundancyConstraint">RedundancyConstraint</a>
 
 ##### Template <a id="TypedLiteralConstraint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/library#TypedLiteralConstraint">TypedLiteralConstraint</a>
+------
 _Shape definition in Turtle syntax:_
 
 ```
@@ -28,9 +29,16 @@ _Shape definition in Turtle syntax:_
       SELECT ?this (?this as ?subject) $predicate (?value AS ?object)
       WHERE {
         $this $predicate ?value .
+        BIND (datatype(?value) AS ?dt) .
+        FILTER ( isLiteral(?value) && ( (?dt = xsd:string)
+                                     || (?dt = rdf:langString ) ) ) .
+      }
+    """ ;
+.
 ```
 
 ##### Template <a id="DisjointConstraint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/library#DisjointConstraint">DisjointConstraint</a>
+------
 _Shape definition in Turtle syntax:_
 
 ```
@@ -51,9 +59,21 @@ _Shape definition in Turtle syntax:_
       WHERE {
         GRAPH $shapesGraph {
             $disjointProperties (rdf:rest*)/rdf:first ?property1 .
+        }
+        $this ?property1 ?value .
+        FILTER EXISTS {
+            GRAPH $shapesGraph {
+                $disjointProperties (rdf:rest*)/rdf:first ?property2 .
+            }
+            $this ?property2 ?value . FILTER (?property2 != ?property1)
+        }
+      }
+    """ ;
+.
 ```
 
 ##### Template <a id="DisjointPropertyConstraint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/library#DisjointPropertyConstraint">DisjointPropertyConstraint</a>
+------
 _Shape definition in Turtle syntax:_
 
 ```
@@ -79,9 +99,19 @@ _Shape definition in Turtle syntax:_
       SELECT $this ($this AS ?subject) $predicate (?value AS ?object)
       WHERE {
         $this $predicate ?value .
+        FILTER EXISTS {
+            GRAPH $shapesGraph {
+                $disjointWith (rdf:rest*)/rdf:first ?disjoint .
+            }
+            FILTER EXISTS { $this ?disjoint ?value }
+        }
+      }
+    """ ;
+.
 ```
 
 ##### Template <a id="RedundancyConstraint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/library#RedundancyConstraint">RedundancyConstraint</a>
+------
 _Shape definition in Turtle syntax:_
 
 ```
@@ -112,4 +142,7 @@ _Shape definition in Turtle syntax:_
     sh:sparql """
       SELECT ?this (?this as ?subject) $predicate ?value
       WHERE { ?node rdf:type ?scopeClass ; ?property  ?value .
+              ?this                        ?notEquals ?value . }
+    """ ;
+.
 ```

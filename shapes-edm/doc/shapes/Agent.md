@@ -184,7 +184,9 @@ _Shape definition in Turtle syntax:_
   ) ;
 .
 ```
+
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
+
 ------
 
 ##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype</a>
@@ -252,7 +254,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
+
 ------
 
 ##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype</a>
@@ -298,7 +302,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
+
 ------
 
 ##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality</a>
@@ -365,7 +371,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="dc_date" target="_blank" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
+
 ------
 
 ##### Constraint <a id="dc_date_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal</a>
@@ -396,7 +404,9 @@ _Shape definition in Turtle syntax:_
   sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 .
 ```
+
 #### Property <a id="dc_identifier" target="_blank" href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a>
+
 ------
 
 ##### Constraint <a id="dc_identifier_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_identifier#type</a>
@@ -416,7 +426,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
+
 ------
 
 ##### Constraint <a id="dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class</a>
@@ -463,7 +475,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
+
 ------
 
 ##### Constraint <a id="dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class</a>
@@ -510,7 +524,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="foaf_name" target="_blank" href="http://xmlns.com/foaf/0.1/name">http://xmlns.com/foaf/0.1/name</a>
+
 ------
 
 ##### Constraint <a id="foaf_name_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/foaf_name#type</a>
@@ -530,7 +546,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_biographicalInformation" target="_blank" href="http://rdvocab.info/ElementsGr2/biographicalInformation">http://rdvocab.info/ElementsGr2/biographicalInformation</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_biographicalInformation_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_biographicalInformation#type</a>
@@ -550,7 +568,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_dateOfBirth" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfBirth">http://rdvocab.info/ElementsGr2/dateOfBirth</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_dateOfBirth_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#cardinality</a>
@@ -640,7 +660,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_dateOfDeath" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfDeath">http://rdvocab.info/ElementsGr2/dateOfDeath</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_dateOfDeath_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#cardinality</a>
@@ -709,7 +731,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_dateOfEstablishment" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfEstablishment">http://rdvocab.info/ElementsGr2/dateOfEstablishment</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_dateOfEstablishment_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation</a>
@@ -779,7 +803,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_dateOfTermination" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfTermination">http://rdvocab.info/ElementsGr2/dateOfTermination</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_dateOfTermination_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal</a>
@@ -828,7 +854,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_gender" target="_blank" href="http://rdvocab.info/ElementsGr2/gender">http://rdvocab.info/ElementsGr2/gender</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_gender_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#cardinality</a>
@@ -868,7 +896,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="rdaGr2_placeOfBirth" target="_blank" href="http://rdvocab.info/ElementsGr2/placeOfBirth">http://rdvocab.info/ElementsGr2/placeOfBirth</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_placeOfBirth_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality</a>
@@ -890,7 +920,9 @@ _Shape definition in Turtle syntax:_
   sh:maxCount 1 ;
 .
 ```
+
 #### Property <a id="rdaGr2_placeOfDeath" target="_blank" href="http://rdvocab.info/ElementsGr2/placeOfDeath">http://rdvocab.info/ElementsGr2/placeOfDeath</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_placeOfDeath_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality</a>
@@ -912,7 +944,9 @@ _Shape definition in Turtle syntax:_
   sh:maxCount 1 ;
 .
 ```
+
 #### Property <a id="rdaGr2_professionOrOccupation" target="_blank" href="http://rdvocab.info/ElementsGr2/professionOrOccupation">http://rdvocab.info/ElementsGr2/professionOrOccupation</a>
+
 ------
 
 ##### Constraint <a id="rdaGr2_professionOrOccupation_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality</a>
@@ -932,7 +966,9 @@ _Shape definition in Turtle syntax:_
   sh:minCount 0 ;
 .
 ```
+
 #### Property <a id="edm_begin" target="_blank" href="http://www.europeana.eu/schemas/edm/begin">http://www.europeana.eu/schemas/edm/begin</a>
+
 ------
 
 ##### Constraint <a id="edm_begin_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#cardinality</a>
@@ -1042,7 +1078,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="edm_end" target="_blank" href="http://www.europeana.eu/schemas/edm/end">http://www.europeana.eu/schemas/edm/end</a>
+
 ------
 
 ##### Constraint <a id="edm_end_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#cardinality</a>
@@ -1133,7 +1171,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="edm_hasMet" target="_blank" href="http://www.europeana.eu/schemas/edm/hasMet">http://www.europeana.eu/schemas/edm/hasMet</a>
+
 ------
 
 ##### Constraint <a id="edm_hasMet_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class</a>
@@ -1177,7 +1217,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_isRelatedTo" target="_blank" href="http://www.europeana.eu/schemas/edm/isRelatedTo">http://www.europeana.eu/schemas/edm/isRelatedTo</a>
+
 ------
 
 ##### Constraint <a id="edm_isRelatedTo_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_isRelatedTo#type</a>
@@ -1197,7 +1239,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="owl_sameAs" target="_blank" href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
+
 ------
 
 ##### Constraint <a id="owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/owl_sameAs#type</a>

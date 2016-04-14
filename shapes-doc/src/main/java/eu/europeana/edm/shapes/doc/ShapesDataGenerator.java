@@ -217,6 +217,7 @@ public class ShapesDataGenerator extends DocGenerator
     {
         String name = function.getLocalName();
         w.printH5("Template " + w.newLink(name, function.getURI(), name, true));
+        w.printSeparator();
 
         printRule(function, w);
     }
@@ -247,9 +248,9 @@ public class ShapesDataGenerator extends DocGenerator
 
     private void printPropertyHeader(Resource prop, MarkDownWriter w)
     {
-        w.print("#### Property ");
         String uri = prop.getURI();
-        w.printLink(uri, uri, getLocalReference(prop), true);
+        w.printH4("Property "
+                + w.newLink(uri, uri, getLocalReference(prop), true));
         w.println();
         w.printSeparator();
     }

@@ -109,7 +109,7 @@ public class ShapesDefinitionParser
         public State newLine(String line)
         {
             _sb.append(line).append('\n');
-            if ( line.trim().endsWith(".") ) { return newDefinition(); }
+            if ( line.trim().equals(".") ) { return newDefinition(); }
             return this;
         }
 

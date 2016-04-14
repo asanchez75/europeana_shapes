@@ -119,7 +119,9 @@ _Shape definition in Turtle syntax:_
   ) ;
 .
 ```
+
 #### Property <a id="dc_rights" target="_blank" href="http://purl.org/dc/elements/1.1/rights">http://purl.org/dc/elements/1.1/rights</a>
+
 ------
 
 ##### Constraint <a id="dc_rights_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#redundancy</a>
@@ -160,7 +162,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="edm_aggregatedCHO" target="_blank" href="http://www.europeana.eu/schemas/edm/aggregatedCHO">http://www.europeana.eu/schemas/edm/aggregatedCHO</a>
+
 ------
 
 ##### Constraint <a id="edm_aggregatedCHO_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_aggregatedCHO#cardinality</a>
@@ -220,7 +224,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_dataProvider" target="_blank" href="http://www.europeana.eu/schemas/edm/dataProvider">http://www.europeana.eu/schemas/edm/dataProvider</a>
+
 ------
 
 ##### Constraint <a id="edm_dataProvider_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_dataProvider#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_dataProvider#cardinality</a>
@@ -241,7 +247,9 @@ _Shape definition in Turtle syntax:_
   sh:maxCount 1 ;
 .
 ```
+
 #### Property <a id="edm_hasView" target="_blank" href="http://www.europeana.eu/schemas/edm/hasView">http://www.europeana.eu/schemas/edm/hasView</a>
+
 ------
 
 ##### Constraint <a id="edm_hasView_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_hasView#range-class</a>
@@ -283,7 +291,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_isShownAt" target="_blank" href="http://www.europeana.eu/schemas/edm/isShownAt">http://www.europeana.eu/schemas/edm/isShownAt</a>
+
 ------
 
 ##### Constraint <a id="edm_isShownAt_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownAt#cardinality</a>
@@ -344,7 +354,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_isShownBy" target="_blank" href="http://www.europeana.eu/schemas/edm/isShownBy">http://www.europeana.eu/schemas/edm/isShownBy</a>
+
 ------
 
 ##### Constraint <a id="edm_isShownBy_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_isShownBy#cardinality</a>
@@ -405,7 +417,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_object" target="_blank" href="http://www.europeana.eu/schemas/edm/object">http://www.europeana.eu/schemas/edm/object</a>
+
 ------
 
 ##### Constraint <a id="edm_object_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_object#range-class</a>
@@ -447,7 +461,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_provider" target="_blank" href="http://www.europeana.eu/schemas/edm/provider">http://www.europeana.eu/schemas/edm/provider</a>
+
 ------
 
 ##### Constraint <a id="edm_provider_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_provider#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_provider#cardinality</a>
@@ -468,7 +484,9 @@ _Shape definition in Turtle syntax:_
   sh:maxCount 1 ;
 .
 ```
+
 #### Property <a id="edm_rights" target="_blank" href="http://www.europeana.eu/schemas/edm/rights">http://www.europeana.eu/schemas/edm/rights</a>
+
 ------
 
 ##### Constraint <a id="edm_rights_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_rights#type">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_rights#type</a>
@@ -521,7 +539,9 @@ _Shape definition in Turtle syntax:_
           <http://www.europeana.eu/rights/unknown/> ) ;
 .
 ```
+
 #### Property <a id="edm_ugc" target="_blank" href="http://www.europeana.eu/schemas/edm/ugc">http://www.europeana.eu/schemas/edm/ugc</a>
+
 ------
 
 ##### Constraint <a id="edm_ugc_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_ugc#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_ugc#cardinality</a>
@@ -559,7 +579,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="edm_unstored" target="_blank" href="http://www.europeana.eu/schemas/edm/unstored">http://www.europeana.eu/schemas/edm/unstored</a>
+
 ------
 
 ##### Constraint <a id="edm_unstored_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_unstored#type">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/edm_unstored#type</a>

@@ -123,7 +123,9 @@ _Shape definition in Turtle syntax:_
   ) ;
 .
 ```
+
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
+
 ------
 
 ##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype</a>
@@ -190,7 +192,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
+
 ------
 
 ##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype</a>
@@ -235,7 +239,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
+
 ------
 
 ##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality</a>
@@ -301,7 +307,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="dct_hasPart" target="_blank" href="http://purl.org/dc/terms/hasPart">http://purl.org/dc/terms/hasPart</a>
+
 ------
 
 ##### Constraint <a id="dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class</a>
@@ -347,7 +355,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
+
 ------
 
 ##### Constraint <a id="dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class</a>
@@ -393,7 +403,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="edm_begin" target="_blank" href="http://www.europeana.eu/schemas/edm/begin">http://www.europeana.eu/schemas/edm/begin</a>
+
 ------
 
 ##### Constraint <a id="edm_begin_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#cardinality</a>
@@ -474,7 +486,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="edm_end" target="_blank" href="http://www.europeana.eu/schemas/edm/end">http://www.europeana.eu/schemas/edm/end</a>
+
 ------
 
 ##### Constraint <a id="edm_end_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#cardinality</a>
@@ -536,7 +550,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="edm_isNextInSequence" target="_blank" href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
+
 ------
 
 ##### Constraint <a id="edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class</a>
@@ -582,7 +598,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="owl_sameAs" target="_blank" href="http://www.w3.org/2002/07/owl#sameAs">http://www.w3.org/2002/07/owl#sameAs</a>
+
 ------
 
 ##### Constraint <a id="owl_sameAs_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/owl_sameAs#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/owl_sameAs#type</a>

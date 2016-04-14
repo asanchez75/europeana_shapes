@@ -149,7 +149,9 @@ _Shape definition in Turtle syntax:_
   );
 .
 ```
+
 #### Property <a id="skos_altLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
+
 ------
 
 ##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#datatype</a>
@@ -217,7 +219,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_broadMatch" target="_blank" href="http://www.w3.org/2004/02/skos/core#broadMatch">http://www.w3.org/2004/02/skos/core#broadMatch</a>
+
 ------
 
 ##### Constraint <a id="skos_broadMatch_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#type</a>
@@ -237,7 +241,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_broader" target="_blank" href="http://www.w3.org/2004/02/skos/core#broader">http://www.w3.org/2004/02/skos/core#broader</a>
+
 ------
 
 ##### Constraint <a id="skos_broader_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#range-class</a>
@@ -286,7 +292,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_closeMatch" target="_blank" href="http://www.w3.org/2004/02/skos/core#closeMatch">http://www.w3.org/2004/02/skos/core#closeMatch</a>
+
 ------
 
 ##### Constraint <a id="skos_closeMatch_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_closeMatch#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_closeMatch#type</a>
@@ -306,7 +314,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_exactMatch" target="_blank" href="http://www.w3.org/2004/02/skos/core#exactMatch">http://www.w3.org/2004/02/skos/core#exactMatch</a>
+
 ------
 
 ##### Constraint <a id="skos_exactMatch_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_exactMatch#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_exactMatch#type</a>
@@ -326,7 +336,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_inScheme" target="_blank" href="http://www.w3.org/2004/02/skos/core#inScheme">http://www.w3.org/2004/02/skos/core#inScheme</a>
+
 ------
 
 ##### Constraint <a id="skos_inScheme_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#type</a>
@@ -346,7 +358,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_narrowMatch" target="_blank" href="http://www.w3.org/2004/02/skos/core#narrowMatch">http://www.w3.org/2004/02/skos/core#narrowMatch</a>
+
 ------
 
 ##### Constraint <a id="skos_narrowMatch_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#type</a>
@@ -366,7 +380,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_narrower" target="_blank" href="http://www.w3.org/2004/02/skos/core#narrower">http://www.w3.org/2004/02/skos/core#narrower</a>
+
 ------
 
 ##### Constraint <a id="skos_narrower_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#type</a>
@@ -386,7 +402,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_notation" target="_blank" href="http://www.w3.org/2004/02/skos/core#notation">http://www.w3.org/2004/02/skos/core#notation</a>
+
 ------
 
 ##### Constraint <a id="skos_notation_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype</a>
@@ -423,7 +441,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
+
 ------
 
 ##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_note#datatype</a>
@@ -469,7 +489,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_prefLabel" target="_blank" href="http://www.w3.org/2004/02/skos/core#prefLabel">http://www.w3.org/2004/02/skos/core#prefLabel</a>
+
 ------
 
 ##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality</a>
@@ -536,7 +558,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:Literal ;
 .
 ```
+
 #### Property <a id="skos_related" target="_blank" href="http://www.w3.org/2004/02/skos/core#related">http://www.w3.org/2004/02/skos/core#related</a>
+
 ------
 
 ##### Constraint <a id="skos_related_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_related#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_related#type</a>
@@ -574,7 +598,9 @@ _Shape definition in Turtle syntax:_
   sh:nodeKind sh:IRI ;
 .
 ```
+
 #### Property <a id="skos_relatedMatch" target="_blank" href="http://www.w3.org/2004/02/skos/core#relatedMatch">http://www.w3.org/2004/02/skos/core#relatedMatch</a>
+
 ------
 
 ##### Constraint <a id="skos_relatedMatch_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#type">http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#type</a>
