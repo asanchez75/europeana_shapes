@@ -152,24 +152,24 @@ sh:PropertyConstraint. Another option would be to define a function (ie. SHACL
 constraint template) at the level of a shape listing the properties that must 
 be pairwise disjoint, which was the option that we adopted. 
 > As an example, in EDM all SKOS relation properties should be disjoint, namely: 
-skos:broadMatch, skos:narrowMatch, skos:relatedMatch, skos:broader, 
-skos:narrower, skos:related, skos:exactMatch, skos:closeMatch. Below is the Shape
-definition using the sh:ConstraintTemplate defined 
-[here](library.md#DisjointConstraint).
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint>
-  a etp:DisjointConstraint ;
-  dc:type esc:disjoint ;
-  sh:description """The value set of properties skos:broader, skos:narrower,
-                    skos:related, skos:broadMatch, skos:narrowMatch, 
-                    skos:relatedMatch, skos:exactMatch, skos:closeMatch,
-                    skos:broader must be disjoint""" ;
-  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
-  sh:disjointProperties (
-    skos:broader skos:narrower skos:related
-    skos:broadMatch skos:narrowMatch skos:relatedMatch
-    skos:exactMatch skos:closeMatch
-  );
-.
-```
+> skos:broadMatch, skos:narrowMatch, skos:relatedMatch, skos:broader, 
+> skos:narrower, skos:related, skos:exactMatch, skos:closeMatch. Below is the Shape
+> definition using the sh:ConstraintTemplate defined 
+> [here](library.md#DisjointConstraint).
+> ```
+> <http://www.europeana.eu/schemas/edm/shapes/external/Concept#disjoint>
+>   a etp:DisjointConstraint ;
+>   dc:type esc:disjoint ;
+>   sh:description """The value set of properties skos:broader, skos:narrower,
+>                     skos:related, skos:broadMatch, skos:narrowMatch, 
+>                     skos:relatedMatch, skos:exactMatch, skos:closeMatch,
+>                     skos:broader must be disjoint""" ;
+>   dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+>   sh:disjointProperties (
+>     skos:broader skos:narrower skos:related
+>     skos:broadMatch skos:narrowMatch skos:relatedMatch
+>     skos:exactMatch skos:closeMatch
+>   );
+> .
+> ```
 
