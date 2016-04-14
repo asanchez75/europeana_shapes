@@ -148,7 +148,8 @@ available.
 that the range of two properties is disjoint using the sh:notEquals.
 > As an example, in EDM all SKOS relation properties should be disjoint, namely: 
 > skos:broadMatch, skos:narrowMatch, skos:relatedMatch, skos:broader, 
-> skos:narrower, skos:related, skos:exactMatch, skos:closeMatch
+> skos:narrower, skos:related, skos:exactMatch, skos:closeMatch.
+
 However, in case several properties must be disjoint amongst each other, it is
 necessary to create a sh:PropertyConstraint for each pair of properties, namely C(n,2).
 This could be simplified if sh:notEquals could be used more than once per 
