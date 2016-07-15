@@ -2,11 +2,11 @@
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
-  sh:object            "broader" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#broader> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://dbpedia.org/resource/xpto4> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -19,6 +19,18 @@
   sh:predicate         <http://www.w3.org/2004/02/skos/core#relatedMatch> ;
   sh:severity          sh:Violation ;
   sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_relatedMatch#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
+  sh:object            "broadMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#broadMatch> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -51,10 +63,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
-  sh:object            "narrower" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrower> ;
+  sh:object            "broader" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#broader> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broader#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -63,10 +75,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto1> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  sh:object            <http://dbpedia.org/resource/xpto2> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -75,10 +87,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
-  sh:object            "inScheme" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#inScheme> ;
+  sh:object            "narrowMatch" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrowMatch> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -87,10 +99,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
-  sh:object            "broadMatch" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#broadMatch> ;
+  sh:object            "narrower" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrower> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_broadMatch#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrower#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -110,23 +122,11 @@
 
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto4> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#IRI>" ;
-  sh:object            "narrowMatch" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#narrowMatch> ;
+  sh:object            "inScheme" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#inScheme> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_narrowMatch#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_inScheme#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>
@@ -147,10 +147,10 @@
 [ a                    sh:ValidationResult ;
   sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
   sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
-  sh:object            <http://dbpedia.org/resource/xpto2> ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+  sh:object            <http://dbpedia.org/resource/xpto1> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
   sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_altLabel#type> ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#type> ;
   sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
   sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
   sh:subject           <http://dbpedia.org/resource/Contemporary_art>

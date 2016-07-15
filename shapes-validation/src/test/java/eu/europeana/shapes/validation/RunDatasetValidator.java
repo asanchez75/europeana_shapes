@@ -17,6 +17,7 @@ import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.util.FileUtils;
 import org.topbraid.spin.util.JenaUtil;
 
+import eu.europeana.edm.shapes.EDMShapesConfig;
 import eu.europeana.edm.shapes.LocalShapesLoader;
 import eu.europeana.edm.shapes.ShapesLoader;
 import eu.europeana.edm.shapes.check.ShapeChecker;
@@ -35,10 +36,11 @@ public class RunDatasetValidator
 
     public static final void main(String[] args) throws Exception
     {
-        File file = new File("D:\\work\\git\\Europeana\\shapes\\shapes-validation\\src\\test\\resources\\etc\\agents_sample.xml");
         Properties props = new Properties();
         props.load(ClassLoader.getSystemResourceAsStream("etc/config.prop"));
-        LocalShapesLoader loader    = new LocalShapesLoader(new File(props.getProperty("shapes.edm.data")));
+        ShapesLoader loader = EDMShapesConfig.newShapesLoader(props);
+
+        File file = new File("D:\\work\\git\\Europeana\\shapes\\shapes-validation\\src\\test\\resources\\etc\\agents_sample.xml");
         DatasetValidator  validator = new DatasetValidator(new TopBraidValidator(loader.load(NS)));
         Model result = validator.validate(file);
 

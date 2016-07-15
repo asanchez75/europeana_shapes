@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:prefLabel xml:lang="en">Contemporary art</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Art contemporain</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Another pref label</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

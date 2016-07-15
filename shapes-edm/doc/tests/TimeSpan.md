@@ -6,7 +6,7 @@ This document contains test cases that target constraints that are specific to r
 
 | Test Case | Results | Status |
 | :--- | ---: | :--: |
-| [ok.xml](#ok_data) | [3](#ok_result) |  |
+| [ok.xml](#ok_data) | [0](#ok_result) |  |
 
 #### Test Case: <a id="ok_data" target="_blank" href="/shapes-edm/src/test/resources/etc/edm/tests/data/timespan/ok.xml">ok.xml</a>
 ------
@@ -37,40 +37,4 @@ This document contains test cases that target constraints that are specific to r
 
 ```
 @prefix sh:    <http://www.w3.org/ns/shacl#> .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://semium.org/time/19xx_2_third> ;
-  sh:message           "Values must be instances of edm:TimeSpan" ;
-  sh:object            <http://semium.org/time/1939> ;
-  sh:predicate         <http://purl.org/dc/terms/hasPart> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base> ;
-  sh:sourceTemplate    sh:AbstractClassPropertyConstraint ;
-  sh:subject           <http://semium.org/time/19xx_2_third>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://semium.org/time/19xx_2_third> ;
-  sh:message           "Values must be instances of edm:TimeSpan" ;
-  sh:object            <http://semium.org/time/19xx_3_third> ;
-  sh:predicate         <http://www.europeana.eu/schemas/edm/isNextInSequence> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base> ;
-  sh:sourceTemplate    sh:AbstractClassPropertyConstraint ;
-  sh:subject           <http://semium.org/time/19xx_2_third>
-] .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://semium.org/time/19xx_2_third> ;
-  sh:message           "Values must be instances of edm:TimeSpan" ;
-  sh:object            <http://semium.org/time/19xx> ;
-  sh:predicate         <http://purl.org/dc/terms/isPartOf> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan#base> ;
-  sh:sourceTemplate    sh:AbstractClassPropertyConstraint ;
-  sh:subject           <http://semium.org/time/19xx_2_third>
-] .
 ```

@@ -1,0 +1,37 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Values must be of kind <http://www.w3.org/ns/shacl#Literal>" ;
+  sh:object            <http://example.org/xpto> ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#type> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractNodeKindPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Not a typed literal" ;
+  sh:object            "123"@en ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#TypedLiteralConstraint> ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Not a typed literal" ;
+  sh:object            "123" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#notation> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_notation#datatype> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    <http://www.europeana.eu/schemas/edm/shapes/library#TypedLiteralConstraint> ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .

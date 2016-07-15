@@ -1,0 +1,13 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
+  sh:message           "Invalid triple for closed shape" ;
+  sh:object            <http://data.europeana.eu/concept/base/C1> ;
+  sh:predicate         <http://www.w3.org/2002/07/owl#sameAs> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept#closure> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
+  sh:sourceTemplate    sh:AbstractClosedNodeConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
+] .

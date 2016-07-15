@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:notation rdf:resource="http://example.org/xpto"/>
+        <skos:notation>123</skos:notation>
+        <skos:notation xml:lang="en">123</skos:notation>
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#int">123</skos:notation>
+        <skos:notation rdf:datatype="http://example.org/mydatatype">[SH]123.4567</skos:notation>
+    </skos:Concept>
+</rdf:RDF>

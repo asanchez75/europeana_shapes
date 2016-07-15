@@ -1,0 +1,67 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Required maximum value count 1 but found 2" ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/placeOfDeath> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfDeath#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractMaxCountPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Required maximum value count 1 but found 2" ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfBirth> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractMaxCountPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Required maximum value count 1 but found 2" ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/dateOfDeath> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractMaxCountPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Required maximum value count 1 but found 2" ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/gender> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_gender#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractMaxCountPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Duplicate use of language tag \"en\"" ;
+  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractUniqueLangPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .
+
+[ a                    sh:ValidationResult ;
+  sh:focusNode         <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+  sh:message           "Required maximum value count 1 but found 2" ;
+  sh:predicate         <http://rdvocab.info/ElementsGr2/placeOfBirth> ;
+  sh:severity          sh:Violation ;
+  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_placeOfBirth#cardinality> ;
+  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Agent#base> ;
+  sh:sourceTemplate    sh:AbstractMaxCountPropertyConstraint ;
+  sh:subject           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+] .

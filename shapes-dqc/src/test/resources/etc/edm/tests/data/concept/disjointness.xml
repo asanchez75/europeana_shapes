@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         >
+    <skos:Concept rdf:about="http://dbpedia.org/resource/Contemporary_art">
+        <skos:broader rdf:resource="http://dbpedia.org/resource/xpto1"/>
+        <skos:narrower rdf:resource="http://dbpedia.org/resource/xpto1"/>
+        <skos:related rdf:resource="http://dbpedia.org/resource/xpto1"/>
+        <skos:broadMatch rdf:resource="http://dbpedia.org/resource/xpto1"/>
+        <skos:narrowMatch rdf:resource="http://dbpedia.org/resource/xpto1"/>
+        <skos:relatedMatch rdf:resource="http://dbpedia.org/resource/xpto2"/>
+    </skos:Concept>
+</rdf:RDF>

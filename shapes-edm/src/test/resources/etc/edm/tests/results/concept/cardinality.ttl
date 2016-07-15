@@ -1,12 +1,1 @@
 @prefix sh:    <http://www.w3.org/ns/shacl#> .
-
-[ a                    sh:ValidationResult ;
-  sh:focusNode         <http://dbpedia.org/resource/Contemporary_art> ;
-  sh:message           "Duplicate use of language tag \"en\"" ;
-  sh:predicate         <http://www.w3.org/2004/02/skos/core#prefLabel> ;
-  sh:severity          sh:Violation ;
-  sh:sourceConstraint  <http://www.europeana.eu/schemas/edm/shapes/external/Concept/skos_prefLabel#cardinality> ;
-  sh:sourceShape       <http://www.europeana.eu/schemas/edm/shapes/external/Concept#base> ;
-  sh:sourceTemplate    sh:AbstractUniqueLangPropertyConstraint ;
-  sh:subject           <http://dbpedia.org/resource/Contemporary_art>
-] .
