@@ -24,30 +24,12 @@ constraint. The complete list of results is stored in this
 </tr>
 <tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#edm_end_cardinality'>There must be at most one edm:end</a></div></td>
 <td align='right'>46</td><td align='right'>46</td></tr>
-<tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#edm_end_literal'>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</a></div></td>
-<td align='right'>291</td><td align='right'>296</td></tr>
-<tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#edm_end_redundancy'>edm:end should not be the same as rdaGr2:dateOfDeath
-                  , if true the field is redundant</a></div></td>
-<td align='right'>818</td><td align='right'>865</td></tr>
 <tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#edm_isRelatedTo_type'>Values for edm:isRelatedTo must be Resources</a></div></td>
 <td align='right'>6</td><td align='right'>17</td></tr>
 <tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_dateOfBirth_cardinality'>There must be at most one rdaGr2:dateOfBirth</a></div></td>
 <td align='right'>94</td><td align='right'>94</td></tr>
-<tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_dateOfBirth_correlation'>rdaGr2:dateOfBirth must be earlier or equals than 
-                    rdaGr2:dateOfDeath</a></div></td>
-<td align='right'>16</td><td align='right'>20</td></tr>
-<tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_dateOfBirth_literal'>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</a></div></td>
-<td align='right'>578</td><td align='right'>589</td></tr>
 <tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_dateOfDeath_cardinality'>There must be at most one rdaGr2:dateOfDeath</a></div></td>
 <td align='right'>46</td><td align='right'>46</td></tr>
-<tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_dateOfDeath_literal'>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</a></div></td>
-<td align='right'>291</td><td align='right'>296</td></tr>
 <tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_placeOfBirth_cardinality'>There must be at most one rdaGr2:placeOfBirth</a></div></td>
 <td align='right'>637</td><td align='right'>637</td></tr>
 <tr><td><div style='padding-left:40px'><a href='/shapes-edm/doc/shapes/Agent.md#rdaGr2_placeOfDeath_cardinality'>There must be at most one rdaGr2:placeOfDeath</a></div></td>

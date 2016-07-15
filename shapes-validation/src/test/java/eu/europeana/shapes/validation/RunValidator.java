@@ -9,13 +9,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.net.URL;
+import java.util.Properties;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.util.FileUtils;
+import org.apache.jena.vocabulary.RDF;
 import org.topbraid.spin.util.JenaUtil;
 
+import eu.europeana.edm.shapes.EDMShapesConfig;
 import eu.europeana.edm.shapes.LocalShapesLoader;
 import eu.europeana.edm.shapes.ShapesLoader;
 import eu.europeana.edm.shapes.check.ShapeChecker;
@@ -37,14 +40,13 @@ public class RunValidator
     private static ShapesLoader LOADER = null;
 
     static {
-        File dir    = new File("D:\\work\\git\\Europeana\\shapes\\shapes-edm\\");
-        File shapes = new File(dir, "src\\main\\resources\\etc\\edm\\shapes");
-        LOADER = new LocalShapesLoader(shapes);
+        Properties props = new Properties();
+        props.load(ClassLoader.getSystemResourceAsStream("etc/config.prop"));
+        LOADER = EDMShapesConfig.newShapesLoader(props);
     }
 
     public static final void main(String[] args) throws Exception
     {
-        
         runShape();
     }
 
@@ -67,7 +69,7 @@ public class RunValidator
     {
         ps.println(results);
         ResIterator iter = results.listResourcesWithProperty(
-                results.getProperty(RDF_TYPE)
+                RDF.type
               , results.getResource(SHACL_RESULT));
         while(iter.hasNext()) { print(iter.nextResource(), ps); }
     }
