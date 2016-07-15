@@ -12,26 +12,26 @@ The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
-|<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>|<a href="#skos_altLabel_datatype">datatype</a>, <a href="#skos_altLabel_redundancy">redundancy</a>|
-|<a href="#skos_note">skos:note</a>|0..*|<a href="#skos_note_type">Literal</a>|<a href="#skos_note_datatype">datatype</a>|
-|<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#skos_prefLabel_cardinality">0..?</a>|<a href="#skos_prefLabel_type">Literal</a>|<a href="#skos_prefLabel_datatype">datatype</a>|
-|<a href="#dc_date">dc:date</a>|0..*||<a href="#dc_date_literal">literal</a>|
+|<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>||
+|<a href="#skos_note">skos:note</a>|0..*|<a href="#skos_note_type">Literal</a>||
+|<a href="#skos_prefLabel">skos:prefLabel</a>|0..*|<a href="#skos_prefLabel_type">Literal</a>||
+|<a href="#dc_date">dc:date</a>|0..*|||
 |<a href="#dc_identifier">dc:identifier</a>|0..*|<a href="#dc_identifier_type">Literal</a>||
-|<a href="#dct_hasPart">dct:hasPart</a>|0..*|<a href="#dct_hasPart_type">IRI</a>|<a href="#dct_hasPart_range-class">range-class</a>|
-|<a href="#dct_isPartOf">dct:isPartOf</a>|0..*|<a href="#dct_isPartOf_type">IRI</a>|<a href="#dct_isPartOf_range-class">range-class</a>|
+|<a href="#dct_hasPart">dct:hasPart</a>|0..*|<a href="#dct_hasPart_type">IRI</a>||
+|<a href="#dct_isPartOf">dct:isPartOf</a>|0..*|<a href="#dct_isPartOf_type">IRI</a>||
 |<a href="#foaf_name">foaf:name</a>|0..*|<a href="#foaf_name_type">Literal</a>||
 |<a href="#rdaGr2_biographicalInformation">rdaGr2:biographicalInformation</a>|0..*|<a href="#rdaGr2_biographicalInformation_type">Literal</a>||
-|<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#rdaGr2_dateOfBirth_cardinality">0..1</a>|<a href="#rdaGr2_dateOfBirth_type">Literal</a>|<a href="#rdaGr2_dateOfBirth_correlation">correlation</a>, <a href="#rdaGr2_dateOfBirth_literal">literal</a>|
-|<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#rdaGr2_dateOfDeath_cardinality">0..1</a>|<a href="#rdaGr2_dateOfDeath_type">Literal</a>|<a href="#rdaGr2_dateOfDeath_literal">literal</a>|
-|<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|0..*|<a href="#rdaGr2_dateOfEstablishment_type">Literal</a>|<a href="#rdaGr2_dateOfEstablishment_correlation">correlation</a>, <a href="#rdaGr2_dateOfEstablishment_literal">literal</a>|
-|<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|0..*|<a href="#rdaGr2_dateOfTermination_type">Literal</a>|<a href="#rdaGr2_dateOfTermination_literal">literal</a>|
+|<a href="#rdaGr2_dateOfBirth">rdaGr2:dateOfBirth</a>|<a href="#rdaGr2_dateOfBirth_cardinality">0..1</a>|<a href="#rdaGr2_dateOfBirth_type">Literal</a>||
+|<a href="#rdaGr2_dateOfDeath">rdaGr2:dateOfDeath</a>|<a href="#rdaGr2_dateOfDeath_cardinality">0..1</a>|<a href="#rdaGr2_dateOfDeath_type">Literal</a>||
+|<a href="#rdaGr2_dateOfEstablishment">rdaGr2:dateOfEstablishment</a>|0..*|<a href="#rdaGr2_dateOfEstablishment_type">Literal</a>||
+|<a href="#rdaGr2_dateOfTermination">rdaGr2:dateOfTermination</a>|0..*|<a href="#rdaGr2_dateOfTermination_type">Literal</a>||
 |<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#rdaGr2_gender_cardinality">0..1</a>|<a href="#rdaGr2_gender_type">Literal</a>||
 |<a href="#rdaGr2_placeOfBirth">rdaGr2:placeOfBirth</a>|<a href="#rdaGr2_placeOfBirth_cardinality">0..1</a>|||
 |<a href="#rdaGr2_placeOfDeath">rdaGr2:placeOfDeath</a>|<a href="#rdaGr2_placeOfDeath_cardinality">0..1</a>|||
 |<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|<a href="#rdaGr2_professionOrOccupation_cardinality">0..?</a>|||
-|<a href="#edm_begin">edm:begin</a>|<a href="#edm_begin_cardinality">0..1</a>|<a href="#edm_begin_type">Literal</a>|<a href="#edm_begin_correlation">correlation</a>, <a href="#edm_begin_literal">literal</a>, <a href="#edm_begin_redundancy">redundancy</a>|
-|<a href="#edm_end">edm:end</a>|<a href="#edm_end_cardinality">0..1</a>|<a href="#edm_end_type">Literal</a>|<a href="#edm_end_literal">literal</a>, <a href="#edm_end_redundancy">redundancy</a>|
-|<a href="#edm_hasMet">edm:hasMet</a>|0..*|<a href="#edm_hasMet_type">IRI</a>|<a href="#edm_hasMet_range-class">range-class</a>|
+|<a href="#edm_begin">edm:begin</a>|<a href="#edm_begin_cardinality">0..1</a>|<a href="#edm_begin_type">Literal</a>||
+|<a href="#edm_end">edm:end</a>|<a href="#edm_end_cardinality">0..1</a>|<a href="#edm_end_type">Literal</a>||
+|<a href="#edm_hasMet">edm:hasMet</a>|0..*|<a href="#edm_hasMet_type">IRI</a>||
 |<a href="#edm_isRelatedTo">edm:isRelatedTo</a>|0..*|<a href="#edm_isRelatedTo_type">IRI</a>||
 |<a href="#owl_sameAs">owl:sameAs</a>|0..*|<a href="#owl_sameAs_type">IRI</a>||
 
@@ -93,36 +93,22 @@ _Shape body in Turtle syntax:_
 
   # SKOS properties
   sh:property        <Agent/skos_prefLabel#type> ;
-  sh:property        <Agent/skos_prefLabel#datatype> ;
-  sh:property        <Agent/skos_prefLabel#cardinality> ;
   sh:property        <Agent/skos_altLabel#type> ;
-  sh:property        <Agent/skos_altLabel#datatype> ;
-  sh:property        <Agent/skos_altLabel#redundancy> ;
   sh:property        <Agent/skos_note#type> ;
-  sh:property        <Agent/skos_note#datatype> ;
 
   # DC properties
-  sh:property        <Agent/dc_date#literal> ;
   sh:property        <Agent/dc_identifier#type> ;
 
   # DCTERMS properties
   sh:property        <Agent/dct_hasPart#type> ;
-  sh:property        <Agent/dct_hasPart#range-class> ;
   sh:property        <Agent/dct_isPartOf#type> ;
-  sh:property        <Agent/dct_isPartOf#range-class> ;
 
   # EDM properties
   sh:property        <Agent/edm_begin#type> ;
   sh:property        <Agent/edm_begin#cardinality> ;
-  sh:property        <Agent/edm_begin#literal> ;
-  sh:property        <Agent/edm_begin#correlation> ;
-  sh:property        <Agent/edm_begin#redundancy> ;
   sh:property        <Agent/edm_end#type> ;
   sh:property        <Agent/edm_end#cardinality> ;
-  sh:property        <Agent/edm_end#literal> ;
-  sh:property        <Agent/edm_end#redundancy> ;
   sh:property        <Agent/edm_hasMet#type> ;
-  sh:property        <Agent/edm_hasMet#range-class> ;
   sh:property        <Agent/edm_isRelatedTo#type> ;
 
   # FOAF properties
@@ -132,16 +118,10 @@ _Shape body in Turtle syntax:_
   sh:property        <Agent/rdaGr2_biographicalInformation#type> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#type> ;
   sh:property        <Agent/rdaGr2_dateOfBirth#cardinality> ;
-  sh:property        <Agent/rdaGr2_dateOfBirth#literal> ;
-  sh:property        <Agent/rdaGr2_dateOfBirth#correlation> ;
   sh:property        <Agent/rdaGr2_dateOfDeath#type> ;
   sh:property        <Agent/rdaGr2_dateOfDeath#cardinality> ;
-  sh:property        <Agent/rdaGr2_dateOfDeath#literal> ;
   sh:property        <Agent/rdaGr2_dateOfEstablishment#type> ;
-  sh:property        <Agent/rdaGr2_dateOfEstablishment#literal> ;
-  sh:property        <Agent/rdaGr2_dateOfEstablishment#correlation> ;
   sh:property        <Agent/rdaGr2_dateOfTermination#type> ;
-  sh:property        <Agent/rdaGr2_dateOfTermination#literal> ;
   sh:property        <Agent/rdaGr2_gender#type> ;
   sh:property        <Agent/rdaGr2_gender#cardinality> ;
   sh:property        <Agent/rdaGr2_placeOfBirth#cardinality> ;
@@ -189,54 +169,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype</a>
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:altLabel ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate skos:altLabel ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-
-##### Constraint <a id="skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#redundancy</a>
-<table>
-<tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
-                    skos:prefLabel</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """skos:altLabel should not have the same labels than in 
-                    skos:prefLabel""" ;
-  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
-  sh:predicate  skos:altLabel ;
-  sh:notEquals  skos:prefLabel ;
-  sh:severity sh:Warning ;
-.
-```
-
 ##### Constraint <a id="skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_altLabel#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for skos:altLabel must be Literals</td></tr>
@@ -258,32 +190,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
 
 ------
-
-##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype</a>
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:note should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:note ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate skos:note ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
 
 ##### Constraint <a id="skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_note#type</a>
 <table>
@@ -307,53 +213,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality</a>
-<table>
-<tr><th align="right">description</th><td>There must be at most one skos:prefLabel per language</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  sh:description "There must be at most one skos:prefLabel per language" ;
-  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
-           , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
-  sh:predicate skos:prefLabel ;
-  sh:minCount 0 ;
-  sh:uniqueLang true ;
-.
-```
-
-##### Constraint <a id="skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype</a>
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:prefLabel ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate skos:prefLabel ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-
 ##### Constraint <a id="skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/skos_prefLabel#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for skos:prefLabel must be Literals</td></tr>
@@ -375,35 +234,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dc_date" target="_blank" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a>
 
 ------
-
-##### Constraint <a id="dc_date_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dc_date#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [ #restrict only to Literals
-      sh:property [
-          sh:predicate dc:date ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate dc:date ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
 
 #### Property <a id="dc_identifier" target="_blank" href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a>
 
@@ -431,33 +261,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class</a>
-<table>
-<tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:Agent</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """dcterms:hasPart must refer to a valid edm:Agent""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
-           , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dct:hasPart ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:predicate dct:hasPart ;
-  sh:valueShape Agent: ;
-  sh:class edm:Agent ;
-.
-```
-
 ##### Constraint <a id="dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_hasPart#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for dcterms:hasPart must be Resources</td></tr>
@@ -479,33 +282,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 
 ------
-
-##### Constraint <a id="dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class</a>
-<table>
-<tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:Agent</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """dcterms:isPartOf must refer to a valid edm:Agent""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
-           , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dct:isPartOf ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:predicate dct:hasPart ;
-  sh:valueShape Agent: ;
-  sh:class edm:Agent ;
-.
-```
 
 ##### Constraint <a id="dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/dct_isPartOf#type</a>
 <table>
@@ -593,56 +369,6 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### Constraint <a id="rdaGr2_dateOfBirth_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#correlation</a>
-<table>
-<tr><th align="right">description</th><td>rdaGr2:dateOfBirth must be earlier or equals than 
-                    rdaGr2:dateOfDeath</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#correlation>
-  a sh:PropertyConstraint ;
-  sh:description """rdaGr2:dateOfBirth must be earlier or equals than 
-                    rdaGr2:dateOfDeath""";
-  dc:type esc:correlation ;
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-  sh:predicate rdaGr2:dateOfBirth ;
-  sh:lessThanOrEquals rdaGr2:dateOfDeath ;
-.
-```
-
-##### Constraint <a id="rdaGr2_dateOfBirth_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate rdaGr2:dateOfBirth ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  sh:predicate rdaGr2:dateOfBirth ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
-
 ##### Constraint <a id="rdaGr2_dateOfBirth_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfBirth#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for rdaGr2:dateOfBirth must be Literals</td></tr>
@@ -685,35 +411,6 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### Constraint <a id="rdaGr2_dateOfDeath_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate rdaGr2:dateOfDeath ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  sh:predicate rdaGr2:dateOfDeath ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
-
 ##### Constraint <a id="rdaGr2_dateOfDeath_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfDeath#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for rdaGr2:dateOfDeath must be Literals</td></tr>
@@ -736,56 +433,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="rdaGr2_dateOfEstablishment_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation</a>
-<table>
-<tr><th align="right">description</th><td>rdaGr2:dateOfEstablishment must be earlier or equals than 
-                    rdaGr2:dateOfTermination</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#correlation>
-  a sh:PropertyConstraint ;
-  sh:description """rdaGr2:dateOfEstablishment must be earlier or equals than 
-                    rdaGr2:dateOfTermination""";
-  dc:type esc:correlation ;
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-  sh:predicate rdaGr2:dateOfEstablishment ;
-  sh:lessThanOrEquals rdaGr2:dateOfTermination ;
-.
-```
-
-##### Constraint <a id="rdaGr2_dateOfEstablishment_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate rdaGr2:dateOfEstablishment ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  sh:predicate rdaGr2:dateOfEstablishment ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
-
 ##### Constraint <a id="rdaGr2_dateOfEstablishment_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfEstablishment#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for rdaGr2:dateOfEstablishment must be Literals</td></tr>
@@ -807,35 +454,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="rdaGr2_dateOfTermination" target="_blank" href="http://rdvocab.info/ElementsGr2/dateOfTermination">http://rdvocab.info/ElementsGr2/dateOfTermination</a>
 
 ------
-
-##### Constraint <a id="rdaGr2_dateOfTermination_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate rdaGr2:dateOfTermination ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  sh:predicate rdaGr2:dateOfTermination ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
 
 ##### Constraint <a id="rdaGr2_dateOfTermination_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_dateOfTermination#type</a>
 <table>
@@ -991,76 +609,6 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### Constraint <a id="edm_begin_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#correlation">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#correlation</a>
-<table>
-<tr><th align="right">description</th><td>edm:begin must be earlier or equals than edm:end</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#correlation>
-  a sh:PropertyConstraint ;
-  sh:description "edm:begin must be earlier or equals than edm:end";
-  dc:type esc:correlation ;
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-  sh:predicate edm:begin ;
-  sh:lessThanOrEquals edm:end ;
-.
-```
-
-##### Constraint <a id="edm_begin_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate edm:begin ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  sh:predicate edm:begin ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
-
-##### Constraint <a id="edm_begin_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#redundancy</a>
-<table>
-<tr><th align="right">description</th><td>edm:begin should not be the same as rdaGr2:dateOfBirth
-                  , if true the field is redundant</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """edm:begin should not be the same as rdaGr2:dateOfBirth
-                  , if true the field is redundant""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:predicate edm:begin ;
-  sh:notEquals rdaGr2:dateOfBirth ;
-.
-```
-
 ##### Constraint <a id="edm_begin_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_begin#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for edm:being must be Literals</td></tr>
@@ -1103,57 +651,6 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### Constraint <a id="edm_end_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#literal">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate edm:end ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  sh:predicate edm:end ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
-
-##### Constraint <a id="edm_end_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#redundancy</a>
-<table>
-<tr><th align="right">description</th><td>edm:end should not be the same as rdaGr2:dateOfDeath
-                  , if true the field is redundant</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """edm:end should not be the same as rdaGr2:dateOfDeath
-                  , if true the field is redundant""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:predicate edm:end ;
-  sh:notEquals rdaGr2:dateOfDeath ;
-.
-```
-
 ##### Constraint <a id="edm_end_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_end#type</a>
 <table>
 <tr><th align="right">description</th><td>Values for edm:end must be Literals</td></tr>
@@ -1175,30 +672,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="edm_hasMet" target="_blank" href="http://www.europeana.eu/schemas/edm/hasMet">http://www.europeana.eu/schemas/edm/hasMet</a>
 
 ------
-
-##### Constraint <a id="edm_hasMet_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class</a>
-<table>
-<tr><th align="right">description</th><td>edm:hasMet must refer to a valid edm:Agent, edm:Place
-                  , skos:Concept or edm:TimeSpan</td></tr>
-<tr><th align="right">subject</th><td></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """edm:hasMet must refer to a valid edm:Agent, edm:Place
-                  , skos:Concept or edm:TimeSpan""";
-  dc:type esc:range-class ;
-  sh:predicate edm:hasMet ;
-  sh:valueShape [
-    sh:constraint [
-      sh:or ( Agent: Place: Concept: TimeSpan: )
-    ] ;
-  ] ;
-.
-```
 
 ##### Constraint <a id="edm_hasMet_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#type">http://www.europeana.eu/schemas/edm/shapes/external/Agent/edm_hasMet#type</a>
 <table>

@@ -463,13 +463,17 @@ public class ShapesDataGenerator extends DocGenerator
      * Private Methods - Other
      **************************************************************************/
 
-    private Model loadModel(File file) throws FileNotFoundException
+    private Model loadModel(File file) throws IOException
     {
         FileInputStream fis = new FileInputStream(file);
         try {
             Model model = JenaUtil.createMemoryModel();
             model.read(fis, "urn:dummy", FileUtils.langTurtle);
             return model;
+        }
+        catch (Exception e)
+        {
+            throw new IOException("Error reading file: " + file.getName(), e);
         }
         finally { closeQuietly(fis); }
     }

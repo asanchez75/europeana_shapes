@@ -42,11 +42,17 @@
 
   # class level constraints
   sh:constraint      <Concept#closure> ;
+  sh:constraint      <Concept#disjoint> ;
 
   # SKOS properties
   sh:property        <Concept/skos_prefLabel#type> ;
+  sh:property        <Concept/skos_prefLabel#datatype> ;
+  sh:property        <Concept/skos_prefLabel#cardinality> ;
   sh:property        <Concept/skos_altLabel#type> ;
+  sh:property        <Concept/skos_altLabel#datatype> ;
+  sh:property        <Concept/skos_altLabel#redundancy> ;
   sh:property        <Concept/skos_broader#type> ;
+  sh:property        <Concept/skos_broader#range-class> ;
   sh:property        <Concept/skos_narrower#type> ;
   sh:property        <Concept/skos_related#type> ;
   sh:property        <Concept/skos_broadMatch#type> ;
@@ -55,6 +61,7 @@
   sh:property        <Concept/skos_exactMatch#type> ;
   sh:property        <Concept/skos_closeMatch#type> ;
   sh:property        <Concept/skos_note#type> ;
+  sh:property        <Concept/skos_note#datatype> ;
   sh:property        <Concept/skos_notation#type> ;
   sh:constraint      <Concept/skos_notation#datatype> ;
   sh:property        <Concept/skos_inScheme#type> ;
@@ -76,6 +83,21 @@
   ) ;
 .
 
+<Concept#disjoint>
+  a etp:DisjointConstraint ;
+  dc:type esc:disjoint ;
+  sh:description """The value set of properties skos:broader, skos:narrower,
+                    skos:related, skos:broadMatch, skos:narrowMatch, 
+                    skos:relatedMatch, skos:exactMatch, skos:closeMatch,
+                    skos:broader must be disjoint""" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:disjointProperties (
+    skos:broader skos:narrower skos:related
+    skos:broadMatch skos:narrowMatch skos:relatedMatch
+    skos:exactMatch skos:closeMatch
+  );
+.
+
 # skos:prefLabel ###############################################################
 
 <Concept/skos_prefLabel#type>
@@ -84,6 +106,33 @@
   sh:description "Values for skos:prefLabel must be Literals" ;
   sh:predicate skos:prefLabel ;
   sh:nodeKind sh:Literal ;
+.
+
+<Concept/skos_prefLabel#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:prefLabel should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+
+<Concept/skos_prefLabel#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
+           , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
+  sh:predicate skos:prefLabel ;
+  sh:minCount 0 ;
+  sh:uniqueLang true ;
 .
 
 # skos:altLabel ################################################################
@@ -96,6 +145,33 @@
   sh:nodeKind sh:Literal ;
 .
 
+<Concept/skos_altLabel#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:altLabel should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate skos:altLabel ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+
+<Concept/skos_altLabel#redundancy>
+  a sh:PropertyConstraint ;
+  dc:type esc:redundancy ;
+  sh:description """skos:altLabel should not have the same labels than in 
+                    skos:prefLabel""" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:predicate  skos:altLabel ;
+  sh:notEquals  skos:prefLabel ;
+  sh:severity sh:Warning ;
+.
+
 # skos:broader #################################################################
 
 <Concept/skos_broader#type>
@@ -105,6 +181,44 @@
   sh:predicate skos:broader ;
   sh:nodeKind sh:IRI ;
 .
+
+<Concept/skos_broader#range-class>
+  a sh:PropertyConstraint ;
+  sh:description "skos:broader must refer to a valid skos:Concept" ;
+  dc:type esc:range-class ;
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:broader ;
+#          sh:nodeKind sh:IRI ;
+          sh:valueShape [
+            sh:property [ sh:predicate rdf:type ; sh:minCount 1; ]
+          ]
+      ]
+  ] ;
+  sh:predicate skos:broader ;
+  sh:valueShape Concept: ;
+  sh:class edm:Concept ;
+.
+
+#<Concept/skos_broader#disjoint2>
+#  a sh:Constraint ;
+#  sh:description """skos:broader must be disjoint with: skos:narrower
+#                  , skos:related, skos:broadMatch, skos:narrowMatch
+#                  , skos:relatedMatch, skos:exactMatch, skos:closeMatch.""" ;
+#  dc:type esc:disjoint ;
+#  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+#  sh:severity sh:Warning ;
+#  sh:and (
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:narrower ;     ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:related ;      ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:broadMatch ;   ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:narrowMatch ;  ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:relatedMatch ; ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:exactMatch ;   ] ]
+#    [ sh:property [ sh:predicate skos:broader ; sh:notEquals skos:closeMatch ;   ] ]
+#  );
+#.
 
 # skos:narrower ################################################################
 
@@ -184,6 +298,22 @@
   sh:description "Values for skos:note must be Literals" ;
   sh:predicate skos:note ;
   sh:nodeKind sh:Literal ;
+.
+
+<Concept/skos_note#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:note should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate skos:note ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
 .
 
 # skos:notation ################################################################

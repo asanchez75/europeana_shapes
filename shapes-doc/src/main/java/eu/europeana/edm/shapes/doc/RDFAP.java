@@ -47,7 +47,6 @@ public class RDFAP
                         , getURL("451"));
         _requirements.put("R-225-VALIDATION-OF-CLASS-ASSOCIATION"
                         , getURL("453"));
-
     }
 
     public static String getRequirementURL(String reqID)

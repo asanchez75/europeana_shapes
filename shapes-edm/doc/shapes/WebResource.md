@@ -110,33 +110,11 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="dc_creator_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_creator#range-class">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_creator#range-class</a>
 <table>
-<tr><th align="right">description</th><td>the reference should be one to an Agent (the access to the 
-                    data and the data itself should be formatted according to 
-                    the Agent specifications.)</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_creator#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """the reference should be one to an Agent (the access to the 
-                    data and the data itself should be formatted according to 
-                    the Agent specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:predicate dc:creator ;
-  sh:filterShape [ #restrict only to nodes
-      sh:property [
-          sh:predicate dc:creator ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:valueShape Agent: ;
-  sh:class edm:Agent ;
-.
-```
 
 #### Property <a id="dc_description" target="_blank" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a>
 
@@ -144,29 +122,11 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="dc_description_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype</a>
 <table>
-<tr><th align="right">description</th><td>Ideally all dc:description should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_description#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all dc:description should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dc:description ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate dc:description ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
 
 #### Property <a id="dc_format" target="_blank" href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
 
@@ -178,25 +138,11 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="dc_rights_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy</a>
 <table>
-<tr><th align="right">description</th><td>dc:rights should not be the same as edm:rights, if true the 
-                    field is redundant</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dc_rights#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """dc:rights should not be the same as edm:rights, if true the 
-                    field is redundant""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:predicate dc:rights ;
-  sh:notEquals edm:rights ;
-.
-```
 
 #### Property <a id="dc_source" target="_blank" href="http://purl.org/dc/elements/1.1/source">http://purl.org/dc/elements/1.1/source</a>
 
@@ -212,76 +158,27 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="dct_created_correlation_1" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1</a>
 <table>
-<tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_1>
-  a sh:PropertyConstraint ;
-  dc:type esc:correlation ;
-  sh:description "dcterms:created must be equal or earlier than dcterms:issued";
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-  sh:predicate dct:created ;
-  sh:lessThanOrEquals dct:issued ;
-.
-```
 
 ##### Constraint <a id="dct_created_correlation_2" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2</a>
 <table>
-<tr><th align="right">description</th><td>dcterms:created must be equal or earlier than dcterms:issued
-                    and dcterms:created in edm:ProvidedCHO</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#correlation_2>
-  a sh:PropertyConstraint ;
-
-  sh:description """dcterms:created must be equal or earlier than dcterms:issued
-                    and dcterms:created in edm:ProvidedCHO""";
-  dc:type esc:correlation ;
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-  sh:predicate dct:created ;
-
-  #requires a second focus node (ie. ProvidedCHO)
-  #can though be implemented using SPARQL
-.
-```
 
 ##### Constraint <a id="dct_created_range-values" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values">http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values</a>
 <table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-value">http://www.europeana.eu/schemas/edm/shapes/categories#range-value</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/WebResource/dct_created#range-values>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""" ;
-  dc:type esc:range-value ;
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate dct:created ;
-  sh:filterShape [ #restrict only to Literals
-    sh:property [
-      sh:predicate dct:created ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
 
 #### Property <a id="dct_extent" target="_blank" href="http://purl.org/dc/terms/extent">http://purl.org/dc/terms/extent</a>
 

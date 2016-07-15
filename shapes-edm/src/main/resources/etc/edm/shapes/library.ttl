@@ -135,3 +135,22 @@
       }
     """ ;
 .
+
+:CycleConstraint
+    a sh:ConstraintTemplate ;
+    rdfs:label """Detects if the property is being used to refer to the same 
+                  Resource as the subject""" ;
+    rdfs:subClassOf sh:TemplateConstraint ;
+    sh:argument [
+        sh:predicate etp:property ;
+        sh:class rdf:Property ;
+        sh:name "predicate" ;
+        sh:description "The property to validate the values of." ;
+    ] ;
+    rdfs:comment "Cannot reference the same resource with this property"^^xsd:string ;
+    sh:message "Cycle reference" ;
+    sh:sparql """
+      SELECT ?this (?this as ?subject) $predicate (?this as ?object)
+      WHERE { ?this $predicate ?this . }
+    """ ;
+.

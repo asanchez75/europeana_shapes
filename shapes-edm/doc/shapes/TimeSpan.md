@@ -12,14 +12,14 @@ The following table shows an overview of the constraints divided per property:
 
 | Property | Cardinality | Value Type | Constraints |
 | :--- | :--: | :--: | :--- |
-|<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>|<a href="#skos_altLabel_datatype">datatype</a>, <a href="#skos_altLabel_redundancy">redundancy</a>|
-|<a href="#skos_note">skos:note</a>|0..*|<a href="#skos_note_type">Literal</a>|<a href="#skos_note_datatype">datatype</a>|
-|<a href="#skos_prefLabel">skos:prefLabel</a>|<a href="#skos_prefLabel_cardinality">0..?</a>|<a href="#skos_prefLabel_type">Literal</a>|<a href="#skos_prefLabel_datatype">datatype</a>|
-|<a href="#dct_hasPart">dct:hasPart</a>|0..*|<a href="#dct_hasPart_type">IRI</a>|<a href="#dct_hasPart_range-class">range-class</a>|
-|<a href="#dct_isPartOf">dct:isPartOf</a>|0..*|<a href="#dct_isPartOf_type">IRI</a>|<a href="#dct_isPartOf_range-class">range-class</a>|
-|<a href="#edm_begin">edm:begin</a>|<a href="#edm_begin_cardinality">0..1</a>|<a href="#edm_begin_type">Literal</a>|<a href="#edm_begin_correlation">correlation</a>, <a href="#edm_begin_literal">literal</a>|
-|<a href="#edm_end">edm:end</a>|<a href="#edm_end_cardinality">0..1</a>|<a href="#edm_end_type">Literal</a>|<a href="#edm_end_literal">literal</a>|
-|<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|0..*|<a href="#edm_isNextInSequence_type">IRI</a>|<a href="#edm_isNextInSequence_range-class">range-class</a>|
+|<a href="#skos_altLabel">skos:altLabel</a>|0..*|<a href="#skos_altLabel_type">Literal</a>||
+|<a href="#skos_note">skos:note</a>|0..*|<a href="#skos_note_type">Literal</a>||
+|<a href="#skos_prefLabel">skos:prefLabel</a>|0..*|<a href="#skos_prefLabel_type">Literal</a>||
+|<a href="#dct_hasPart">dct:hasPart</a>|0..*|<a href="#dct_hasPart_type">IRI</a>||
+|<a href="#dct_isPartOf">dct:isPartOf</a>|0..*|<a href="#dct_isPartOf_type">IRI</a>||
+|<a href="#edm_begin">edm:begin</a>|<a href="#edm_begin_cardinality">0..1</a>|<a href="#edm_begin_type">Literal</a>||
+|<a href="#edm_end">edm:end</a>|<a href="#edm_end_cardinality">0..1</a>|<a href="#edm_end_type">Literal</a>||
+|<a href="#edm_isNextInSequence">edm:isNextInSequence</a>|0..*|<a href="#edm_isNextInSequence_type">IRI</a>||
 |<a href="#owl_sameAs">owl:sameAs</a>|0..*|<a href="#owl_sameAs_type">IRI</a>||
 
 Below is an example of a resource of type edm:TimeSpan: 
@@ -65,30 +65,19 @@ _Shape body in Turtle syntax:_
 
   # SKOS properties
   sh:property        <TimeSpan/skos_prefLabel#type> ;
-  sh:property        <TimeSpan/skos_prefLabel#datatype> ;
-  sh:property        <TimeSpan/skos_prefLabel#cardinality> ;
   sh:property        <TimeSpan/skos_altLabel#type> ;
-  sh:property        <TimeSpan/skos_altLabel#datatype> ;
-  sh:property        <TimeSpan/skos_altLabel#redundancy> ;
   sh:property        <TimeSpan/skos_note#type> ;
-  sh:property        <TimeSpan/skos_note#datatype> ;
 
   # DCTERMS properties
   sh:property        <TimeSpan/dct_hasPart#type> ;
-  sh:property        <TimeSpan/dct_hasPart#range-class> ;
   sh:property        <TimeSpan/dct_isPartOf#type> ;
-  sh:property        <TimeSpan/dct_isPartOf#range-class> ;
 
   # EDM properties
   sh:property        <TimeSpan/edm_begin#type> ;
   sh:property        <TimeSpan/edm_begin#cardinality> ;
-  sh:property        <TimeSpan/edm_begin#literal> ;
-  sh:property        <TimeSpan/edm_begin#correlation> ;
   sh:property        <TimeSpan/edm_end#type> ;
   sh:property        <TimeSpan/edm_end#cardinality> ;
-  sh:property        <TimeSpan/edm_end#literal> ;
   sh:property        <TimeSpan/edm_isNextInSequence#type> ;
-  sh:property        <TimeSpan/edm_isNextInSequence#range-class> ;
 
   # OWL properties
   sh:property        <TimeSpan/owl_sameAs#type> ;
@@ -128,54 +117,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="skos_altLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype</a>
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:altLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:altLabel should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:altLabel ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate skos:altLabel ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-
-##### Constraint <a id="skos_altLabel_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy</a>
-<table>
-<tr><th align="right">description</th><td>skos:altLabel should not have the same labels than in 
-                    skos:prefLabel</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/17">R-10-DEFINE-DISJOINT-PROPERTIES</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """skos:altLabel should not have the same labels than in 
-                    skos:prefLabel""" ;
-  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
-  sh:predicate  skos:altLabel ;
-  sh:notEquals  skos:prefLabel ;
-  sh:severity sh:Warning ;
-.
-```
-
 ##### Constraint <a id="skos_altLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_altLabel#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -196,32 +137,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="skos_note" target="_blank" href="http://www.w3.org/2004/02/skos/core#note">http://www.w3.org/2004/02/skos/core#note</a>
 
 ------
-
-##### Constraint <a id="skos_note_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype</a>
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:note should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:note should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:note ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate skos:note ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
 
 ##### Constraint <a id="skos_note_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_note#type</a>
 <table>
@@ -244,53 +159,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="skos_prefLabel_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality</a>
-<table>
-<tr><th align="right">description</th><td>There must be at most one skos:prefLabel per language</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/56">R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  sh:description "There must be at most one skos:prefLabel per language" ;
-  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
-           , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
-  sh:predicate skos:prefLabel ;
-  sh:minCount 0 ;
-  sh:uniqueLang true ;
-.
-```
-
-##### Constraint <a id="skos_prefLabel_datatype" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype</a>
-<table>
-<tr><th align="right">description</th><td>Ideally all skos:prefLabel should have a language tag</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/55">R-48-MISSING-LANGUAGE-TAGS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#datatype">http://www.europeana.eu/schemas/edm/shapes/categories#datatype</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all skos:prefLabel should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate skos:prefLabel ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate skos:prefLabel ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
-```
-
 ##### Constraint <a id="skos_prefLabel_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/skos_prefLabel#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -312,33 +180,6 @@ _Shape definition in Turtle syntax:_
 
 ------
 
-##### Constraint <a id="dct_hasPart_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class</a>
-<table>
-<tr><th align="right">description</th><td>dcterms:hasPart must refer to a valid edm:TimeSpan</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#range-class>
-  a sh:PropertyConstraint ;
-  sh:description "dcterms:hasPart must refer to a valid edm:TimeSpan" ;
-  dc:type esc:range-class ;
-  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
-           , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dct:hasPart ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:predicate dct:hasPart ;
-  sh:valueShape TimeSpan: ;
-  sh:class edm:TimeSpan ;
-.
-```
-
 ##### Constraint <a id="dct_hasPart_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_hasPart#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -359,33 +200,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="dct_isPartOf" target="_blank" href="http://purl.org/dc/terms/isPartOf">http://purl.org/dc/terms/isPartOf</a>
 
 ------
-
-##### Constraint <a id="dct_isPartOf_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class</a>
-<table>
-<tr><th align="right">description</th><td>dcterms:isPartOf must refer to a valid edm:TimeSpan</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#range-class>
-  a sh:PropertyConstraint ;
-  sh:description "dcterms:isPartOf must refer to a valid edm:TimeSpan" ;
-  dc:type esc:range-class ;
-  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
-           , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dct:isPartOf ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:predicate dct:isPartOf ;
-  sh:valueShape TimeSpan: ;
-  sh:class edm:TimeSpan ;
-.
-```
 
 ##### Constraint <a id="dct_isPartOf_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/dct_isPartOf#type</a>
 <table>
@@ -425,48 +239,6 @@ _Shape definition in Turtle syntax:_
   sh:predicate edm:begin ;
   sh:minCount 0 ;
   sh:maxCount 1 ;
-.
-```
-
-##### Constraint <a id="edm_begin_correlation" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#correlation">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#correlation</a>
-<table>
-<tr><th align="right">description</th><td>edm:begin must be earlier or equals than edm:end</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/50">R-43-LITERAL-VALUE-COMPARISON</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#correlation">http://www.europeana.eu/schemas/edm/shapes/categories#correlation</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#correlation>
-  a sh:PropertyConstraint ;
-  sh:description "edm:begin must be earlier or equals than edm:end";
-  dc:type esc:correlation ;
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-  sh:predicate edm:begin ;
-  sh:lessThanOrEquals edm:end ;
-.
-```
-
-##### Constraint <a id="edm_begin_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#literal">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_begin#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate edm:begin ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
 .
 ```
 
@@ -511,29 +283,6 @@ _Shape definition in Turtle syntax:_
 .
 ```
 
-##### Constraint <a id="edm_end_literal" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#literal">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#literal</a>
-<table>
-<tr><th align="right">description</th><td>Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/51">R-44-PATTERN-MATCHING-ON-RDF-LITERALS</a></td></tr>
-<tr><th align="right">type</th><td></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate edm:end ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-```
-
 ##### Constraint <a id="edm_end_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_end#type</a>
 <table>
 <tr><th align="right">description</th><td></td></tr>
@@ -554,33 +303,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="edm_isNextInSequence" target="_blank" href="http://www.europeana.eu/schemas/edm/isNextInSequence">http://www.europeana.eu/schemas/edm/isNextInSequence</a>
 
 ------
-
-##### Constraint <a id="edm_isNextInSequence_range-class" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class</a>
-<table>
-<tr><th align="right">description</th><td>The reference should be a valid edm:TimeSpan</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/453">R-225-VALIDATION-OF-CLASS-ASSOCIATION</a>, <a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/286">R-171-VALIDATION-OF-URIS-BY-DEREFERENCING</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#range-class">http://www.europeana.eu/schemas/edm/shapes/categories#range-class</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#range-class>
-  a sh:PropertyConstraint ;
-  sh:description "The reference should be a valid edm:TimeSpan" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
-            , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate edm:isNextInSequence ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:predicate edm:isNextInSequence ;
-  sh:valueShape TimeSpan: ;
-  sh:class edm:TimeSpan ;
-.
-```
 
 ##### Constraint <a id="edm_isNextInSequence_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#type">http://www.europeana.eu/schemas/edm/shapes/external/TimeSpan/edm_isNextInSequence#type</a>
 <table>

@@ -1,0 +1,391 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ore:  <http://www.openarchives.org/ore/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdaGr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix edm:  <http://www.europeana.eu/schemas/edm/> .
+
+@prefix esc:  <http://www.europeana.eu/schemas/edm/shapes/categories#> .
+
+@base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
+@prefix Agent:    <Agent#base> .
+@prefix Concept:  <Concept#base> .
+@prefix Place:    <Place#base> .
+@prefix TimeSpan: <TimeSpan#base> .
+
+################################################################################
+# Shape Graph for edm:Agent
+################################################################################
+
+<Agent>
+  rdf:type owl:Ontology, sh:Graph ;
+  owl:versionInfo "Draft version for edm:Agent Class"^^xsd:string ;
+  sh:shapesGraph <http://www.w3.org/ns/shacl> ;
+.
+
+################################################################################
+# Base Shape for the edm:Agent Class
+################################################################################
+
+<Agent#base>
+  a sh:Shape ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:description """This shape gathers all constraints that apply to a
+                    edm:Agent class""" ;
+
+  sh:scopeClass edm:Agent ;
+
+  # SKOS properties
+  sh:property        <Agent/skos_prefLabel#datatype> ;
+  sh:property        <Agent/skos_prefLabel#cardinality> ;
+  sh:property        <Agent/skos_altLabel#datatype> ;
+  sh:property        <Agent/skos_altLabel#redundancy> ;
+  sh:property        <Agent/skos_note#datatype> ;
+
+  # DC properties
+  sh:property        <Agent/dc_date#literal> ;
+
+  # DCTERMS properties
+  sh:property        <Agent/dct_hasPart#range-class> ;
+  sh:property        <Agent/dct_isPartOf#range-class> ;
+
+  # EDM properties
+  sh:property        <Agent/edm_begin#literal> ;
+  sh:property        <Agent/edm_begin#correlation> ;
+  sh:property        <Agent/edm_begin#redundancy> ;
+  sh:property        <Agent/edm_end#literal> ;
+  sh:property        <Agent/edm_end#redundancy> ;
+  sh:property        <Agent/edm_hasMet#range-class> ;
+
+  # RDAGR2 properties
+  sh:property        <Agent/rdaGr2_dateOfBirth#literal> ;
+  sh:property        <Agent/rdaGr2_dateOfBirth#correlation> ;
+  sh:property        <Agent/rdaGr2_dateOfDeath#literal> ;
+  sh:property        <Agent/rdaGr2_dateOfEstablishment#literal> ;
+  sh:property        <Agent/rdaGr2_dateOfEstablishment#correlation> ;
+  sh:property        <Agent/rdaGr2_dateOfTermination#literal> ;
+  sh:property        <Agent/rdaGr2_gender#cardinality>
+.
+
+# skos:prefLabel ###############################################################
+
+<Agent/skos_prefLabel#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:prefLabel should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:prefLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate skos:prefLabel ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+
+<Agent/skos_prefLabel#cardinality>
+  a sh:PropertyConstraint ;
+  dc:type esc:cardinality ;
+  sh:description "There must be at most one skos:prefLabel per language" ;
+  dc:relation "R-211-CARDINALITY-CONSTRAINTS"
+           , "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG" ;
+  sh:predicate skos:prefLabel ;
+  sh:minCount 0 ;
+  sh:uniqueLang true ;
+.
+
+
+# skos:altLabel ################################################################
+
+<Agent/skos_altLabel#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:altLabel should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:altLabel ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate skos:altLabel ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+
+<Agent/skos_altLabel#redundancy>
+  a sh:PropertyConstraint ;
+  dc:type esc:redundancy ;
+  sh:description """skos:altLabel should not have the same labels than in 
+                    skos:prefLabel""" ;
+  dc:relation "R-10-DEFINE-DISJOINT-PROPERTIES" ;
+  sh:predicate  skos:altLabel ;
+  sh:notEquals  skos:prefLabel ;
+  sh:severity sh:Warning ;
+.
+
+# skos:note ####################################################################
+
+<Agent/skos_note#datatype>
+  a sh:PropertyConstraint ;
+  dc:type esc:datatype ;
+  sh:description "Ideally all skos:note should have a language tag" ;
+  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate skos:note ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate skos:note ;
+  sh:datatype rdf:langString ;
+  sh:severity sh:Warning ;
+.
+
+# dc:date ######################################################################
+
+<Agent/dc_date#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [ #restrict only to Literals
+      sh:property [
+          sh:predicate dc:date ;
+          sh:nodeKind sh:Literal ;
+      ]
+  ] ;
+  sh:predicate dc:date ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+# dcterms:hasPart ##############################################################
+
+<Agent/dct_hasPart#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """dcterms:hasPart must refer to a valid edm:Agent""" ;
+  dc:type esc:range-class ;
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+           , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:hasPart ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:predicate dct:hasPart ;
+  sh:valueShape Agent: ;
+  sh:class edm:Agent ;
+.
+
+# dcterms:isPartOf #############################################################
+
+<Agent/dct_isPartOf#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """dcterms:isPartOf must refer to a valid edm:Agent""" ;
+  dc:type esc:range-class ;
+  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION"
+           , "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
+  sh:filterShape [
+      sh:property [
+          sh:predicate dct:isPartOf ;
+          sh:nodeKind sh:IRI ;
+      ]
+  ] ;
+  sh:predicate dct:hasPart ;
+  sh:valueShape Agent: ;
+  sh:class edm:Agent ;
+.
+
+# edm:begin ####################################################################
+
+<Agent/edm_begin#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate edm:begin ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  sh:predicate edm:begin ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+#NEED TO CHECK FOR SEVERAL PAIRS AND WHEN ONE OF THEM IS MISSING!
+<Agent/edm_begin#correlation>
+  a sh:PropertyConstraint ;
+  sh:description "edm:begin must be earlier or equals than edm:end";
+  dc:type esc:correlation ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
+  sh:predicate edm:begin ;
+  sh:lessThanOrEquals edm:end ;
+.
+
+<Agent/edm_begin#redundancy>
+  a sh:PropertyConstraint ;
+  dc:type esc:redundancy ;
+  sh:description """edm:begin should not be the same as rdaGr2:dateOfBirth
+                  , if true the field is redundant""" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:predicate edm:begin ;
+  sh:notEquals rdaGr2:dateOfBirth ;
+.
+
+# edm:end ######################################################################
+
+<Agent/edm_end#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate edm:end ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  sh:predicate edm:end ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+<Agent/edm_end#redundancy>
+  a sh:PropertyConstraint ;
+  dc:type esc:redundancy ;
+  sh:description """edm:end should not be the same as rdaGr2:dateOfDeath
+                  , if true the field is redundant""" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:predicate edm:end ;
+  sh:notEquals rdaGr2:dateOfDeath ;
+.
+
+# edm:hasMet ###################################################################
+
+<Agent/edm_hasMet#range-class>
+  a sh:PropertyConstraint ;
+  sh:description """edm:hasMet must refer to a valid edm:Agent, edm:Place
+                  , skos:Concept or edm:TimeSpan""";
+  dc:type esc:range-class ;
+  sh:predicate edm:hasMet ;
+  sh:valueShape [
+    sh:constraint [
+      sh:or ( Agent: Place: Concept: TimeSpan: )
+    ] ;
+  ] ;
+.
+
+
+# rdaGr2:dateOfBirth ###########################################################
+
+<Agent/rdaGr2_dateOfBirth#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfBirth ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  sh:predicate rdaGr2:dateOfBirth ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+<Agent/rdaGr2_dateOfBirth#correlation>
+  a sh:PropertyConstraint ;
+  sh:description """rdaGr2:dateOfBirth must be earlier or equals than 
+                    rdaGr2:dateOfDeath""";
+  dc:type esc:correlation ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
+  sh:predicate rdaGr2:dateOfBirth ;
+  sh:lessThanOrEquals rdaGr2:dateOfDeath ;
+.
+
+
+# rdaGr2:dateOfDeath ###########################################################
+
+<Agent/rdaGr2_dateOfDeath#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfDeath ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  sh:predicate rdaGr2:dateOfDeath ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+# rdaGr2:dateOfEstablishment ###################################################
+
+<Agent/rdaGr2_dateOfEstablishment#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfEstablishment ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  sh:predicate rdaGr2:dateOfEstablishment ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.
+
+<Agent/rdaGr2_dateOfEstablishment#correlation>
+  a sh:PropertyConstraint ;
+  sh:description """rdaGr2:dateOfEstablishment must be earlier or equals than 
+                    rdaGr2:dateOfTermination""";
+  dc:type esc:correlation ;
+  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
+  sh:predicate rdaGr2:dateOfEstablishment ;
+  sh:lessThanOrEquals rdaGr2:dateOfTermination ;
+.
+
+# rdaGr2:dateOfTermination #####################################################
+
+<Agent/rdaGr2_dateOfTermination#literal>
+  a sh:PropertyConstraint ;
+  sh:description """Check that the value for date matches ISO 8601 starting with
+                    the year and hyphenating the day and month parts: 
+                    YYYY-MM-DD""";
+  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
+  sh:filterShape [
+    sh:property [
+      sh:predicate rdaGr2:dateOfTermination ;
+      sh:nodeKind sh:Literal ;
+    ]
+  ] ;
+  sh:predicate rdaGr2:dateOfTermination ;
+  #does not check for valid dates but could be expanded
+  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
+.

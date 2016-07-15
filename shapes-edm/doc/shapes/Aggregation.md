@@ -126,25 +126,11 @@ _Shape definition in Turtle syntax:_
 
 ##### Constraint <a id="dc_rights_redundancy" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#redundancy">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#redundancy</a>
 <table>
-<tr><th align="right">description</th><td>dc:rights should not be the same as edm:rights, if true
-                    the field is redundant</td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/451">R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#redundancy">http://www.europeana.eu/schemas/edm/shapes/categories#redundancy</a></td></tr>
+<tr><th align="right">description</th><td></td></tr>
+<tr><th align="right">subject</th><td></td></tr>
+<tr><th align="right">type</th><td></td></tr>
 </table>
 _Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#redundancy>
-  a sh:PropertyConstraint ;
-  dc:type esc:redundancy ;
-  sh:description """dc:rights should not be the same as edm:rights, if true
-                    the field is redundant""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:predicate dc:rights ;
-  sh:notEquals edm:rights ;
-.
-```
 
 ##### Constraint <a id="dc_rights_type" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#type">http://www.europeana.eu/schemas/edm/shapes/external/Aggregation/dc_rights#type</a>
 <table>

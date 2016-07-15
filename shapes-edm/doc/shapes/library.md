@@ -5,6 +5,7 @@ _This document was generated from the [shapes file](/shapes-edm/src/main/resourc
 Below is the index of all functions defined in this Library:
 - <a id="TypedLiteralConstraint" href="#TypedLiteralConstraint">TypedLiteralConstraint</a>
 - <a id="DisjointConstraint" href="#DisjointConstraint">DisjointConstraint</a>
+- <a id="CycleConstraint" href="#CycleConstraint">CycleConstraint</a>
 - <a id="DisjointPropertyConstraint" href="#DisjointPropertyConstraint">DisjointPropertyConstraint</a>
 - <a id="RedundancyConstraint" href="#RedundancyConstraint">RedundancyConstraint</a>
 
@@ -68,6 +69,31 @@ _Shape definition in Turtle syntax:_
             $this ?property2 ?value . FILTER (?property2 != ?property1)
         }
       }
+    """ ;
+.
+```
+
+##### Template <a id="CycleConstraint" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/library#CycleConstraint">CycleConstraint</a>
+------
+_Shape definition in Turtle syntax:_
+
+```
+<http://www.europeana.eu/schemas/edm/shapes/library#CycleConstraint>
+    a sh:ConstraintTemplate ;
+    rdfs:label """Detects if the property is being used to refer to the same 
+                  Resource as the subject""" ;
+    rdfs:subClassOf sh:TemplateConstraint ;
+    sh:argument [
+        sh:predicate etp:property ;
+        sh:class rdf:Property ;
+        sh:name "predicate" ;
+        sh:description "The property to validate the values of." ;
+    ] ;
+    rdfs:comment "Cannot reference the same resource with this property"^^xsd:string ;
+    sh:message "Cycle reference" ;
+    sh:sparql """
+      SELECT ?this (?this as ?subject) $predicate (?this as ?object)
+      WHERE { ?this $predicate ?this . }
     """ ;
 .
 ```

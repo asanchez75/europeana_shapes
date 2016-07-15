@@ -15,9 +15,9 @@
 @prefix etp:  <http://www.europeana.eu/schemas/edm/shapes/library#>   .
 
 @base             <http://www.europeana.eu/schemas/edm/shapes/external/> .
-@prefix Agent:    <Agent#base> .
-@prefix Concept:  <Concept#base> .
-@prefix Place:    <Place#base> .
+@prefix Agent:    <Agent#base>    .
+@prefix Concept:  <Concept#base>  .
+@prefix Place:    <Place#base>    .
 @prefix TimeSpan: <TimeSpan#base> .
 
 ################################################################################
@@ -52,45 +52,20 @@
   sh:constraint      <ProvidedCHO#correlation> ;
 
   # DC properties
-  sh:property        <ProvidedCHO/dc_contributor#range-class> ;
-  sh:property        <ProvidedCHO/dc_coverage#range-class> ;
-  sh:property        <ProvidedCHO/dc_coverage#subproperty_1> ;
-  sh:constraint      <ProvidedCHO/dc_coverage#subproperty_2> ;
-  sh:property        <ProvidedCHO/dc_creator#range-class> ;
-  sh:property        <ProvidedCHO/dc_date#range-class> ;
-  sh:property        <ProvidedCHO/dc_date#literal> ;
-  sh:property        <ProvidedCHO/dc_date#subproperty_1> ;
-  sh:constraint      <ProvidedCHO/dc_date#subproperty_2> ;
-  sh:property        <ProvidedCHO/dc_description#datatype> ;
   sh:property        <ProvidedCHO/dc_identifier#type> ;
   sh:property        <ProvidedCHO/dc_language#type> ;
-  sh:property        <ProvidedCHO/dc_language#values> ;
-  sh:property        <ProvidedCHO/dc_publisher#range-class> ;
-  sh:constraint      <ProvidedCHO/dc_rights#redundancy> ;
-  sh:property        <ProvidedCHO/dc_subject#range-class> ;
-  sh:property        <ProvidedCHO/dc_subject#multiplevalue> ;
   sh:property        <ProvidedCHO/dc_title#type> ;
-  sh:property        <ProvidedCHO/dc_type#range-class> ;
 
   # DCTERMS properties
   sh:property        <ProvidedCHO/dct_alternative#type> ;
-  sh:property        <ProvidedCHO/dct_alternative#subproperty> ;
-  sh:property        <ProvidedCHO/dct_created#range-values> ;
-  sh:property        <ProvidedCHO/dct_created#correlation> ;
-  sh:property        <ProvidedCHO/dct_issued#range-values> ;
-  sh:property        <ProvidedCHO/dct_issued#range-class> ;
   sh:property        <ProvidedCHO/dct_tableOfContents#type> ;
 
   # EDM properties
-  sh:inverseProperty <ProvidedCHO/edm_aggregatedCHO#correlation> ;
   sh:property        <ProvidedCHO/edm_currentLocation#type> ;
   sh:property        <ProvidedCHO/edm_hasMet#type> ;
-  sh:constraint      <ProvidedCHO/edm_hasMet#range-class> ;
   sh:property        <ProvidedCHO/edm_incorporates#type> ;
   sh:property        <ProvidedCHO/edm_isDerivativeOf#type> ;
   sh:property        <ProvidedCHO/edm_isNextInSequence#type> ;
-  sh:property        <ProvidedCHO/edm_isNextInSequence#range-class> ;
-  sh:property        <ProvidedCHO/edm_isNextInSequence#correlation> ;
   sh:property        <ProvidedCHO/edm_isRepresentationOf#type> ;
   sh:property        <ProvidedCHO/edm_isRepresentationOf#cardinality> ;
   sh:property        <ProvidedCHO/edm_isSimilarTo#type> ;
@@ -99,8 +74,6 @@
   sh:property        <ProvidedCHO/edm_type#type> ;
   sh:property        <ProvidedCHO/edm_type#cardinality> ;
   sh:property        <ProvidedCHO/edm_type#values> ;
-  sh:property        <ProvidedCHO/edm_type#correlation> ;
-  sh:property        <ProvidedCHO/edm_unstored#type> ;
   sh:property        <ProvidedCHO/edm_ugc#type> ;
 
   # OWL properties
@@ -127,12 +100,10 @@
     edm:currentLocation edm:hasMet edm:hasType edm:incorporates 
     edm:isDerivativeOf edm:isNextInSequence edm:isRelatedTo 
     edm:isRepresentationOf edm:isSimilarTo edm:isSuccessorOf edm:realizes 
-    edm:type edm:unstored edm:ugc
+    edm:type edm:ugc
     owl:sameAs
   ) ;
 .
-
-#:uniqueness ?
 
 # the constraint for edm:type was taken out of this rule
 <ProvidedCHO#correlation>
@@ -169,204 +140,6 @@
   ) ;
 .
 
-# edm:aggregatedCHO ############################################################
-
-<ProvidedCHO/edm_aggregatedCHO#correlation>
-  a sh:InversePropertyConstraint ;
-  sh:description """Check that the URI of the ProvidedCHO and the URI described 
-                    in edm:aggregatedCHO are the same.""" ;
-  dc:type esc:correlation ;
-  dc:relation "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
-  sh:predicate edm:aggregatedCHO ;
-  sh:valueClass ore:Aggregation ;
-  sh:minCount 1 ;
-  sh:maxCount 1 ; #this enforces uniqueness
-.
-
-# dc:contributor ###############################################################
-
-<ProvidedCHO/dc_contributor#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """the reference should be one to an Agent (the access to the 
-                    data and the data itself should be formatted according to 
-                    the Agent specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
-  sh:predicate dc:contributor ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate dc:contributor ;
-      sh:nodeKind sh:IRI ;
-    ]
-  ] ;
-  sh:valueShape Agent: ;
-  sh:class edm:Agent ;
-.
-
-# dc:coverage ##################################################################
-
-<ProvidedCHO/dc_coverage#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """If the value is a URI, check if it refers to a TimeSpan or a
-                    Place that is declared in the document.""" ;
-  dc:type esc:range-class ;
-  sh:predicate dc:coverage ;
-  sh:filterShape [
-    sh:property [
-        sh:predicate dc:coverage ;
-        sh:nodeKind sh:IRI ;
-    ]
-  ] ;
-  sh:valueShape [
-    sh:constraint [
-      sh:or ( Place: TimeSpan: )
-    ] ;
-  ] ;
-.
-
-<ProvidedCHO/dc_coverage#subproperty_1>
-  a sh:PropertyConstraint ;
-  sh:description """If two dc:coverage are present, suggest the use of 
-                    dcterms:spatial or dcterms:temporal.""" ;
-  dc:type esc:subproperty ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:predicate dc:coverage ;
-  sh:maxCount 1 ;
-  sh:severity sh:Warning ;
-  sh:message "Suggest the use of dcterms:spatial or dcterms:temporal" ;
-.
-
-<ProvidedCHO/dc_coverage#subproperty_2>
-  a sh:Constraint ;
-  sh:description """If dc:coverage and dcterms:spatial or dcterms:temporal are 
-                    present, check that the value in dc:coverage is not 
-                    redundant with dcterms:spatial or dcterms:temporal for 
-                    ingestion""" ;
-  dc:type esc:subproperty ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:and (
-    [
-      sh:property [
-        sh:predicate dc:coverage ;
-        sh:notEquals dct:spatial ;
-      ]
-    ]
-    [
-      sh:property [
-        sh:predicate dc:coverage ;
-        sh:notEquals dct:temporal ;
-      ]
-    ]
-  )
-.
-
-# dc:creator ###################################################################
-
-<ProvidedCHO/dc_creator#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """the reference should be one to an Agent (the access to the 
-                    data and the data itself should be formatted according to 
-                    the Agent specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:predicate dc:creator ;
-  sh:filterShape [ #restrict only to nodes
-      sh:property [
-          sh:predicate dc:creator ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:valueShape Agent: ;
-  sh:class edm:Agent ;
-.
-
-# dc:date ######################################################################
-
-<ProvidedCHO/dc_date#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """the reference should be one to a TimeSpan (the access to 
-                    the data and the data itself should be formatted according 
-                    to the TimeSpan specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
-  sh:predicate dc:date ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dc:date ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:valueShape TimeSpan: ;
-  sh:class edm:TimeSpan ;
-.
-
-<ProvidedCHO/dc_date#literal>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""";
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate dc:date ;
-  sh:filterShape [ #restrict only to Literals
-      sh:property [
-          sh:predicate dc:date ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-
-<ProvidedCHO/dc_date#subproperty_1>
-  a sh:PropertyConstraint ;
-  sh:description """If two dc:date are present, suggest the use of 
-                    dcterms:created or dcterms:issued.""" ;
-  dc:type esc:subproperty ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:predicate dc:date ;
-  sh:maxCount 1 ;
-  sh:severity sh:Warning ;
-  sh:message "Suggest the use of dcterms:created or dcterms:issued" ;
-.
-
-<ProvidedCHO/dc_date#subproperty_2>
-  a sh:Constraint ;
-  sh:description """If dc:date and dcterms:created or dcterms:issued are present
-                    , check that the value in dc:date is not redundant with 
-                    dcterms:created or dctersm:issued for ingestion""" ;
-  dc:type esc:subproperty ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:and (
-    [
-      sh:predicate  dc:date ;
-      sh:notEquals dct:created ;
-    ]
-    [
-      sh:predicate dc:date ;
-      sh:notEquals dct:issued ;
-    ]
-  )
-.
-
-# dc:description ###############################################################
-
-<ProvidedCHO/dc_description#datatype>
-  a sh:PropertyConstraint ;
-  dc:type esc:datatype ;
-  sh:description "Ideally all dc:description should have a language tag" ;
-  dc:relation "R-48-MISSING-LANGUAGE-TAGS" ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dc:description ;
-          sh:nodeKind sh:Literal ;
-      ]
-  ] ;
-  sh:predicate dc:description ;
-  sh:datatype rdf:langString ;
-  sh:severity sh:Warning ;
-.
 
 # dc:identifier ################################################################
 
@@ -384,90 +157,6 @@
   sh:nodeKind sh:Literal ;
 .
 
-<ProvidedCHO/dc_language#values>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for language matches ISO 639 two-letter
-                    code if it exists at http://www.loc.gov/standards/iso639-2/php/code_list.php
-                    otherwise accept three-letter code.""" ;
-  dc:relation "R-49-PROPERTY-OCCURS-ONCE-PER-LANGUAGE-TAG"
-           , "R-47-SPECIFY-AND-VALIDATE-LANGUAGE-TAGS" ;
-  sh:predicate dc:language ;
-  #alternative is to have the full list of acceptable values
-  sh:pattern "^[a-z]{2}$" ;
-.
-
-# dc:publisher #################################################################
-
-<ProvidedCHO/dc_publisher#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """The reference should be one to an Agent( the access to the 
-                    data and the data itself should be formatted according to 
-                    the Agent specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:predicate dc:publisher ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate dc:publisher ;
-      sh:nodeKind sh:IRI ;
-    ]
-  ] ;
-  sh:valueShape Agent: ;
-  sh:class edm:Agent ;
-.
-
-# dc:rights ####################################################################
-
-<ProvidedCHO/dc_rights#redundancy>
-  a etp:RedundancyConstraint, sh:Constraint ;
-  dc:type esc:redundancy ;
-  sh:description """Check if dc:rights has the same value than edm:rights of the 
-                    Aggregation (either as rdf:resource or literal), if yes the 
-                    field is redundant""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:predicate  dc:rights ;
-  sh:scopeClass edm:Aggregation ;
-  sh:notEquals  edm:rights ;
-  sh:severity sh:Warning ;
-.
-
-# dc:subject ###################################################################
-
-<ProvidedCHO/dc_subject#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """The reference should be one to a Concept( the access to the
-                    data and the data itself should be formatted according to 
-                    the Concept specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
-  sh:predicate dc:publisher ;
-  sh:filterShape [ #restrict only to nodes
-      sh:property [
-          sh:predicate dc:subject ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:valueShape Concept: ;
-  sh:class skos:Concept ;
-.
-
-<ProvidedCHO/dc_subject#multiplevalue>
-  a sh:PropertyConstraint ;
-
-  sh:description """If more than one term is in the field, a new dc:subject 
-                    should be created.""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  skos:note """The field is considered to have multiple terms if a separator is 
-               detected""" ;
-  sh:severity sh:Warning ;
-
-  sh:predicate dc:subject ;
-  sh:pattern "^.*[,;].*$" ; #check for char separators
-
-  sh:message """More than one term was detected, suggest the use of a new 
-                dc:subject field""" ;
-.
-
 # dc:title #####################################################################
 
 <ProvidedCHO/dc_title#type>
@@ -477,29 +166,6 @@
   sh:nodeKind sh:Literal ;
 .
 
-
-# dc:type ######################################################################
-
-<ProvidedCHO/dc_type#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """If the value is a URI, check if a skos:Concept class is 
-                    created.""" ;
-#  sh:description """The reference should be one to a Concept( the access to the
-#                    data and the data itself should be formatted according to 
-#                    the Concept specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:predicate dc:type ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate dc:type ;
-      sh:nodeKind sh:IRI ;
-    ]
-  ] ;
-  sh:valueShape Concept: ;
-  sh:class skos:Concept ;
-.
-
 # dcterms:alternative ##########################################################
 
 <ProvidedCHO/dct_alternative#type>
@@ -507,90 +173,6 @@
   dc:type esc:type ;
   sh:predicate dct:alternative ;
   sh:nodeKind sh:Literal ;
-.
-
-<ProvidedCHO/dct_alternative#subproperty>
-  a sh:PropertyConstraint ;
-  dc:type esc:subproperty ;
-  sh:description """If dcterms:alternative has the same title than dc:title, 
-                    then dcterms:alternative is redundant.""" ;
-  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
-  sh:severity sh:Warning ;
-  sh:predicate dct:alternative ;
-  sh:notEquals dc:title ;
-#  sh:message "Redundant dcterms:alternative" ;
-.
-
-# dcterms:created ##############################################################
-
-<ProvidedCHO/dct_created#range-values>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""" ;
-  dc:type esc:range-value ;
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate dct:created ;
-  sh:filterShape [ #restrict only to Literals
-    sh:property [
-      sh:predicate dct:created ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-
-#ISSUE: values need to be typed as xsd:date!
-<ProvidedCHO/dct_created#correlation>
-  a sh:PropertyConstraint ;
-
-  sh:description "dcterms:created must be equal or earlier than dcterms:issued";
-#  sh:description """Check that dcterms:created is equal or earlier than 
-#                    dcterms:issued""" ;
-  dc:type esc:correlation ;
-  dc:relation "R-43-LITERAL-VALUE-COMPARISON" ;
-
-  sh:predicate dct:created ;
-  sh:lessThanOrEquals dct:issued ;
-.
-
-# dcterms:issued ###############################################################
-
-<ProvidedCHO/dct_issued#range-values>
-  a sh:PropertyConstraint ;
-  sh:description """Check that the value for date matches ISO 8601 starting with
-                    the year and hyphenating the day and month parts: 
-                    YYYY-MM-DD""" ;
-  dc:type esc:range-value ;
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:predicate dct:issued ;
-  sh:filterShape [ #restrict only to Literals
-    sh:property [
-      sh:predicate dct:issued ;
-      sh:nodeKind sh:Literal ;
-    ]
-  ] ;
-  #does not check for valid dates but could be expanded
-  sh:pattern "^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$" ;
-.
-
-<ProvidedCHO/dct_issued#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """the reference should be one to a TimeSpan (the access to 
-                    the data and the data itself should be formatted according 
-                    to the TimeSpan specifications.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;  
-  sh:predicate dc:issued ;
-  sh:filterShape [
-      sh:property [
-          sh:predicate dct:issued ;
-          sh:nodeKind sh:IRI ;
-      ]
-  ] ;
-  sh:valueShape TimeSpan: ;
-  sh:class edm:TimeSpan ;
 .
 
 # dcterms:tableOfContents ######################################################
@@ -620,25 +202,6 @@
   sh:nodeKind sh:IRI ;
 .
 
-<ProvidedCHO/edm_hasMet#range-class>
-  a sh:Constraint ;
-  sh:description """A edm:hasMet should reference one of Agent, Place, TimeSpan 
-                    or Concept that is declared in the record""" ;
-# sh:description """the reference should be one to an Agent, a Place, a TimeSpan
-#                   or a Concept ( the access to the data and the data itself 
-#                   should be formatted according to the specifications of the 
-#                   corresponding classes.)""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING" ;
-  sh:or (
-    [ sh:predicate dc:contributor ; sh:valueShape Agent:    ]
-    [ sh:predicate dc:contributor ; sh:valueShape Place:    ]
-    [ sh:predicate dc:contributor ; sh:valueShape TimeSpan: ]
-    [ sh:predicate dc:contributor ; sh:valueShape Concept:  ]
-  )
-.
-
-
 # edm:incorporates #############################################################
 
 <ProvidedCHO/edm_incorporates#type>
@@ -665,28 +228,6 @@
   sh:predicate edm:isNextInSequence ;
   sh:nodeKind sh:IRI ;
 .
-
-# Issue requires the full dataset
-<ProvidedCHO/edm_isNextInSequence#range-class>
-  a sh:PropertyConstraint ;
-  sh:description """The reference should be a valid edm:ProvidedCHO""" ;
-  dc:type esc:range-class ;
-  dc:relation "R-171-VALIDATION-OF-URIS-BY-DEREFERENCING"
-           , "R-225-VALIDATION-OF-CLASS-ASSOCIATION" ;
-  sh:predicate edm:isNextInSequence ;
-.
-
-# Implement using a SPARQL query
-# Requires the full dataset
-<ProvidedCHO/edm_isNextInSequence#correlation>
-  a sh:PropertyConstraint ;
-  dc:type esc:correlation ;
-  sh:description """The ProvidedCHO referred to by this property must share 
-                    the same parent""" ;
-  dc:relation "?" ;
-  sh:predicate edm:isNextInSequence ;
-.
-
 
 # edm:isRepresentationOf #######################################################
 
@@ -761,34 +302,6 @@
   dc:relation "R-30-DEFINE-VALUE-LISTS" ;
   sh:predicate edm:type ;
   sh:in ( "TEXT" "VIDEO" "SOUND" "IMAGE" "3D" ) ;
-.
-
-<ProvidedCHO/edm_type#correlation>
-  a sh:PropertyConstraint ;
-# sh:description """Check that if the value of edm:type  is 3D the syntax of 
-#                   dc:format is 3D-PDF """ ;
-  sh:description """If the value of edm:type is '3D' then the syntax of 
-                    dc:format must be '3D-PDF'""";
-  dc:type esc:correlation ;
-  dc:relation "R-44-PATTERN-MATCHING-ON-RDF-LITERALS" ;
-  sh:filterShape [
-    sh:property [
-      sh:predicate edm:type ;
-      sh:hasValue "3D" ;
-    ]
-  ] ;
-  sh:predicate dc:format ;
-  sh:hasValue "3D-PDF" ;
-.
-
-
-# edm:unstored #################################################################
-
-<ProvidedCHO/edm_unstored#type>
-  a sh:PropertyConstraint ;
-  dc:type esc:type ;
-  sh:predicate edm:unstored ;
-  sh:nodeKind sh:Literal ;
 .
 
 # edm:ugc ######################################################################

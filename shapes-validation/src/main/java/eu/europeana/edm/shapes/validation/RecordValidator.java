@@ -15,7 +15,7 @@ import org.apache.jena.riot.RDFLanguages;
 import org.apache.jena.util.FileUtils;
 import org.topbraid.spin.util.JenaUtil;
 
-import eu.europeana.ld.deref.Dereferencer;
+import eu.europeana.ld.deref.DereferencerImpl;
 import static org.apache.commons.io.IOUtils.*;
 import static eu.europeana.edm.shapes.validation.ValidationUtils.*;
 
@@ -26,13 +26,13 @@ import static eu.europeana.edm.shapes.validation.ValidationUtils.*;
 public class RecordValidator
 {
     private ModelValidator _validator;
-    private Dereferencer   _dereference;
+    private DereferencerImpl   _dereference;
 
     public RecordValidator(ModelValidator validator
                          , String defaultMime)
     {
         _validator   = validator;
-        _dereference = new Dereferencer(defaultMime);
+        _dereference = new DereferencerImpl(defaultMime);
     }
 
     public RecordValidator(ModelValidator validator)

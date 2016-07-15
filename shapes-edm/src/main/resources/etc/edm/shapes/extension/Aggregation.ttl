@@ -107,6 +107,17 @@
   sh:nodeKind sh:Literal ;
 .
 
+<Aggregation/dc_rights#redundancy>
+  a sh:PropertyConstraint ;
+  dc:type esc:redundancy ;
+  sh:description """dc:rights should not be the same as edm:rights, if true
+                    the field is redundant""" ;
+  dc:relation "R-224-USE-SUB-SUPER-RELATIONS-IN-VALIDATION" ;
+  sh:severity sh:Warning ;
+  sh:predicate dc:rights ;
+  sh:notEquals edm:rights ;
+.
+
 # edm:aggregatedCHO ############################################################
 
 <Aggregation/edm_aggregatedCHO#type>
