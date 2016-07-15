@@ -28,7 +28,7 @@ The following table shows an overview of the constraints divided per property:
 |<a href="#rdaGr2_gender">rdaGr2:gender</a>|<a href="#rdaGr2_gender_cardinality">0..1</a>|<a href="#rdaGr2_gender_type">Literal</a>||
 |<a href="#rdaGr2_placeOfBirth">rdaGr2:placeOfBirth</a>|<a href="#rdaGr2_placeOfBirth_cardinality">0..1</a>|||
 |<a href="#rdaGr2_placeOfDeath">rdaGr2:placeOfDeath</a>|<a href="#rdaGr2_placeOfDeath_cardinality">0..1</a>|||
-|<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|<a href="#rdaGr2_professionOrOccupation_cardinality">0..?</a>|||
+|<a href="#rdaGr2_professionOrOccupation">rdaGr2:professionOrOccupation</a>|0..*|||
 |<a href="#edm_begin">edm:begin</a>|<a href="#edm_begin_cardinality">0..1</a>|<a href="#edm_begin_type">Literal</a>||
 |<a href="#edm_end">edm:end</a>|<a href="#edm_end_cardinality">0..1</a>|<a href="#edm_end_type">Literal</a>||
 |<a href="#edm_hasMet">edm:hasMet</a>|0..*|<a href="#edm_hasMet_type">IRI</a>||
@@ -126,7 +126,6 @@ _Shape body in Turtle syntax:_
   sh:property        <Agent/rdaGr2_gender#cardinality> ;
   sh:property        <Agent/rdaGr2_placeOfBirth#cardinality> ;
   sh:property        <Agent/rdaGr2_placeOfDeath#cardinality> ;
-  sh:property        <Agent/rdaGr2_professionOrOccupation#cardinality> ;
 
   # OWL properties
   sh:property        <Agent/owl_sameAs#type> ;
@@ -566,24 +565,6 @@ _Shape definition in Turtle syntax:_
 #### Property <a id="rdaGr2_professionOrOccupation" target="_blank" href="http://rdvocab.info/ElementsGr2/professionOrOccupation">http://rdvocab.info/ElementsGr2/professionOrOccupation</a>
 
 ------
-
-##### Constraint <a id="rdaGr2_professionOrOccupation_cardinality" target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality">http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality</a>
-<table>
-<tr><th align="right">description</th><td></td></tr>
-<tr><th align="right">subject</th><td><a target="_blank" href="http://lelystad.informatik.uni-mannheim.de/rdf-validation/?q=node/424">R-211-CARDINALITY-CONSTRAINTS</a></td></tr>
-<tr><th align="right">type</th><td><a target="_blank" href="http://www.europeana.eu/schemas/edm/shapes/categories#cardinality">http://www.europeana.eu/schemas/edm/shapes/categories#cardinality</a></td></tr>
-</table>
-_Shape definition in Turtle syntax:_
-
-```
-<http://www.europeana.eu/schemas/edm/shapes/external/Agent/rdaGr2_professionOrOccupation#cardinality>
-  a sh:PropertyConstraint ;
-  dc:type esc:cardinality ;
-  dc:relation "R-211-CARDINALITY-CONSTRAINTS" ;
-  sh:predicate rdaGr2:professionOrOccupation ;
-  sh:minCount 0 ;
-.
-```
 
 #### Property <a id="edm_begin" target="_blank" href="http://www.europeana.eu/schemas/edm/begin">http://www.europeana.eu/schemas/edm/begin</a>
 
