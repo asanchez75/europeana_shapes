@@ -62,7 +62,13 @@ public class RecordValidator
 
     public Model validate(String url) throws HttpException
     {
-        return validate(_dereference.dereference(url));
+        try {
+            return validate(_dereference.dereference(url));
+        }
+        catch (IOException e)
+        {
+            throw new HttpException("Error while dereferencing: " + url, e);
+        }
     }
 
     public Model validate(String url, String mime) throws HttpException

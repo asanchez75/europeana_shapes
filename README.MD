@@ -1,22 +1,26 @@
 # EDM Shapes Definitions
 
-This project represents an effort to represent validation constraints for the
-[EDM schema](http://www.europeana.eu/schemas/edm/) using the [W3C SHACL Constraint Language](https://www.w3.org/TR/shacl/).
+This project details an effort to represent validation constraints that are 
+currenly defined in the [EDM schema](http://www.europeana.eu/schemas/edm/), 
+but also constraints that had previously been identified in previous Europeana 
+projects and the new requirements identified within the 
+[Data Quality Committee](https://docs.google.com/document/d/1ZOSKrX7X9oU7Ob3wjinXVWenx8HCq5qnhUzljcpFKs8), 
+using the [W3C SHACL Constraint Language](https://www.w3.org/TR/shacl/).
 
 References:
-- See the [EDM documentation](http://www.europeana.eu/schemas/edm/)
-- See []() for an overview of the rules identified.
-
+- [EDM schema](http://www.europeana.eu/schemas/edm/) and [EDM documentation]()
+- [Validation Rules identified by DDB and the DM2E project](https://docs.google.com/spreadsheets/d/1dI29hgckyHn3B0h5shmbYX3jcp3PZfX7TA30Ohp_dMI) for an overview of the rules identified in previous projects.
+- DQC's [Problem Patterns Catalog](https://docs.google.com/spreadsheets/d/1zoU-1uPk2O5t5zRC1-MD3LakBQGJ2hsWlSnp3XS2iAk) for a fresh list of issues that need to be checked
 
 **Contact:** Hugo Manguinhas (hugo.manguinhas@europeana.eu)
 
 ## About SHACL
 
-...
+TODO
 
 ##Shapes Definitions for EDM
 
-EDM defines two flavours
+TODO
 
 ##Documentation
 
