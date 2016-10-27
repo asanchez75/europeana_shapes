@@ -21,7 +21,7 @@ TODO
 ## Modules included in this Project
 
 - [The EDM Schema constraints in SHACL](shapes-edm).
-- ~~ [New EDM contraints](shapes-dqc) from previous projects and DQC. ~~
+- ~~[New EDM contraints](shapes-dqc) from previous projects and DQC.~~
 - A [SHACL Java implementation](shapes-validation) that is able to run EDM validation constraints against EDM data. 
   It also supports testing of constraints and generation of validation reports.
 - A [software to generate documentation](shapes-doc) pages in GitHub so that constraints can be easily viewed, validate the constraints and build validation reports.
