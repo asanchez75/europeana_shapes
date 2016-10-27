@@ -16,7 +16,7 @@ documents, one for each EDM class:
 In addition to previous shape definitions, a Template Library was designed
 to support some of the requirements that were not met by existing SHACL 
 functions:
-- [EDM Template Library](library.md)
+- [EDM Template Library](doc/shapes/library.md)
 
 ## Design choices
 
@@ -26,7 +26,7 @@ This section explains the main design choices:
 class, in order to split the shapes definition for EDM into smaller and 
 manageable files. Each file corresponds then to a sub-ontology which is linked to 
 (using the *owl:imports* property) from the main ontology file defined in 
-[EDM.ttl](../../src/main/resources/etc/edm/shapes/external/EDM.ttl).
+[EDM.ttl](src/main/resources/etc/edm/shapes/external/EDM.ttl).
 
 - **Constraints are isolated per EDM requirement:** Each rule is expressed in 
 a separate constraint or shape so that they are identifiable and may have their 
@@ -64,18 +64,18 @@ Examples:
 
 So that we could test the EDM shape definitions and the validation output, we 
 have created a test suite for each of the EDM classes:
-- ~~[ore:Aggregation](../tests/Aggregation.md)~~
-- ~~[edm:ProvidedCHO](../tests/ProvidedCHO.md)~~
-- ~~[edm:WebResource](../tests/WebResource.md)~~
-- [edm:Agent](../tests/Agent.md)
-- ~~[edm:Place](../tests/Place.md)~~
-- [skos:Concept](../tests/Concept.md)
-- ~~[edm:TimeSpan](../tests/TimeSpan.md)~~
+- ~~[ore:Aggregation](doc/tests/Aggregation.md)~~
+- ~~[edm:ProvidedCHO](doc/tests/ProvidedCHO.md)~~
+- ~~[edm:WebResource](doc/tests/WebResource.md)~~
+- [edm:Agent](doc/tests/Agent.md)
+- ~~[edm:Place](doc/tests/Place.md)~~
+- [skos:Concept](doc/tests/Concept.md)
+- ~~[edm:TimeSpan](doc/tests/TimeSpan.md)~~
 
 Besides testing, we have already started to work on reports that aggregate
 the result of a validation over a full dataset:
-- [DBpedia Concepts Dataset](../reports/DBpediaConcepts.md)
-- [DBpedia Agents Dataset](../reports/DBpediaAgents.md)
+- [DBpedia Concepts Dataset](doc/reports/DBpediaConcepts.md)
+- [DBpedia Agents Dataset](doc/reports/DBpediaAgents.md)
 
 ## Known limitations and possible improvements
 
