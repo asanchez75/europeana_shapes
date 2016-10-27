@@ -1,17 +1,17 @@
 # Shapes definitions for EDM (external)
-*This document was generated from the [shapes file](../../src/main/resources/etc/edm/shapes/external/EDM.ttl)* using this 
+*This document was generated from the [shapes file](src/main/resources/etc/edm/shapes/external/EDM.ttl)* using this 
 [software](/shapes-doc)
 
 This document presents all shape definitions that make up EDM (in the form 
 which we informally call as external). It is composed of the following 
 documents, one for each EDM class:
-- [ore:Aggregation](Aggregation.md)
-- [edm:ProvidedCHO](ProvidedCHO.md)
-- [edm:WebResource](WebResource.md)
-- [edm:Agent](Agent.md)
-- [edm:Place](Place.md)
-- [skos:Concept](Concept.md)
-- [edm:TimeSpan](TimeSpan.md)
+- [ore:Aggregation](doc/shapes/Aggregation.md)
+- [edm:ProvidedCHO](doc/shapes/ProvidedCHO.md)
+- [edm:WebResource](doc/shapes/WebResource.md)
+- [edm:Agent](doc/shapes/Agent.md)
+- [edm:Place](doc/shapes/Place.md)
+- [skos:Concept](doc/shapes/Concept.md)
+- [edm:TimeSpan](doc/shapes/TimeSpan.md)
 
 In addition to previous shape definitions, a Template Library was designed
 to support some of the requirements that were not met by existing SHACL 

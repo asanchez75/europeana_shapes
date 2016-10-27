@@ -1,4 +1,4 @@
-# EDM Shapes Definitions
+# EDM Shapes Project
 
 This project details an effort to represent validation constraints that are 
 currenly defined in the [EDM schema](http://www.europeana.eu/schemas/edm/), 
@@ -8,9 +8,9 @@ projects and the new requirements identified within the
 using the [W3C SHACL Constraint Language](https://www.w3.org/TR/shacl/).
 
 References:
-- [EDM schema](http://www.europeana.eu/schemas/edm/) and [EDM documentation]()
+- [EDM schema](http://www.europeana.eu/schemas/edm/) and [EDM documentation](http://pro.europeana.eu/page/edm-documentation)
 - [Validation Rules identified by DDB and the DM2E project](https://docs.google.com/spreadsheets/d/1dI29hgckyHn3B0h5shmbYX3jcp3PZfX7TA30Ohp_dMI) for an overview of the rules identified in previous projects.
-- DQC's [Problem Patterns Catalog](https://docs.google.com/spreadsheets/d/1zoU-1uPk2O5t5zRC1-MD3LakBQGJ2hsWlSnp3XS2iAk) for a fresh list of issues that need to be checked
+- [Problem Patterns Catalog](https://docs.google.com/spreadsheets/d/1zoU-1uPk2O5t5zRC1-MD3LakBQGJ2hsWlSnp3XS2iAk) for a fresh list of issues that are being worked on in the scope of the DQC
 
 **Contact:** Hugo Manguinhas (hugo.manguinhas@europeana.eu)
 
